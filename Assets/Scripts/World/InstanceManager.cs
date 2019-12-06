@@ -10,15 +10,21 @@ using UnityEngine;
 //PURPOSE : This class calls the clock to update
 public class InstanceManager : MonoBehaviour
 {
-    float deltaTime;
+    private const float incrementClockTime = 1f;
     private void Start()
     {
-        deltaTime = Time.deltaTime;
+        InvokeRepeating("ProgressTime()", incrementClockTime, incrementClockTime);
 
     }
 
     private void Update()
+    {        
+
+    }
+
+    private void ProgressTime()
     {
-        Clock.UpdateClock(deltaTime);
+        Clock.UpdateClock(incrementClockTime);
+
     }
 }

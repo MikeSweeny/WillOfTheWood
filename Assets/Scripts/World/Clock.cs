@@ -8,7 +8,7 @@ using UnityEngine;
 
 //NAME : Clock
 //PURPOSE : This class manages the clock and progresses the day
-public class Clock : MonoBehaviour
+public class Clock
 {
     static int currentDay = 1;
     static int hours;
