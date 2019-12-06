@@ -13,13 +13,12 @@ public class InputManager : MonoBehaviour
 {
 
     public delegate void InputEvent();
+    public delegate void WalkInputEvent(float verticalValue);
+    public delegate void RotateInputEvent(float horizontalValue);
 
     public static event InputEvent Jump;
-    public static event InputEvent Walk;
     public static event InputEvent Interact;
-    public static event InputEvent Rotate;
     public static event InputEvent Attack;
-
     public static event InputEvent Ability1;
     public static event InputEvent Ability2;
     public static event InputEvent Ability3;
@@ -31,6 +30,22 @@ public class InputManager : MonoBehaviour
     public static event InputEvent Ability9;
     public static event InputEvent Ability0;
 
+    public static event WalkInputEvent Walk;
+    public static event RotateInputEvent Rotate;
+
+    private void Update()
+    {
+        TriggerJump();
+    }
+
+    private void FixedUpdate()
+    {
+        Walk?.Invoke(Input.GetAxis("Vertical"));
+
+        Rotate?.Invoke(Input.GetAxis("Horizontal"));
+    }
+
+
     //Function: TriggerJump
     //DESCRIPTION: Calls the event for jumping
     //PARAMETERS: None
@@ -38,17 +53,7 @@ public class InputManager : MonoBehaviour
     public static void TriggerJump()
     {
         if (Input.GetButtonDown("Jump"))
-            Jump();
-    }
-
-    //Function: TriggerWalk
-    //DESCRIPTION: Calls the event for walking forward / backward
-    //PARAMETERS: None
-    //RETURNS: None
-    public static void TriggerWalk()
-    {
-        if (Input.GetAxis("Vertical") != 0)
-            Walk();
+            Jump?.Invoke();
     }
 
     //Function: TriggerInteract
@@ -58,18 +63,117 @@ public class InputManager : MonoBehaviour
     public static void TriggerInteract()
     {
         if (Input.GetButtonDown("Interact"))
-            Interact();
+            Interact?.Invoke();
     }
 
-    //Function: TriggerRotate
-    //DESCRIPTION: Calls the event for rotating left or right
+    //Function: TriggerAttack
+    //DESCRIPTION: Calls the event for attacking
     //PARAMETERS: None
     //RETURNS: None
-    public static void TriggerRotate()
+    public static void TriggerAttack()
     {
-        if (Input.GetAxis("Horizontal") != 0)
-            Rotate();
+        if (Input.GetMouseButtonDown(0))
+            Attack?.Invoke();
 
     }
 
+    //Function: TriggerAbility1
+    //DESCRIPTION: Calls the event for the ability in the 1 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility1()
+    {
+        if(Input.GetButtonDown("Ability1"))
+            Ability1?.Invoke();
+    }
+
+    //Function: TriggerAbility2
+    //DESCRIPTION: Calls the event for the ability in the 2 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility2()
+    {
+        if (Input.GetButtonDown("Ability2"))
+            Ability2?.Invoke();
+    }
+
+    //Function: TriggerAbility3
+    //DESCRIPTION: Calls the event for the ability in the 3 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility3()
+    {
+        if (Input.GetButtonDown("Ability3"))
+            Ability3?.Invoke();
+    }
+
+    //Function: TriggerAbility4
+    //DESCRIPTION: Calls the event for the ability in the 4 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility4()
+    {
+        if (Input.GetButtonDown("Ability4"))
+            Ability4?.Invoke();
+    }
+
+    //Function: TriggerAbility5
+    //DESCRIPTION: Calls the event for the ability in the 5 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility5()
+    {
+        if (Input.GetButtonDown("Ability5"))
+            Ability5?.Invoke();
+    }
+
+    //Function: TriggerAbility6
+    //DESCRIPTION: Calls the event for the ability in the 6 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility6()
+    {
+        if (Input.GetButtonDown("Ability6"))
+            Ability6?.Invoke();
+    }
+
+    //Function: TriggerAbility7
+    //DESCRIPTION: Calls the event for the ability in the 7 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility7()
+    {
+        if (Input.GetButtonDown("Ability7"))
+            Ability7?.Invoke();
+    }
+
+    //Function: TriggerAbility8
+    //DESCRIPTION: Calls the event for the ability in the 8 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility8()
+    {
+        if (Input.GetButtonDown("Ability8"))
+            Ability8?.Invoke();
+    }
+
+    //Function: TriggerAbility9
+    //DESCRIPTION: Calls the event for the ability in the 9 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility9()
+    {
+        if (Input.GetButtonDown("Ability9"))
+            Ability9?.Invoke();
+    }
+
+    //Function: TriggerAbility0
+    //DESCRIPTION: Calls the event for the ability in the 0 slot
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerAbility0()
+    {
+        if (Input.GetButtonDown("Ability0"))
+            Ability0?.Invoke();
+    }
 }
