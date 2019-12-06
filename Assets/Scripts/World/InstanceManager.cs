@@ -17,7 +17,7 @@ public class InstanceManager : MonoBehaviour
     //RETURNS : none
     private void Start()
     {
-        InvokeRepeating("ProgressTime()", incrementClockTime, incrementClockTime);
+        InvokeRepeating("ProgressTime", incrementClockTime, incrementClockTime);
 
     }
 
