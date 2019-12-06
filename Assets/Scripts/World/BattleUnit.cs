@@ -10,7 +10,7 @@ using UnityEngine;
 //PURPOSE : interact with other units for the final battle
 public class BattleUnit
 {
-    private int unitTier;
+    protected int unitTier;
     private const int MINRANGE = 0;
     private const int MAXRANGE = 20;
 
