@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿
+//File Header:
+//FILE : PlayerObject.cs
+////PROJECT : WillOfTheWood
+//PROGRAMMER : Jeff
+//FIRST VERSION : 06/12/2019
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 [CreateAssetMenu (menuName = "Quests/KillQuest", fileName = "KillQuests")]
