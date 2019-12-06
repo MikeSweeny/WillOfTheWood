@@ -21,36 +21,60 @@ public class GameEventManager
     public static event GameEvent StartDay;
     public static event GameEvent StartNight;
 
+    //Function : TriggerGameStart
+    //DESCRIPTION : calls the event to start the game
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerGameStart()
     {
         if (GameStart != null)
             GameStart();
     }
 
+    //Function : TriggerGameOver
+    //DESCRIPTION : calls the event when the player dies
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerGameOver()
     {
         if (GameOver != null)
             GameOver();
     }
 
+    //Function : TriggerPause
+    //DESCRIPTION : calls the event that pauses the game
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerPause()
     {
         if (Pause != null)
             Pause();
     }
 
+    //Function : TriggerUnpause
+    //DESCRIPTION : calls the event to unpause the game
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerUnPause()
     {
         if (UnPause != null)
             UnPause();
     }
 
+    //Function : TriggerStartDay
+    //DESCRIPTION : call the event that starts a new day
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerStartDay()
     {
         if (StartDay != null)
             StartDay();
     }
 
+    //Function : TriggerStartNight
+    //DESCRIPTION : call the event that starts the night
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerStartNight()
     {
         if (StartNight != null)
