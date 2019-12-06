@@ -13,7 +13,16 @@ public class Clock
     static int currentDay = 1;
     static int hours;
     static float seconds;
-
+    
+    //Function : UpdateClock
+    //DESCRIPTION : increments seconds at a rate of 24 to 1. Then
+    //              progressing hours after an hour's worth of time, 
+    //              in-game has passed, and then progress the currentDay
+    //              in the same manner. When the day hours expire, it
+    //              it calls the GameEventManager to trigger the day and
+    //              night
+    //PARAMETERS : The difference in time, passed in by the InstanceManager
+    //RETURNS : none
     public static void UpdateClock(float deltaTime)
     {
         seconds += 24 * deltaTime;
