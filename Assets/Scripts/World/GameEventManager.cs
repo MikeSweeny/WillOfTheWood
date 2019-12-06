@@ -18,6 +18,7 @@ public class GameEventManager
     public static event GameEvent GameOver;
     public static event GameEvent Pause;
     public static event GameEvent UnPause;
+    public static event GameEvent Restart;
     public static event GameEvent StartDay;
     public static event GameEvent StartNight;
 
@@ -59,6 +60,16 @@ public class GameEventManager
     {
         if (UnPause != null)
             UnPause();
+    }
+
+    //Function : TriggerRestart
+    //DESCRIPTION : calls the event that restarts the game
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerRestart()
+    {
+        if (Restart != null)
+            Restart();
     }
 
     //Function : TriggerStartDay
