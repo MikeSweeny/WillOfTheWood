@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour
     public float runSpeed = 10.0f;
     public float walkSpeed = 4.0f;
     public float turnSpeed = 250.0f;
-    public float moveBackwardsMultiplyer = 0.75f;
+    public float moveBackwardsMultiplier = 0.75f;
 
-    float speedMultiplyer = 0.0f;
+    float speedMultiplier = 0.0f;
     bool grounded = false;
     Vector3 moveDirection = Vector3.zero;
     bool isWalking = false;
@@ -38,6 +38,10 @@ public class PlayerController : MonoBehaviour
         InputManager.Jump += PlayerJump;
     }
 
+    //Function: Movement
+    //DESCRIPTION: function for moving the player forward and backward
+    //PARAMETERS: None
+    //RETURNS: None
     void Movement(float verticalMovement)
     {
         if (Input.GetMouseButton(1))
@@ -49,11 +53,23 @@ public class PlayerController : MonoBehaviour
             moveDirection = new Vector3(0, 0, verticalMovement);
         }
 
-        moveDirection *= isWalking ? walkSpeed * speedMultiplyer : runSpeed * speedMultiplyer;
+        if(verticalMovement < 0)
+        {
+            speedMultiplier = moveBackwardsMultiplier;
+        } else
+        {
+            speedMultiplier = 1;
+        }
+
+        moveDirection *= isWalking ? walkSpeed * speedMultiplier : runSpeed * speedMultiplier;
 
         moveDirection = transform.TransformDirection(moveDirection);
     }
 
+    //Function: TurnPlayer
+    //DESCRIPTION: function for rotating the player based off mouse inputs
+    //PARAMETERS: None
+    //RETURNS: None
     void TurnPlayer(float horizontalRotation)
     {
         if (Input.GetMouseButton(1))
@@ -66,6 +82,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //Function: PlayerJump
+    //DESCRIPTION: function for allowing the player to jump
+    //PARAMETERS: None
+    //RETURNS: None
     void PlayerJump()
     {
         jumping = true;
