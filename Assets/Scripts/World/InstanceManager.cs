@@ -11,17 +11,20 @@ using UnityEngine;
 public class InstanceManager : MonoBehaviour
 {
     private const float incrementClockTime = 1f;
+    //Function : Start
+    //DESCRIPTION : Invokes ProgressTime by the incrmentClockTime const (should be 1 second)
+    //PARAMETERS : none
+    //RETURNS : none
     private void Start()
     {
         InvokeRepeating("ProgressTime()", incrementClockTime, incrementClockTime);
 
     }
 
-    private void Update()
-    {        
-
-    }
-
+    //Function : ProgressTime
+    //DESCRIPTION : calls the UpdateClock function from the Clock class, passing in the incrementClock const
+    //PARAMETERS : none
+    //RETURNS : none
     private void ProgressTime()
     {
         Clock.UpdateClock(incrementClockTime);
