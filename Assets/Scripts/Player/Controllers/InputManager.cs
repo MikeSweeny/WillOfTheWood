@@ -12,6 +12,9 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
 
+    private static InputManager instance = null;
+    public static InputManager Instance { get { return instance; } }
+
     public delegate void InputEvent();
     public delegate void WalkInputEvent(float verticalValue);
     public delegate void RotateInputEvent(float horizontalValue);
@@ -33,6 +36,19 @@ public class InputManager : MonoBehaviour
     public static event WalkInputEvent Walk;
     public static event RotateInputEvent Rotate;
 
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            instance = this;
+        }
+    }
+
     private void Update()
     {
         TriggerJump();
@@ -40,9 +56,11 @@ public class InputManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Walk?.Invoke(Input.GetAxis("Vertical"));
+        if (Walk != null)
+            Walk(Input.GetAxis("Vertical"));
 
-        Rotate?.Invoke(Input.GetAxis("Horizontal"));
+        if (Rotate != null)
+            Rotate(Input.GetAxis("Horizontal"));
     }
 
 

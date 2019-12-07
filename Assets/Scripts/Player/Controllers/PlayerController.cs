@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float runSpeed = 10.0f;
     public float walkSpeed = 4.0f;
-    public float turnSpeed = 250.0f;
+    public float turnSpeed = 150.0f;
     public float moveBackwardsMultiplier = 0.75f;
 
     float speedMultiplier = 0.0f;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
 
     CharacterController controller;
 
-    private void Awake()
+    private void Start()
     {
         controller = GetComponent<CharacterController>();
         InputManager.Walk += Movement;
