@@ -38,12 +38,19 @@ public class PlayerController : MonoBehaviour
         InputManager.Jump += PlayerJump;
     }
 
+    private void Update()
+    {
+        grounded = ((controller.Move(moveDirection * Time.deltaTime)) & CollisionFlags.Below) != 0;
+        moveDirection.y -= gravity * Time.deltaTime;
+    }
+
     //Function: Movement
     //DESCRIPTION: function for moving the player forward and backward
     //PARAMETERS: None
     //RETURNS: None
     void Movement(float verticalMovement)
     {
+        isWalking = walkByDefault;
         if (Input.GetMouseButton(1))
         {
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, verticalMovement);
@@ -53,10 +60,11 @@ public class PlayerController : MonoBehaviour
             moveDirection = new Vector3(0, 0, verticalMovement);
         }
 
-        if(verticalMovement < 0)
+        if (verticalMovement < 0)
         {
             speedMultiplier = moveBackwardsMultiplier;
-        } else
+        }
+        else
         {
             speedMultiplier = 1;
         }
@@ -88,14 +96,13 @@ public class PlayerController : MonoBehaviour
     //RETURNS: None
     void PlayerJump()
     {
-        jumping = true;
-        moveDirection.y = jumpSpeed;
-
-        moveDirection.y -= gravity * Time.deltaTime;
-
-        grounded = ((controller.Move(moveDirection * Time.deltaTime)) & CollisionFlags.Below) != 0;
-
         jumping = grounded ? false : jumping;
+
+        if(!jumping)
+        {
+            jumping = true;
+            moveDirection.y = jumpSpeed;
+        }
     }
 
 }
