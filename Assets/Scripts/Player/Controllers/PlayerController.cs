@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     //Function: Movement
     //DESCRIPTION: function for moving the player forward and backward
-    //PARAMETERS: None
+    //PARAMETERS: verticalMovement
     //RETURNS: None
     void Movement(float verticalMovement)
     {
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
     //Function: TurnPlayer
     //DESCRIPTION: function for rotating the player based off mouse inputs
-    //PARAMETERS: None
+    //PARAMETERS: horizontalRotation
     //RETURNS: None
     void TurnPlayer(float horizontalRotation)
     {

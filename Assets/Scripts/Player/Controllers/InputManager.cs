@@ -9,6 +9,7 @@ using UnityEngine;
 //NAME: InputManager
 //PURPOSE: This class is meant to act as an intermediary
 // between the default input manager and our controllers.
+// there must be an instance of this class in the game for the input to work
 public class InputManager : MonoBehaviour
 {
 
