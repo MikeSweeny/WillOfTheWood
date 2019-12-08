@@ -11,22 +11,23 @@ using UnityEngine;
 [CreateAssetMenu (menuName = "Entity/Player", fileName = "Player")]
 public class PlayerObject : EntityObject
 {
-    public Stats health;
-    public Stats accuracy;
-    public Stats cunning;
-    public Stats discrete;
-    public Stats persuasive;
-    public Stats quick;
-    public Stats strong;
-    public Stats vigilant;
+    public StatSet pStats;
 
+    [Range(0, 100)]
     public int pHealth;
+    [Range(0, 20)]
     public int pAccuracy;
+    [Range(0, 20)]
     public int pCunning;
+    [Range(0, 20)]
     public int pDiscrete;
+    [Range(0, 20)]
     public int pPersuasive;
+    [Range(0, 20)]
     public int pQuick;
+    [Range(0, 20)]
     public int pStrong;
+    [Range(0, 20)]
     public int pVigilant;
 
     //public PlayerController player;
@@ -34,13 +35,13 @@ public class PlayerObject : EntityObject
 
     private void Awake()
     {
-        pHealth = health.statValue;
-        pAccuracy = accuracy.statValue;
-        pCunning = cunning.statValue;
-        pDiscrete = discrete.statValue;
-        pPersuasive = persuasive.statValue;
-        pStrong = strong.statValue;
-        pVigilant = vigilant.statValue;
+        //pHealth = health.statValue;
+        //pAccuracy = accuracy.statValue;
+        //pCunning = cunning.statValue;
+        //pDiscrete = discrete.statValue;
+        //pPersuasive = persuasive.statValue;
+        //pStrong = strong.statValue;
+        //pVigilant = vigilant.statValue;
 
         GetStats();
     }

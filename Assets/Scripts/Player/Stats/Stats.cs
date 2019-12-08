@@ -2,46 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum StatType
+public abstract class StatsObject : ScriptableObject
 { 
-    Accuracy,
-    Cunning,
-    Discrete,
-    Pursuasive,
-    Quick,
-    Strong,
-    Vigilant,
-    Health
-}
+    public int Accuracy { get; set; }
+    public int Cunning { get; set; }
+    public int Discrete { get; set; }
+    public int Pursuasive { get; set; }
+    public int Quick { get; set; }
+    public int Strong { get; set; }
+    public int Vigilant { get; set; }
 
-public abstract class Stats : ScriptableObject
-{
-    public new string name;
-    public int statValue;
-    public int statMod;
-    public StatType type;
 
-    [TextArea(15, 20)]
-    public string description;
 
-    public virtual void IncreaseStat(int _value) { }
+    public virtual void IncreaseStat(int _value, int _secondValue) { }
     public virtual void DecreaseStat(int _value) { }
     public virtual void ApplyMod(int _value) { }
 
 }
-
-public class stat
+public class Stats
 {
-    public string name;
-    public int value;
-    public int mod;
-    public StatType type;
+    public int accuracy;
+    public int discrete;
+    public int pursuasive;
+    public int quick;
+    public int strong;
+    public int vigilant;
 
-    public stat(Stats stat)
+
+    //Function Header:
+    //FUNCTION : Entitiy()
+    //DESCRIPTION : Initialize child Classes with the information set in the Entity : ScriptableObjects class
+    //PARAMETERS : EntityObject entity
+    //RETURNS : VOID
+
+    public Stats(StatsObject stats)
     {
-        name = stat.name;
-        value = stat.statValue;
-        mod = stat.statMod;
-        type = stat.type;
+        accuracy = stats.Accuracy;
+        discrete = stats.Discrete;
+        pursuasive = stats.Pursuasive;
+        quick = stats.Quick;
+        strong = stats.Strong;
+        vigilant = stats.Vigilant;
     }
+
 }

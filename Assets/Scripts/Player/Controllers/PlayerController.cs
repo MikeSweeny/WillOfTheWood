@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         grounded = ((controller.Move(moveDirection * Time.deltaTime)) & CollisionFlags.Below) != 0;
         moveDirection.y -= gravity * Time.deltaTime;
+        playerBrain.GetStats();
     }
 
     //Function: Movement

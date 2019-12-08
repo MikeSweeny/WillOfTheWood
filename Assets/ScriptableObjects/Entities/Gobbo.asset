@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2ae99a586c68a4d8f8c8580d420e25, type: 3}
-  m_Name: TEST_MainPlayer
+  m_Script: {fileID: 11500000, guid: 72f48b9ef58244c428df048703051b24, type: 3}
+  m_Name: Gobbo
   m_EditorClassIdentifier: 
   name: 
   ID: 0
@@ -24,11 +24,10 @@ MonoBehaviour:
   quick: {fileID: 0}
   strong: {fileID: 0}
   vigilant: {fileID: 0}
-  pHealth: 10
-  pAccuracy: 6
-  pCunning: 16
-  pDiscrete: 10
-  pPersuasive: 4
-  pQuick: 7
-  pStrong: 11
-  pVigilant: 6
+  eAccuracy: 8
+  eCunning: 12
+  eDiscrete: 6
+  ePersuasive: 12
+  eQuick: 8
+  eStrong: 6
+  eVigilant: 12

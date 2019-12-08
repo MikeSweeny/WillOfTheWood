@@ -16,14 +16,7 @@ MonoBehaviour:
   ID: 0
   description: 
   type: 0
-  health: {fileID: 0}
-  accuracy: {fileID: 0}
-  cunning: {fileID: 0}
-  discrete: {fileID: 0}
-  persuasive: {fileID: 0}
-  quick: {fileID: 0}
-  strong: {fileID: 0}
-  vigilant: {fileID: 0}
+  pStats: {fileID: 11400000, guid: fadddd51eeb14e847b628011c745a951, type: 2}
   pHealth: 0
   pAccuracy: 0
   pCunning: 0
