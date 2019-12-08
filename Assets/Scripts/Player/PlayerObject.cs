@@ -8,17 +8,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu (menuName = "Quests/KillQuest", fileName = "KillQuests")]
+[CreateAssetMenu (menuName = "Entity/Player", fileName = "Player")]
 public class PlayerObject : EntityObject
 {
-    //public Stats health;
-    //public Stats accuracy;
-    //public Stats cunning;
-    //public Stats discrete;
-    //public Stats persuasive;
-    //public Stats quick;
-    //public Stats strong;
-    //public Stats vigilant;
+    public Stats health;
+    public Stats accuracy;
+    public Stats cunning;
+    public Stats discrete;
+    public Stats persuasive;
+    public Stats quick;
+    public Stats strong;
+    public Stats vigilant;
 
     public int pHealth;
     public int pAccuracy;
@@ -34,13 +34,13 @@ public class PlayerObject : EntityObject
 
     private void Awake()
     {
-        //pHealth = health.statValue;
-        //pAccuracy = accuracy.statValue;
-        //pCunning = cunning.statValue;
-        //pDiscrete = discrete.statValue;
-        //pPersuasive = persuasive.statValue;
-        //pStrong = strong.statValue;
-        //pVigilant = vigilant.statValue;
+        pHealth = health.statValue;
+        pAccuracy = accuracy.statValue;
+        pCunning = cunning.statValue;
+        pDiscrete = discrete.statValue;
+        pPersuasive = persuasive.statValue;
+        pStrong = strong.statValue;
+        pVigilant = vigilant.statValue;
 
         GetStats();
     }

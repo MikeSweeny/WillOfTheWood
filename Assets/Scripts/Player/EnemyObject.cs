@@ -14,14 +14,14 @@ public class EnemyObject : EntityObject
 {
     // Uncomment when we have the Stats Setup in game
 
-    //public Stats health;
-    //public Stats accuracy;
-    //public Stats cunning;
-    //public Stats discrete;
-    //public Stats persuasive;
-    //public Stats quick;
-    //public Stats strong;
-    //public Stats vigilant;
+    public Stats health;
+    public Stats accuracy;
+    public Stats cunning;
+    public Stats discrete;
+    public Stats persuasive;
+    public Stats quick;
+    public Stats strong;
+    public Stats vigilant;
 
     public int eHealth;
     public int eAccuracy;
@@ -39,13 +39,13 @@ public class EnemyObject : EntityObject
 
     private void Awake()
     {
-        //eHealth = health.statValue;
-        //eAccuracy = accuracy.statValue;
-        //eCunning = cunning.statValue;
-        //eDiscrete = discrete.statValue;
-        //ePersuasive = persuasive.statValue;
-        //eStrong = strong.statValue;
-        //eVigilant = vigilant.statValue;
+        eHealth = health.statValue;
+        eAccuracy = accuracy.statValue;
+        eCunning = cunning.statValue;
+        eDiscrete = discrete.statValue;
+        ePersuasive = persuasive.statValue;
+        eStrong = strong.statValue;
+        eVigilant = vigilant.statValue;
 
         GetStats();
 

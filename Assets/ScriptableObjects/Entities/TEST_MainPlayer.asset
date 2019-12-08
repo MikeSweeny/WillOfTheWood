@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e2ae99a586c68a4d8f8c8580d420e25, type: 3}
+  m_Name: TEST_MainPlayer
+  m_EditorClassIdentifier: 
+  name: 
+  ID: 0
+  description: 
+  type: 0
+  health: {fileID: 11400000, guid: 30f24365317e26348a34fe40ebf71e49, type: 2}
+  accuracy: {fileID: 11400000, guid: a037fd990ec14584b95f7e3bf1ff8f09, type: 2}
+  cunning: {fileID: 11400000, guid: eb1a060f13dc4674da30ba7a65608697, type: 2}
+  discrete: {fileID: 11400000, guid: 1e1ab0de89b890f4c90dbd09367cfdc8, type: 2}
+  persuasive: {fileID: 11400000, guid: 698f17abca38c9c44a2750f23be76331, type: 2}
+  quick: {fileID: 11400000, guid: b758036e5f6bcda4e90371f0b3177987, type: 2}
+  strong: {fileID: 11400000, guid: b83e0154684caf8448188949dfa1f89f, type: 2}
+  vigilant: {fileID: 11400000, guid: bdd8ab9b3230acd419ba0c19d905911c, type: 2}
+  pHealth: 150
+  pAccuracy: 15
+  pCunning: 15
+  pDiscrete: 15
+  pPersuasive: 15
+  pQuick: 15
+  pStrong: 15
+  pVigilant: 15

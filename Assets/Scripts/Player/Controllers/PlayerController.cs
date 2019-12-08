@@ -12,7 +12,7 @@ using UnityEngine;
 //PURPOSE: This class will be for controlling the player movements and interactions
 public class PlayerController : MonoBehaviour
 {
-
+    public PlayerObject playerBrain;            // Added 07/12/2019 - JO.    The Players "Brain" Holds all the stats and stuff that makes the player a Unique
     public bool walkByDefault = true;
     public float gravity = 20.0f;
 
