@@ -9,7 +9,7 @@
 //NAME : EnttiyObject : ScriptableObject
 //PURPOSE : To setup and initialize base Game Entities like the Player, Enemies and NPCs
 
-public enum EntitiyType
+public enum EntityType
 {
     Player,
     Enemy,
@@ -26,7 +26,7 @@ public abstract class EntityObject : ScriptableObject
     public int ID;
     [TextArea(10, 10)]
     public string description;
-    public EntitiyType type;
+    public EntityType type;
 
 
 }
@@ -39,7 +39,7 @@ public class Entity
 {
     public string name;
     public int ID;
-    public EntitiyType type;
+    public EntityType type;
 
     //Function Header:
     //FUNCTION : Entitiy()

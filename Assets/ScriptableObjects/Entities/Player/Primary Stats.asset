@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2462a8048845bba43a15a99045933fd5, type: 3}
-  m_Name: EnemyStats
+  m_Name: Primary Stats
   m_EditorClassIdentifier: 
-  accuracy: 2
-  discrete: 3
-  pursuasive: 5
-  quick: 4
-  strong: 2
-  vigilant: 1
+  accuracy: 11
+  cunning: 7
+  discrete: 9
+  pursuasive: 14
+  quick: 10
+  strong: 11
+  vigilant: 12

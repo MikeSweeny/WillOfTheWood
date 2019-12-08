@@ -16,12 +16,4 @@ MonoBehaviour:
   ID: 0
   description: 
   type: 0
-  pStats: {fileID: 11400000, guid: fadddd51eeb14e847b628011c745a951, type: 2}
-  pHealth: 0
-  pAccuracy: 0
-  pCunning: 0
-  pDiscrete: 0
-  pPersuasive: 0
-  pQuick: 0
-  pStrong: 0
-  pVigilant: 0
+  pStats: {fileID: 11400000, guid: cbd21e22a5473fb4bb228e973ab78d06, type: 2}
