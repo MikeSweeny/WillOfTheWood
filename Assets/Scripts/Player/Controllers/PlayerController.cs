@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         InputManager.Walk += Movement;
         InputManager.Rotate += TurnPlayer;
         InputManager.Jump += PlayerJump;
+        InputManager.Attack += PlayerAttack;
     }
 
     private void Update()
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     //Function: Movement
     //DESCRIPTION: function for moving the player forward and backward
-    //PARAMETERS: verticalMovement
+    //PARAMETERS: float verticalMovement
     //RETURNS: None
     void Movement(float verticalMovement)
     {
@@ -77,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     //Function: TurnPlayer
     //DESCRIPTION: function for rotating the player based off mouse inputs
-    //PARAMETERS: horizontalRotation
+    //PARAMETERS: float horizontalRotation
     //RETURNS: None
     void TurnPlayer(float horizontalRotation)
     {
@@ -104,6 +105,15 @@ public class PlayerController : MonoBehaviour
             jumping = true;
             moveDirection.y = jumpSpeed;
         }
+    }
+
+    //Function: PlayerAttack
+    //DESCRIPTION:  This function will allow the player to execute their attack and switch to the attack animation
+    //PARAMETERS: None
+    //RETURNS: None
+    void PlayerAttack()
+    {
+
     }
 
 }

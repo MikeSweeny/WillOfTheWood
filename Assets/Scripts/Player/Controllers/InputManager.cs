@@ -19,6 +19,7 @@ public class InputManager : MonoBehaviour
     public delegate void InputEvent();
     public delegate void WalkInputEvent(float verticalValue);
     public delegate void RotateInputEvent(float horizontalValue);
+    public delegate void CamerControlEvent();
 
     public static event InputEvent Jump;
     public static event InputEvent Interact;
@@ -36,6 +37,7 @@ public class InputManager : MonoBehaviour
 
     public static event WalkInputEvent Walk;
     public static event RotateInputEvent Rotate;
+    public static event CamerControlEvent MoveCamera;
 
     private void Awake()
     {
@@ -53,17 +55,16 @@ public class InputManager : MonoBehaviour
     private void Update()
     {
         TriggerJump();
+        MoveCamera?.Invoke();
+        TriggerAttack();
     }
 
     private void FixedUpdate()
     {
-        if (Walk != null)
-            Walk(Input.GetAxis("Vertical"));
+        Walk?.Invoke(Input.GetAxis("Vertical"));
 
-        if (Rotate != null)
-            Rotate(Input.GetAxis("Horizontal"));
+        Rotate?.Invoke(Input.GetAxis("Horizontal"));
     }
-
 
     //Function: TriggerJump
     //DESCRIPTION: Calls the event for jumping
@@ -91,7 +92,7 @@ public class InputManager : MonoBehaviour
     //RETURNS: None
     public static void TriggerAttack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))
             Attack?.Invoke();
 
     }
