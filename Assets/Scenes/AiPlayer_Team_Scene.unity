@@ -138,7 +138,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 113312171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b2743f2c408e60418cf79121701d719, type: 3}
+  m_Script: {fileID: 11500000, guid: 42a84cd08a35bd54980f583aea090d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &113312173
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBrain: {fileID: 11400000, guid: f43b11aaa94daf24484f6f434b5cc1d8, type: 2}
   walkByDefault: 1
-  gravity: 20
+  gravity: 100
   jumpSpeed: 75
   runSpeed: 10
   walkSpeed: 4
