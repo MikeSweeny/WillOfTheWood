@@ -9,8 +9,10 @@ using UnityEngine;
 //Class Header:
 ////NAME : StatsObject : ScriptableObject
 ////PURPOSE : builds a base set of Attributes to be changed in the editor and appilied to various gameobjects
+
 public abstract class StatsObject : ScriptableObject
-{ 
+{
+    [SerializeField]
     public int Accuracy { get; set; }
     public int Cunning { get; set; }
     public int Discrete { get; set; }
@@ -21,20 +23,20 @@ public abstract class StatsObject : ScriptableObject
 
 
 
-    ////FUNCTION : functionName
-    ////DESCRIPTION : what the function is for
-    ////PARAMETERS : types and names
+    ////FUNCTION : IncreaseStat
+    ////DESCRIPTION : Increasing a Stat
+    ////PARAMETERS : int _value, int _secondValue
     ////RETURNS : type and use  
     public virtual void IncreaseStat(int _value, int _secondValue) { }
 
-    ////FUNCTION : functionName
-    ////DESCRIPTION : what the function is for
-    ////PARAMETERS : types and names
+    ////FUNCTION : DecreaseStat
+    ////DESCRIPTION : decreasing a stat
+    ////PARAMETERS : int _value, int _secondValue
     ////RETURNS : type and use  
     public virtual void DecreaseStat(int _value) { }
-    ////FUNCTION : functionName
-    ////DESCRIPTION : what the function is for
-    ////PARAMETERS : types and names
+    ////FUNCTION : ApplyMod
+    ////DESCRIPTION :Apply a Mod
+    ////PARAMETERS : int _value, int _secondValue
     ////RETURNS : type and use  
     public virtual void ApplyMod(int _value) { }
 

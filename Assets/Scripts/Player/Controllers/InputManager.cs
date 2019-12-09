@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
 {
 
     private static InputManager instance = null;
-    public static InputManager Instance { get { return instance; } }
+    //public static InputManager Instance { get { return instance; } }
 
     public delegate void InputEvent();
     public delegate void WalkInputEvent(float verticalValue);

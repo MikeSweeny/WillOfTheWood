@@ -13,7 +13,6 @@ using UnityEngine;
 ////PURPOSE : Screating NPCs
 
 
-    // BUild when we need NPCs    *Note for Future Jeff, Sorry we put this off* 
 
 public class NPCObject : EntityObject
 {

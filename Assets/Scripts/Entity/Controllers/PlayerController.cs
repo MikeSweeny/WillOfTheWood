@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        playerBrain.Initialize();
         controller = GetComponent<CharacterController>();
         InputManager.Walk += Movement;
         InputManager.Rotate += TurnPlayer;
