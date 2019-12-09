@@ -20,7 +20,7 @@ public class BEnemyUnit : BattleUnit
     //              the unitTier from BattleUnits. 
     //PARAMETERS : none
     //RETURNS : int : The amount of enemies per waves 
-    private int EnemyUnitsToSpawn()
+    public int EnemyUnitsToSpawn()
     {
         int units = unitTier * TIERTOENEMYCOUNT;
         return units;

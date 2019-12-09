@@ -25,7 +25,7 @@ public class BattleUnit
         defeated = false;
         fought = false;
         spawned = false;
-        //WaveManager.StartWave += StartWave;
+        WaveManager.StartWave += StartWave;
     }
 
     //Function : SkillCheck
@@ -96,7 +96,7 @@ public class BattleUnit
     //DESCRIPTION : prepares unit for new wave cycle
     //PARAMETERS : none
     //RETURNS : none
-    private void WaveStart()
+    private void StartWave()
     {
         fought = false;
     }

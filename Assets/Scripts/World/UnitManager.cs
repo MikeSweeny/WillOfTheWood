@@ -54,9 +54,9 @@ public class UnitManager
     //DESCRIPTION : returns a capable enemy unit to convert into a wave
     //PARAMETERS : none
     //RETURNS : BEnemyUnit indicating a battle-ready unit, if null end battle
-    public static BEnemyUnit GetEnemyUnit(int wave)
+    public static BEnemyUnit GetEnemyUnit()
     {
-        for (int i = wave; i < enemies.Length; ++i)
+        for (int i = 0; i < enemies.Length; ++i)
         {
             if (!enemies[i].IsDefeated() && !enemies[i].HasSpawned())
             {

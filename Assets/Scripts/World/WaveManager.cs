@@ -12,8 +12,7 @@ using UnityEngine;
 //When waves begin, end and what they are comprised of
 public class WaveManager
 {
-    private int waveCount;
-    private bool waveComplete = false;
+    public static int enemyCount;
 
     public delegate void WaveEvent();
     public static event WaveEvent StartWave;
@@ -37,25 +36,11 @@ public class WaveManager
     //              all the enimies in a wave of enemies
     //PARAMETERS : none
     //RETURNS : none
-    private void TriggerEndWave()
+    public static void TriggerEndWave()
     {
         if (EndWave != null)
         {
             EndWave();
-        }
-    }
-    //Function : TriggerSpawnWave
-    //DESCRIPTION : calls the event when the player when
-    //              the StartWave event is triggered. It
-    //              instantiates or  sets active enemy units
-    //              based on the tier of the enemy
-    //PARAMETERS : none
-    //RETURNS : none
-    private void TriggerSpawnWave()
-    {
-        if (SpawnWave != null)
-        {
-            SpawnWave();
         }
     }
 }
