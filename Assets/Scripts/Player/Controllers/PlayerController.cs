@@ -16,19 +16,19 @@ public class PlayerController : MonoBehaviour
     public bool walkByDefault = true;
     public float gravity = 20.0f;
 
-    public float jumpSpeed = 8.0f;
+    public float jumpSpeed = 75.0f;
     public float runSpeed = 10.0f;
     public float walkSpeed = 4.0f;
     public float turnSpeed = 150.0f;
     public float moveBackwardsMultiplier = 0.75f;
 
-    float speedMultiplier = 0.0f;
-    bool grounded = false;
-    Vector3 moveDirection = Vector3.zero;
-    bool isWalking = false;
-    bool jumping = false;
+    private float speedMultiplier = 0.0f;
+    private bool grounded = false;
+    private Vector3 moveDirection = Vector3.zero;
+    private bool isWalking = false;
+    private bool jumping = false;
 
-    CharacterController controller;
+    private CharacterController controller;
 
     private void Start()
     {
@@ -41,15 +41,18 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        grounded = ((controller.Move(moveDirection * Time.deltaTime)) & CollisionFlags.Below) != 0;
         moveDirection.y -= gravity * Time.deltaTime;
+
+        grounded = ((controller.Move(moveDirection * Time.deltaTime)) & CollisionFlags.Below) != 0;
+
+        jumping = grounded ? false : jumping;
     }
 
     //Function: Movement
     //DESCRIPTION: function for moving the player forward and backward
     //PARAMETERS: float verticalMovement
     //RETURNS: None
-    void Movement(float verticalMovement)
+    private void Movement(float verticalMovement)
     {
         isWalking = walkByDefault;
         if (Input.GetMouseButton(1))
@@ -79,7 +82,7 @@ public class PlayerController : MonoBehaviour
     //DESCRIPTION: function for rotating the player based off mouse inputs
     //PARAMETERS: float horizontalRotation
     //RETURNS: None
-    void TurnPlayer(float horizontalRotation)
+    private void TurnPlayer(float horizontalRotation)
     {
         if (Input.GetMouseButton(1))
         {
@@ -95,10 +98,8 @@ public class PlayerController : MonoBehaviour
     //DESCRIPTION: function for allowing the player to jump
     //PARAMETERS: None
     //RETURNS: None
-    void PlayerJump()
+    private void PlayerJump()
     {
-        jumping = grounded ? false : jumping;
-
         if(!jumping)
         {
             jumping = true;
@@ -110,7 +111,7 @@ public class PlayerController : MonoBehaviour
     //DESCRIPTION:  This function will allow the player to execute their attack and switch to the attack animation
     //PARAMETERS: None
     //RETURNS: None
-    void PlayerAttack()
+    private void PlayerAttack()
     {
 
     }

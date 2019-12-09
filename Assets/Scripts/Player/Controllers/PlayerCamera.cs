@@ -31,12 +31,12 @@ public class PlayerCamera : MonoBehaviour
     public bool allowMouseInputX = true;
     public bool allowMouseInputY = true;
 
-    float xDeg = 0.0f;
-    float yDeg = 0.0f;
-    float currentDistance;
-    float desiredDistance;
-    float correctedDistance;
-    bool rotateBehind = false;
+    private float xDeg = 0.0f;
+    private float yDeg = 0.0f;
+    private float currentDistance;
+    private float desiredDistance;
+    private float correctedDistance;
+    private bool rotateBehind = false;
 
 
     // Start is called before the first frame update
@@ -58,12 +58,12 @@ public class PlayerCamera : MonoBehaviour
     //DESCRIPTION:  This class is used to get the left and right mouse button inputs and the scroll wheel then control the camera based on that
     //PARAMETERS: Quaternion rotation, Vector3 vTargetOffset, Vector3 position, RaycastHit collisionHit, Vector3 trueTargetPosition and bool isCorrected
     //RETURNS: None
-    void ControlCamera()
+    private void ControlCamera()
     {
         
         if (GUIUtility.hotControl == 0)
         {
-            if (Input.GetMouseButton(0) || Input.GetMouseButton(1))
+            if (Input.GetMouseButton(1))
             {
                 if (allowMouseInputX)
                 {
@@ -124,12 +124,12 @@ public class PlayerCamera : MonoBehaviour
             transform.position = position;
         }
     }
-   
+
     //Function: RotateBehindTarget
     //DESCRIPTION: This function is use to rotate the camera behind its target when it is supposed to
     //PARAMETERS: float targetRotationAngle and float currentRotationAngle
     //RETURNS: None
-    void RotateBehindTarget()
+    private void RotateBehindTarget()
     {
         float targetRotationAngle = target.transform.eulerAngles.y;
         float currentRotationAngle = transform.eulerAngles.y;
@@ -150,7 +150,7 @@ public class PlayerCamera : MonoBehaviour
     //DESCRIPTION: This function is used to clamp the camera angle between its min and max
     //PARAMETERS: float angle, float min and float max
     //RETURNS: returns a float, this is done with the Mathf.Clamp() method
-    float ClampAngle(float angle, float min, float max)
+    private float ClampAngle(float angle, float min, float max)
     {
         if (angle < -360f)
             angle += 360f;

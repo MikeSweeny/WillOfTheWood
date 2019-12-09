@@ -101,9 +101,12 @@ public class InputManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Walk?.Invoke(Input.GetAxis("Vertical"));
+        if(inputEnabled)
+        {
+            Walk?.Invoke(Input.GetAxis("Vertical"));
 
-        Rotate?.Invoke(Input.GetAxis("Horizontal"));
+            Rotate?.Invoke(Input.GetAxis("Horizontal"));
+        }
     }
 
     //Function: TriggerJump
