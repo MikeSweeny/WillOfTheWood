@@ -38,6 +38,16 @@ public class PlayerController : MonoBehaviour
         InputManager.Rotate += TurnPlayer;
         InputManager.Jump += PlayerJump;
         InputManager.Attack += PlayerAttack;
+        InputManager.HotbarSlot1 += ActivateHotbarSlot1;
+        InputManager.HotbarSlot2 += ActivateHotbarSlot2;
+        InputManager.HotbarSlot3 += ActivateHotbarSlot3;
+        InputManager.HotbarSlot4 += ActivateHotbarSlot4;
+        InputManager.HotbarSlot5 += ActivateHotbarSlot5;
+        InputManager.HotbarSlot6 += ActivateHotbarSlot6;
+        InputManager.HotbarSlot7 += ActivateHotbarSlot7;
+        InputManager.HotbarSlot8 += ActivateHotbarSlot8;
+        InputManager.HotbarSlot9 += ActivateHotbarSlot9;
+        InputManager.HotbarSlot0 += ActivateHotbarSlot0;
     }
 
     private void Update()
@@ -114,7 +124,97 @@ public class PlayerController : MonoBehaviour
     //RETURNS: None
     private void PlayerAttack()
     {
+        print("Attacking");
+    }
 
+    //Function: ActivateHotbarSlot1
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 1 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot1()
+    {
+        print("Used slot 1");
+    }
+
+    //Function: ActivateHotbarSlot2
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 2 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot2()
+    {
+        print("Used slot 2");
+    }
+
+    //Function: ActivateHotbarSlot3
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 3 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot3()
+    {
+        print("Used slot 3");
+    }
+
+    //Function: ActivateHotbarSlot4
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 4 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot4()
+    {
+        print("Used slot 4");
+    }
+
+    //Function: ActivateHotbarSlot5
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 5 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot5()
+    {
+        print("Used slot 5");
+    }
+
+    //Function: ActivateHotbarSlot6
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 6 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot6()
+    {
+        print("Used slot 6");
+    }
+
+    //Function: ActivateHotbarSlot7
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 7 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot7()
+    {
+        print("Used slot 7");
+    }
+
+    //Function: ActivateHotbarSlot8
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 8 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot8()
+    {
+        print("Used slot 8");
+    }
+
+    //Function: ActivateHotbarSlot9
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 9 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot9()
+    {
+        print("Used slot 9");
+    }
+
+    //Function: ActivateHotbarSlot0
+    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 0 of the player hotbar
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateHotbarSlot0()
+    {
+        print("Used slot 0");
     }
 
 }
