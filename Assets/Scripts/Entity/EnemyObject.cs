@@ -30,6 +30,11 @@ public class EnemyObject : EntityObject
     public int defence;
     public int painThreshold;
 
+    ////FUNCTION : Initialize()
+    ////DESCRIPTION : Setting the Stats from the ScriptableObject (StatsSet) to the Enttiy that needs it
+    ////PARAMETERS : Void
+    ////RETURNS : void
+
     public void Initialize()
     {
         accuracy = eStats.accuracy;
