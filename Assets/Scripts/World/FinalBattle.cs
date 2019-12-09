@@ -1,7 +1,13 @@
-﻿using System.Collections;
+﻿//FILE          :   FinalBattle.cs
+//PROJECT       :   Will of the Woods
+//PROGRAMMER    :   Gavin McGuire
+//FIRST VERSION :   09/12/2019
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NAME : FinalBattle
+//PURPOSE : Handles mechanics for the game's climactic fight
 public class FinalBattle : MonoBehaviour
 {
     private bool startOfWave;
@@ -9,8 +15,11 @@ public class FinalBattle : MonoBehaviour
     private float interludeTime;
     private bool betweenWaves;
 
-    // Start is called before the first frame update
-    void Awake()
+    //Function : Awake
+    //DESCRIPTION : Initializes the gameobject
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Awake()
     {
         betweenWaves = true;
         interludeDuration = 10.0f;
@@ -20,8 +29,11 @@ public class FinalBattle : MonoBehaviour
         WaveManager.EndWave += EndWave;
     }
 
-    // Update is called once per frame
-    void Update()
+    //Function : Update
+    //DESCRIPTION : updates the gameobject
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Update()
     {
         if (betweenWaves)
         {
@@ -57,12 +69,20 @@ public class FinalBattle : MonoBehaviour
         }
     }
 
+    //Function : StartWave
+    //DESCRIPTION : Tells gameobject a new wave has started
+    //PARAMETERS : none
+    //RETURNS : none
     private void StartWave()
     {
         startOfWave = true;
         betweenWaves = false;
     }
 
+    //Function : EndWave
+    //DESCRIPTION : tells the gameobject the wave has ended
+    //PARAMETERS : none
+    //RETURNS : none
     private void EndWave()
     {
         betweenWaves = true;
