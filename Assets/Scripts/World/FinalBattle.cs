@@ -51,7 +51,7 @@ public class FinalBattle : MonoBehaviour
             startOfWave = false;
         }
 
-        if (WaveManager.enemyCount <= 0)
+        if (WaveManager.enemyCount <= 0 && !betweenWaves)
         {
             WaveManager.TriggerEndWave();
         }
