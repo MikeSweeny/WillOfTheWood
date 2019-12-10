@@ -19,7 +19,7 @@ public class InputManager : MonoBehaviour
     public delegate void InputEvent();
     public delegate void WalkInputEvent(float verticalValue);
     public delegate void RotateInputEvent(float horizontalValue);
-    public delegate void CamerControlEvent();
+    public delegate void CameraControlEvent();
 
     public static event InputEvent Jump;
     public static event InputEvent Interact;
@@ -37,7 +37,7 @@ public class InputManager : MonoBehaviour
 
     public static event WalkInputEvent Walk;
     public static event RotateInputEvent Rotate;
-    public static event CamerControlEvent MoveCamera;
+    public static event CameraControlEvent MoveCamera;
 
     //set to false when menu is opened
     public static bool inputEnabled = true;
