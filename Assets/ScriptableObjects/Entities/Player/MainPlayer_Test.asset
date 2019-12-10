@@ -17,16 +17,11 @@ MonoBehaviour:
   description: 
   type: 0
   pStats: {fileID: 11400000, guid: cbd21e22a5473fb4bb228e973ab78d06, type: 2}
-  pSecondaryStats: {fileID: 11400000, guid: 7e41b707f04c21b429d14e00c04e9722, type: 2}
-  gold: 695
-  accuracy: 100
-  cunning: 108
-  discrete: 149
-  pursuasive: 146
-  quick: 105
-  strong: 115
-  vigilant: 181
-  armour: 7
-  toughness: 12
-  defence: 12
-  painThreshold: 6
+  gold: 0
+  accuracy: 15
+  cunning: 11
+  discrete: 14
+  pursuasive: 10
+  quick: 13
+  strong: 14
+  vigilant: 11

@@ -13,10 +13,8 @@ using UnityEngine;
 public class EnemyObject : EntityObject
 {
     public StatSet eStats;
-    public SecondaryStatsSet eSecondaryStats;
     //public AbilitySet pAbilityes;
-    //public PlayerController player;
-    //public Inventory inventory;
+    //public AIControler? (Dunno name) AIBrain;
     public int gold;
     public int accuracy;
     public int cunning;
@@ -25,15 +23,17 @@ public class EnemyObject : EntityObject
     public int quick;
     public int strong;
     public int vigilant;
-    public int armour;
+    [Tooltip("Toughness is the Entities Health (Toughness = Strong (though never below 10)")]
     public int toughness;
+    [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
+    [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
     public int painThreshold;
 
-    ////FUNCTION : Initialize()
-    ////DESCRIPTION : Setting the Stats from the ScriptableObject (StatsSet) to the Enttiy that needs it
-    ////PARAMETERS : Void
-    ////RETURNS : void
+    //FUNCTION : Initialize()
+    //DESCRIPTION : Setting the Stats from the ScriptableObject (StatsSet) to the Enttiy that needs it
+    //PARAMETERS : Void
+    //RETURNS : void
 
     public void Initialize()
     {
@@ -44,11 +44,42 @@ public class EnemyObject : EntityObject
         quick = eStats.quick;
         strong = eStats.strong;
         vigilant = eStats.vigilant;
-        armour = eSecondaryStats.armour;
-        toughness = eSecondaryStats.toughness;
-        defence = eSecondaryStats.defence;
-        painThreshold = eSecondaryStats.painThreshold;
-
+        CalcToughness();
+        CalcPainThreshold();
+    }
+    //FUNCTION :  CalcToughness()
+    //DESCRIPTION : Calcualting the Toughness of the Entity
+    //PARAMETERS : void
+    //RETURNS : void
+    public void CalcToughness()
+    {
+        if (toughness <= 9)
+        {
+            toughness = 10;
+        }
+        if (strong >= 10)
+        {
+            toughness = strong;
+        }
+    }
+    //FUNCTION : CalcPainThreshold()
+    //DESCRIPTION : Calculating the Pain Threshold of the Entity
+    //PARAMETERS : void
+    //RETURNS : void
+    public void CalcPainThreshold()
+    {
+        painThreshold = strong / 2;
+    }
+    //FUNCTION : OnDeath()
+    //DESCRIPTION : what happens then the entitiy dies
+    //PARAMETERS : void
+    //RETURNS : void 
+    public void OnDeath()
+    {
+        if(WaveManager.enemyCount > 0)
+        {
+            WaveManager.enemyCount--;
+        }
     }
 
 

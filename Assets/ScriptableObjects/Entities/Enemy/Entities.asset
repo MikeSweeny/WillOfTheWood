@@ -16,8 +16,7 @@ MonoBehaviour:
   ID: 0
   description: 
   type: 0
-  eStats: {fileID: 11400000, guid: f8750e17f4aa7a6469615041698b3b68, type: 2}
-  eSecondaryStats: {fileID: 11400000, guid: 7e41b707f04c21b429d14e00c04e9722, type: 2}
+  eStats: {fileID: 0}
   gold: 0
   accuracy: 0
   cunning: 0
@@ -26,7 +25,6 @@ MonoBehaviour:
   quick: 0
   strong: 0
   vigilant: 0
-  armour: 0
   toughness: 0
   defence: 0
   painThreshold: 0

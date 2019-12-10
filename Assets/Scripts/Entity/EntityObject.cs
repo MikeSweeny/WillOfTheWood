@@ -28,7 +28,6 @@ public abstract class EntityObject : ScriptableObject
     public string description;
     public EntityType type;
 
-
 }
 
 //Class Header:

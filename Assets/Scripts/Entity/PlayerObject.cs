@@ -17,23 +17,23 @@ public class PlayerObject : EntityObject
 
 {   [Tooltip("Grab the Players Primary Stats Asset files variables for this class to use")]
     public StatSet pStats;
-    [Tooltip("Grab the Players Secondary Stats Asset files variables for this class to use")]
-    public SecondaryStatsSet pSecondaryStats;
-    //public AbilitySet pAbilityes;
-    //public PlayerController player;
-    //public Inventory inventory;
+    [HideInInspector]
     public int gold;
+    [HideInInspector]
     public int accuracy;
+    [HideInInspector]
     public int cunning;
+    [HideInInspector]
     public int discrete;
+    [HideInInspector]
     public int pursuasive;
+    [HideInInspector]
     public int quick;
+    [HideInInspector]
     public int strong;
+    [HideInInspector]
     public int vigilant;
-    public int armour;
-    public int toughness;
-    public int defence;
-    public int painThreshold;
+    [HideInInspector]
 
 
     ////FUNCTION : Initialize()
@@ -49,12 +49,6 @@ public class PlayerObject : EntityObject
         quick = pStats.quick;
         strong = pStats.strong;
         vigilant = pStats.vigilant;
-        armour = pSecondaryStats.armour;
-        toughness = pSecondaryStats.toughness;
-        defence = pSecondaryStats.defence;
-        painThreshold = pSecondaryStats.painThreshold;
 
     }
-
-
 }
