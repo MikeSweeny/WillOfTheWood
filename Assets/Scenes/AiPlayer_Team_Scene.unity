@@ -563,8 +563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBrain: {fileID: 11400000, guid: f43b11aaa94daf24484f6f434b5cc1d8, type: 2}
   walkByDefault: 1
-  gravity: 100
-  jumpSpeed: 75
+  gravity: 75
+  jumpSpeed: 20
   runSpeed: 10
   walkSpeed: 4
   turnSpeed: 150

@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+
         moveDirection.y -= gravity * Time.deltaTime;
 
         grounded = ((controller.Move(moveDirection * Time.deltaTime)) & CollisionFlags.Below) != 0;
@@ -116,6 +117,7 @@ public class PlayerController : MonoBehaviour
             jumping = true;
             moveDirection.y = jumpSpeed;
         }
+        moveDirection = transform.TransformDirection(moveDirection);
     }
 
     //Function: PlayerAttack
