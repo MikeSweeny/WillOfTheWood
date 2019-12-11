@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         InputManager.Rotate += TurnPlayer;
         InputManager.Jump += PlayerJump;
         InputManager.Attack += PlayerAttack;
+        InputManager.Interact += PlayerInteract;
         InputManager.HotbarSlot1 += ActivateHotbarSlot1;
         InputManager.HotbarSlot2 += ActivateHotbarSlot2;
         InputManager.HotbarSlot3 += ActivateHotbarSlot3;
@@ -86,6 +87,11 @@ public class PlayerController : MonoBehaviour
         moveDirection *= isWalking ? walkSpeed * speedMultiplier : runSpeed * speedMultiplier;
 
         moveDirection = transform.TransformDirection(moveDirection);
+    }
+
+    private void PlayerInteract()
+    {
+        print("Interacted");
     }
 
     //Function: TurnPlayer
