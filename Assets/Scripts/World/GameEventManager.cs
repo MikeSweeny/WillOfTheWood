@@ -48,6 +48,7 @@ public class GameEventManager
     //RETURNS : none
     public static void TriggerPause()
     {
+        UIEventManager.TriggerOpenPause();
         if (Pause != null)
             Pause();
     }
@@ -58,6 +59,7 @@ public class GameEventManager
     //RETURNS : none
     public static void TriggerUnPause()
     {
+        UIEventManager.TriggerClosePause();
         if (UnPause != null)
             UnPause();
     }
