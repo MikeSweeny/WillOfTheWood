@@ -1,0 +1,181 @@
+Recruit Quests
+
+1.Murder Mayhem
+
+The quest will start when the player encounters a dead body somewhere in the town and talks to the
+"security guard" NPC nearby who will identify the victim and task them to find the culprit
+
+goals
+
+-Talk to the Guard(who will tell the player the identity of the victim and urge them to talk to spouse) 
+
+-Find spouse and ask about "dead spouse"
+(the player will talk to the spouse who will talk about husbands...overwhelming debt to criminal)
+
+-Talk to said criminal
+(the player will talk to the criminal in a house and discover he killed the spouse as a warning to those
+who don't pay up)
+
+-Defeat the criminal
+(the player must kill them)
+
+-talk to spouse
+(the player will talk to the spouse and upon recieving justice will offer to give their full
+support to town for the coming battle)
+
+Rewards
+
+-Spouse recruited
+-Money(if the player talks to the guard afterward)
+
+
+
+2.Missing Hunter
+
+The quest will start if the player talks to an npc in the village who will tell them that their child(late teen/early adult hasn't
+hasn't returned from a hunt yet
+
+goals
+
+-Investigate the woods to find the hunter
+(the player will have to go to the forest to search for the hunter)
+
+-Follow tracks
+(if the player finds the tracks they can follow them to find the hunter, if they don't this skips to part 3)
+
+-Help the hunter
+(the hunter is fighting a beast and the player must help defeat it)
+
+-Bring the hunter safely home
+(the player escorts the hunter back to the village and they thank the player for saving their life and swear to help player
+defend against the elves)
+
+Reward
+
+-Hunter recruited
+
+
+
+
+Scavenging Quests
+
+1.Farming is fun
+
+The quest will begin if the player talks to a farmer in the farmlands who will ask the player for help to gather crops
+
+goals
+
+-Gather crops
+(the player will need to search the fields for a number of crops)
+
+-Return to farmer for reward
+(the player will talk to the farmer again)
+
+Reward
+
+-Money
+
+
+2. Woodpicker
+
+This quest will begin when player talks to an NPC in the village who will task them to go to the woods
+and bring back lumber to help build barricades
+
+Goals
+
+-Head to the woods
+
+-Gather(number)logs
+(the player needs to pick up wood lying around)
+
+-Head back to the village
+(the players heads back to the village and gets reward from NPC
+
+Rewards
+
+-Money
+-Weapon?
+
+
+Kill Quests
+
+1.Clearing the Camp
+
+Quest will begin when player encounters elf encampment in the woods
+
+Goals
+
+-Defeat all the elves
+(the player will need to kill all elves inside camp)
+
+Rewards
+
+-Player finds money on the ground or chest
+
+2. Moving Up Ranks
+
+Quest will begin if player finds dropped message (note) somewhere in overworld from a high up elf commander
+
+-Read the note
+
+-Kill (elf name)
+(upon discovering the name of the elf in the note the player will be tasked with killing him to sabotage elf
+army)
+
+Rewards
+
+-Weapon
+
+
+Side Quests
+
+1. Artifact of Power (There will be more story behind this we can come up with)
+
+Quest will begin when the player finds an ancient object in the basement of an abandodoned house
+
+
+goals
+
+
+-Investigate the artifact
+(The player will need to bring the object to another part of the world with no clues of where...there will
+be a certain indicator at the place the player needs to bring it to)
+
+-Open the door
+(the player discovers a large door that requires puzzle mechanics to open(will be impossibe without artifact))
+
+- Investigate the Altar
+(The player will walk up to a dark altar of unknown power and recieve a gift)
+
+Rewards
+
+-Ability
+
+2.Noises in the dark
+
+This quest will trigger when the players arrives at a house where upon speaking to a family member
+will discover that the family have been hearing strange noises at night
+
+Goals
+
+-Investigate the house)
+(The player will search the house and will find secret room behind a cupboard)
+
+-Follow the passage
+(the room leads to a path the player will follow)
+
+-Kill The looters
+(The players discover pillagers and robbers at the end that have been using the passage to rob the house at night and kill them)
+
+-Return to Family
+(The player returns to family and recieves a reward)
+
+Rewards
+
+-Money
+
+
+
+
+
+
