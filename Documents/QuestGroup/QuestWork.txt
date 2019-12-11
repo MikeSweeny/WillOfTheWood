@@ -5,3 +5,6 @@ Link-https://drive.google.com/file/d/1aNi2e__rPbl0cXCmmNMaMd-r3pvW48ER/view?usp=
 Mon-Wed (2:19)
 
 Created multiple quest trees with 68 quests and template for quest info
+
+Expanded the Priest questline, adding more indepth details, adding requirments and rewards
+	Tim-
