@@ -114,8 +114,8 @@ public class PlayerController : MonoBehaviour
         {
             jumping = true;
             moveDirection.y = jumpSpeed;
+            moveDirection = transform.TransformDirection(moveDirection);
         }
-        moveDirection = transform.TransformDirection(moveDirection);
     }
 
     //Function: PlayerAttack

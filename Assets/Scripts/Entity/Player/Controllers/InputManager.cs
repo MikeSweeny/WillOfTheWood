@@ -53,6 +53,9 @@ public class InputManager : MonoBehaviour
         {
             instance = this;
         }
+
+        GameEventManager.Pause += OnPause;
+        GameEventManager.UnPause += UnPause;
     }
 
     private void Update()
@@ -107,6 +110,24 @@ public class InputManager : MonoBehaviour
 
             Rotate?.Invoke(Input.GetAxis("Horizontal"));
         }
+    }
+
+    //Function: OnPause
+    //DESCRIPTION: this function disables input on pause
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void OnPause()
+    {
+        inputEnabled = false;
+    }
+
+    //Function: UnPause
+    //DESCRIPTION: this function enables input when game is unpaused
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void UnPause()
+    {
+        inputEnabled = true;
     }
 
     //Function: TriggerJump
