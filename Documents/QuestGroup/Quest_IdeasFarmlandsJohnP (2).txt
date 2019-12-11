@@ -1,0 +1,214 @@
+Ideas for quests (Farmlands):
+_________________
+
+(Investigation quests)
+
+1.Name: NPC searching for child.
+
+Description: A mother has lost her child in the farmlands.
+
+Goals: 
+1.Find the 1st clue 
+2.Find the 2nd clue 
+3.Find the 3rd clue. 
+4.Find the child 
+5.Escort child home.
+
+Rewards: exp and currency.
+
+2.Name: NPC searching for lost item.
+
+Description: NPC has lost there item in the Farmlands and wants you to find it for them.
+
+Goals:
+1.Find the 1st clue 
+2.Find the 2nd clue 
+3.Find the 3rd clue. 
+4.Find the item. 
+5.Return to the NPC with the item.
+
+Rewards: exp and currency.
+
+3.Name: NPC missing.
+Description: An NPC is worried for another NPC, and wants you to find out where they are and what happened.
+
+Goals:
+1.Find the 1st clue 
+2.Find the 2nd clue 
+3.Find the 3rd clue. 
+4.Find the body(alive or dead) 
+5.Escort NPC home or Return to NPC with information.
+
+Rewards: exp, currency, unlocked quest(Head of the snake).
+_________________
+
+(Resource Gathering Quests)
+1.Name: Find x ammount common item.
+
+Description: Player is sent to find x ammount of a common item and return it to the NPC.
+
+Goals:
+1.Find location of items.
+2.Gather items.
+3.Return with items to NPC.
+
+Rewards: exp and currency.
+
+2.Name: Find x ammount uncommon item.
+
+Description: Player is sent to find x ammount of a uncommon item and return it to the NPC.
+
+Goals:
+1.Find location of items.
+2.Gather items.
+3.Return with items to NPC.
+
+Rewards: exp and currency.
+
+3.Name: Find x ammount rare item.
+
+Description: Player is sent to find x ammount of a rare item and return it to the NPC.
+
+Goals:
+1.Find location of items.
+2.Gather items.
+3.Return with items to NPC.
+
+Rewards: 2x reg. exp reward and 2x reg. currency. reward.
+_________________
+
+(Stronghold Quests)
+1.Name: Eliminate small stronghold forces.
+
+Description: Player is sent to eliminate enemy forces and destroy the stronghold(small)
+
+Goals:
+1.Find the location.
+2.Eliminate the enemy forces at the location.
+3.Destroy the location(destruction trigger enabled).
+4.Return to the NPC.
+
+Rewards: exp. and currency.
+
+2.Name:Eliminate medium stronghold forces.
+
+Description: Player is sent to eliminate enemy forces and destroy the stronghold(medium)
+
+Goals:
+1.Find the location.
+2.Eliminate the enemy forces at the location.
+3.Destroy the location(destruction trigger enabled).
+4.Return to the NPC.
+
+Rewards: exp. and currency.
+
+3.Name:Eliminate large stronghold forces.
+
+Description: Player is sent to eliminate enemy forces and destroy the stronghold(large)
+
+Goals:
+1.Find the location.
+2.Eliminate the enemy forces at the location.
+3.Destroy the location(destruction trigger enabled).
+4.Return to the NPC.
+
+Rewards: 2x exp. reward, 2x currency reward. and quest unlocked (Twin vipers)
+_________________
+
+(Mini Boss Quests)
+1.Name:A tale of 2 rivals.
+Description:
+Goals:
+Rewards:
+
+2.Name: Head of the snake.
+
+Description: A local gang leader is causeing unrest in the farmlands and township.
+
+Goals:
+1.Go to the gang HQ.
+2.Eliminate the gang members(x ammount).
+3.Eliminate the gang leader.
+4.Return to NPC with information.
+
+Rewards: 3x reg. exp reward, 3x reg. currency reward.
+
+3.Name: Twin vipers
+
+Description: 2 twin enemies have been renown for causing chaos and disruption in the farmland, time to take them down.
+
+Goals:
+1.Find the hidden stronghold where the twin vipers are hiding out.
+2.Eliminate the enemy forces.
+3.Eliminate the twin vipers.
+4.Destroy the location(destruction trigger enabled).
+5.Return to the NPC.
+
+Rewards: 3x reg. exp, 3x reg currency.
+_________________
+
+(Stealth Quests)
+1.Name: Recon the enemy forces (Easy).
+
+Description: Sneak into one of the enemy camps and reach checkpoints for information to gather.
+
+Goals:
+1.Reach checkpoint 1.
+2.Reach checkpoint 2.
+3.Reach checkpoint 3.
+4.Return to NPC with information.
+
+Rewards: exp and currency.
+
+2.Name: Recon the enemy forces (Medium).
+
+Description: Sneak into one of the enemy camps and reach checkpoints for information to gather.
+
+Goals:
+1.Reach checkpoint 1.
+2.Reach checkpoint 2.
+3.Reach checkpoint 3.
+4.Reach checkpoint 4.
+5.Return to NPC with information.
+
+3.Name: Recon the enemy forces (Hard).
+
+Description: Sneak into one of the enemy camps and reach checkpoints for information to gather.
+
+Goals:
+1.Reach checkpoint 1.
+2.Reach checkpoint 2.
+3.Reach checkpoint 3.
+4.Reach checkpoint 4.
+5.Reach checkpoint 5.
+6.Return to NPC with information.
+
+Rewards: 2x reg. exp and 2x reg. currency.
+
+4.Name: What is my husband doing!?
+
+Description: Local barmaiden thinks her husband is up to no good, check him out.
+
+Goals:
+1.Find the husband.
+2.Tail the husband to checkpoint 1.
+3.Tail the husband to checkpoint 2.
+4.Tail the husband to checkpoint 3.
+5.Find out what the husband was up to.
+6.Return to NPC with information.
+
+Rewards: exp and currency.
+
+5.Name: Follow the enemy caravan.
+
+Description: Word has it there is an enemy caravan patroling the Farmlands, check it out and see whats up.
+
+Goals:
+1.Find the Caravan and hide at checkpoint 1.
+2.Follow them to checkpoint 2.
+3.Follow them to checkpoint 3.
+4.Follow them to checkpoint 4.
+5.Return to the NPC with information.
+
+Rewards: exp. and currency.
+

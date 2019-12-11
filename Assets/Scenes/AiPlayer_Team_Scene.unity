@@ -567,7 +567,7 @@ MonoBehaviour:
   jumpSpeed: 20
   runSpeed: 10
   walkSpeed: 4
-  turnSpeed: 150
+  turnSpeed: 75
   moveBackwardsMultiplier: 0.75
 --- !u!23 &1761258543
 MeshRenderer:
@@ -640,6 +640,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd1deb1e138386f4d82fd7ddde09f028, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  cunning: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  vigilant: 0
+  toughness: 0
+  defence: 0
+  painThreshold: 0
   playerBrain: {fileID: 11400000, guid: f43b11aaa94daf24484f6f434b5cc1d8, type: 2}
 --- !u!1 &1762386837
 GameObject:
