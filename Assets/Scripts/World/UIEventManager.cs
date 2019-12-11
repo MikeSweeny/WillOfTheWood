@@ -12,4 +12,19 @@ public class UIEventManager
 {
     public delegate void UIEvent();
 
+    public static event UIEvent OpenOptions;
+    public static event UIEvent CloseOptions;
+
+    public static void TriggerOptionsOpen()
+    {
+        if (OpenOptions != null)
+            OpenOptions();
+    }
+
+    public static void TriggerOptionsClose()
+    {
+        if (CloseOptions != null)
+            CloseOptions();
+    }
+
 }
