@@ -12,10 +12,40 @@ public class UIEventManager
 {
     public delegate void UIEvent();
 
+    public static event UIEvent OpenMainMenu;
+    public static event UIEvent CloseMainMenu;
     public static event UIEvent OpenPause;
     public static event UIEvent ClosePause;
     public static event UIEvent OpenOptions;
     public static event UIEvent CloseOptions;
+    public static event UIEvent OpenQuests;
+    public static event UIEvent CloseQuests;
+    public static event UIEvent OpenShop;
+    public static event UIEvent CloseShop;
+    public static event UIEvent OpenInventory;
+    public static event UIEvent CloseInventory;
+    public static event UIEvent OpenLeveling;
+    public static event UIEvent CloseLeveling;
+
+    //Function : TriggerOpenMainMenu
+    //DESCRIPTION : Opens the main menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenMainMenu()
+    {
+        if (OpenMainMenu != null)
+            OpenMainMenu();
+    }
+
+    //Function : TriggerCloseMainMenu
+    //DESCRIPTION : Closes the main menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseMainMenu()
+    {
+        if (CloseMainMenu != null)
+            CloseMainMenu();
+    }
 
     //Function : TriggerOpenPause
     //DESCRIPTION : Opens the pause menu
@@ -57,4 +87,83 @@ public class UIEventManager
             CloseOptions();
     }
 
+    //Function : TriggerQuestsOpen
+    //DESCRIPTION : Opens the quest menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerQuestsOpen()
+    {
+        if (OpenQuests != null)
+            OpenQuests();
+    }
+
+    //Function : TriggerQuestsClose
+    //DESCRIPTION : Close the quest menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerQuestsClose()
+    {
+        if (CloseQuests != null)
+            CloseQuests();
+    }
+
+    //Function : TriggerOpenShop
+    //DESCRIPTION : Open the shop menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenShop()
+    {
+        if (OpenShop != null)
+            OpenShop();
+    }
+
+    //Function : TriggerCloseShop
+    //DESCRIPTION : Close the shop menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseShop()
+    {
+        if (CloseShop != null)
+            CloseShop();
+    }
+
+    //Function : TriggerOpenInventory
+    //DESCRIPTION : Open the inventory menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenInventory()
+    {
+        if (OpenInventory != null)
+            OpenInventory();
+    }
+
+    //Function : TriggerCloseInventory
+    //DESCRIPTION : Close the inventory menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseInventory()
+    {
+        if (CloseInventory != null)
+            CloseInventory();
+    }
+
+    //Function : TriggerOpenLeveling
+    //DESCRIPTION : Opens the leveling menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenLeveling()
+    {
+        if (OpenLeveling != null)
+            OpenLeveling();
+    }
+
+    //Function : TriggerCloseLeveling
+    //DESCRIPTION :Close the leveling menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseLeveling()
+    {
+        if (CloseLeveling != null)
+            CloseLeveling();
+    }
 }
