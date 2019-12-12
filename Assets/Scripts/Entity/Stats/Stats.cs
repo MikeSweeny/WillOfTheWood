@@ -13,7 +13,6 @@ using UnityEngine;
 public abstract class StatsObject : ScriptableObject
 {
     public int Accuracy { get; set; }
-    public int Cunning { get; set; }
     public int Discrete { get; set; }
     public int Pursuasive { get; set; }
     public int Quick { get; set; }

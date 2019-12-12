@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
         {
             jumping = true;
             moveDirection.y = jumpSpeed;
-            moveDirection = transform.TransformDirection(moveDirection);
+            controller.Move(moveDirection * Time.deltaTime);
         }
     }
 

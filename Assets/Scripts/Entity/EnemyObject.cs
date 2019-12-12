@@ -17,12 +17,9 @@ public class EnemyObject : EntityObject
     //public AIControler? (Dunno name) AIBrain;
     public int gold;
     public int accuracy;
-    public int cunning;
-    public int discrete;
-    public int pursuasive;
     public int quick;
     public int strong;
-    public int vigilant;
+    public int vigilance;
     [Tooltip("Toughness is the Entities Health (Toughness = Strong (though never below 10)")]
     public int toughness;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
@@ -38,12 +35,9 @@ public class EnemyObject : EntityObject
     public void Initialize()
     {
         accuracy = eStats.accuracy;
-        cunning = eStats.cunning;
-        discrete = eStats.discrete;
-        pursuasive = eStats.pursuasive;
         quick = eStats.quick;
         strong = eStats.strong;
-        vigilant = eStats.vigilant;
+        vigilance = eStats.vigilance;
         CalcToughness();
         CalcPainThreshold();
     }

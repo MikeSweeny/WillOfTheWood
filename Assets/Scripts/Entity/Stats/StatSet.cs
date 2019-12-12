@@ -16,36 +16,32 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Stats/Primary Stats", fileName = "Primary Stats")]
 public class StatSet : StatsObject
 {
-    [Range(5, 20)]
+    [Range(5, 18)]
     public int accuracy;
-    [Range(5, 20)]
-    public int cunning;
-    [Range(5, 20)]
+    [Range(5, 18)]
     public int discrete;
-    [Range(5, 20)]
+    [Range(5, 18)]
     public int pursuasive;
-    [Range(5, 20)]
+    [Range(5, 18)]
     public int quick;
-    [Range(5, 20)]
+    [Range(5, 18)]
     public int strong;
-    [Range(5, 20)]
-    public int vigilant;
+    [Range(5, 18)]
+    public int vigilance;
     private void Awake()
     {
         Accuracy = 5;
-        Cunning = 5;
         Discrete = 5;
         Pursuasive = 5;
         Quick = 5;
         Strong = 5;
-        Vigilant = 5;
+        vigilance = 5;
+
         accuracy = Accuracy;
-        cunning = Cunning;
         discrete = Discrete;
         pursuasive = Pursuasive;
         quick = Quick;
         strong = Strong;
-        vigilant = Vigilant;       
     }
 
 
