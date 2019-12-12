@@ -20,4 +20,14 @@ public class MLoadMenu : Menu
         UIEventManager.OpenLoadMenu += OpenMenu;
         UIEventManager.CloseLoadMenu += CloseMenu;
     }
+
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenLoadMenu -= OpenMenu;
+        UIEventManager.CloseLoadMenu -= CloseMenu;
+    }
 }

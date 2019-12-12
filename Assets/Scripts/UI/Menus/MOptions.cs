@@ -15,19 +15,19 @@ public class MOptions : Menu
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    private void Awake()
     {
         UIEventManager.OpenOptions += OpenMenu;
         UIEventManager.CloseOptions += CloseMenu;
     }
 
-
-    //Function : Update
-    //DESCRIPTION : called once per frame
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
     //PARAMETERS : none
     //RETURNS : none
-    void Update()
+    private void OnDestroy()
     {
-        
+        UIEventManager.OpenOptions -= OpenMenu;
+        UIEventManager.CloseOptions -= CloseMenu;
     }
 }

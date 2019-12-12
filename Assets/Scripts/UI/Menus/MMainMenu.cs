@@ -15,9 +15,19 @@ public class MMainMenu : Menu
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    private void Awake()
     {
         UIEventManager.OpenMainMenu += OpenMenu;
         UIEventManager.CloseMainMenu += CloseMenu;
+    }
+
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenMainMenu -= OpenMenu;
+        UIEventManager.CloseMainMenu -= CloseMenu;
     }
 }

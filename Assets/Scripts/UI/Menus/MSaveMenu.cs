@@ -17,6 +17,9 @@ public class MSaveMenu : Menu
     //RETURNS : none
     void Awake()
     {
-        
+        UIEventManager.OpenSaveMenu += OpenMenu;
+        UIEventManager.CloseSaveMenu += CloseMenu;
     }
+
+
 }

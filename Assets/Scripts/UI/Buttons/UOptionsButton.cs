@@ -19,6 +19,7 @@ public class UOptionsButton : UIButton
     public override void Clicked()
     {
         UIEventManager.TriggerCloseMainMenu();
+        UIEventManager.TriggerClosePause();
         UIEventManager.TriggerOptionsOpen();
     }
 }
