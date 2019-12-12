@@ -21,4 +21,14 @@ public class MQuest : Menu
         UIEventManager.CloseQuests += CloseMenu;
     }
 
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenQuests -= OpenMenu;
+        UIEventManager.CloseQuests -= CloseMenu;
+    }
+
 }

@@ -20,4 +20,14 @@ public class MPause : Menu
         UIEventManager.OpenPause += OpenMenu;
         UIEventManager.ClosePause += CloseMenu;
     }
+
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenPause -= OpenMenu;
+        UIEventManager.ClosePause -= CloseMenu;
+    }
 }

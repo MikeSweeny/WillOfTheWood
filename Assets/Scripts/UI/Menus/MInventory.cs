@@ -15,9 +15,19 @@ public class MInventory : Menu
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Start()
+    void Awake()
     {
         UIEventManager.OpenInventory += OpenMenu;
         UIEventManager.CloseInventory += CloseMenu;
+    }
+
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenInventory -= OpenMenu;
+        UIEventManager.CloseInventory -= CloseMenu;
     }
 }

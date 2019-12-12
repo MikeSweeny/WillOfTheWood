@@ -20,4 +20,14 @@ public class MShop : Menu
         UIEventManager.OpenShop += OpenMenu;
         UIEventManager.CloseShop += CloseMenu;
     }
+
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenShop -= OpenMenu;
+        UIEventManager.CloseShop -= CloseMenu;
+    }
 }

@@ -20,4 +20,14 @@ public class MLeveling : Menu
         UIEventManager.OpenLeveling += OpenMenu;
         UIEventManager.CloseLeveling += CloseMenu;
     }
+
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenLeveling -= OpenMenu;
+        UIEventManager.CloseLeveling -= CloseMenu;
+    }
 }

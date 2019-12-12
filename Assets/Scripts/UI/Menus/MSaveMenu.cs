@@ -22,4 +22,14 @@ public class MSaveMenu : Menu
     }
 
 
+
+    //Function : OnDestroy
+    //DESCRIPTION : Called when the object is destroyed
+    //PARAMETERS : none
+    //RETURNS : none
+    private void OnDestroy()
+    {
+        UIEventManager.OpenSaveMenu -= OpenMenu;
+        UIEventManager.CloseSaveMenu -= CloseMenu;
+    }
 }
