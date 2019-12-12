@@ -8,7 +8,10 @@ public class WaypointGizmo : MonoBehaviour
     private Transform[] waypoints;
     public Color color;
 
-
+    //Function: prebuilt OnDrawGizmos
+    //DESCRIPTION: this function is being used to draw lines between waypoints and a sphere on the waypoints themselves
+    //PARAMETERS: Vector3 last
+    //RETURNS: None
     private void OnDrawGizmos()
     {
         waypoints = gameObject.GetComponentsInChildren<Transform>();

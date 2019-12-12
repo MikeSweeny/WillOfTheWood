@@ -89,9 +89,25 @@ public class PlayerController : MonoBehaviour
         moveDirection = transform.TransformDirection(moveDirection);
     }
 
+    //Function: PlayerInteract
+    //DESCRIPTION: This function is the players interact function
+    //PARAMETERS: RaycastHit hit
+    //RETURNS: None
     private void PlayerInteract()
     {
+        RaycastHit hit;
         print("Interacted");
+
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 2))
+        {
+            if(hit.collider.gameObject.tag == "QuestGiver")
+            {
+                if(hit.collider.gameObject.GetComponent<QuestGiverNpc>())
+                {
+                    print("Interacted with quest NPC");
+                }
+            }
+        }
     }
 
     //Function: TurnPlayer

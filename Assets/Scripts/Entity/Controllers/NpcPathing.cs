@@ -16,7 +16,6 @@ public class NpcPathing : MonoBehaviour
 
     public Transform WaypointContainer;
     public Transform[] waypoints;
-    //change to be correct type when base class for NPCs are finished
     public BaseNpc[] enemy;
     private Transform[] waypoint;
     private int currentWaypoint = 0;
