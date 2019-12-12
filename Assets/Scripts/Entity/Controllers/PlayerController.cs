@@ -100,12 +100,27 @@ public class PlayerController : MonoBehaviour
 
         if(Physics.Raycast(transform.position, transform.forward, out hit, 2))
         {
-            if(hit.collider.gameObject.tag == "QuestGiver")
+            switch(hit.collider.gameObject.tag)
             {
-                if(hit.collider.gameObject.GetComponent<QuestGiverNpc>())
-                {
-                    print("Interacted with quest NPC");
-                }
+                case "QuestGiver":
+                    if (hit.collider.gameObject.GetComponent<QuestGiverNpc>())
+                    {
+                        print("Interacted with quest NPC");
+                        hit.collider.gameObject.GetComponent<QuestGiverNpc>().OnInteract();
+                    }
+                    break;
+
+                case "ShopKeeper":
+                    break;
+
+                case "Door":
+                    break;
+
+                case "Item":
+                    break;
+
+                default:
+                    break;
             }
         }
     }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - QuestGiver
+  - ShopKeeper
+  - Door
+  - Item
   layers:
   - Default
   - TransparentFX
