@@ -22,8 +22,6 @@ public class PlayerObject : EntityObject
     [HideInInspector]
     public int accuracy;
     [HideInInspector]
-    public int cunning;
-    [HideInInspector]
     public int discrete;
     [HideInInspector]
     public int pursuasive;
@@ -31,8 +29,6 @@ public class PlayerObject : EntityObject
     public int quick;
     [HideInInspector]
     public int strong;
-    [HideInInspector]
-    public int vigilant;
     [HideInInspector]
 
 
@@ -42,13 +38,15 @@ public class PlayerObject : EntityObject
     ////RETURNS : void
     public void Initialize()
     {
+    }
+
+    private void OnValidate()
+    {
         accuracy = pStats.accuracy;
-        cunning = pStats.cunning;
         discrete = pStats.discrete;
         pursuasive = pStats.pursuasive;
         quick = pStats.quick;
         strong = pStats.strong;
-        vigilant = pStats.vigilant;
 
     }
 }

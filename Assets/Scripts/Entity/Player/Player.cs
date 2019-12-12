@@ -5,13 +5,10 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int accuracy;
-    public int cunning;
     public int discrete;
     public int persuasive;
     public int quick;
     public int strong;
-    public int vigilant;
-    [Tooltip("Toughness is the Entities Health (Toughness = Strong (though never below 10)")]
     public int toughness;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
@@ -39,12 +36,10 @@ public class Player : MonoBehaviour
     public void setStats()
     {
         accuracy = playerBrain.accuracy;
-        cunning = playerBrain.cunning;
         discrete = playerBrain.discrete;
         persuasive = playerBrain.pursuasive;
         quick = playerBrain.quick;
         strong = playerBrain.strong;
-        vigilant = playerBrain.vigilant;
         playerBrain.Initialize();
         //Debug.Log(""+ accuracy +""+ cunning + "" + discrete + "" + persuasive + "" + quick + "" + strong + "" + vigilant);
     }
