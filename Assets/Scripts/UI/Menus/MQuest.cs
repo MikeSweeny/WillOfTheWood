@@ -1,14 +1,14 @@
-﻿//FILE          :   Shop.cs
-//PROJECT       :   Will of the Woods
+﻿//FILE          :   MQuest.cs
+//PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
 //FIRST VERSION :   11/12/2019
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MShop
-//PURPOSE : serves as the shop menu
-public class MShop : Menu
+//NAME : MQuest
+//PURPOSE : serves as the quest menu
+public class MQuest : Menu
 {
 
     //Function : Awake
@@ -17,7 +17,8 @@ public class MShop : Menu
     //RETURNS : none
     void Awake()
     {
-        UIEventManager.OpenShop += OpenMenu;
-        UIEventManager.CloseShop += CloseMenu;
+        UIEventManager.OpenQuests += OpenMenu;
+        UIEventManager.CloseQuests += CloseMenu;
     }
+
 }

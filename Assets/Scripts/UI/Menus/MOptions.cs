@@ -1,5 +1,5 @@
-﻿//FILE          :   Options.cs
-//PROJECT       :   Will of the Woods
+﻿//FILE          :   MOptions.cs
+//PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
 //FIRST VERSION :   11/12/2019
 using System.Collections;
