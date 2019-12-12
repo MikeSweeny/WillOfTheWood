@@ -6,6 +6,8 @@ public class WaypointGizmo : MonoBehaviour
 {
     public float size = 1f;
     private Transform[] waypoints;
+    public Color color;
+
 
     private void OnDrawGizmos()
     {
@@ -14,7 +16,7 @@ public class WaypointGizmo : MonoBehaviour
         int n = waypoints.Length;
         for (int i = 1; i < n; i++)
         {
-            Gizmos.color = Color.yellow;
+            Gizmos.color = color;
             Gizmos.DrawSphere(waypoints[i].position, size);
             Gizmos.DrawLine(last, waypoints[i].position);
             last = waypoints[i].position;
