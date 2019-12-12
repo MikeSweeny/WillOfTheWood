@@ -1,14 +1,14 @@
-﻿//FILE          :   MainMenu.cs
-//PROJECT       :   Will of the Woods
+﻿//FILE          :   MQuest.cs
+//PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
 //FIRST VERSION :   11/12/2019
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MMainMenu
-//PURPOSE : serves as the main menu
-public class MMainMenu : Menu
+//NAME : MQuest
+//PURPOSE : serves as the quest menu
+public class MQuest : Menu
 {
 
     //Function : Awake
@@ -17,7 +17,8 @@ public class MMainMenu : Menu
     //RETURNS : none
     void Awake()
     {
-        UIEventManager.OpenMainMenu += OpenMenu;
-        UIEventManager.CloseMainMenu += CloseMenu;
+        UIEventManager.OpenQuests += OpenMenu;
+        UIEventManager.CloseQuests += CloseMenu;
     }
+
 }

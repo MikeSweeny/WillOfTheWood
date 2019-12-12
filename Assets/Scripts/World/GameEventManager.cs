@@ -1,5 +1,5 @@
 ﻿//FILE : GameEventManager.cs
-//PROJECT : Will of the Woods
+//PROJECT : Will of the Wood
 //PROGRAMMER : Gavin McGuire
 //FIRST VERSION : 06/12/2019
 using System.Collections;

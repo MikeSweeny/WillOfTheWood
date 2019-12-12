@@ -1,14 +1,14 @@
-﻿//FILE          :   Leveling.cs
-//PROJECT       :   Will of the Woods
+﻿//FILE          :   MSaveMenu.cs
+//PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
 //FIRST VERSION :   11/12/2019
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MLeveling
-//PURPOSE : serves as the leveling menu
-public class MLeveling : Menu
+//NAME : MSaveMenu
+//PURPOSE : serves as the save menu
+public class MSaveMenu : Menu
 {
 
     //Function : Awake
@@ -17,7 +17,6 @@ public class MLeveling : Menu
     //RETURNS : none
     void Awake()
     {
-        UIEventManager.OpenLeveling += OpenMenu;
-        UIEventManager.CloseLeveling += CloseMenu;
+        
     }
 }
