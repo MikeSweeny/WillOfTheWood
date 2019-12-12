@@ -27,13 +27,17 @@ public class Quests : ScriptableObject
 
     //Changeable in script able list
     public string QuestName;
-    public string Description;
     public string Prereq1;
     public string Prereq2;
+    public string Description;
     public string NPCID;
-    public int ExperenceReward;
+    public string TurnInNPCName;
+    public List<string> QuestObjectives;
     public int RequiredAmount;
+    public int ExperenceReward;
     public int CoinReward;
+    public int UnitReward;
+    //public variable for item reward needed;
 
     //Descriptions of text
     [TextArea(3,10)]
@@ -52,8 +56,8 @@ public class Quests : ScriptableObject
     //DESCRIPTION : Allowing the quests to pass text into the UI
     //PARAMETERS : 
     //RETURNS : 
-    public virtual void StartText() { }
     public virtual void TrackingQuest(){ }
+    public virtual void StartText() { }
     public virtual void InprogressText() { }
     public virtual void CompletedText() { }
 
