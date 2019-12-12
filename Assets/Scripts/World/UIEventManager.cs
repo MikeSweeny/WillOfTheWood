@@ -14,6 +14,10 @@ public class UIEventManager
 
     public static event UIEvent OpenMainMenu;
     public static event UIEvent CloseMainMenu;
+    public static event UIEvent OpenSaveMenu;
+    public static event UIEvent CloseSaveMenu;
+    public static event UIEvent OpenLoadMenu;
+    public static event UIEvent CloseLoadMenu;
     public static event UIEvent OpenPause;
     public static event UIEvent ClosePause;
     public static event UIEvent OpenOptions;
@@ -45,6 +49,46 @@ public class UIEventManager
     {
         if (CloseMainMenu != null)
             CloseMainMenu();
+    }
+
+    //Function : TriggerOpenSaveMenu
+    //DESCRIPTION : Opens the save menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenSaveMenu()
+    {
+        if (OpenSaveMenu != null)
+            OpenSaveMenu();
+    }
+
+    //Function : TriggerCloseSaveMenu
+    //DESCRIPTION : Closes the save menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseSaveMenu()
+    {
+        if (CloseSaveMenu != null)
+            CloseSaveMenu();
+    }
+
+    //Function : TriggerOpenLoadMenu
+    //DESCRIPTION : Opens the load menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenLoadMenu()
+    {
+        if (OpenLoadMenu != null)
+            OpenLoadMenu();
+    }
+
+    //Function : TriggerCloseLoadMenu
+    //DESCRIPTION : Closes the load menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseLoadMenu()
+    {
+        if (CloseLoadMenu != null)
+            CloseLoadMenu();
     }
 
     //Function : TriggerOpenPause
