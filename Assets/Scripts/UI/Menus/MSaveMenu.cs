@@ -10,6 +10,9 @@ using UnityEngine;
 //PURPOSE : serves as the save menu
 public class MSaveMenu : Menu
 {
+    private SaveSlot slot1;
+    private SaveSlot slot2;
+    private SaveSlot slot3;
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
