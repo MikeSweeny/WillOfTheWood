@@ -1,23 +1,23 @@
-﻿//FILE          :   Inventory.cs
-//PROJECT       :   Will of the Woods
+﻿//FILE          :   MLeveling.cs
+//PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
 //FIRST VERSION :   11/12/2019
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MInventory
-//PURPOSE : serves as the inventory menu
-public class MInventory : Menu
+//NAME : MLeveling
+//PURPOSE : serves as the leveling menu
+public class MLeveling : Menu
 {
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Start()
+    void Awake()
     {
-        UIEventManager.OpenInventory += OpenMenu;
-        UIEventManager.CloseInventory += CloseMenu;
+        UIEventManager.OpenLeveling += OpenMenu;
+        UIEventManager.CloseLeveling += CloseMenu;
     }
 }

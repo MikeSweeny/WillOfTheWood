@@ -1,23 +1,23 @@
-﻿//FILE          :   MainMenu.cs
-//PROJECT       :   Will of the Woods
+﻿//FILE          :   MInventory.cs
+//PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
 //FIRST VERSION :   11/12/2019
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MMainMenu
-//PURPOSE : serves as the main menu
-public class MMainMenu : Menu
+//NAME : MInventory
+//PURPOSE : serves as the inventory menu
+public class MInventory : Menu
 {
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    void Start()
     {
-        UIEventManager.OpenMainMenu += OpenMenu;
-        UIEventManager.CloseMainMenu += CloseMenu;
+        UIEventManager.OpenInventory += OpenMenu;
+        UIEventManager.CloseInventory += CloseMenu;
     }
 }
