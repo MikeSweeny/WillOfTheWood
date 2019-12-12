@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
 
         if(Physics.Raycast(transform.position, transform.forward, out hit, 2))
         {
+            //add any other cases for the player to interact with objects with specific tags
             switch(hit.collider.gameObject.tag)
             {
                 case "QuestGiver":
@@ -111,11 +112,16 @@ public class PlayerController : MonoBehaviour
                     break;
 
                 case "ShopKeeper":
+                    if(hit.collider.gameObject.GetComponent<ShopKeeperNpc>())
+                    {
+                        print("Interacted with shop keeper");
+                        hit.collider.gameObject.GetComponent<ShopKeeperNpc>().OnInteract();
+                    }
                     break;
-
+                    //put code here for the doors interactions
                 case "Door":
                     break;
-
+                    //put code here for the items interaction ie. adding it to the inventory
                 case "Item":
                     break;
 
