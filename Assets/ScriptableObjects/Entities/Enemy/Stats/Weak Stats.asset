@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2462a8048845bba43a15a99045933fd5, type: 3}
-  m_Name: EnemyStats
+  m_Script: {fileID: 11500000, guid: e018d13370d20ba4fb826d42eadf565c, type: 3}
+  m_Name: Weak Stats
   m_EditorClassIdentifier: 
-  accuracy: 0
-  cunning: 0
-  discrete: 0
-  pursuasive: 0
-  quick: 0
-  strong: 0
+  accuracy: 13
+  quick: 9
+  strong: 12
   vigilant: 0

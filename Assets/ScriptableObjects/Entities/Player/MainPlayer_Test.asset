@@ -16,12 +16,10 @@ MonoBehaviour:
   ID: 0
   description: 
   type: 0
-  pStats: {fileID: 11400000, guid: cbd21e22a5473fb4bb228e973ab78d06, type: 2}
+  pStats: {fileID: 11400000, guid: c97e881b428964e4380e1a92cf8afe72, type: 2}
   gold: 0
-  accuracy: 15
-  cunning: 11
-  discrete: 14
-  pursuasive: 10
-  quick: 13
-  strong: 14
-  vigilant: 11
+  accuracy: 5
+  discrete: 5
+  pursuasive: 5
+  quick: 5
+  strong: 5

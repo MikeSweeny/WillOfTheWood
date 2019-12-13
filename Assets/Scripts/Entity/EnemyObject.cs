@@ -12,7 +12,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Entity/Enemy", fileName = "Entities")]
 public class EnemyObject : EntityObject
 {
-    public StatSet eStats;
+    public StatsObject eStats;
+    public GameObject transform;
     //public AbilitySet pAbilityes;
     //public AIControler? (Dunno name) AIBrain;
     public int gold;
@@ -34,10 +35,10 @@ public class EnemyObject : EntityObject
 
     public void Initialize()
     {
-        accuracy = eStats.accuracy;
-        quick = eStats.quick;
-        strong = eStats.strong;
-        vigilance = eStats.vigilance;
+        accuracy = eStats.Accuracy;
+        quick = eStats.Quick;
+        strong = eStats.Strong;
+        vigilance = eStats.Vigilant;
         CalcToughness();
         CalcPainThreshold();
     }

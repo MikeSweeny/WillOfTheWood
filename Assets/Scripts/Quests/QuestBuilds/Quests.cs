@@ -41,8 +41,6 @@ public class Quests : ScriptableObject
     public int UnitReward;
     //public variable for item reward needed;
 
-    public string NPCKilled;
-
     //Descriptions of text
     [TextArea(3, 10)]
     public string QuestObjectives;
