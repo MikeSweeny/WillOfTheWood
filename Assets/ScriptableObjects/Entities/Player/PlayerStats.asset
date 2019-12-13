@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2462a8048845bba43a15a99045933fd5, type: 3}
-  m_Name: ToughStats
+  m_Script: {fileID: 11500000, guid: 7226b79519be4f04ea63120cbefe87bf, type: 3}
+  m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  accuracy: 14
-  cunning: 10
-  discrete: 10
-  pursuasive: 15
-  quick: 12
-  strong: 15
-  vigilant: 12
+  accuracy: 5
+  discrete: 5
+  pursuasive: 5
+  quick: 5
+  strong: 5

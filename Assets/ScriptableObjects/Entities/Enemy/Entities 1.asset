@@ -7,27 +7,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72f48b9ef58244c428df048703051b24, type: 3}
-  m_Name: Gobbo
+  m_Name: Entities 1
   m_EditorClassIdentifier: 
   name: 
   ID: 0
   description: 
   type: 0
-  health: {fileID: 0}
-  accuracy: {fileID: 0}
-  cunning: {fileID: 0}
-  discrete: {fileID: 0}
-  persuasive: {fileID: 0}
-  quick: {fileID: 0}
-  strong: {fileID: 0}
-  vigilant: {fileID: 0}
-  eAccuracy: 8
-  eCunning: 12
-  eDiscrete: 6
-  ePersuasive: 12
-  eQuick: 8
-  eStrong: 6
-  eVigilant: 12
+  eStats: {fileID: 11400000, guid: 43c6640eaf4ce5d4f949bed09b74ea84, type: 2}
+  transform: {fileID: 0}
+  gold: 0
+  accuracy: 0
+  quick: 0
+  strong: 0
+  vigilance: 0
+  toughness: 0
+  defence: 0
+  painThreshold: 0
