@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         print("Interacted");
 
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 2))
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 4))
         {
             //add any other cases for the player to interact with objects with specific tags
             switch(hit.collider.gameObject.tag)

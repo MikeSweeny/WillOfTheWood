@@ -17,12 +17,14 @@ public class NpcPathing : MonoBehaviour
     public Transform WaypointContainer;
     public Transform[] waypoints;
     public BaseNpc[] enemy;
+    public GameObject target;
+    public Transform[] fleeingPoints;
+    public Transform fleeingDestinationContainer;
     private Transform[] waypoint;
     private int currentWaypoint = 0;
     public float distanceToCover = 1f;
 
     private float[] distanceLeftToTravel;
-
 
 
     private void Start()
@@ -70,6 +72,33 @@ public class NpcPathing : MonoBehaviour
                 }
             }
             agent.SetDestination(GetCurrentWaypoint().position);
+        }
+    }
+
+    //Function: FleeingPath
+    //DESCRIPTION: this function is used for enemies to flee from the player to whichever point is furthest from the player in a container of points
+    //PARAMETERS: float furthestDistanceSoFar, Vector3 fleePosition, Transform[] potentialDestinations, float currentDistanceCheck, Transform point
+    //RETURNS: None
+    public void FleeingPath()
+    {
+        float furthestDistanceSoFar = 0;
+        Vector3 fleePosition = Vector3.zero;
+
+        Transform[] potentialDestinations = fleeingDestinationContainer.GetComponentsInChildren<Transform>();
+        fleeingPoints = new Transform[(potentialDestinations.Length - 1)];
+        if(target)
+        {
+            foreach (Transform point in potentialDestinations)
+            {
+                float currentDistanceCheck = Vector3.Distance(target.transform.position, point.position);
+                if (currentDistanceCheck > furthestDistanceSoFar)
+                {
+                    furthestDistanceSoFar = currentDistanceCheck;
+                    fleePosition = point.position;
+                }
+            }
+
+            agent.SetDestination(fleePosition);
         }
     }
 
