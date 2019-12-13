@@ -30,4 +30,5 @@ public abstract class StatsObject : ScriptableObject
     ////RETURNS : type and use  
     public virtual void DecreaseStat(int _value, int _secondValue) { }
 
+    public virtual int GetMod(int _statValue)  { return 0; }
 }

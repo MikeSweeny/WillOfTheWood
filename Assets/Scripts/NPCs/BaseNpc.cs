@@ -5,7 +5,6 @@ using UnityEngine;
 public class BaseNpc : MonoBehaviour
 {
 
-    public EntityObject objectBrain;
 
     public NpcPathing pathingPattern;
 
@@ -21,4 +20,5 @@ public class BaseNpc : MonoBehaviour
         if(pathingPattern.WaypointContainer)
             pathingPattern.RoamingPath();
     }
+
 }
