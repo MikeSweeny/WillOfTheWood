@@ -17,6 +17,7 @@ public class QuestGoal
     public int CurrentAmount { get; set; }
     public int RequiredAmount { get; set; }
     public int CoinReward { get; set; }
+    public bool NPCKillable { get; set; }
 
     public virtual void Init()
     {
