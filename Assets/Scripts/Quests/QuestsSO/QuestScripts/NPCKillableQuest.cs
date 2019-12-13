@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Quest", menuName = "Quests/NPCKillable")]
 public class NPCKillableQuest : Quests
 {
-    
+    public string NPCKilled;
     public override void Load()
     {
         CurrentAmount = 0;
