@@ -620,7 +620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectBrain: {fileID: 11400000, guid: 8832f7420998a7d49ae7c424223e84ed, type: 2}
   pathingPattern: {fileID: 0}
   QuestList:
   - {fileID: 11400000, guid: 96296555b2ab40f40abe071414a30629, type: 2}
@@ -924,8 +923,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectBrain: {fileID: 11400000, guid: 8832f7420998a7d49ae7c424223e84ed, type: 2}
   pathingPattern: {fileID: 0}
+  objectBrain: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e, type: 2}
+  accuracy: 0
+  quick: 0
+  strong: 0
+  toughness: 0
 --- !u!195 &802290473
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1273,8 +1276,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectBrain: {fileID: 11400000, guid: 8832f7420998a7d49ae7c424223e84ed, type: 2}
   pathingPattern: {fileID: 0}
+  objectBrain: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e, type: 2}
+  accuracy: 0
+  quick: 0
+  strong: 0
+  toughness: 0
 --- !u!54 &1249577577
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1342,8 +1349,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectBrain: {fileID: 11400000, guid: 8832f7420998a7d49ae7c424223e84ed, type: 2}
   pathingPattern: {fileID: 0}
+  objectBrain: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e, type: 2}
+  accuracy: 0
+  quick: 0
+  strong: 0
+  toughness: 0
 --- !u!195 &1274719926
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1506,8 +1517,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectBrain: {fileID: 11400000, guid: 8832f7420998a7d49ae7c424223e84ed, type: 2}
   pathingPattern: {fileID: 0}
+  objectBrain: {fileID: 11400000, guid: f0fa67d41e4d143478d697b66b3a68ce, type: 2}
+  accuracy: 0
+  quick: 0
+  strong: 0
+  toughness: 0
 --- !u!195 &1387165849
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1983,8 +1998,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectBrain: {fileID: 11400000, guid: 8832f7420998a7d49ae7c424223e84ed, type: 2}
   pathingPattern: {fileID: 0}
+  objectBrain: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e, type: 2}
+  accuracy: 0
+  quick: 0
+  strong: 0
+  toughness: 0
 --- !u!195 &1852228505
 NavMeshAgent:
   m_ObjectHideFlags: 0

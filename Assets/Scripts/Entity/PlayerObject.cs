@@ -16,7 +16,7 @@ using UnityEngine;
 public class PlayerObject : EntityObject
 
 {   [Tooltip("Grab the Players Primary Stats Asset files variables for this class to use")]
-    public StatSet pStats;
+    public PlayerStats pStats;
     [HideInInspector]
     public int gold;
     [HideInInspector]
@@ -38,15 +38,10 @@ public class PlayerObject : EntityObject
     ////RETURNS : void
     public void Initialize()
     {
-    }
-
-    private void OnValidate()
-    {
         accuracy = pStats.accuracy;
         discrete = pStats.discrete;
         pursuasive = pStats.pursuasive;
         quick = pStats.quick;
         strong = pStats.strong;
-
     }
 }

@@ -2,8 +2,8 @@
 ////FILE : StatSet.cs
 ////PROJECT : WillOfTheWood
 ////PROGRAMMER : Jeff Oldfield
-////FIRST VERSION : 08/12/2019
- 
+////FIRST VERSION : 13/12/2019
+
 
 using System.Collections;
 using System.Collections.Generic;
@@ -13,8 +13,8 @@ using UnityEngine;
 //Class Header:
 ////NAME : StatSet : StatsObject
 ////PURPOSE : Creating a Set of Attributes to be refrenced when making a new Entity
-[CreateAssetMenu(menuName = "Stats/Primary Stats", fileName = "Primary Stats")]
-public class StatSet : StatsObject
+[CreateAssetMenu(menuName = "Stats/PlayerStats", fileName = "PlayerStats")]
+public class PlayerStats : StatsObject
 {
     [Range(5, 18)]
     public int accuracy;
@@ -26,16 +26,15 @@ public class StatSet : StatsObject
     public int quick;
     [Range(5, 18)]
     public int strong;
-    [Range(5, 18)]
-    public int vigilance;
+
+    private int modValue;
     private void Awake()
     {
-        Accuracy = 5;
-        Discrete = 5;
-        Pursuasive = 5;
-        Quick = 5;
-        Strong = 5;
-        vigilance = 5;
+        Accuracy = 10;
+        Discrete = 10;
+        Pursuasive = 10;
+        Quick = 10;
+        Strong = 10;
 
         accuracy = Accuracy;
         discrete = Discrete;
@@ -52,8 +51,21 @@ public class StatSet : StatsObject
     ////RETURNS : 
     public override void IncreaseStat(int _value, int _statValue)
     {
-            _value += _statValue;
+        _value += _statValue;
     }
-    
+
+    public override int GetMod(int _statValue)
+    {
+        if (_statValue == 5)
+        {
+            return 5;
+        }
+        else
+        {
+            return 0;
+        }
+
+    }
 }
+
 
