@@ -119,13 +119,13 @@ public class QuestGiverNpc : BaseInteractableNpc
 
     //FUNCTION : NoMoreQuest
     //DESCRIPTION : Calls the dialog if no more quests are to be found
-    //void NoMoreQuest()
-    //{
-    //    if (QUIM)
-    //    {
-    //        QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
-    //        QUIM.NPCBoxTwo.text = "No Available Quests";
-    //    }
-    //    Debug.Log("No Quest Got");
-    //}
+    void NoMoreQuest()
+    {
+        //    if (QUIM)
+        //    {
+        //        QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
+        //        QUIM.NPCBoxTwo.text = "No Available Quests";
+        //    }
+        Debug.Log("No Quest Got");
+    }
 }

@@ -1,16 +1,9 @@
-﻿//FILE          :   SaveSlot.cs
-//PROJECT       :   Will of the Wood
-//PROGRAMMER    :   Gavin McGuire
-//FIRST VERSION :   DD/MM/YYYY
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
-//NAME : SaveSlot
-//PURPOSE : holds the save information to a game session
-public class SaveSlot
+public class SaveSlot : MonoBehaviour
 {
-    private bool empty;
-
-
+    
 }
