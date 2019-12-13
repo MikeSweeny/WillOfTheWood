@@ -339,7 +339,6 @@ GameObject:
   - component: {fileID: 49563940}
   - component: {fileID: 49563939}
   - component: {fileID: 49563938}
-  - component: {fileID: 49563937}
   m_Layer: 0
   m_Name: HotbarControl5
   m_TagString: Untagged
@@ -367,18 +366,6 @@ RectTransform:
   m_AnchoredPosition: {x: 3.899998, y: -65.399994}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &49563937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 49563935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &49563938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,7 +607,6 @@ GameObject:
   - component: {fileID: 97661190}
   - component: {fileID: 97661189}
   - component: {fileID: 97661188}
-  - component: {fileID: 97661187}
   m_Layer: 0
   m_Name: RightControl
   m_TagString: Untagged
@@ -648,18 +634,6 @@ RectTransform:
   m_AnchoredPosition: {x: -123, y: 84}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &97661187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 97661185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &97661188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,7 +761,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 120330975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9521bad2062c534b98868f01b4961bc, type: 3}
+  m_Script: {fileID: 11500000, guid: bbc37f8d4c3b6ee4fae048a2056156f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &120330978
@@ -1215,7 +1189,6 @@ GameObject:
   - component: {fileID: 201770882}
   - component: {fileID: 201770881}
   - component: {fileID: 201770880}
-  - component: {fileID: 201770879}
   m_Layer: 0
   m_Name: HotbarControl7
   m_TagString: Untagged
@@ -1243,18 +1216,6 @@ RectTransform:
   m_AnchoredPosition: {x: -181, y: -126.8}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &201770879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201770877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &201770880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,7 +1380,6 @@ GameObject:
   - component: {fileID: 214245670}
   - component: {fileID: 214245669}
   - component: {fileID: 214245668}
-  - component: {fileID: 214245667}
   m_Layer: 0
   m_Name: VideoSettingsCanvas
   m_TagString: Untagged
@@ -1451,18 +1411,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &214245667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214245665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9521bad2062c534b98868f01b4961bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &214245668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1535,7 +1483,6 @@ GameObject:
   - component: {fileID: 221192575}
   - component: {fileID: 221192574}
   - component: {fileID: 221192573}
-  - component: {fileID: 221192572}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -1563,18 +1510,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -280}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &221192572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221192570}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3403082f5e16414fadf57fe5a27e5fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &221192573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1806,7 +1741,6 @@ GameObject:
   - component: {fileID: 252421291}
   - component: {fileID: 252421290}
   - component: {fileID: 252421289}
-  - component: {fileID: 252421288}
   m_Layer: 0
   m_Name: WorldMapControl
   m_TagString: Untagged
@@ -1834,18 +1768,6 @@ RectTransform:
   m_AnchoredPosition: {x: 89.999985, y: 52}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &252421288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252421286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &252421289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2123,7 +2045,6 @@ GameObject:
   - component: {fileID: 306578358}
   - component: {fileID: 306578357}
   - component: {fileID: 306578356}
-  - component: {fileID: 306578355}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -2151,18 +2072,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -280}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &306578355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306578353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3403082f5e16414fadf57fe5a27e5fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &306578356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2452,7 +2361,6 @@ GameObject:
   - component: {fileID: 378784895}
   - component: {fileID: 378784894}
   - component: {fileID: 378784893}
-  - component: {fileID: 378784892}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -2480,18 +2388,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -280}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &378784892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378784890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3403082f5e16414fadf57fe5a27e5fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &378784893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2712,7 +2608,6 @@ GameObject:
   - component: {fileID: 415883241}
   - component: {fileID: 415883240}
   - component: {fileID: 415883239}
-  - component: {fileID: 415883238}
   m_Layer: 0
   m_Name: HotbarControl6
   m_TagString: Untagged
@@ -2740,18 +2635,6 @@ RectTransform:
   m_AnchoredPosition: {x: -243.2, y: -126.79999}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &415883238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 415883236}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &415883239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,7 +2799,6 @@ GameObject:
   - component: {fileID: 439905173}
   - component: {fileID: 439905172}
   - component: {fileID: 439905171}
-  - component: {fileID: 439905170}
   m_Layer: 0
   m_Name: VideoSettings
   m_TagString: Untagged
@@ -2944,18 +2826,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -80}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &439905170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439905168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756752e863156e64b8065485983946c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &439905171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3043,7 +2913,6 @@ GameObject:
   - component: {fileID: 453515456}
   - component: {fileID: 453515455}
   - component: {fileID: 453515454}
-  - component: {fileID: 453515453}
   m_Layer: 0
   m_Name: InventoryControl
   m_TagString: Untagged
@@ -3071,18 +2940,6 @@ RectTransform:
   m_AnchoredPosition: {x: 90, y: 143}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &453515453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453515451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &453515454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3170,7 +3027,6 @@ GameObject:
   - component: {fileID: 460369435}
   - component: {fileID: 460369434}
   - component: {fileID: 460369433}
-  - component: {fileID: 460369432}
   m_Layer: 0
   m_Name: JumpControl
   m_TagString: Untagged
@@ -3198,18 +3054,6 @@ RectTransform:
   m_AnchoredPosition: {x: -180.8, y: 10}
   m_SizeDelta: {x: 84, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &460369432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460369430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &460369433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3557,7 +3401,6 @@ GameObject:
   - component: {fileID: 495932702}
   - component: {fileID: 495932701}
   - component: {fileID: 495932700}
-  - component: {fileID: 495932699}
   m_Layer: 0
   m_Name: SaveFile1
   m_TagString: Untagged
@@ -3585,18 +3428,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &495932699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495932697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505038c8bfc79b24188a4513c60e64bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &495932700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3637,7 +3468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 495932699}
+      - m_Target: {fileID: 0}
         m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
@@ -3734,7 +3565,6 @@ GameObject:
   - component: {fileID: 507954661}
   - component: {fileID: 507954660}
   - component: {fileID: 507954659}
-  - component: {fileID: 507954658}
   m_Layer: 0
   m_Name: SaveFile2
   m_TagString: Untagged
@@ -3762,18 +3592,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -80}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &507954658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 507954656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756752e863156e64b8065485983946c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &507954659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3814,7 +3632,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 507954658}
+      - m_Target: {fileID: 0}
         m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
@@ -4057,7 +3875,6 @@ GameObject:
   - component: {fileID: 606434063}
   - component: {fileID: 606434062}
   - component: {fileID: 606434061}
-  - component: {fileID: 606434060}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -4085,18 +3902,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -280}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &606434060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 606434058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3403082f5e16414fadf57fe5a27e5fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &606434061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4137,7 +3942,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 606434060}
+      - m_Target: {fileID: 0}
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -4564,7 +4369,6 @@ GameObject:
   - component: {fileID: 725900505}
   - component: {fileID: 725900504}
   - component: {fileID: 725900503}
-  - component: {fileID: 725900502}
   m_Layer: 0
   m_Name: SaveFile3
   m_TagString: Untagged
@@ -4592,18 +4396,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -180}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &725900502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 725900500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &725900503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4644,7 +4436,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 725900502}
+      - m_Target: {fileID: 0}
         m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
@@ -4964,7 +4756,6 @@ GameObject:
   - component: {fileID: 799781475}
   - component: {fileID: 799781474}
   - component: {fileID: 799781473}
-  - component: {fileID: 799781472}
   m_Layer: 0
   m_Name: HotbarControl1
   m_TagString: Untagged
@@ -4992,18 +4783,6 @@ RectTransform:
   m_AnchoredPosition: {x: -243.2, y: -65.399994}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &799781472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799781470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &799781473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5312,7 +5091,6 @@ GameObject:
   - component: {fileID: 839031149}
   - component: {fileID: 839031148}
   - component: {fileID: 839031147}
-  - component: {fileID: 839031146}
   m_Layer: 0
   m_Name: InteractControl
   m_TagString: Untagged
@@ -5340,18 +5118,6 @@ RectTransform:
   m_AnchoredPosition: {x: 89.999985, y: -39}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &839031146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 839031144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &839031147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5665,7 +5431,6 @@ GameObject:
   - component: {fileID: 896212780}
   - component: {fileID: 896212779}
   - component: {fileID: 896212778}
-  - component: {fileID: 896212777}
   m_Layer: 0
   m_Name: AudioSettings
   m_TagString: Untagged
@@ -5693,18 +5458,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &896212777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896212775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505038c8bfc79b24188a4513c60e64bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &896212778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6025,7 +5778,6 @@ GameObject:
   - component: {fileID: 942848596}
   - component: {fileID: 942848595}
   - component: {fileID: 942848594}
-  - component: {fileID: 942848593}
   m_Layer: 0
   m_Name: AudioSettingsCanvas
   m_TagString: Untagged
@@ -6056,18 +5808,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &942848593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 942848591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9521bad2062c534b98868f01b4961bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &942848594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6259,7 +5999,6 @@ GameObject:
   - component: {fileID: 988700546}
   - component: {fileID: 988700545}
   - component: {fileID: 988700544}
-  - component: {fileID: 988700543}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -6287,18 +6026,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -280}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &988700543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988700541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3403082f5e16414fadf57fe5a27e5fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &988700544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7048,7 +6775,6 @@ GameObject:
   - component: {fileID: 1157961565}
   - component: {fileID: 1157961564}
   - component: {fileID: 1157961563}
-  - component: {fileID: 1157961562}
   m_Layer: 0
   m_Name: PauseMenuControl
   m_TagString: Untagged
@@ -7076,18 +6802,6 @@ RectTransform:
   m_AnchoredPosition: {x: 89.999985, y: -126.7}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1157961562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157961560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1157961563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7252,7 +6966,6 @@ GameObject:
   - component: {fileID: 1163139819}
   - component: {fileID: 1163139818}
   - component: {fileID: 1163139817}
-  - component: {fileID: 1163139816}
   m_Layer: 0
   m_Name: HotbarControl8
   m_TagString: Untagged
@@ -7280,18 +6993,6 @@ RectTransform:
   m_AnchoredPosition: {x: -119.200005, y: -126.79999}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1163139816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163139814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1163139817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7379,7 +7080,6 @@ GameObject:
   - component: {fileID: 1179761351}
   - component: {fileID: 1179761350}
   - component: {fileID: 1179761349}
-  - component: {fileID: 1179761348}
   m_Layer: 0
   m_Name: HotbarControl0
   m_TagString: Untagged
@@ -7407,18 +7107,6 @@ RectTransform:
   m_AnchoredPosition: {x: 3.899998, y: -126.79999}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1179761348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179761346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1179761349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8897,7 +8585,6 @@ GameObject:
   - component: {fileID: 1464610029}
   - component: {fileID: 1464610028}
   - component: {fileID: 1464610027}
-  - component: {fileID: 1464610026}
   m_Layer: 0
   m_Name: ForwardControl
   m_TagString: Untagged
@@ -8925,18 +8612,6 @@ RectTransform:
   m_AnchoredPosition: {x: -181.70003, y: 143.30003}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1464610026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464610024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 505038c8bfc79b24188a4513c60e64bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1464610027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8977,7 +8652,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1464610026}
+      - m_Target: {fileID: 0}
         m_MethodName: Clicked
         m_Mode: 1
         m_Arguments:
@@ -9680,7 +9355,6 @@ GameObject:
   - component: {fileID: 1571446143}
   - component: {fileID: 1571446142}
   - component: {fileID: 1571446141}
-  - component: {fileID: 1571446140}
   m_Layer: 0
   m_Name: HotbarControl9
   m_TagString: Untagged
@@ -9708,18 +9382,6 @@ RectTransform:
   m_AnchoredPosition: {x: -58, y: -126.79999}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1571446140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571446138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1571446141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9807,7 +9469,6 @@ GameObject:
   - component: {fileID: 1571730899}
   - component: {fileID: 1571730898}
   - component: {fileID: 1571730897}
-  - component: {fileID: 1571730896}
   m_Layer: 0
   m_Name: BackwardControl
   m_TagString: Untagged
@@ -9835,18 +9496,6 @@ RectTransform:
   m_AnchoredPosition: {x: -181.70003, y: 83.70003}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1571730896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571730894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 756752e863156e64b8065485983946c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1571730897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10659,7 +10308,6 @@ GameObject:
   - component: {fileID: 1817498361}
   - component: {fileID: 1817498360}
   - component: {fileID: 1817498359}
-  - component: {fileID: 1817498358}
   m_Layer: 0
   m_Name: HotbarControl2
   m_TagString: Untagged
@@ -10687,18 +10335,6 @@ RectTransform:
   m_AnchoredPosition: {x: -181, y: -65.4}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1817498358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817498356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1817498359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11463,7 +11099,6 @@ GameObject:
   - component: {fileID: 1935214865}
   - component: {fileID: 1935214864}
   - component: {fileID: 1935214863}
-  - component: {fileID: 1935214862}
   m_Layer: 0
   m_Name: HotbarControl4
   m_TagString: Untagged
@@ -11491,18 +11126,6 @@ RectTransform:
   m_AnchoredPosition: {x: -58, y: -65.399994}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1935214862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935214860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1935214863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11952,7 +11575,6 @@ GameObject:
   - component: {fileID: 2010160932}
   - component: {fileID: 2010160931}
   - component: {fileID: 2010160930}
-  - component: {fileID: 2010160929}
   m_Layer: 0
   m_Name: LeftControl
   m_TagString: Untagged
@@ -11980,18 +11602,6 @@ RectTransform:
   m_AnchoredPosition: {x: -241.00003, y: 84.00003}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2010160929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010160927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2010160930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12079,7 +11689,6 @@ GameObject:
   - component: {fileID: 2014289516}
   - component: {fileID: 2014289515}
   - component: {fileID: 2014289514}
-  - component: {fileID: 2014289513}
   m_Layer: 0
   m_Name: HotbarControl3
   m_TagString: Untagged
@@ -12107,18 +11716,6 @@ RectTransform:
   m_AnchoredPosition: {x: -119.200005, y: -65.399994}
   m_SizeDelta: {x: 28, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2014289513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014289511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67d10b1047898944b94739833b2df5bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2014289514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12350,7 +11947,6 @@ GameObject:
   - component: {fileID: 2090818030}
   - component: {fileID: 2090818029}
   - component: {fileID: 2090818028}
-  - component: {fileID: 2090818027}
   m_Layer: 0
   m_Name: KeybindsCanvas
   m_TagString: Untagged
@@ -12381,18 +11977,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2090818027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090818025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9521bad2062c534b98868f01b4961bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2090818028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12654,7 +12238,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2137000881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9521bad2062c534b98868f01b4961bc, type: 3}
+  m_Script: {fileID: 11500000, guid: d72ba26c114d5d14f98a4f6693665f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2137000884
