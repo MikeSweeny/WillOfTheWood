@@ -229,6 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113312173}
   - component: {fileID: 113312172}
+  - component: {fileID: 113312174}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -262,6 +263,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &113312174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113312171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ef99f340897b49aaa439f88e7796f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completedQuestNames: []
 --- !u!1 &142275833
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,6 +622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectBrain: {fileID: 11400000, guid: 8832f7420998a7d49ae7c424223e84ed, type: 2}
   pathingPattern: {fileID: 0}
+  QuestList:
+  - {fileID: 11400000, guid: 96296555b2ab40f40abe071414a30629, type: 2}
 --- !u!65 &502305286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -869,7 +885,6 @@ GameObject:
   - component: {fileID: 802290478}
   - component: {fileID: 802290477}
   - component: {fileID: 802290476}
-  - component: {fileID: 802290475}
   - component: {fileID: 802290474}
   - component: {fileID: 802290473}
   - component: {fileID: 802290472}
@@ -950,58 +965,6 @@ MonoBehaviour:
   enemy:
   - {fileID: 802290472}
   distanceToCover: 1
---- !u!114 &802290475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802290470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91eb20f5b223a54ca65fbfcfe8e1708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &802290476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1176,7 +1139,6 @@ GameObject:
   - component: {fileID: 1249577571}
   - component: {fileID: 1249577570}
   - component: {fileID: 1249577569}
-  - component: {fileID: 1249577573}
   - component: {fileID: 1249577574}
   - component: {fileID: 1249577575}
   - component: {fileID: 1249577576}
@@ -1260,18 +1222,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1249577573
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249577568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91eb20f5b223a54ca65fbfcfe8e1708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1249577574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1353,7 +1303,6 @@ GameObject:
   - component: {fileID: 1274719931}
   - component: {fileID: 1274719930}
   - component: {fileID: 1274719929}
-  - component: {fileID: 1274719928}
   - component: {fileID: 1274719927}
   - component: {fileID: 1274719926}
   - component: {fileID: 1274719925}
@@ -1434,54 +1383,6 @@ MonoBehaviour:
   enemy:
   - {fileID: 1274719925}
   distanceToCover: 1
---- !u!114 &1274719928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274719923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91eb20f5b223a54ca65fbfcfe8e1708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1274719929
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1566,7 +1467,6 @@ GameObject:
   - component: {fileID: 1387165854}
   - component: {fileID: 1387165853}
   - component: {fileID: 1387165852}
-  - component: {fileID: 1387165851}
   - component: {fileID: 1387165850}
   - component: {fileID: 1387165849}
   - component: {fileID: 1387165848}
@@ -1647,58 +1547,6 @@ MonoBehaviour:
   enemy:
   - {fileID: 1387165848}
   distanceToCover: 1
---- !u!114 &1387165851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387165846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91eb20f5b223a54ca65fbfcfe8e1708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1387165852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2096,7 +1944,6 @@ GameObject:
   - component: {fileID: 1852228510}
   - component: {fileID: 1852228509}
   - component: {fileID: 1852228508}
-  - component: {fileID: 1852228507}
   - component: {fileID: 1852228506}
   - component: {fileID: 1852228505}
   - component: {fileID: 1852228504}
@@ -2177,56 +2024,6 @@ MonoBehaviour:
   enemy:
   - {fileID: 1852228504}
   distanceToCover: 1
---- !u!114 &1852228507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852228502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91eb20f5b223a54ca65fbfcfe8e1708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1852228508
 BoxCollider:
   m_ObjectHideFlags: 0
