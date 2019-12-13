@@ -24,6 +24,8 @@ public class Quests : ScriptableObject
     public bool currentQuest { get; set; }
     public bool Completed { get; set; }
     public int CurrentAmount { get; set; }
+    public bool NPCKill { get; set; }
+    protected GameObject NPCtoKill;
 
     //Changeable in script able list
     public string QuestName;
@@ -38,6 +40,8 @@ public class Quests : ScriptableObject
     public int CoinReward;
     public int UnitReward;
     //public variable for item reward needed;
+
+    public string NPCKilled;
 
     //Descriptions of text
     [TextArea(3, 10)]
