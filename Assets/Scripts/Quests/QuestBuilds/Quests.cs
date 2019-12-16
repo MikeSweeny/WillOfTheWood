@@ -23,6 +23,7 @@ public class Quests : ScriptableObject
     public List<QuestGoal> Goals = new List<QuestGoal>();
     public bool currentQuest { get; set; }
     public bool Completed { get; set; }
+    public bool isActive { get; set; }
     public int CurrentAmount { get; set; }
     public bool NPCKill { get; set; }
     protected GameObject NPCtoKill;
