@@ -717,7 +717,6 @@ GameObject:
   m_Component:
   - component: {fileID: 158449365}
   - component: {fileID: 158449367}
-  - component: {fileID: 158449366}
   m_Layer: 0
   m_Name: MinimapCameraInput
   m_TagString: Untagged
@@ -744,14 +743,6 @@ RectTransform:
   m_AnchoredPosition: {x: 311.00003, y: 812.65}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!81 &158449366
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 158449364}
-  m_Enabled: 1
 --- !u!20 &158449367
 Camera:
   m_ObjectHideFlags: 0
