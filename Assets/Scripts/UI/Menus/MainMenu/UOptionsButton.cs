@@ -13,7 +13,7 @@ public class UOptionsButton : UIButton
 
     //Function : Clicked
     //DESCRIPTION : Calls the function in the UI event manager that opens the options menu
-    // and closes the main menu
+    // and closes the main/pause menu
     //PARAMETERS :  none
     //RETURNS : none
     public override void Clicked()

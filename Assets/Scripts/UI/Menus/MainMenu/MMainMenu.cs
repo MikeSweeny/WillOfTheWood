@@ -1,4 +1,4 @@
-﻿//FILE          :   MLeveling.cs
+﻿//FILE          :   MMainMenu.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
 //FIRST VERSION :   11/12/2019
@@ -6,20 +6,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MLeveling
-//PURPOSE : serves as the leveling menu
-public class MLeveling : Menu
+//NAME : MMainMenu
+//PURPOSE : serves as the main menu
+public class MMainMenu : Menu
 {
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    private void Awake()
     {
-        gameObject.SetActive(false);
-        UIEventManager.OpenLeveling += OpenMenu;
-        UIEventManager.CloseLeveling += CloseMenu;
+        UIEventManager.OpenMainMenu += OpenMenu;
+        UIEventManager.CloseMainMenu += CloseMenu;
     }
 
     //Function : OnDestroy
@@ -28,7 +27,7 @@ public class MLeveling : Menu
     //RETURNS : none
     private void OnDestroy()
     {
-        UIEventManager.OpenLeveling -= OpenMenu;
-        UIEventManager.CloseLeveling -= CloseMenu;
+        UIEventManager.OpenMainMenu -= OpenMenu;
+        UIEventManager.CloseMainMenu -= CloseMenu;
     }
 }

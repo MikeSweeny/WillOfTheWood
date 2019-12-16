@@ -1,25 +1,25 @@
-﻿//FILE          :   MLeveling.cs
+﻿//FILE          :   MKeybindMenu.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
-//FIRST VERSION :   11/12/2019
+//FIRST VERSION :   16/12/2019
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MLeveling
-//PURPOSE : serves as the leveling menu
-public class MLeveling : Menu
+//NAME : MKeybindMenu
+//PURPOSE : serves as the keybind menu
+public class MKeybindMenu : Menu
 {
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    private void Awake()
     {
         gameObject.SetActive(false);
-        UIEventManager.OpenLeveling += OpenMenu;
-        UIEventManager.CloseLeveling += CloseMenu;
+        UIEventManager.OpenKeybindMenu += OpenMenu;
+        UIEventManager.CloseKeybindMenu += CloseMenu;
     }
 
     //Function : OnDestroy
@@ -28,7 +28,7 @@ public class MLeveling : Menu
     //RETURNS : none
     private void OnDestroy()
     {
-        UIEventManager.OpenLeveling -= OpenMenu;
-        UIEventManager.CloseLeveling -= CloseMenu;
+        UIEventManager.OpenKeybindMenu -= OpenMenu;
+        UIEventManager.CloseKeybindMenu -= CloseMenu;
     }
 }

@@ -17,6 +17,7 @@ public class MInventory : Menu
     //RETURNS : none
     void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenInventory += OpenMenu;
         UIEventManager.CloseInventory += CloseMenu;
     }
