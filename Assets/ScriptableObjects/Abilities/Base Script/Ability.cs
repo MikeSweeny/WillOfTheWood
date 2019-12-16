@@ -16,8 +16,16 @@ public class Ability : ScriptableObject
     private string abilityName;
     [SerializeField]
     [TextArea(10, 10)]
-    private string abilityDescription;
+    private string abilityDescriptionNoviceLevel;
+    [SerializeField]
+    [TextArea(10, 10)]
+    private string abilityDescriptionAdaptLevel;
+    [SerializeField]
+    [TextArea(10, 10)]
+    private string abilityDescriptionMasterLevel;
     //Variables that are applied when needed.
+    [SerializeField]
+    private Sprite abilityImage;
     [SerializeField]
     private int damageModifier;
     [SerializeField]
@@ -28,4 +36,8 @@ public class Ability : ScriptableObject
     private int strengthModifier;
     [SerializeField]
     private int detectionModifier;
+
+    public virtual void noviceLevel() { }
+    public virtual void adeptLevel() { }
+    public virtual void masterLevel() { }
 }
