@@ -41,6 +41,7 @@ public class InputManager : MonoBehaviour
 
     //set to false when menu is opened
     public static bool inputEnabled = true;
+    private bool axisInUse = false;
 
     private void Awake()
     {
@@ -65,8 +66,14 @@ public class InputManager : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             TriggerJump();
 
-        if (Input.GetButtonDown("Fire1") || Input.GetAxisRaw("Fire1") != 0)
+        if (Input.GetButtonDown("Fire1") || (Input.GetAxis("ControllerAttack") != 0 && axisInUse == false))
+        {
             TriggerAttack();
+            axisInUse = true;
+        }
+
+        if (Input.GetAxis("ControllerAttack") == 0)
+            axisInUse = false;
 
         if (Input.GetButtonDown("Interact"))
             TriggerInteract();
