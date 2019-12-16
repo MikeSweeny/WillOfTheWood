@@ -17,6 +17,7 @@ public class MShop : Menu
     //RETURNS : none
     void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenShop += OpenMenu;
         UIEventManager.CloseShop += CloseMenu;
     }

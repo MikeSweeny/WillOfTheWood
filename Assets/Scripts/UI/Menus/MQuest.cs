@@ -17,6 +17,7 @@ public class MQuest : Menu
     //RETURNS : none
     void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenQuests += OpenMenu;
         UIEventManager.CloseQuests += CloseMenu;
     }

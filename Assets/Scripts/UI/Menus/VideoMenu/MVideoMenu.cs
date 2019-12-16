@@ -1,24 +1,25 @@
-﻿//FILE          :   MMainMenu.cs
+﻿//FILE          :   MVideoMenu.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Gavin McGuire
-//FIRST VERSION :   11/12/2019
+//FIRST VERSION :   16/12/2019
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MMainMenu
-//PURPOSE : serves as the main menu
-public class MMainMenu : Menu
+//NAME : MVideoMenu
+//PURPOSE : serves as the video menu
+public class MVideoMenu : Menu
 {
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    private void Awake()
+    void Awake()
     {
-        UIEventManager.OpenMainMenu += OpenMenu;
-        UIEventManager.CloseMainMenu += CloseMenu;
+        gameObject.SetActive(false);
+        UIEventManager.OpenVideoMenu += OpenMenu;
+        UIEventManager.CloseVideoMenu += CloseMenu;
     }
 
     //Function : OnDestroy
@@ -27,7 +28,7 @@ public class MMainMenu : Menu
     //RETURNS : none
     private void OnDestroy()
     {
-        UIEventManager.OpenMainMenu -= OpenMenu;
-        UIEventManager.CloseMainMenu -= CloseMenu;
+        UIEventManager.OpenVideoMenu -= OpenMenu;
+        UIEventManager.CloseVideoMenu -= CloseMenu;
     }
 }
