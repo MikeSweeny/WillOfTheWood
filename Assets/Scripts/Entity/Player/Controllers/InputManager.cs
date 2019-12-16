@@ -65,7 +65,7 @@ public class InputManager : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             TriggerJump();
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetButtonDown("Fire1") || Input.GetAxisRaw("Fire1") != 0)
             TriggerAttack();
 
         if (Input.GetButtonDown("Interact"))
@@ -104,7 +104,7 @@ public class InputManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(inputEnabled)
+        if (inputEnabled)
         {
             Walk?.Invoke(Input.GetAxis("Vertical"));
 
@@ -136,7 +136,7 @@ public class InputManager : MonoBehaviour
     //RETURNS: None
     public static void TriggerJump()
     {
-        if(inputEnabled)
+        if (inputEnabled)
             Jump?.Invoke();
     }
 
