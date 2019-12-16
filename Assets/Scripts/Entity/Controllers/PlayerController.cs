@@ -27,10 +27,13 @@ public class PlayerController : MonoBehaviour
     private bool isWalking = false;
     private bool jumping = false;
 
+    private Animator animController;
     private CharacterController controller;
+
 
     private void Start()
     {
+        animController = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         InputManager.Walk += Movement;
         InputManager.Rotate += TurnPlayer;
