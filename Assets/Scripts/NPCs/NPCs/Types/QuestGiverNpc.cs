@@ -73,6 +73,8 @@ public class QuestGiverNpc : BaseInteractableNpc
                     AssignedQuest = true;
                     Quest.Load();
                     Quest.StartText();
+                    Quest.isActive = true;
+                    QM.AddActiveQuests();
                     return;
                 }
             }
@@ -91,6 +93,8 @@ public class QuestGiverNpc : BaseInteractableNpc
             AssignedQuest = false;
             QM.addToCQNList(Quest.QuestName);
             Quest.CompletedText();
+            Quest.isActive = false;
+            QM.RemoveActiveQuest(Quest.QuestName);
 
         }
         else

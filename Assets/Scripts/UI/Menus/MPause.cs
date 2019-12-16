@@ -17,6 +17,7 @@ public class MPause : Menu
     //RETURNS : none
     void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenPause += OpenMenu;
         UIEventManager.ClosePause += CloseMenu;
     }

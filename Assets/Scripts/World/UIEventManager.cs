@@ -18,6 +18,12 @@ public class UIEventManager
     public static event UIEvent CloseSaveMenu;
     public static event UIEvent OpenLoadMenu;
     public static event UIEvent CloseLoadMenu;
+    public static event UIEvent OpenAudioMenu;
+    public static event UIEvent CloseAudioMenu;
+    public static event UIEvent OpenVideoMenu;
+    public static event UIEvent CloseVideoMenu;
+    public static event UIEvent OpenKeybindMenu;
+    public static event UIEvent CloseKeybindMenu;
     public static event UIEvent OpenPause;
     public static event UIEvent ClosePause;
     public static event UIEvent OpenOptions;
@@ -89,6 +95,66 @@ public class UIEventManager
     {
         if (CloseLoadMenu != null)
             CloseLoadMenu();
+    }
+
+    //Function : TriggerOpenAudioMenu
+    //DESCRIPTION : Opens the audio menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenAudioMenu()
+    {
+        if (OpenAudioMenu != null)
+            OpenAudioMenu();
+    }
+
+    //Function : TriggerCloseAudioMenu
+    //DESCRIPTION : Closes the audio menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseAudioMenu()
+    {
+        if (CloseAudioMenu != null)
+            CloseAudioMenu();
+    }
+
+    //Function : TriggerOpenVideoMenu
+    //DESCRIPTION : Opens the video menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenVideoMenu()
+    {
+        if (OpenVideoMenu != null)
+            OpenVideoMenu();
+    }
+
+    //Function : TriggerCloseVideoMenu
+    //DESCRIPTION : Closes the video menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseVideoMenu()
+    {
+        if (CloseVideoMenu != null)
+            CloseVideoMenu();
+    }
+
+    //Function : TriggerOpenKeybindMenu
+    //DESCRIPTION : Opens the keybind menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenKeybindMenu()
+    {
+        if (OpenKeybindMenu != null)
+            OpenKeybindMenu();
+    }
+
+    //Function : TriggerCloseKeybindMenu
+    //DESCRIPTION : Closes the keybind menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseKeybindMenu()
+    {
+        if (CloseKeybindMenu != null)
+            CloseKeybindMenu();
     }
 
     //Function : TriggerOpenPause

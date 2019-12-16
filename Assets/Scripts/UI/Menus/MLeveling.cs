@@ -17,6 +17,7 @@ public class MLeveling : Menu
     //RETURNS : none
     void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenLeveling += OpenMenu;
         UIEventManager.CloseLeveling += CloseMenu;
     }

@@ -17,6 +17,7 @@ public class MLoadMenu : Menu
     //RETURNS : none
     void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenLoadMenu += OpenMenu;
         UIEventManager.CloseLoadMenu += CloseMenu;
     }

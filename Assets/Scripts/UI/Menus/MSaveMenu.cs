@@ -20,6 +20,7 @@ public class MSaveMenu : Menu
     //RETURNS : none
     void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenSaveMenu += OpenMenu;
         UIEventManager.CloseSaveMenu += CloseMenu;
     }

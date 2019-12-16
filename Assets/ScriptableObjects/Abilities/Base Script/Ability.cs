@@ -6,11 +6,26 @@ using UnityEngine;
 
 //NAME : Ability Base Scriptable Object
 //PURPOSE :Creates abilities and sets the base perameters needed to apply different effects on the player.
+
+//Puts 'Ability' into the asset menu to be called in unity
 [CreateAssetMenu(fileName = "NewAbility", menuName = "Ability", order = 51)]
 public class Ability : ScriptableObject
 {
+    //Sets the name and description of ability
     [SerializeField]
     private string abilityName;
     [SerializeField]
-    private string abilityDescription;   
+    [TextArea(10, 10)]
+    private string abilityDescription;
+    //Variables that are applied when needed.
+    [SerializeField]
+    private int damageModifier;
+    [SerializeField]
+    private int speedModifier;
+    [SerializeField]
+    private int persuasionModifier;
+    [SerializeField]
+    private int strengthModifier;
+    [SerializeField]
+    private int detectionModifier;
 }
