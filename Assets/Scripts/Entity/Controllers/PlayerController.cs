@@ -64,6 +64,11 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
 
         ResetAnims();
+
+        //if (moveDirection.z < 0)
+        //{
+        //    animController.SetFloat("Speed", moveDirection.z);
+        //}
     }
 
     //Function: Movement
@@ -91,20 +96,16 @@ public class PlayerController : MonoBehaviour
             speedMultiplier = 1;
         }
 
-        if(moveDirection.x < 0)
+       if (moveDirection.z > 0)
         {
-            animController.SetFloat("Speed", -moveDirection.x);
-        } 
-        else if(moveDirection.x > 0)
-        {
-            animController.SetFloat("Speed", moveDirection.x);
+            animController.SetFloat("Speed", moveDirection.z);
         }
 
         moveDirection *= isWalking ? walkSpeed * speedMultiplier : runSpeed * speedMultiplier;
 
         moveDirection = transform.TransformDirection(moveDirection);
 
-        animController.SetFloat("Direction", moveDirection.x);
+       
     }
 
     //Function: PlayerInteract
@@ -204,7 +205,7 @@ public class PlayerController : MonoBehaviour
             animController.SetBool("Attacking", false);
         }
 
-        if(grounded)
+        if (grounded)
         {
             animController.SetBool("Jumping", false);
         }
