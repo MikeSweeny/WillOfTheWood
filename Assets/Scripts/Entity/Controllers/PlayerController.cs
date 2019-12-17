@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private bool isWalking = false;
     private bool jumping = false;
+    private bool isAttacking = false;
 
     private Animator animController;
     private CharacterController controller;
@@ -60,6 +61,14 @@ public class PlayerController : MonoBehaviour
         grounded = ((controller.Move(moveDirection * Time.deltaTime)) & CollisionFlags.Below) != 0;
 
         jumping = grounded ? false : jumping;
+        isAttacking = false;
+
+        ResetAnims();
+
+        //if (moveDirection.z < 0)
+        //{
+        //    animController.SetFloat("Speed", moveDirection.z);
+        //}
     }
 
     //Function: Movement
@@ -87,9 +96,16 @@ public class PlayerController : MonoBehaviour
             speedMultiplier = 1;
         }
 
+       if (moveDirection.z > 0)
+        {
+            animController.SetFloat("Speed", moveDirection.z);
+        }
+
         moveDirection *= isWalking ? walkSpeed * speedMultiplier : runSpeed * speedMultiplier;
 
         moveDirection = transform.TransformDirection(moveDirection);
+
+       
     }
 
     //Function: PlayerInteract
@@ -158,6 +174,7 @@ public class PlayerController : MonoBehaviour
     {
         if(!jumping)
         {
+            animController.SetBool("Jumping", true);
             jumping = true;
             moveDirection.y = jumpSpeed;
             controller.Move(moveDirection * Time.deltaTime);
@@ -170,7 +187,28 @@ public class PlayerController : MonoBehaviour
     //RETURNS: None
     private void PlayerAttack()
     {
-        print("Attacking");
+        if(isAttacking == false)
+        {
+            animController.SetBool("Attacking", true);
+            isAttacking = true;
+        }
+    }
+
+    //Function: ResetAnims
+    //DESCRIPTION: this function will be used to reset the conditions for the bools in the animator for the player
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ResetAnims()
+    {
+        if (isAttacking == false && animController.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttack") && animController.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+        {
+            animController.SetBool("Attacking", false);
+        }
+
+        if (grounded && (animController.GetCurrentAnimatorStateInfo(0).IsName("Jumping") && animController.GetCurrentAnimatorStateInfo(0).normalizedTime > 1))
+        {
+            animController.SetBool("Jumping", false);
+        }
     }
 
     //Function: ActivateHotbarSlot1

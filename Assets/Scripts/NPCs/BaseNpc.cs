@@ -17,8 +17,13 @@ public class BaseNpc : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pathingPattern.WaypointContainer)
+        if (pathingPattern.WaypointContainer && pathingPattern.canWait)
+        {
+            pathingPattern.WaitWhilePathing();
+        } else if(pathingPattern.WaypointContainer && pathingPattern.canWait == false)
+        {
             pathingPattern.RoamingPath();
+        }
     }
 
 }

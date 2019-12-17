@@ -677,6 +677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completedQuestNames: []
+  ActiveQuest: []
+  QuestNPC: []
 --- !u!1 &142275833
 GameObject:
   m_ObjectHideFlags: 0
@@ -6582,6 +6584,7 @@ GameObject:
   - component: {fileID: 1761258542}
   - component: {fileID: 1761258541}
   - component: {fileID: 1761258546}
+  - component: {fileID: 1761258547}
   m_Layer: 0
   m_Name: Player_Cube
   m_TagString: Untagged
@@ -6706,6 +6709,25 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   playerBrain: {fileID: 11400000, guid: f43b11aaa94daf24484f6f434b5cc1d8, type: 2}
+--- !u!95 &1761258547
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761258540}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 97e0bf1e8077ff04f9951107eea064df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1762386837
 GameObject:
   m_ObjectHideFlags: 0
