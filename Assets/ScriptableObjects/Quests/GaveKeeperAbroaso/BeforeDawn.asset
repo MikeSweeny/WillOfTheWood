@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc5057f776b1ef4b98dfa9d84f1ab3c, type: 3}
+  m_Name: BeforeDawn
+  m_EditorClassIdentifier: 
+  QuestName: BeforeDawn
+  Prereq1: Day5
+  Prereq2: Night
+  Description: Kill spectral hound
+  NPCID: 
+  TurnInNPCName: GraveKeeper Abraso
+  RequiredAmount: 1
+  ExperenceReward: 1
+  CoinReward: 2
+  UnitReward: 0
+  QuestObjectives: There is a spectral hound that appears in the graveyard during
+    a certain night of the week, attacking anything it says its eyes upon, dispatch
+    of the hound.
+  StartQuestText: 'Traveler, I have see your deeds, I have a little gold for your
+    assistance.  You see tonight and only tonight, there will be a spectral hound
+    appear.  This beast attacks anyone it lays its eyes upon.  Lure him out of the
+    grave yard and dispatch of the hound. '
+  TrackingQuestText: Spectral Hound Killed
+  InprogressQuestText: Have you seen the wild beast yet? is he dead?
+  CompletedQuestText: 'Thank you traveler, I knew my faith in you was well placed,
+    now we can visit our dead in peace now. '
