@@ -1,0 +1,128 @@
+PlayerStats:
+
+Accuracy
+Speed
+Strength
+Discrete
+Persuasive
+Defense
+Toughness
+PainThreshold
+
+
+Abillities:
+
+BackStab(Passive):
+
+If novice is equipped and stealth attack boolean equals true, player deals additional 1-6 damage to target enemy.
+If adept, same as novice with a bleeding effect on enemy that deals 1-4 damage 
+every 10 in game seconds until enemy is healed or dies.
+If master, same as adept with new damage on bleeding to 1-8 damage.
+
+Berserker:
+
+If novice is equipped and player has toggled isOn to true, equipped weapons gain additional 1-6 damage, defence lowered by 2.
+If adept, same as novice with player now taking 1-4 less damage from enemy attacks while activated.
+If master, same as adept with player now taking no penalty for defence.
+
+Dominate(Passive):
+
+If novice is equipped, half of players persuasive stat is added to their accuracy check.
+If adept, same as novice with a chance to do 1-4 damage to another enemy within player range on successfull player attacks.
+If master, same as adept with the ability to effect enemies within player range
+with fear and causes them to flee for 25 in game seconds.
+
+Exceptional Attribute:
+
+On collection,if novice, player looks through and chooses one of the options in a switch statement holding all the player stats.
+check to see what option was chosen and apply 1 point to chosen player stat using the switch statement.
+If adept, player looks through and chooses one of the options in a switch statement holding all the player stats.
+check to see what option was chosen and apply 2 points to chosen player stat using the switch statement.
+If master, player looks through and chooses one of the options in a switch statement holding all the player stats.
+check to see what option was chosen and apply 3 points to chosen player stat using the switch statement.
+
+Feign(only works with short weapons):
+
+If novice is equipped and player uses, player attacks enemy with chance between 1-10 (above 5 comes back true)
+of enemy not realizing it has taken damage for 1-4 damage.
+If adept is equipped and player uses, same as novice with a chance between 1-10 (above 3 comes back true)
+of enemy not realizing it has taken damage for 1-4 damage.
+If master, same as adept with a chance between 1-10 (above 3 comes back true)
+of enemy not realizing it has taken damage for 2-8 damage.
+
+Iron Fist(Passive):
+
+If novice is equipped, half of players strength is added to accuracy for melee attacks.
+If adept, players strength is added to accuracy for melee attacks and melee damage is increased to 1-6 damage.
+If master, same as adept with after every successfull attack on an enemy, 
+player has 10 in game seconds to strike another hit for an additional 1-4 melee damage added to base melee damage.
+
+Man At Arms:
+
+If novice is equipped and player uses, increase current armours rating to next tier. 
+(Light armor blocks 1-6, medium armor blocks 1-8 and heavy armor now blocks 1-10.)
+If adept is equipped and player uses, same functionality as novice with a 1 - 10 chance 
+to knock back the attacking enemy while the player is wearing armour.
+If Master is equipped and player uses, same functionality as adept with added check 
+to see if enemy has armor reducing effects and if they do negate them while ability is activated.
+
+Natural Warrior:
+
+If novice is equipped and player uses, while activated the players unnarmed attack damage is between 1-6.
+If adept is equipped and the player uses, while activated the player has the same functionality as novice
+with now having the player attack twice with unnarmed attacks.
+If master is equipped and the player uses, while activated the player has the same functionality as adept with 
+the change of instead of attack damage being 1-6 it is now 2-12.
+
+Poisoner:
+
+If novice is equipped and the player uses, 
+while activated the weapon equipped becomes poisonous for 1 strike. 
+Enemy hit will have a poison effect added for x ammount of time.
+If adept is equipped and the player uses,
+while activated the weapon equipped is now poisonous until combat is over.
+If master is equipped and the player uses,
+while activated the weapon equipped is now poisonous with 2x the poison damage on enemy hit.
+
+Polearm Mastery:
+
+If novice is equipped and player uses, on activation Weapons designated "Long" have 1 step added to damage
+(spears and halberds 1-10 and 1-8 for staves)
+If adept is equipped and player uses, same as novice with the player able to swing twice.
+If master is equipped and player uses, same as adept with the effect that the enemies 
+get stopped at a range of the weapon even if they do not get hit by it.
+
+Recovery:
+
+If novice is equipped and the player uses, on activation 
+the player will gain a random integer ammount between 1-4 on toughness.
+If adept, same as novice with now the integer is 1-6.
+If master, same as adept or novice with now the integer is 1-8.
+
+Shield Fighter(Passive):
+
+If novice is equipped, one handed weapons equipped get +1 to attack damage and sheilds get +2 defence instead of regular +1.
+If adept, same as novice with added sheild bash follow up attack after every succesfull attack landed 
+dealing extra 1-4 damage.
+If master, same as adept with damage of sheild bash being 1-6 instead of 1-4.
+
+Steadfast(passive):
+
+If novice is equipped, resistance increased to 1.
+If adept, resistance increased to 2.
+If master, resistance increased to 3 and checks if players resistance
+is currently higher than 2, if yes attacking enemy takes 1-6 damage if attacking with effecting weapons.
+
+Twin Attack(passive):
+
+If novice is equipped, player can now equip a small weapon on the sheild hand and has +1 to defence, 
+switching the sheild hand command to an attack aswell when equipped.
+If adept, same as novice with now the player can have a one-handed in each hand.
+If master, same as adept with now the player can equip a two-handed weapon in one hand, and a one-handed in the other. 
+
+Two-Handed Force:
+
+If novice is equipped, two handed weapons equipped have 1-12 damage instead of base damage of 1-10.
+If adept, same as novice with a check to see if the player has swung and missed, if yes the boolean will set true. 
+On next successfull attack the player will lnad an additional 1-6 damage.
+If master, same as adept with two handed damage bypassing enemy armour checks.
