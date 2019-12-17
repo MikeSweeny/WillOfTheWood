@@ -1,18 +1,22 @@
-﻿using System.Collections;
+﻿//FILE          :   HHotbar.cs
+//PROJECT       :   Will of the Wood
+//PROGRAMMER    :   Gavin McGuire
+//FIRST VERSION :   17/12/2019
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HHotbar : MonoBehaviour
+//NAME : HHotbar
+//PURPOSE : displays the abilities / items that are bound to the hotbar
+public class HHotbar : HUDElement
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    //Function : UpdateElement
+    //DESCRIPTION : Updates the relevant information to the element
+    //PARAMETERS : none
+    //RETURNS : none
+    public override void UpdateElement()
     {
-        
+        throw new System.NotImplementedException();
     }
 }
