@@ -200,7 +200,7 @@ public class PlayerController : MonoBehaviour
     //RETURNS: None
     private void ResetAnims()
     {
-        if (isAttacking == false)
+        if (isAttacking == false && animController.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttack") && animController.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
             animController.SetBool("Attacking", false);
         }
