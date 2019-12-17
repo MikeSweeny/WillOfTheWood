@@ -20,12 +20,14 @@ public class NpcPathing : MonoBehaviour
     public GameObject target;
     public Transform[] fleeingPoints;
     public Transform fleeingDestinationContainer;
+    public bool canWait = false;
     private Transform[] waypoint;
     private int currentWaypoint = 0;
     public float distanceToCover = 1f;
 
     private float[] distanceLeftToTravel;
-
+    private float waitTime;
+    private float waitDelay = 5f;
 
     private void Start()
     {
@@ -99,6 +101,16 @@ public class NpcPathing : MonoBehaviour
             }
 
             agent.SetDestination(fleePosition);
+        }
+    }
+
+    public void WaitWhilePathing()
+    {
+        waitTime += Time.deltaTime;
+        if (waitTime >= waitDelay)
+        {
+            waitTime = 0;
+            RoamingPath();
         }
     }
 

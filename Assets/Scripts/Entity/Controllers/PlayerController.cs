@@ -205,7 +205,7 @@ public class PlayerController : MonoBehaviour
             animController.SetBool("Attacking", false);
         }
 
-        if (grounded)
+        if (grounded && (animController.GetCurrentAnimatorStateInfo(0).IsName("Jumping") && animController.GetCurrentAnimatorStateInfo(0).normalizedTime > 1))
         {
             animController.SetBool("Jumping", false);
         }
