@@ -11,9 +11,16 @@ using UnityEngine;
 public abstract class HUDElement : MonoBehaviour
 {
 
+    protected Player player;
+
     //Function : UpdateElement
     //DESCRIPTION : Updates the relevant information to the element
     //PARAMETERS : none
     //RETURNS : none
     public abstract void UpdateElement();
+
+    public void SetPlayer(Player tPlayer)
+    {
+        player = tPlayer;
+    }
 }
