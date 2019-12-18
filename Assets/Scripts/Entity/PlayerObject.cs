@@ -22,6 +22,8 @@ public class PlayerObject : EntityObject
     [HideInInspector]
     public int accuracy;
     [HideInInspector]
+    public int maxHealth;
+    [HideInInspector]
     public int discrete;
     [HideInInspector]
     public int pursuasive;

@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public int quick;
     public int strong;
     public int toughness;
+    public float maxHealth = 100f;
+    private float currentHealth;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
     [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
@@ -20,12 +22,11 @@ public class Player : MonoBehaviour
 
     private bool canShootTargetRay = false;
     private GameObject target;
-
     private void Awake()
     {
         setStats();
         getStats();
-
+        currentHealth = maxHealth;
     }
 
     private void Update()

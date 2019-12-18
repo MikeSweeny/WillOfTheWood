@@ -8,7 +8,8 @@ public class BaseEnemy : BaseNpc
     public int accuracy;
     public int quick;
     public int strong;
-
+    private float maxHealth;
+    private float currentHealth;
     public int toughness;
 
 
@@ -16,7 +17,7 @@ public class BaseEnemy : BaseNpc
 
     private void Awake()
     {
-
+        
     }
 
     private void FixedUpdate()
