@@ -9,6 +9,14 @@ public class CollectableItems : MonoBehaviour, IQuestID
     PlayerController PC;
 
 
+    public void OnInteract()
+    {
+        gameObject.SetActive(false);
+        Cleared();
+
+        Invoke("reset", 10);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         PC = other.GetComponent<PlayerController>();

@@ -117,7 +117,9 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         print("Interacted");
 
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 6))
+        Debug.DrawRay(transform.position, transform.forward * 5, Color.red, 5.0f);
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 6))
         {
             //add any other cases for the player to interact with objects with specific tags
             switch(hit.collider.gameObject.tag)
@@ -142,6 +144,10 @@ public class PlayerController : MonoBehaviour
                     break;
                     //put code here for the items interaction ie. adding it to the inventory
                 case "Item":
+                    if(hit.collider.gameObject.GetComponent<CollectableItems>())
+                    {
+                        hit.collider.gameObject.GetComponent<CollectableItems>().OnInteract();
+                    }
                     break;
 
                 default:
