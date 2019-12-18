@@ -18,9 +18,16 @@ public class PlayerHUD : MonoBehaviour
     //RETURNS : none
     void Awake()
     {
+        Player player = GameObject.Find("Player").GetComponent<Player>();
+        elements = new List<HUDElement>();
         for (int i = 0; i < transform.childCount; ++i)
         {
             elements.Add(transform.GetChild(i).GetComponent<HUDElement>());
+        }
+
+        foreach (HUDElement element in elements)
+        {
+            element.SetPlayer(player);
         }
     }
 

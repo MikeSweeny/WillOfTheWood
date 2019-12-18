@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private bool isWalking = false;
     private bool jumping = false;
     private bool isAttacking = false;
+    private bool canShootTargetRay = false;
 
     private Animator animController;
     private CharacterController controller;
@@ -65,10 +66,20 @@ public class PlayerController : MonoBehaviour
 
         ResetAnims();
 
-        //if (moveDirection.z < 0)
-        //{
-        //    animController.SetFloat("Speed", moveDirection.z);
-        //}
+        if (moveDirection.z == 0)
+        {
+            animController.SetFloat("Speed", moveDirection.z);
+        }
+
+        if(canShootTargetRay == true)
+        {
+            canShootTargetRay = false;
+            FindPlayerTarget();
+        }
+        else
+        {
+            canShootTargetRay = true;
+        }
     }
 
     //Function: Movement
@@ -108,6 +119,17 @@ public class PlayerController : MonoBehaviour
        
     }
 
+    public GameObject FindPlayerTarget()
+    {
+        RaycastHit hit;
+
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 8))
+        {
+            return hit.collider.gameObject;
+        }
+        return null;
+    }
+
     //Function: PlayerInteract
     //DESCRIPTION: This function is the players interact function
     //PARAMETERS: RaycastHit hit
@@ -117,7 +139,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         print("Interacted");
 
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 4))
+        if(Physics.Raycast(transform.position, transform.forward, out hit, 6))
         {
             //add any other cases for the player to interact with objects with specific tags
             switch(hit.collider.gameObject.tag)
