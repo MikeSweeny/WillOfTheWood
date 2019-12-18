@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     private bool isWalking = false;
     private bool jumping = false;
     private bool isAttacking = false;
-    private bool canShootTargetRay = false;
 
     private Animator animController;
     private CharacterController controller;
@@ -70,16 +69,6 @@ public class PlayerController : MonoBehaviour
         {
             animController.SetFloat("Speed", moveDirection.z);
         }
-
-        if(canShootTargetRay == true)
-        {
-            canShootTargetRay = false;
-            FindPlayerTarget();
-        }
-        else
-        {
-            canShootTargetRay = true;
-        }
     }
 
     //Function: Movement
@@ -117,17 +106,6 @@ public class PlayerController : MonoBehaviour
         moveDirection = transform.TransformDirection(moveDirection);
 
        
-    }
-
-    public GameObject FindPlayerTarget()
-    {
-        RaycastHit hit;
-
-        if(Physics.Raycast(transform.position, transform.forward, out hit, 8))
-        {
-            return hit.collider.gameObject;
-        }
-        return null;
     }
 
     //Function: PlayerInteract

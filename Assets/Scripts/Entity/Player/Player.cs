@@ -18,12 +18,29 @@ public class Player : MonoBehaviour
 
     public PlayerObject playerBrain;
 
+    private bool canShootTargetRay = false;
+    private GameObject target;
+
     private void Awake()
     {
         setStats();
         getStats();
 
     }
+
+    private void Update()
+    {
+        if (canShootTargetRay == true)
+        {
+            canShootTargetRay = false;
+            FindPlayerTarget();
+        }
+        else
+        {
+            canShootTargetRay = true;
+        }
+    }
+
     private void FixedUpdate()
     {
         CalcToughness();
@@ -77,5 +94,30 @@ public class Player : MonoBehaviour
     public void CalcPainThreshold()
     {
         painThreshold = strong / 2;
+    }
+
+    //Function: FindPlayerTarget
+    //DESCRIPTION: finds the target in front of the player if there is one
+    //PARAMETERS: RaycastHit hit
+    //RETURNS: hit.collider.gameObject
+    public GameObject FindPlayerTarget()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 8))
+        {
+            target = hit.collider.gameObject;
+            return target;
+        }
+        return null;
+    }
+
+    //Function: GetPlayerTarget
+    //DESCRIPTION: returns the players target for use in outside functions
+    //PARAMETERS: None
+    //RETURNS: GameObject target
+    public GameObject GetPlayerTarget()
+    {
+        return target;
     }
 }
