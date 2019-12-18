@@ -66,7 +66,6 @@ public class QuestManager: MonoBehaviour
 
     public void AddActiveQuests()
     {
-
         for (int i = 0; i < QuestNPC.Count; i++)
         {
             isActive = QuestNPC[i].GetComponent<QuestGiverNpc>().Quest.isActive;
@@ -109,5 +108,12 @@ public class QuestManager: MonoBehaviour
             ActiveQuest.Remove(name);
     }
 
+    public void listActiveQuest()
+    {
+        for (int i = 0; i < ActiveQuest.Count; i++)
+        {
+           Debug.Log( ActiveQuest[i]);
+        }
 
+    }
 }
