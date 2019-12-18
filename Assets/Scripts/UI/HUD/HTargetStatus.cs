@@ -11,12 +11,15 @@ using UnityEngine;
 public class HTargetStatus : HUDElement
 {
 
+    //private Character target
+
     //Function : UpdateElement
     //DESCRIPTION : Updates the relevant information to the element
     //PARAMETERS : none
     //RETURNS : none
     public override void UpdateElement()
     {
+        //target = player.GetPlayerTarget().GetComponent<Character>();
         throw new System.NotImplementedException();
     }
 }
