@@ -13,7 +13,6 @@ using UnityEngine.UI;
 public class ShopKeeperNpc : BaseInteractableNpc
 {
     public GameObject shopDisplayWindow;
-    public List<ItemObject> shopItems;
 
     private Player player;
 
