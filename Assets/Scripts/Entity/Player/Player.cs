@@ -61,7 +61,7 @@ public class Player : CharacterBase
     //Function: FindPlayerTarget
     //DESCRIPTION: finds the target in front of the player if there is one
     //PARAMETERS: RaycastHit hit
-    //RETURNS: hit.collider.gameObject
+    //RETURNS: hit.collider.gameObject, null
     public GameObject FindPlayerTarget()
     {
         RaycastHit hit;
