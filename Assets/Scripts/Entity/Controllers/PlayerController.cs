@@ -10,7 +10,7 @@ using UnityEngine;
 
 //NAME: PlayerController
 //PURPOSE: This class will be for controlling the player movements and interactions
-public class PlayerController : MonoBehaviour
+public class PlayerController : BaseController
 {
     public bool walkByDefault = true;
     public float gravity = 20.0f;
@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
         InputManager.Walk += Movement;
         InputManager.Rotate += TurnPlayer;
         InputManager.Jump += PlayerJump;
-        InputManager.Attack += PlayerAttack;
+        InputManager.Attack += Attack;
         InputManager.Interact += PlayerInteract;
         InputManager.HotbarSlot1 += ActivateHotbarSlot1;
         InputManager.HotbarSlot2 += ActivateHotbarSlot2;
@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
         InputManager.HotbarSlot8 += ActivateHotbarSlot8;
         InputManager.HotbarSlot9 += ActivateHotbarSlot9;
         InputManager.HotbarSlot0 += ActivateHotbarSlot0;
+        ToggleWeaponCollider();
     }
 
     private void Update()
@@ -78,7 +79,7 @@ public class PlayerController : MonoBehaviour
     //DESCRIPTION: function for moving the player forward and backward
     //PARAMETERS: float verticalMovement
     //RETURNS: None
-    private void Movement(float verticalMovement)
+    public override void Movement(float verticalMovement)
     {
         isWalking = walkByDefault;
         if (Input.GetMouseButton(1))
@@ -193,10 +194,11 @@ public class PlayerController : MonoBehaviour
     //DESCRIPTION:  This function will allow the player to execute their attack and switch to the attack animation
     //PARAMETERS: None
     //RETURNS: None
-    private void PlayerAttack()
+    public override void Attack()
     {
         if(isAttacking == false)
         {
+            ToggleWeaponCollider();
             animController.SetBool("Attacking", true);
             isAttacking = true;
         }

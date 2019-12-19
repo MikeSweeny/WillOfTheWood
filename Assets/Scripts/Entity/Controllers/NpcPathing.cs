@@ -10,7 +10,7 @@ using UnityEngine.AI;
 
 //NAME: NpcPathing
 //PURPOSE: this calss will be used to determine the general movement for enemies and NPCs
-public class NpcPathing : MonoBehaviour
+public class NpcPathing : BaseController
 {
     private NavMeshAgent agent;
 
@@ -43,6 +43,11 @@ public class NpcPathing : MonoBehaviour
         {
             distanceLeftToTravel[i] = float.MaxValue;
         }
+    }
+
+    public override void Attack()
+    {
+        
     }
 
     //Function: RoamingPath

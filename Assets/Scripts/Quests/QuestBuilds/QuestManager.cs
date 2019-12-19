@@ -67,7 +67,9 @@ public class QuestManager: MonoBehaviour
     {
         for (int i = 0; i < QuestNPC.Count; i++)
         {
+            if (QuestNPC[i].GetComponent<QuestGiverNpc>().Quest)
             isActive = QuestNPC[i].GetComponent<QuestGiverNpc>().Quest.isActive;
+
             if (isActive == true)
             {
 
