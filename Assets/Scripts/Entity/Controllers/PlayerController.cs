@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private bool isWalking = false;
     private bool jumping = false;
     private bool isAttacking = false;
+    private Vector3 rayFiringPoint;
 
     private Animator animController;
     private CharacterController controller;
@@ -69,6 +70,8 @@ public class PlayerController : MonoBehaviour
         {
             animController.SetFloat("Speed", moveDirection.z);
         }
+
+        rayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1f), transform.position.z);
     }
 
     //Function: Movement
@@ -117,12 +120,11 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         print("Interacted");
 
-        Debug.DrawRay(transform.position, transform.forward * 5, Color.red, 5.0f);
-
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 6))
+        if (Physics.Raycast(rayFiringPoint, transform.forward, out hit, 6))
         {
+            print(hit.collider.gameObject);
             //add any other cases for the player to interact with objects with specific tags
-            switch(hit.collider.gameObject.tag)
+            switch (hit.collider.gameObject.tag)
             {
                 case "QuestGiver":
                     if (hit.collider.gameObject.GetComponent<QuestGiverNpc>())

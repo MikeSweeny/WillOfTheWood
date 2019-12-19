@@ -8,6 +8,7 @@ public class Player : CharacterBase
 
     private bool canShootTargetRay = false;
     private GameObject target;
+    private Vector3 rayFiringPoint;
 
 
     private void Awake()
@@ -27,6 +28,8 @@ public class Player : CharacterBase
         {
             canShootTargetRay = true;
         }
+
+        rayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1f), transform.position.z);
     }
 
     //FUNCTION : setStats()
@@ -63,7 +66,7 @@ public class Player : CharacterBase
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 8))
+        if (Physics.Raycast(rayFiringPoint, transform.forward, out hit, 8))
         {
             target = hit.collider.gameObject;
             return target;
