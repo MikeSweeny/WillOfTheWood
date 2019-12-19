@@ -17,7 +17,7 @@ public class QuestManager: MonoBehaviour
     private bool isActive = false;
     private bool checklist;
 
-    public List<string> ActiveQuest;
+    public List<Quests> ActiveQuest = new List<Quests>();
     public List<GameObject> QuestNPC = new List<GameObject>();
     
     
@@ -29,7 +29,6 @@ public class QuestManager: MonoBehaviour
     public void Awake()
     {
         addToCQNList("NULL");
-        ActiveQuest.Add("NULL");
         //find all quest givers
         QuestNPC.AddRange(GameObject.FindGameObjectsWithTag("QuestGiver"));
     }
@@ -74,7 +73,7 @@ public class QuestManager: MonoBehaviour
 
                 for (int j = 0; j < ActiveQuest.Count; j++)
                 {
-                    if (ActiveQuest[j] == QuestNPC[i].GetComponent<QuestGiverNpc>().Quest.QuestName)
+                    if (ActiveQuest[j] == QuestNPC[i].GetComponent<QuestGiverNpc>().Quest)
                     {
                         checklist = true;
                         break;
@@ -84,18 +83,18 @@ public class QuestManager: MonoBehaviour
                 }
 
                 if (checklist == false)
-                    ActiveQuest.Add(QuestNPC[i].GetComponent<QuestGiverNpc>().Quest.QuestName);
+                    ActiveQuest.Add(QuestNPC[i].GetComponent<QuestGiverNpc>().Quest);
 
                 
             }
         }
     }
 
-    public void RemoveActiveQuest(string name)
+    public void RemoveActiveQuest(Quests quest)
     {
         for (int j = 0; j < ActiveQuest.Count; j++)
         {
-            if (ActiveQuest[j] == name)
+            if (ActiveQuest[j] == quest)
             {
                 checklist = true;
                 break;
@@ -105,7 +104,7 @@ public class QuestManager: MonoBehaviour
         }
 
         if (checklist == true)
-            ActiveQuest.Remove(name);
+            ActiveQuest.Remove(quest);
     }
 
     public void listActiveQuest()
