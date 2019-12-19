@@ -18,7 +18,7 @@ public class QuestGoal
     public int RequiredAmount { get; set; }
     public int CoinReward { get; set; }
     public bool NPCKillable { get; set; }
-
+    public string NPCHandIn { get; set; }
     public virtual void Init()
     {
         //default init stuff

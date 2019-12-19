@@ -27,6 +27,7 @@ public class Quests : ScriptableObject
     public int CurrentAmount { get; set; }
     public bool NPCKill { get; set; }
     protected GameObject NPCtoKill;
+    protected GameObject NPCHandIn;
 
     //Changeable in script able list
     public string QuestName;
@@ -78,11 +79,13 @@ public class Quests : ScriptableObject
     //DESCRIPTION : gives the player the reward for the quest
     //PARAMETERS : 
     //RETURNS : 
-    public void GiveReward()
+    public virtual void GiveReward()
     {
         //player = FindObjectOfType<player>();
         //if (player)
         //    player.SetCoin(CoinReward);
+
+        Debug.Log("Quest Reward Given.");
     }
 
 
