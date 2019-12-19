@@ -35,6 +35,11 @@ public class MQuest : Menu
         UIEventManager.CloseQuests += CloseMenu;
     }
 
+
+    //Function : Update
+    //DESCRIPTION : updates the gameobject
+    //PARAMETERS : none
+    //RETURNS : none
     private void Update()
     {
         title.text = selectedQuest.QuestName;
@@ -53,6 +58,10 @@ public class MQuest : Menu
     }
 
 
+    //Function : SetQuest
+    //DESCRIPTION : sets the selected quest to the quest provided
+    //PARAMETERS : Quests quest: the quest the user wants to see
+    //RETURNS : none
     public void SetQuest(Quests quest)
     {
         selectedQuest = quest;
