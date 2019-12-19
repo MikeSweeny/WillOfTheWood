@@ -9,21 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8173adec161249147b7cc0d20e2b39f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e95ffded68d9a0428c63967cacf083b, type: 3}
   m_Name: TheBody
   m_EditorClassIdentifier: 
   QuestName: TheBody
-  Prereq1: Day2
+  Prereq1: NULL
   Prereq2: NULL
-  Description: Find the clues
-  NPCID: 
-  TurnInNPCName: The Sheriff
-  RequiredAmount: 0
+  Description: Find clues about the women's death
+  NPCID: wood
+  TurnInNPCName: Sheriff
+  RequiredAmount: 6
   ExperenceReward: 0
   CoinReward: 0
   UnitReward: 0
   QuestObjectives: 
-  StartQuestText: 
-  TrackingQuestText: 
-  InprogressQuestText: 
-  CompletedQuestText: 
+  StartQuestText: 'You stumble upon a dead body, looking around it seems she might
+    have been ready to attend a party, you look about the body for any clues that
+    might be able to help you out. '
+  TrackingQuestText: Find Clues
+  InprogressQuestText: The body still looks as dead as you first found it, maybe looking
+    a little worse
+  CompletedQuestText: visit the sherif
+  NPCHandInName: Bandit1

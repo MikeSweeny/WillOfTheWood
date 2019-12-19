@@ -19,6 +19,8 @@ public class QuestGiverNpc : BaseInteractableNpc
     public bool Helped { get; set; } //quest to hand in
     public List<Quests> QuestList = new List<Quests>(); //List of quests for NPC
     private int i = 0; //quest counter
+    public bool isSecondaryNPC = false;
+
 
 
     void Awake()
@@ -32,26 +34,45 @@ public class QuestGiverNpc : BaseInteractableNpc
     //RETURNS: None
     public override void OnInteract()
     {
-
-        if (!AssignedQuest && !Helped)
+        if (!isSecondaryNPC)
         {
-            //if (QUIM)
-            //{
-            //    QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
-            //    QUIM.NPCBoxTwo.text = "Will you please help me out with my quest?";
-            //}
+            if (!AssignedQuest && !Helped)
+            {
+                //if (QUIM)
+                //{
+                //    QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
+                //    QUIM.NPCBoxTwo.text = "Will you please help me out with my quest?";
+                //}
 
-            AssignQuest();
+                AssignQuest();
+            }
+            else if (AssignedQuest && !Helped)
+            {
+                CheckQuest();
+            }
+            else
+            {
+                NextQuest();
+            }
         }
-        else if (AssignedQuest && !Helped)
+        else if (isSecondaryNPC)
         {
-            CheckQuest();
-        }
-        else
-        {
-            NextQuest();
-        }
+            if(!Quest.Completed)
+            {
+            //what do you want!
+            }
+            else if (Quest.Completed)
+            {
+                //customized dialog
+                Quest.GiveReward();
+                QM.addToCQNList(Quest.QuestName);
+                Quest.isActive = false;
+                QM.RemoveActiveQuest(Quest);
+                isSecondaryNPC = false;
+            }
 
+            
+        }
     }
 
     //FUNCTION : AssignedQuest
@@ -86,7 +107,7 @@ public class QuestGiverNpc : BaseInteractableNpc
     //DESCRIPTION : Checking to see if quest is done or not and assigning the correct dialoge/action
     void CheckQuest()
     {
-        if (Quest.Completed)
+        if (Quest.Completed && !Quest.SecondNPC)
         {
             Quest.GiveReward();
             Helped = true;

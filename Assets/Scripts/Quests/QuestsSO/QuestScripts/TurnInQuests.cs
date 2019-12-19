@@ -9,6 +9,7 @@ using UnityEngine;
 public class TurnInQuests : Quests
 {
     public string NPCHandInName;
+    
     public override void Load()
     {
         CurrentAmount = 0;
@@ -16,10 +17,12 @@ public class TurnInQuests : Quests
         Goals.Add(new TurnInQuest(this, NPCID, "Kill " + RequiredAmount + " " + NPCID, false, CurrentAmount, RequiredAmount, CoinReward, NPCHandInName));
         Goals.ForEach(g => g.Init());
 
+        SecondNPC = true;
         NPCHandIn = GameObject.Find(NPCHandInName);
         if (NPCHandIn)
         {
-           //something maybe if needed. 
+            NPCHandIn.GetComponent<QuestGiverNpc>().isSecondaryNPC = true;
+            NPCHandIn.GetComponent<QuestGiverNpc>().Quest = this;
         }
     }
 
@@ -71,7 +74,7 @@ public class TurnInQuests : Quests
 
     public override void GiveReward()
     {
-
+        
 
         Debug.Log("Quest Reward Given.");
     }

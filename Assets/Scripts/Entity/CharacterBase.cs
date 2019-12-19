@@ -18,6 +18,7 @@ public class CharacterBase : MonoBehaviour
     [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
     public int painThreshold;
 
+    private IArmour armour;
     private void Start()
     {
         currentHealth = maxHealth;
@@ -52,5 +53,10 @@ public class CharacterBase : MonoBehaviour
     public void CalcPainThreshold()
     {
         painThreshold = strong / 2;
+    }
+    public void TakeDamage(float damage)
+    {
+        
+            currentHealth -= damage;
     }
 }
