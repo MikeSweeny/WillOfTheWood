@@ -11,11 +11,11 @@ using UnityEngine;
 public class IConsumable : Item
 {
 
-    //Function : IConsumable
-    //DESCRIPTION : Initializes the consumable
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
-    //RETURNS : IConsumable : the item that was constructed
-    public IConsumable()
+    //RETURNS : none
+    public void Awake()
     {
         itemType = ItemTypes.CONSUMABLE;
     }

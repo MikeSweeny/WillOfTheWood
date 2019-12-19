@@ -11,11 +11,11 @@ using UnityEngine;
 public class IMiscellanious : Item
 {
 
-    //Function : IMiscellanious
-    //DESCRIPTION : Initializes the item
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
-    //RETURNS : IMiscellanious : the item that was constructed
-    public IMiscellanious()
+    //RETURNS : none
+    public void Awake()
     {
         itemType = ItemTypes.MISC;
     }

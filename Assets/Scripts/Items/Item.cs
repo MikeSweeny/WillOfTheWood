@@ -8,7 +8,7 @@ using UnityEngine;
 
 //NAME : Item
 //PURPOSE : represents anything that can exist in an inventory
-public class Item
+public class Item : MonoBehaviour
 {
     protected ItemTypes itemType;
 }
