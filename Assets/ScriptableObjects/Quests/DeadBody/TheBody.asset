@@ -30,4 +30,4 @@ MonoBehaviour:
   InprogressQuestText: The body still looks as dead as you first found it, maybe looking
     a little worse
   CompletedQuestText: visit the sherif
-  NPCHandInName: TestQuestGiverTwo
+  NPCHandInName: Bandit1
