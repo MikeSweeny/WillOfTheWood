@@ -94,7 +94,7 @@ public class QuestGiverNpc : BaseInteractableNpc
             QM.addToCQNList(Quest.QuestName);
             Quest.CompletedText();
             Quest.isActive = false;
-            QM.RemoveActiveQuest(Quest.QuestName);
+            QM.RemoveActiveQuest(Quest);
 
         }
         else
