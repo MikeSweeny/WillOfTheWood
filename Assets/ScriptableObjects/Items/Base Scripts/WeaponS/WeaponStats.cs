@@ -5,8 +5,13 @@ using UnityEngine;
 public class WeaponStats 
 {
     protected float attackSpeed;
+    protected float attackRange;
     protected float attackMinDamage;
     protected float attackMaxDamage;
+    protected bool isOneHanded = false;
+    protected bool isTwoHanded = false;
+    protected bool isDagger = false;
+    protected bool isLongWeapon = false;
 
     public float GetAttackSpeed()
     {
