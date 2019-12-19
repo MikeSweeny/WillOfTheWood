@@ -16,13 +16,13 @@ MonoBehaviour:
   Prereq1: GetWood
   Prereq2: NULL
   Description: Find 6 pieces of wood
-  NPCID: TestQuestGiver
+  NPCID: wood
   TurnInNPCName: TestQuestGiver
-  QuestObjectives: []
   RequiredAmount: 6
   ExperenceReward: 0
   CoinReward: 0
   UnitReward: 0
+  QuestObjectives: 
   StartQuestText: Find 6 pieces of wood.
   TrackingQuestText: Find the Wood.
   InprogressQuestText: Have you found them?

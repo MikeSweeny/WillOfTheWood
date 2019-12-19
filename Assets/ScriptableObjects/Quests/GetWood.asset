@@ -16,13 +16,13 @@ MonoBehaviour:
   Prereq1: NULL
   Prereq2: NULL
   Description: Find 3 Pieces of Wood
-  NPCID: TestQuestGiver
+  NPCID: wood
   TurnInNPCName: TestQuestGiver
-  QuestObjectives: []
   RequiredAmount: 3
   ExperenceReward: 0
   CoinReward: 0
   UnitReward: 0
+  QuestObjectives: 
   StartQuestText: Find 3 pieces of wood.
   TrackingQuestText: Find the Wood.
   InprogressQuestText: Have you found them?

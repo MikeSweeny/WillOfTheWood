@@ -8,7 +8,11 @@ public class CollectableItems : MonoBehaviour, IQuestID
 
     PlayerController PC;
 
+    private void Awake()
+    {
+        ID = "wood";
 
+    }
     public void OnInteract()
     {
         gameObject.SetActive(false);
