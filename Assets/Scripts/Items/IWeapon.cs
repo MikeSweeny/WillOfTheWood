@@ -11,11 +11,11 @@ using UnityEngine;
 public class IWeapon : Item
 {
 
-    //Function : IWeapon
-    //DESCRIPTION : Initializes the weapon
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
-    //RETURNS : IWeapon : the item that was constructed
-    public IWeapon()
+    //RETURNS : none
+    public void Awake()
     {
         itemType = ItemTypes.WEAPON;
     }

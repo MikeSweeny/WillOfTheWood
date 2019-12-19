@@ -11,11 +11,11 @@ using UnityEngine;
 public class IArmour : Item
 {
 
-    //Function : IArmour
-    //DESCRIPTION : Initializes the armour
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
-    //RETURNS : IArmour : the item that was constructed
-    public IArmour()
+    //RETURNS : none
+    public void Awake()
     {
         itemType = ItemTypes.ARMOUR;
     }
