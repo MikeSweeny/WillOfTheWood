@@ -13,6 +13,8 @@ public class Inventory : MonoBehaviour
 
     private List<Item> contents;
 
+    private int currency;
+
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
@@ -38,5 +40,20 @@ public class Inventory : MonoBehaviour
     public void RemoveItem(Item item)
     {
         contents.Remove(item);
+    }
+
+    private void AddCurrency(int amount)
+    {
+        currency += amount;
+    }
+
+    private int GetCurrency()
+    {
+        return currency;
+    }
+
+    private void RemoveCurrency(int amount)
+    {
+        AddCurrency(-amount);
     }
 }
