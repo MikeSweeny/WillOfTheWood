@@ -27,7 +27,8 @@ public class PlayerController : BaseController
     private bool isWalking = false;
     private bool jumping = false;
     private bool isAttacking = false;
-    private Vector3 rayFiringPoint;
+    private Vector3 midRayFiringPoint;
+    private Vector3 bottomRayFiringPoint;
 
     private Animator animController;
     private CharacterController controller;
@@ -72,7 +73,8 @@ public class PlayerController : BaseController
             animController.SetFloat("Speed", moveDirection.z);
         }
 
-        rayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1f), transform.position.z);
+        midRayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1), transform.position.z);
+        bottomRayFiringPoint = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
     }
 
     //Function: Movement
@@ -119,11 +121,10 @@ public class PlayerController : BaseController
     private void PlayerInteract()
     {
         RaycastHit hit;
-        print("Interacted");
 
-        if (Physics.Raycast(rayFiringPoint, transform.forward, out hit, 6))
+        if (Physics.Raycast(midRayFiringPoint, transform.forward, out hit, 6) || Physics.Raycast(bottomRayFiringPoint, transform.forward, out hit, 6))
         {
-            print(hit.collider.gameObject);
+            Debug.DrawRay(bottomRayFiringPoint, transform.forward * 5, Color.red, 5.0f);
             //add any other cases for the player to interact with objects with specific tags
             switch (hit.collider.gameObject.tag)
             {
