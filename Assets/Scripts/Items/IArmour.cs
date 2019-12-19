@@ -10,7 +10,7 @@ using UnityEngine;
 //PURPOSE : the base class for armour items
 public class IArmour : Item
 {
-
+    protected ArmorStats stats;
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
@@ -18,5 +18,9 @@ public class IArmour : Item
     public void Awake()
     {
         itemType = ItemTypes.ARMOUR;
+    }
+    public ArmorStats GetStats()
+    {
+        return stats;
     }
 }

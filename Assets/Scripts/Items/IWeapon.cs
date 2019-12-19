@@ -10,7 +10,7 @@ using UnityEngine;
 //PURPOSE : the base class for weapons
 public class IWeapon : Item
 {
-
+    protected WeaponStats stats;
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
@@ -18,5 +18,14 @@ public class IWeapon : Item
     public void Awake()
     {
         itemType = ItemTypes.WEAPON;
+    }
+
+    public WeaponStats GetStats()
+    {
+        return stats;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        Random.Range(stats.GetAttackMinDamage(), stats.GetAttackMaxDamage());
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class WeaponStats 
 {
     protected float attackSpeed;
-    protected float attackRange;
     protected float attackMinDamage;
     protected float attackMaxDamage;
     protected bool isOneHanded = false;
