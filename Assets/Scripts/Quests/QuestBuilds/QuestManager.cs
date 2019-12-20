@@ -19,6 +19,8 @@ public class QuestManager: MonoBehaviour
 
     public List<Quests> ActiveQuest = new List<Quests>();
     public List<GameObject> QuestNPC = new List<GameObject>();
+
+    private List<GameObject> NPC = new List<GameObject>();
     
     
 
@@ -30,7 +32,16 @@ public class QuestManager: MonoBehaviour
     {
         addToCQNList("NULL");
         //find all quest givers
-        QuestNPC.AddRange(GameObject.FindGameObjectsWithTag("QuestGiver"));
+
+        NPC.AddRange(GameObject.FindGameObjectsWithTag("NPC"));
+        for (int i = 0; i < NPC.Count; i++)
+        {
+            if (NPC[i].GetComponent<QuestGiverNpc>())
+            {
+                QuestNPC.Add(NPC[i]);
+            }
+        }
+        
     }
     public bool searchCQNList(string name)
     {
