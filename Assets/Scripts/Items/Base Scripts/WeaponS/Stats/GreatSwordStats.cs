@@ -11,4 +11,5 @@ public class GreatSwordStats : WeaponStats
         attackMaxDamage = 10f;
         isTwoHanded = true;
     }
+    
 }

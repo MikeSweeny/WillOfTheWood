@@ -39,7 +39,7 @@ public class PlayerStats : StatsObject
         Pursuasive = 10;
         Quick = 10;
         Strong = 10;
-        Defence = 0;
+        Defence = 5;
 
         accuracy = Accuracy;
         discrete = Discrete;

@@ -37,48 +37,43 @@ public class Backstab : Abilities
     public override void noviceLevelAct()
     {
         stats.defence = stats.defence - 1;
-
-        if ()
+        if(stats.defence <= 0)
         {
-            equippedWeapon.AttackRoll();
-            additionalDamage();
+            stats.defence = 0;
         }
-        else
+
+        if (stats.isDetected == false)
         {
-            equippedWeapon.AttackRoll();
+            isNovice = true;
+            additionalDamage();
         }
     }
     public override void adeptLevelAct()
     {
-        //player defence = defence - 1
-        //
-        //if(sneakAttack)
-        //{
-        //      equippedWeapon.AttackRoll();
-        //      additionalDamage();
-        //      bleedOut();
-        //}
-        //else
-        //{
-        //      equippedWeapon.AttackRoll();
-        //}
+        stats.defence = stats.defence - 1;
+        if (stats.defence <= 0)
+        {
+            stats.defence = 0;
+        }
+
+        if (!stats.isDetected == false)
+        {
+            isAdept = true;
+            additionalDamage();
+        }
     }
     public override void masterLevelAct()
     {
-        //if(sneakAttack)
-        //{
-        //      equippedWeapon.AttackRoll();
-        //      additionalDamage();
-        //      bleedOut();
-        //}
-        //else
-        //{
-        //      equippedWeapon.AttackRoll();
-        //}
+        if (!stats.isDetected == false)
+        {
+            isMaster = true;
+            additionalDamage();
+
+        }
     }
     public void additionalDamage()
     {
-        if(isNovice)
+        if(isNovice || isAdept)
         {
             Random.Range(1, 6);
         }

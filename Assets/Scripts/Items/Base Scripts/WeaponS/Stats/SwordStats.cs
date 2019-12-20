@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SwordStats : WeaponStats
 {
+    private void Start()
+    {
+        
+    }
     public SwordStats()
     {
         attackSpeed = 1f;
