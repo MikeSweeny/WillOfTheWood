@@ -259,7 +259,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1347675605207770, guid: 827a7b5ae6c98ed4cba89571136b27a0, type: 3}
       propertyPath: m_Name
-      value: PT_Medieval_Female_Peasant_01_c
+      value: Milea
       objectReference: {fileID: 0}
     - target: {fileID: 1347675605207770, guid: 827a7b5ae6c98ed4cba89571136b27a0, type: 3}
       propertyPath: m_TagString
@@ -712,6 +712,45 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &624653967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624653965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
+  WaypointContainer: {fileID: 0}
+  waypoints: []
+  enemy: []
+  target: {fileID: 0}
+  fleeingPoints: []
+  fleeingDestinationContainer: {fileID: 0}
+  canWait: 0
+  distanceToCover: 1
+--- !u!114 &624653968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 624653965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathingPattern: {fileID: 0}
+  dialogueList:
+  - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
+  nextButton: {fileID: 0}
+  IDName: bodyclue
+  isPartOfQuest: 0
 --- !u!1 &708692252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1ca74154cf6c10e4f8262108edf810b3,
@@ -1674,7 +1713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1773016726961540, guid: 860f1ef61724f0a44a072087734ca3cf, type: 3}
       propertyPath: m_Name
-      value: PT_Medieval_Female_Peasant_01_d
+      value: Sendora
       objectReference: {fileID: 0}
     - target: {fileID: 1773016726961540, guid: 860f1ef61724f0a44a072087734ca3cf, type: 3}
       propertyPath: m_TagString
@@ -2031,6 +2070,9 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
+  nextButton: {fileID: 0}
+  IDName: bodyclue
+  isPartOfQuest: 0
 --- !u!1 &1866009472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1347675605207770, guid: 827a7b5ae6c98ed4cba89571136b27a0,
@@ -2055,6 +2097,45 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1866009474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866009472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
+  WaypointContainer: {fileID: 0}
+  waypoints: []
+  enemy: []
+  target: {fileID: 0}
+  fleeingPoints: []
+  fleeingDestinationContainer: {fileID: 0}
+  canWait: 0
+  distanceToCover: 1
+--- !u!114 &1866009475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866009472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathingPattern: {fileID: 0}
+  dialogueList:
+  - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
+  nextButton: {fileID: 0}
+  IDName: bodyclue
+  isPartOfQuest: 0
 --- !u!1001 &1906076281
 PrefabInstance:
   m_ObjectHideFlags: 0
