@@ -86,7 +86,9 @@ public class MQuest : Menu
             int difference = buttons.Count - qmRef.ActiveQuest.Count;
             for (int i = 0; i < difference; ++i)
             {
-                buttons.Add(Instantiate(questbuttonPrefab).GetComponent<UQuestButton>());
+                GameObject gObject = Instantiate(questbuttonPrefab);
+                gObject.transform.SetParent(buttonHolder);
+                buttons.Add(gObject.GetComponent<UQuestButton>());
             }
         }
 

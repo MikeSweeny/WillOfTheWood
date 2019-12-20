@@ -11,7 +11,7 @@ using UnityEngine;
 public class HTargetStatus : HUDElement
 {
 
-    //private Character target
+    private CharacterBase target;
 
     //Function : UpdateElement
     //DESCRIPTION : Updates the relevant information to the element
@@ -19,7 +19,6 @@ public class HTargetStatus : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        //target = player.GetPlayerTarget().GetComponent<Character>();
-        throw new System.NotImplementedException();
+        target = player.GetPlayerTarget().GetComponent<CharacterBase>();
     }
 }

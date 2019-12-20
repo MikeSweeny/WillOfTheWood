@@ -36,6 +36,8 @@ public class UIEventManager
     public static event UIEvent CloseInventory;
     public static event UIEvent OpenLeveling;
     public static event UIEvent CloseLeveling;
+    public static event UIEvent OpenDialogue;
+    public static event UIEvent CloseDialogue;
 
     //Function : TriggerOpenMainMenu
     //DESCRIPTION : Opens the main menu
@@ -275,5 +277,25 @@ public class UIEventManager
     {
         if (CloseLeveling != null)
             CloseLeveling();
+    }
+
+    //Function : TriggerOpenDialogue
+    //DESCRIPTION : opens the dialogue interface
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenDialogue()
+    {
+        if (OpenDialogue != null)
+            OpenDialogue();
+    }
+
+    //Function : TriggerCloseDialogue
+    //DESCRIPTION : closes the dialogue interface
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerCloseDialogue()
+    {
+        if (CloseDialogue != null)
+            CloseDialogue();
     }
 }

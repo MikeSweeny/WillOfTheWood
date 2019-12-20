@@ -37,6 +37,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         if(!isTalking)
         {
+            UIEventManager.TriggerOpenDialogue();
              StartTalking();
         }
     }
@@ -50,6 +51,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         else if(currentText == dialogue.conversationText || !hasConversation)
         {
             StopTalking();
+            UIEventManager.TriggerCloseDialogue();
         }
     }
 
