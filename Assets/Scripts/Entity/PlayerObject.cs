@@ -22,8 +22,6 @@ public class PlayerObject : EntityObject
     [HideInInspector]
     public int accuracy;
     [HideInInspector]
-    public int maxHealth;
-    [HideInInspector]
     public int discrete;
     [HideInInspector]
     public int pursuasive;
@@ -32,6 +30,9 @@ public class PlayerObject : EntityObject
     [HideInInspector]
     public int strong;
     [HideInInspector]
+    public int toughness;
+    [HideInInspector]
+    public int painThreshold;
 
 
     ////FUNCTION : Initialize()
@@ -45,5 +46,24 @@ public class PlayerObject : EntityObject
         pursuasive = pStats.pursuasive;
         quick = pStats.quick;
         strong = pStats.strong;
+        CalcToughness();
+        CalcPainThreshold();
     }
+
+    public override void CalcToughness()
+    {
+        if (toughness <= 9)
+        {
+            toughness = 10;
+        }
+        if (strong >= 10)
+        {
+            toughness = strong;
+        }
+    }
+    public void CalcPainThreshold()
+    {
+        painThreshold = strong / 2;
+    }
+
 }

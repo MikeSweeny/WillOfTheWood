@@ -28,6 +28,8 @@ public abstract class EntityObject : ScriptableObject
     public string description;
     public EntityType type;
 
+    public virtual void CalcToughness() { }
+
 }
 
 //Class Header:

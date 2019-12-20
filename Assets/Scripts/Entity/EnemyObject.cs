@@ -15,8 +15,6 @@ public class EnemyObject : EntityObject
     public StatsObject eStats;
     public GameObject transform;
     //public AbilitySet pAbilityes;
-    //public AIControler? (Dunno name) AIBrain;
-    public int gold;
     public int accuracy;
     public int quick;
     public int strong;
@@ -46,7 +44,7 @@ public class EnemyObject : EntityObject
     //DESCRIPTION : Calcualting the Toughness of the Entity
     //PARAMETERS : void
     //RETURNS : void
-    public void CalcToughness()
+    public override void CalcToughness()
     {
         if (toughness <= 9)
         {

@@ -2206,6 +2206,7 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   QuestList:
   - {fileID: 11400000, guid: 13c285c6b9315914f83c8814ccf4ecdc, type: 2}
+  isSecondaryNPC: 0
 --- !u!65 &502305286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2290,6 +2291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   WaypointContainer: {fileID: 0}
   waypoints: []
   enemy:
@@ -3233,6 +3235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   WaypointContainer: {fileID: 657780054}
   waypoints: []
   enemy:
@@ -4785,6 +4788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   WaypointContainer: {fileID: 0}
   waypoints: []
   enemy:
@@ -4809,6 +4813,7 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   QuestList:
   - {fileID: 11400000, guid: 13c285c6b9315914f83c8814ccf4ecdc, type: 2}
+  isSecondaryNPC: 0
 --- !u!65 &1185456641
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5210,6 +5215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   WaypointContainer: {fileID: 381058739}
   waypoints: []
   enemy:
@@ -5366,6 +5372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   WaypointContainer: {fileID: 479088909}
   waypoints: []
   enemy:
@@ -5701,6 +5708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   WaypointContainer: {fileID: 2027655560}
   waypoints: []
   enemy:
@@ -6964,6 +6972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f08a3dc19d758624b95fd503146d0d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   walkByDefault: 1
   gravity: 75
   jumpSpeed: 20
@@ -7051,7 +7060,7 @@ MonoBehaviour:
   maxHealth: 100
   defence: 0
   painThreshold: 0
-  playerBrain: {fileID: 11400000, guid: f43b11aaa94daf24484f6f434b5cc1d8, type: 2}
+  playerBrain: {fileID: 11400000, guid: eb7201ec47f6d844e85edcffb64bfb09, type: 2}
 --- !u!95 &1761258547
 Animator:
   serializedVersion: 3
@@ -7416,6 +7425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   WaypointContainer: {fileID: 2027655560}
   waypoints: []
   enemy:

@@ -17,11 +17,29 @@ public class BaseEnemy : BaseNpc
 
     private void Awake()
     {
-        
+        getStats();
+        setStats();
     }
 
     private void FixedUpdate()
     {
+
+    }
+    public void setStats()
+    {
+        accuracy = objectBrain.accuracy;
+        quick = objectBrain.quick;
+        strong = objectBrain.strong;
+        toughness = objectBrain.toughness;
+    }
+
+    //FUNCTION : getStats()
+    //DESCRIPTION : Getting the Stats from the objectBrain
+    //PARAMETERS : void
+    //RETURNS : void
+    public void getStats()
+    {
+        objectBrain.Initialize();
 
     }
 

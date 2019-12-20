@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7226b79519be4f04ea63120cbefe87bf, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  accuracy: 5
-  discrete: 5
-  pursuasive: 5
-  quick: 5
-  strong: 5
+  accuracy: 8
+  discrete: 9
+  pursuasive: 15
+  quick: 9
+  strong: 9
+  defence: 5
+  isDetected: 0

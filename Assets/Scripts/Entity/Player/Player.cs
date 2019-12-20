@@ -13,8 +13,8 @@ public class Player : CharacterBase
 
     private void Awake()
     {
-        setStats();
         getStats();
+        setStats();
     }
 
     private void Update()
@@ -43,8 +43,6 @@ public class Player : CharacterBase
         persuasive = playerBrain.pursuasive;
         quick = playerBrain.quick;
         strong = playerBrain.strong;
-        playerBrain.Initialize();
-        //Debug.Log(""+ accuracy +""+ cunning + "" + discrete + "" + persuasive + "" + quick + "" + strong + "" + vigilant);
     }
 
     //FUNCTION : getStats()
@@ -54,7 +52,6 @@ public class Player : CharacterBase
     public void getStats()
     {
         playerBrain.Initialize();
-        //Debug.Log("" + accuracy + "" + cunning + "" + discrete + "" + persuasive + "" + quick + "" + strong + "" + vigilant);
 
     }
 
