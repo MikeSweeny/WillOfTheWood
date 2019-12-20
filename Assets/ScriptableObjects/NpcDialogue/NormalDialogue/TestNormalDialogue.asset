@@ -17,5 +17,8 @@ MonoBehaviour:
   numInStatReq1: 0
   numInStatReq2: 0
   welcomeText: Hello test.
-  conversationText: 
-  goodbyeText: 
+  welcomeButtonText: 
+  conversationText: conversation
+  conversationButtonText: 
+  goodbyeText: goodbye
+  goodbyeButtonText: 

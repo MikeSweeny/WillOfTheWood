@@ -15,4 +15,14 @@ public class NormalDialogue : BaseNpcDialogue
     {
         Debug.Log(welcomeText);
     }
+
+    public override void Conversation()
+    {
+        Debug.Log(conversationText);
+    }
+
+    public override void Goodbye()
+    {
+        Debug.Log(goodbyeText);
+    }
 }

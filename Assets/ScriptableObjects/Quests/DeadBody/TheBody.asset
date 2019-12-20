@@ -18,7 +18,7 @@ MonoBehaviour:
   Description: Find clues about the women's death
   NPCID: bodyclue
   TurnInNPCName: Sheriff
-  RequiredAmount: 6
+  RequiredAmount: 5
   ExperenceReward: 0
   CoinReward: 0
   UnitReward: 0

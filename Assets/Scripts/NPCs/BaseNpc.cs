@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseNpc : MonoBehaviour
+public class BaseNpc : CharacterBase
 {
 
 

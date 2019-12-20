@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BeforeDawn
   m_EditorClassIdentifier: 
   QuestName: BeforeDawn
-  Prereq1: Day5
-  Prereq2: Night
+  Prereq1: NULL
+  Prereq2: NULL
   Description: Kill spectral hound
   NPCID: 
   TurnInNPCName: GraveKeeper Abraso
