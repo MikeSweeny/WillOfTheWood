@@ -6,7 +6,7 @@ public class PaddedShirtStats : ArmorStats
 {
     public PaddedShirtStats()
     {
-        minDamageModifier = 1;
-        maxDamageModifier = 4;
+        minDefence = 1;
+        maxDefence = 4;
     }
 }

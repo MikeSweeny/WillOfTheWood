@@ -6,7 +6,7 @@ public class LeatherCuriassStats : ArmorStats
 {
     public LeatherCuriassStats()
     {
-        minDamageModifier = 1;
-        maxDamageModifier = 6;
+        minDefence = 1;
+        maxDefence = 6;
     }
 }

@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class ArmorStats
 {
-    protected float minDamageModifier;
-    protected float maxDamageModifier;
+    protected int minDefence;
+    protected int maxDefence;
 
     public float GetMinDamageModifier()
     {
-        return minDamageModifier;
+        return minDefence;
     }
     public float GetMaxDamageModifier()
     {
-        return maxDamageModifier;
+        return maxDefence;
     }
 
 }

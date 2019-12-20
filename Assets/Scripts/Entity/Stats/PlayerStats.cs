@@ -26,6 +26,10 @@ public class PlayerStats : StatsObject
     public int quick;
     [Range(5, 18)]
     public int strong;
+    [Range(5, 18)]
+    public int defence;
+    [Range(5, 18)]
+    public bool isDetected = false;
 
     private int modValue;
     private void Awake()
@@ -35,12 +39,14 @@ public class PlayerStats : StatsObject
         Pursuasive = 10;
         Quick = 10;
         Strong = 10;
+        Defence = 0;
 
         accuracy = Accuracy;
         discrete = Discrete;
         pursuasive = Pursuasive;
         quick = Quick;
         strong = Strong;
+        defence = Defence;
     }
 
 

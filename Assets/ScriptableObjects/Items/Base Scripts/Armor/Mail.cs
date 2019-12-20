@@ -6,7 +6,7 @@ public class Mail : ArmorStats
 {
     public Mail()
     {
-        minDamageModifier = 1;
-        maxDamageModifier = 8;
+        minDefence = 1;
+        maxDefence = 8;
     }
 }

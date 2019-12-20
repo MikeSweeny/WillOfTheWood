@@ -6,7 +6,7 @@ public class DarkPrincesDeathShroud : ArmorStats
 {
     public DarkPrincesDeathShroud()
     {
-        minDamageModifier = 4;
-        maxDamageModifier = 11;
+        minDefence = 4;
+        maxDefence = 11;
     }
 }

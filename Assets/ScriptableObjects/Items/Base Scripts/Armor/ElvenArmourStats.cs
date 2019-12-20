@@ -6,7 +6,7 @@ public class ElvenArmourStats : ArmorStats
 {
     public ElvenArmourStats()
     {
-        minDamageModifier = 1;
-        maxDamageModifier = 8;
+        minDefence = 1;
+        maxDefence = 8;
     }
 }

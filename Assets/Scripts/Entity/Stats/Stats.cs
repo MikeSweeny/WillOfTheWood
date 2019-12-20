@@ -18,6 +18,7 @@ public abstract class StatsObject : ScriptableObject
     public int Quick { get; set; }
     public int Strong { get; set; }
     public int Vigilant { get; set; }
+    public int Defence { get; set; }
     ////FUNCTION : IncreaseStat
     ////DESCRIPTION : Increasing a Stat
     ////PARAMETERS : int _value, int _secondValue

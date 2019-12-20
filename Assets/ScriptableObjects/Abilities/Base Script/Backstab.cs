@@ -6,7 +6,7 @@ using UnityEngine;
 public class Backstab : Abilities
 {
     private bool isActive { get; set; }
-
+    PlayerStats stats;
     public override void OnLoad()
     {
         if (isCollected)
@@ -36,17 +36,17 @@ public class Backstab : Abilities
     }
     public override void noviceLevelAct()
     {
-        //player defence = defence - 1
-        //
-        //if(sneakAttack)
-        //{
-        //      equippedWeapon.AttackRoll();
-        //      additionalDamage();
-        //}
-        //else
-        //{
-        //      equippedWeapon.AttackRoll();
-        //}
+        stats.defence = stats.defence - 1;
+
+        if ()
+        {
+            equippedWeapon.AttackRoll();
+            additionalDamage();
+        }
+        else
+        {
+            equippedWeapon.AttackRoll();
+        }
     }
     public override void adeptLevelAct()
     {
