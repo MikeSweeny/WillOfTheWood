@@ -10,7 +10,7 @@ public class CharacterBase : MonoBehaviour
     public int strong;
     public int toughness;
     public float maxHealth;
-    private float currentHealth;
+    protected float currentHealth;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
     [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
