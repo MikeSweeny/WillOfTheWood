@@ -15,6 +15,7 @@ public class MQuest : Menu
     public GameObject questbuttonPrefab;
 
     private Transform detailsBox;
+    private Transform buttonHolder;
     private Text title;
     private Text description;
     private Text requirements;

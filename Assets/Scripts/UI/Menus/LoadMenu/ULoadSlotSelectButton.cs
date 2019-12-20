@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //NAME : ULoadSlotSelectButton
 //PURPOSE : sets the desired slot for saving in the GameSaveManager and starts the game
@@ -18,6 +19,6 @@ public class ULoadSlotSelectButton : UIButton
     public override void Clicked()
     {
         GameSaveManager.SetCurrentSlot(transform.parent.name);
-        //load desired scene here
+        SceneManager.LoadScene("CoreScene");
     }
 }
