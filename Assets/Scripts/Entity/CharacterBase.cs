@@ -17,7 +17,7 @@ public class CharacterBase : MonoBehaviour
     public int defence;
     [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
     public int painThreshold;
-
+    protected bool isBleeding = false;
     private IArmour armour;
     private void Start()
     {
@@ -28,6 +28,10 @@ public class CharacterBase : MonoBehaviour
     {
         CalcToughness();
         CalcPainThreshold();
+        if(isBleeding)
+        {
+            BleedOutDamage();
+        }
     }
     //FUNCTION :  CalcToughness()
     //DESCRIPTION : Calcualting the Toughness of the Entity
@@ -58,5 +62,13 @@ public class CharacterBase : MonoBehaviour
     {
         
             currentHealth -= damage;
+    }
+    public void BleedOutDamage()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            TakeDamage(1);
+        }
+        isBleeding = false;
     }
 }
