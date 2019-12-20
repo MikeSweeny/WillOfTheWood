@@ -19,8 +19,10 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
 
     public string IDName;
     public bool isPartOfQuest = false;
+    public bool hasConversation = false;
     private bool isTalking = false;
     private bool hasBeenTalkedTo = false;
+    private string currentText = "";
 
     private void Awake()
     {
@@ -35,13 +37,20 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         if(!isTalking)
         {
-            StartTalking();
+             StartTalking();
         }
     }
 
-    private void NextDialogue()
+    public void NextDialogue()
     {
-
+        if(currentText == dialogue.welcomeText && hasConversation)
+        {
+            ContinueTalking();
+        }
+        else if(currentText == dialogue.conversationText || !hasConversation)
+        {
+            StopTalking();
+        }
     }
 
     //Function: StartTalking
@@ -55,9 +64,28 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
             dialogue = dialogueList[i];
 
             dialogue.Welcome();
+            currentText = dialogue.welcomeText;
             isTalking = true;
             return;
         }
+    }
+
+    public string GetCurrentText()
+    {
+        return currentText;
+    }
+
+    private void ContinueTalking()
+    {
+        currentText = dialogue.conversationText;
+        dialogue.Conversation();
+    }
+
+    private void StopTalking()
+    {
+        currentText = "";
+        dialogue.Goodbye();
+        isTalking = false;
     }
 
     public void Cleared()

@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //NAME : USaveSlotSelectButton
 //PURPOSE : selects the slot the player would like their new game to save in
@@ -18,6 +19,6 @@ public class USaveSlotSelectButton : UIButton
     public override void Clicked()
     {
         GameSaveManager.SetCurrentSlot(transform.parent.name);
-        //load desired scene here
+        SceneManager.LoadScene("CoreScene");
     }
 }

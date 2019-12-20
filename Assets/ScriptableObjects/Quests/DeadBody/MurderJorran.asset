@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d74557fa8a9cdc42895ab1fbafc8e96, type: 3}
+  m_Name: MurderJorran
+  m_EditorClassIdentifier: 
+  QuestName: MurderJorran
+  Prereq1: TheBody
+  Prereq2: NULL
+  Description: Dispose of Jorran
+  NPCID: Jorran
+  TurnInNPCName: The Sheriff
+  RequiredAmount: 1
+  ExperenceReward: 4
+  CoinReward: 10
+  UnitReward: 0
+  QuestObjectives: 'Find Jorran and avenge Anne death. '
+  StartQuestText: '"Ah, you think it''s Jorran, I don''t believe anyone has seen him
+    today.  Be careful,  if what you say is true, he could be lurking anywhere" '
+  TrackingQuestText: Dispose of Jorran
+  InprogressQuestText: "Have you found him yet? Maybe those clues you found will help
+    you find him. \n"
+  CompletedQuestText: " \"I hear you have defeated Jorran, this town owes you a debt\"
+    , \"Here is a reward for your effort , it is all we can afford right now\" \r\n\r\n"
+  NPCKilled: Jorran
