@@ -25,6 +25,6 @@ public class BaseNpcDialogue : ScriptableObject
     public string goodbyeText;
 
     public virtual void Welcome() { }
-
+    public virtual void Conversation() { }
     public virtual void Goodbye() { }
 }

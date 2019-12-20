@@ -2014,7 +2014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4008635000629676}
   - component: {fileID: 95314095848851916}
-  - component: {fileID: 143034403888226588}
+  - component: {fileID: 2004575779}
   m_Layer: 0
   m_Name: PT_Medieval_Peasant_01_c
   m_TagString: NPC
@@ -2031,7 +2031,7 @@ Transform:
   m_GameObject: {fileID: 1822559647289274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_Children:
   - {fileID: 4946066986637206}
   - {fileID: 4200151491836792}
@@ -2057,7 +2057,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &143034403888226588
+--- !u!143 &2004575779
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

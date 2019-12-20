@@ -16,7 +16,7 @@ MonoBehaviour:
   Prereq1: NULL
   Prereq2: NULL
   Description: Find clues about the women's death
-  NPCID: wood
+  NPCID: bodyclue
   TurnInNPCName: Sheriff
   RequiredAmount: 6
   ExperenceReward: 0
