@@ -14,6 +14,7 @@ public class ShopKeeperNpc : BaseInteractableNpc
 {
     public GameObject shopDisplayWindow;
 
+    private Inventory shopInventory;
     private Player player;
 
 
