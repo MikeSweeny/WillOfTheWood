@@ -15,4 +15,5 @@ public class ArmorStats
     {
         return maxDamageModifier;
     }
+
 }
