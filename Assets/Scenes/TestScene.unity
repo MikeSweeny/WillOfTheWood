@@ -284,7 +284,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 81a125a46ac274e499c389815294bab8, type: 3}
       propertyPath: m_TagString
-      value: NPC
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 81a125a46ac274e499c389815294bab8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -709,6 +709,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: dialogueList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: dialogueList.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918,
+        type: 2}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: IDName
+      value: clue1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
 --- !u!1 &1597755595
@@ -840,6 +853,9 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
+  nextButton: {fileID: 0}
+  IDName: blah
+  isPartOfQuest: 0
 --- !u!1 &1606930203
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,16 +5,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME: ConversationNpc
 //PURPOSE: this class is used for generic npcs that the player can talk to that may not have significance to the game
-public class ConversationNpc : BaseInteractableNpc
+public class ConversationNpc : BaseInteractableNpc, IQuestID
 {
 
     public List<BaseNpcDialogue> dialogueList = new List<BaseNpcDialogue>();
     public BaseNpcDialogue dialogue { get; set; }
+    public string ID { get; set; }
+    public Button nextButton;
 
+    public string IDName;
+    public bool isPartOfQuest = false;
     private bool isTalking = false;
+    private bool hasBeenTalkedTo = false;
+
+    private void Awake()
+    {
+        ID = IDName;
+    }
 
     //Function: OnInteract
     //DESCRIPTION: overriden function from parent class
@@ -26,6 +37,11 @@ public class ConversationNpc : BaseInteractableNpc
         {
             StartTalking();
         }
+    }
+
+    private void NextDialogue()
+    {
+
     }
 
     //Function: StartTalking
@@ -44,4 +60,9 @@ public class ConversationNpc : BaseInteractableNpc
         }
     }
 
+    public void Cleared()
+    {
+        hasBeenTalkedTo = true;
+        QuestEvents.ItemCleared(this);
+    }
 }
