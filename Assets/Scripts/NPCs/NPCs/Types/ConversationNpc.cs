@@ -79,6 +79,10 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         currentText = dialogue.conversationText;
         dialogue.Conversation();
+        if(isPartOfQuest)
+        {
+            Cleared();
+        }
     }
 
     private void StopTalking()
