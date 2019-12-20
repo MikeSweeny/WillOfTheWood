@@ -19,10 +19,13 @@ public class BaseNpcDialogue : ScriptableObject
 
     [TextArea(3, 10)]
     public string welcomeText;
+    public string welcomeButtonText;
     [TextArea(3, 10)]
     public string conversationText;
+    public string conversationButtonText;
     [TextArea(3, 10)]
     public string goodbyeText;
+    public string goodbyeButtonText;
 
     public virtual void Welcome() { }
     public virtual void Conversation() { }

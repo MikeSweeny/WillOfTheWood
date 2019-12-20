@@ -18,6 +18,9 @@ MonoBehaviour:
   numInStatReq2: 0
   welcomeText: ' "I heard someone is looking into what happened to Anne, truth is
     this ain''t the first time something like this has occurred"'
+  welcomeButtonText: Oh really?
   conversationText: ' "There was another woman that was found at the edge of town
     around this time last year"'
+  conversationButtonText: What else do you think?
   goodbyeText: ' "You could almost think these two cases are connected." '
+  goodbyeButtonText: Good bye
