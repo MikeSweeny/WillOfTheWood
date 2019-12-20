@@ -11,6 +11,7 @@ using UnityEngine;
 public class IWeapon : Item
 {
     protected WeaponStats stats;
+    Collider collider;
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
@@ -27,5 +28,17 @@ public class IWeapon : Item
     private void OnCollisionEnter(Collision collision)
     {
         Random.Range(stats.GetAttackMinDamage(), stats.GetAttackMaxDamage());
+    }
+    public bool ToggleCollider(bool isActive)
+    {
+        if (isActive)
+        {
+            collider.gameObject.SetActive(true);
+        }
+        else
+        {
+            collider.gameObject.SetActive(false);
+        }
+        return isActive;
     }
 }
