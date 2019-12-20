@@ -45,7 +45,7 @@ public class StrongEnemyStats : StatsObject
     ////RETURNS : 
     public override void IncreaseStat(int _value, int _statValue)
     {
-            _value += _statValue;
+        _value += _statValue;
     }
     
 }

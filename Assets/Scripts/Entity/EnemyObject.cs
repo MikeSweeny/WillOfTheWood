@@ -18,7 +18,7 @@ public class EnemyObject : EntityObject
     public int accuracy;
     public int quick;
     public int strong;
-    public int vigilance;
+    public int vigilant;
     [Tooltip("Toughness is the Entities Health (Toughness = Strong (though never below 10)")]
     public int toughness;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
@@ -36,7 +36,7 @@ public class EnemyObject : EntityObject
         accuracy = eStats.Accuracy;
         quick = eStats.Quick;
         strong = eStats.Strong;
-        vigilance = eStats.Vigilant;
+        vigilant = eStats.Vigilant;
         CalcToughness();
         CalcPainThreshold();
     }

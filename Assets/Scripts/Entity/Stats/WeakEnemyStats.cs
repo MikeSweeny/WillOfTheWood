@@ -25,10 +25,10 @@ public class WeakEnemyStats : StatsObject
     [Range(5, 18)]
     public int vigilant;
     private void Awake()
-    {
-        Accuracy = 13;
-        Quick = 9;
-        Strong = 12;
+    { 
+        Accuracy = 9;
+        Quick = 8;
+        Strong = 8;
         vigilant = 10;
 
         accuracy = Accuracy;

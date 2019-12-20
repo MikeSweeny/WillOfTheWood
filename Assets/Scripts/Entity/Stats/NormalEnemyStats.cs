@@ -26,9 +26,9 @@ public class NormalEnemyStats : StatsObject
     public int vigilant;
     private void Awake()
     {
-        Accuracy = 13;
-        Quick = 9;
-        Strong = 12;
+        Accuracy = 10;
+        Quick = 10;
+        Strong = 10;
         vigilant = 10;
 
         accuracy = Accuracy;

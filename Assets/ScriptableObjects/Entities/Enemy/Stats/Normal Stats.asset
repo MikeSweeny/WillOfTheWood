@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2462a8048845bba43a15a99045933fd5, type: 3}
-  m_Name: StrongStats
+  m_Script: {fileID: 11500000, guid: ae0ba5a6d6fd8624e9fdf42b28d7af65, type: 3}
+  m_Name: Normal Stats
   m_EditorClassIdentifier: 
-  accuracy: 13
-  quick: 9
-  strong: 12
+  accuracy: 10
+  quick: 10
+  strong: 10
   vigilant: 10

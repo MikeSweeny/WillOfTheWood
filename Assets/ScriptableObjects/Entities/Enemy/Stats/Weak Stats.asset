@@ -15,4 +15,4 @@ MonoBehaviour:
   accuracy: 13
   quick: 9
   strong: 12
-  vigilant: 0
+  vigilant: 10

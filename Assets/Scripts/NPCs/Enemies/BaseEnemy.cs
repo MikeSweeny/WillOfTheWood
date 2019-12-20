@@ -8,6 +8,7 @@ public class BaseEnemy : BaseNpc
     public int accuracy;
     public int quick;
     public int strong;
+    public int vigilant;
     private float maxHealth;
     private float currentHealth;
     public int toughness;
@@ -31,6 +32,7 @@ public class BaseEnemy : BaseNpc
         quick = objectBrain.quick;
         strong = objectBrain.strong;
         toughness = objectBrain.toughness;
+        vigilant = objectBrain.vigilant;
     }
 
     //FUNCTION : getStats()
@@ -40,7 +42,6 @@ public class BaseEnemy : BaseNpc
     public void getStats()
     {
         objectBrain.Initialize();
-
     }
 
 }

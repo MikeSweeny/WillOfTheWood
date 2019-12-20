@@ -3196,10 +3196,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathingPattern: {fileID: 0}
-  objectBrain: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e, type: 2}
+  objectBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
   accuracy: 0
   quick: 0
   strong: 0
+  vigilant: 0
   toughness: 0
 --- !u!195 &802290473
 NavMeshAgent:
@@ -5264,6 +5265,7 @@ MonoBehaviour:
   accuracy: 0
   quick: 0
   strong: 0
+  vigilant: 0
   toughness: 0
 --- !u!54 &1249577577
 Rigidbody:
@@ -5337,6 +5339,7 @@ MonoBehaviour:
   accuracy: 0
   quick: 0
   strong: 0
+  vigilant: 0
   toughness: 0
 --- !u!195 &1274719926
 NavMeshAgent:
@@ -5668,11 +5671,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathingPattern: {fileID: 0}
-  objectBrain: {fileID: 11400000, guid: f0fa67d41e4d143478d697b66b3a68ce, type: 2}
+  pathingPattern: {fileID: 1387165850}
+  objectBrain: {fileID: 11400000, guid: 9f7a8aac7980f7449926e9d8d6cc561d, type: 2}
   accuracy: 0
   quick: 0
   strong: 0
+  vigilant: 0
   toughness: 0
 --- !u!195 &1387165849
 NavMeshAgent:
@@ -7390,6 +7394,7 @@ MonoBehaviour:
   accuracy: 0
   quick: 0
   strong: 0
+  vigilant: 0
   toughness: 0
 --- !u!195 &1852228505
 NavMeshAgent:
