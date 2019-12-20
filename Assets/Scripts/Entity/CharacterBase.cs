@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterBase : MonoBehaviour
 {
@@ -11,7 +9,7 @@ public class CharacterBase : MonoBehaviour
     public int quick;
     public int strong;
     public int toughness;
-    public float maxHealth = 100f;
+    public float maxHealth;
     private float currentHealth;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
@@ -21,6 +19,7 @@ public class CharacterBase : MonoBehaviour
     private IArmour armour;
     private void Start()
     {
+        maxHealth = toughness;
         currentHealth = maxHealth;
     }
 
@@ -28,10 +27,6 @@ public class CharacterBase : MonoBehaviour
     {
         CalcToughness();
         CalcPainThreshold();
-        if(isBleeding)
-        {
-            BleedOutDamage();
-        }
     }
     //FUNCTION :  CalcToughness()
     //DESCRIPTION : Calcualting the Toughness of the Entity
@@ -62,13 +57,5 @@ public class CharacterBase : MonoBehaviour
     {
         
             currentHealth -= damage;
-    }
-    public void BleedOutDamage()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            TakeDamage(1);
-        }
-        isBleeding = false;
     }
 }

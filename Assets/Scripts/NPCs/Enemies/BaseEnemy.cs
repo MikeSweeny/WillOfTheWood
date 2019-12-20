@@ -5,27 +5,15 @@ using UnityEngine;
 public class BaseEnemy : BaseNpc
 {
     public EnemyObject objectBrain;
-    public int accuracy;
-    public int quick;
-    public int strong;
     public int vigilant;
-    private float maxHealth;
-    private float currentHealth;
-    public int toughness;
-
-
-
 
     private void Awake()
     {
         getStats();
         setStats();
+        currentHealth = maxHealth;
     }
 
-    private void FixedUpdate()
-    {
-
-    }
     public void setStats()
     {
         accuracy = objectBrain.accuracy;
