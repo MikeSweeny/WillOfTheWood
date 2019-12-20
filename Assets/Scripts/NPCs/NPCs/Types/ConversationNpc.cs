@@ -15,7 +15,6 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     public List<BaseNpcDialogue> dialogueList = new List<BaseNpcDialogue>();
     public BaseNpcDialogue dialogue { get; set; }
     public string ID { get; set; }
-    public Button nextButton;
 
     public string IDName;
     public bool isPartOfQuest = false;
