@@ -12,18 +12,21 @@ using UnityEngine.UI;
 public class MQuest : Menu
 {
 
+    public GameObject questbuttonPrefab;
+
     private Transform detailsBox;
     private Text title;
     private Text description;
     private Text requirements;
     private Text reward;
     private Quests selectedQuest;
+    private List<UQuestButton> buttons;
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    private void Awake()
     {
         gameObject.SetActive(false);
         detailsBox = transform.Find("DescriptionHolder");
@@ -31,7 +34,9 @@ public class MQuest : Menu
         description = detailsBox.Find("DescriptionText").GetComponent<Text>();
         requirements = detailsBox.Find("RequirementsText").GetComponent<Text>();
         reward = detailsBox.Find("RewardsText").GetComponent<Text>();
+        buttons = new List<UQuestButton>();
         UIEventManager.OpenQuests += OpenMenu;
+        UIEventManager.OpenQuests += UpdateQuestList;
         UIEventManager.CloseQuests += CloseMenu;
     }
 
@@ -65,5 +70,29 @@ public class MQuest : Menu
     public void SetQuest(Quests quest)
     {
         selectedQuest = quest;
+    }
+
+    //Function : UpdateQuestList
+    //DESCRIPTION : Checks to see if there are enough buttons for the active and completed quests
+    // and if not adds some, then sets the buttons to represent said quests
+    //PARAMETERS : none
+    //RETURNS : none
+    public void UpdateQuestList()
+    {
+        QuestManager qmRef = GameObject.Find("Managers").GetComponent<QuestManager>();
+        if (buttons.Count < qmRef.ActiveQuest.Count)
+        {
+            int difference = buttons.Count - qmRef.ActiveQuest.Count;
+            for (int i = 0; i < difference; ++i)
+            {
+                buttons.Add(Instantiate(questbuttonPrefab).GetComponent<UQuestButton>());
+            }
+        }
+
+        for (int i = 0; i < buttons.Count; ++i)
+        {
+            buttons[i].SetQuestMenuRef(this);
+            buttons[i].SetQuest(qmRef.ActiveQuest[i]);
+        }
     }
 }
