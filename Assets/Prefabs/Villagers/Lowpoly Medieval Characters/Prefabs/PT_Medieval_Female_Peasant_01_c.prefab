@@ -1120,9 +1120,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4129732026269286}
   - component: {fileID: 95295478474458464}
+  - component: {fileID: 143523346177236992}
   m_Layer: 0
   m_Name: PT_Medieval_Female_Peasant_01_c
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1153,7 +1154,7 @@ Animator:
   m_GameObject: {fileID: 1347675605207770}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9e7e6a0bb64f56e46b7051343f0af342, type: 3}
-  m_Controller: {fileID: 9100000, guid: 3244fa875fe4385468bc1782ada67391, type: 2}
+  m_Controller: {fileID: 9100000, guid: 67c37f038ca558e4b8caeb96f18c3e13, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1162,6 +1163,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!143 &143523346177236992
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347675605207770}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1352808768614930
 GameObject:
   m_ObjectHideFlags: 0
