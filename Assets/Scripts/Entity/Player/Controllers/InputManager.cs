@@ -149,16 +149,6 @@ public class InputManager : MonoBehaviour
         inputEnabled = true;
     }
 
-    //Function: OpenMap
-    //DESCRIPTION: calls the event for opening world map
-    //PARAMETERS: None
-    //RETURNS: None
-    public static void OpenMap()
-    {
-        if (inputEnabled)
-            WorldMap?.Invoke();
-    }
-
     //Function: TriggerJump
     //DESCRIPTION: Calls the event for jumping
     //PARAMETERS: None
