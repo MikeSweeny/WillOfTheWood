@@ -14,10 +14,7 @@ public class NormalDialogue : BaseNpcDialogue
     public override void Welcome()
     {
         DH = FindObjectOfType<HDialogueInterface>();
-        if (DH)
-        {
-            DH.dialogueText.text = welcomeText;
-        }
+
         Debug.Log(welcomeText);
     }
 

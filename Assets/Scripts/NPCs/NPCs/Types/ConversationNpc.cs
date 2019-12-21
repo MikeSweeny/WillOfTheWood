@@ -50,6 +50,11 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         else if(currentText == dialogue.conversationText || !hasConversation)
         {
             StopTalking();
+           // UIEventManager.TriggerCloseDialogue();
+        }
+        else
+        {
+            isTalking = false;
             UIEventManager.TriggerCloseDialogue();
         }
     }
@@ -63,7 +68,6 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         for (int i = 0; i < dialogueList.Count; i++)
         {
             dialogue = dialogueList[i];
-
             dialogue.Welcome();
             currentText = dialogue.welcomeText;
             isTalking = true;
@@ -88,9 +92,9 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
 
     private void StopTalking()
     {
-        currentText = "";
+        currentText = dialogue.goodbyeText;
         dialogue.Goodbye();
-        isTalking = false;
+        //isTalking = false;
     }
 
     public void Cleared()

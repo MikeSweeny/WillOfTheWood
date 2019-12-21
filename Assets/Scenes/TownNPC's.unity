@@ -2280,7 +2280,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
   IDName: 
   isPartOfQuest: 0
-  hasConversation: 0
+  hasConversation: 1
 --- !u!114 &1691343735
 MonoBehaviour:
   m_ObjectHideFlags: 0
