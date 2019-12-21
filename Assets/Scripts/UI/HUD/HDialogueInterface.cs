@@ -34,9 +34,13 @@ public class HDialogueInterface : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        ConversationNpc target = player.GetPlayerTarget().GetComponent<ConversationNpc>();
-        dialogueText.text = target.GetCurrentText();
-        button.SetTarget(target);
+        GameObject playerTarget = player.GetPlayerTarget();
+        if (playerTarget != null)
+        { 
+            ConversationNpc target = playerTarget.GetComponent<ConversationNpc>();
+            dialogueText.text = target.GetCurrentText();
+            button.SetTarget(target); 
+        }
     }
 
     //Function : Open
