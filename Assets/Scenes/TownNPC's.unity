@@ -451,6 +451,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
   QuestList:
   - {fileID: 11400000, guid: 13c285c6b9315914f83c8814ccf4ecdc, type: 2}
@@ -745,10 +754,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
-  nextButton: {fileID: 0}
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -1318,10 +1335,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 9e721c440d60b9e44a5b5f276dcd2e19, type: 2}
-  nextButton: {fileID: 0}
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -1531,6 +1556,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
   QuestList:
   - {fileID: 11400000, guid: 004e9a3942e57964ab4e50222907c3a8, type: 2}
@@ -2307,10 +2341,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
-  nextButton: {fileID: 0}
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -2371,10 +2413,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
-  nextButton: {fileID: 0}
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -2492,10 +2542,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 95ca0ff7fa06a5d4a8f454e51095db97, type: 2}
-  nextButton: {fileID: 0}
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -2651,6 +2709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GraveKeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595030781650534866, guid: cfeaec1d1c6377145a2e6b1c8b447f5e,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 3595030781651033522, guid: cfeaec1d1c6377145a2e6b1c8b447f5e,
         type: 3}
