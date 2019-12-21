@@ -12,7 +12,7 @@ using UnityEngine.UI;
 //PURPOSE : serves as the dialogue interface
 public class HDialogueInterface : HUDElement
 {
-    private Text dialogueText;
+    public Text dialogueText { get; set; }
     private UNextDialogueButton button;
 
     //Function : Awake
@@ -25,6 +25,7 @@ public class HDialogueInterface : HUDElement
         button = transform.Find("NextButton").GetComponent<UNextDialogueButton>();
         UIEventManager.OpenDialogue += Open;
         UIEventManager.CloseDialogue += Close;
+        gameObject.SetActive(false);
     }
 
     //Function : UpdateElement
@@ -44,7 +45,7 @@ public class HDialogueInterface : HUDElement
     //RETURNS : none
     private void Open()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
 
     //Function : Close
@@ -53,7 +54,7 @@ public class HDialogueInterface : HUDElement
     //RETURNS : none
     private void Close()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     //Function : OnDestroy

@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 //NAME: InputManager
 //PURPOSE: This class is meant to act as an intermediary
@@ -68,6 +69,9 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") || (Input.GetAxis("ControllerAttack") != 0 && axisInUse == false))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+                return;
+
             TriggerAttack();
             axisInUse = true;
         }

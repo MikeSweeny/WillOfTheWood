@@ -26,7 +26,7 @@ public class Clock
     public static void UpdateClock(float deltaTime)
     {
         seconds += 24 * deltaTime;
-        Debug.Log(seconds);
+        //Debug.Log(seconds);
 
         if (seconds >= 3600)
         {

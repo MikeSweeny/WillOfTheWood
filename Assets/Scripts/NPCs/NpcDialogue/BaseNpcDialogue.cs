@@ -30,4 +30,6 @@ public class BaseNpcDialogue : ScriptableObject
     public virtual void Welcome() { }
     public virtual void Conversation() { }
     public virtual void Goodbye() { }
+
+    public HDialogueInterface DH;
 }

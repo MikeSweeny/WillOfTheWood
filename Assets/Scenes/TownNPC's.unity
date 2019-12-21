@@ -948,7 +948,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1773016726961540, guid: 860f1ef61724f0a44a072087734ca3cf, type: 3}
       propertyPath: m_Name
-      value: PT_Medieval_Female_Peasant_01_d (2)
+      value: TalkingFemale
       objectReference: {fileID: 0}
     - target: {fileID: 1773016726961540, guid: 860f1ef61724f0a44a072087734ca3cf, type: 3}
       propertyPath: m_TagString
@@ -2254,6 +2254,54 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1691343734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691343732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 0
+  defence: 0
+  painThreshold: 0
+  pathingPattern: {fileID: 0}
+  dialogueList:
+  - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
+  IDName: 
+  isPartOfQuest: 0
+  hasConversation: 0
+--- !u!114 &1691343735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691343732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
+  WaypointContainer: {fileID: 0}
+  waypoints: []
+  enemy: []
+  target: {fileID: 0}
+  fleeingPoints: []
+  fleeingDestinationContainer: {fileID: 0}
+  canWait: 0
+  distanceToCover: 1
 --- !u!1 &1728748705 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1076499255189302, guid: 2f638648f0ddcd545bfa64683efffd99,
