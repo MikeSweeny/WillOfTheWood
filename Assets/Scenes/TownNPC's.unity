@@ -750,7 +750,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
   nextButton: {fileID: 0}
   IDName: bodyclue
-  isPartOfQuest: 0
+  isPartOfQuest: 1
+  hasConversation: 1
 --- !u!1 &708692252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 1ca74154cf6c10e4f8262108edf810b3,
@@ -1322,7 +1323,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9e721c440d60b9e44a5b5f276dcd2e19, type: 2}
   nextButton: {fileID: 0}
   IDName: bodyclue
-  isPartOfQuest: 0
+  isPartOfQuest: 1
+  hasConversation: 1
 --- !u!114 &1099352397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,7 +2312,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
   nextButton: {fileID: 0}
   IDName: bodyclue
-  isPartOfQuest: 0
+  isPartOfQuest: 1
+  hasConversation: 1
 --- !u!1 &1866009472 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1347675605207770, guid: 827a7b5ae6c98ed4cba89571136b27a0,
@@ -2373,7 +2376,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
   nextButton: {fileID: 0}
   IDName: bodyclue
-  isPartOfQuest: 0
+  isPartOfQuest: 1
+  hasConversation: 1
 --- !u!1001 &1906076281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2493,7 +2497,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 95ca0ff7fa06a5d4a8f454e51095db97, type: 2}
   nextButton: {fileID: 0}
   IDName: bodyclue
-  isPartOfQuest: 0
+  isPartOfQuest: 1
+  hasConversation: 1
 --- !u!114 &1915851061
 MonoBehaviour:
   m_ObjectHideFlags: 0
