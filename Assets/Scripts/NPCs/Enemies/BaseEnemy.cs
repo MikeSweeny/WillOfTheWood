@@ -1,7 +1,13 @@
-﻿using System.Collections;
+﻿//FILE: BaseEnemy.cs
+//PROJECT: Will Of The Woods
+//PROGRAMMER: John Gotts
+//FIRST VERSION: 20/12/2019
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NAME: BaseEnemy
+//PURPOSE: this class serves as the parent for all enemies
 public class BaseEnemy : BaseNpc
 {
     public EnemyObject objectBrain;
@@ -37,7 +43,6 @@ public class BaseEnemy : BaseNpc
             {
                 case CurrentState.waiting:
                     CheckIfActive();
-                    ResetAnims();
                     break;
 
                 case CurrentState.moving:
@@ -46,7 +51,7 @@ public class BaseEnemy : BaseNpc
                     break;
 
                 case CurrentState.attacking:
-                    attackingDestination = new Vector3((player.transform.position.x + 2), player.transform.position.y, (player.transform.position.z + 2));
+                    attackingDestination = new Vector3((player.transform.position.x), player.transform.position.y, (player.transform.position.z + 2));
                     RotateEnemy();
                     CheckIfCanAttack();
                     StopAttacking();
@@ -61,6 +66,10 @@ public class BaseEnemy : BaseNpc
         }
     }
 
+    //Function: ResetAnims
+    //DESCRIPTION: function used to reset the animations so the enemy is idle
+    //PARAMETERS: None
+    //RETURNS: None
     private void ResetAnims()
     {
         animController.SetLayerWeight(1, 1);
@@ -70,6 +79,10 @@ public class BaseEnemy : BaseNpc
         animController.SetBool("Walking", false);
     }
 
+    //Function: CheckIfActive
+    //DESCRIPTION: this function simply checks if the object is active then sets the state to moving
+    //PARAMETERS: None
+    //RETURNS: None
     private void CheckIfActive()
     {
         if(gameObject.activeInHierarchy)
@@ -78,6 +91,10 @@ public class BaseEnemy : BaseNpc
         }
     }
 
+    //Function: CheckIfCanAttack
+    //DESCRIPTION: this function checks to see if the enemy can attack or not
+    //PARAMETERS: None
+    //RETURNS: None
     private void CheckIfCanAttack()
     {
         if (state == CurrentState.attacking)
@@ -87,13 +104,13 @@ public class BaseEnemy : BaseNpc
                 nextAttack = Time.time + attackSpeed;
                 AttackTarget();
             }
-            else
-            {
-                animController.SetBool("Attacking", false);
-            }
         }
     }
 
+    //Function: FindTarget
+    //DESCRIPTION: this function is used to find the player, if they are found within range then it sets the state to attacking and checks to see if it can attack
+    //PARAMETERS: float range
+    //RETURNS: None
     private void FindTarget(float range)
     {
         if (player)
@@ -106,6 +123,10 @@ public class BaseEnemy : BaseNpc
         }
     }
 
+    //Function: RotateEnemy
+    //DESCRIPTION: this function rotates the enemy to face the player
+    //PARAMETERS: Vector3 targetDirection, Vector3 newDirection
+    //RETURNS: None
     private void RotateEnemy()
     {
         Vector3 targetDirection = player.transform.position - transform.position;
@@ -114,6 +135,10 @@ public class BaseEnemy : BaseNpc
         transform.rotation = Quaternion.LookRotation(newDirection);
     }
 
+    //Function: AttackTarget
+    //DESCRIPTION: this function is used to attack the target, moving to a point close to them
+    //PARAMETERS: None
+    //RETURNS: None
     private void AttackTarget()
     {
         if ((player.transform.position - transform.position).magnitude <= attackRange)
@@ -124,6 +149,10 @@ public class BaseEnemy : BaseNpc
         }
     }
 
+    //Function: StopAttacking
+    //DESCRIPTION: this function is used to see if the player is out of range before setting the state back to moving
+    //PARAMETERS: None
+    //RETURNS: None
     private void StopAttacking()
     {
         if (Vector2.Distance(transform.position, player.transform.position) > attackRange)
