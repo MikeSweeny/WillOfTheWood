@@ -3,6 +3,15 @@
 public class CharacterBase : MonoBehaviour
 {
 
+    protected enum CurrentState
+    {
+        waiting,
+        moving,
+        paused,
+        attacking,
+        dead
+    }
+
     public int accuracy;
     public int discrete;
     public int persuasive;

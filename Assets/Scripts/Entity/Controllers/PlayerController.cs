@@ -53,7 +53,7 @@ public class PlayerController : BaseController
         InputManager.HotbarSlot8 += ActivateHotbarSlot8;
         InputManager.HotbarSlot9 += ActivateHotbarSlot9;
         InputManager.HotbarSlot0 += ActivateHotbarSlot0;
-        if(weaponCollider.enabled == true)
+        if(weaponCollider && weaponCollider.enabled == true)
             ToggleWeaponCollider();
     }
 

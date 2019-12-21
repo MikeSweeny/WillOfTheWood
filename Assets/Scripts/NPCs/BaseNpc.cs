@@ -8,19 +8,18 @@ public class BaseNpc : CharacterBase
 
     public NpcPathing pathingPattern;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         pathingPattern = GetComponent<NpcPathing>();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected void RoamingPatterns()
     {
         if (pathingPattern.WaypointContainer && pathingPattern.canWait)
         {
             pathingPattern.WaitWhilePathing();
-        } else if(pathingPattern.WaypointContainer && pathingPattern.canWait == false)
+        }
+        else if (pathingPattern.WaypointContainer && pathingPattern.canWait == false)
         {
             pathingPattern.RoamingPath();
         }
