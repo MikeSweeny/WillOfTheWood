@@ -55,7 +55,6 @@ public class InputManager : MonoBehaviour
         {
             instance = this;
         }
-
         GameEventManager.Pause += OnPause;
         GameEventManager.UnPause += UnPause;
     }
@@ -75,6 +74,15 @@ public class InputManager : MonoBehaviour
             TriggerAttack();
             axisInUse = true;
         }
+
+        if (Input.GetButtonDown("WorldMap"))
+        {
+            //put code here for binding to open the map
+        }
+           
+
+        if (Input.GetButtonDown("Cancel"))
+            GameEventManager.TriggerPause();
 
         if (Input.GetAxis("ControllerAttack") == 0)
             axisInUse = false;
@@ -139,6 +147,16 @@ public class InputManager : MonoBehaviour
     public static void UnPause()
     {
         inputEnabled = true;
+    }
+
+    //Function: OpenMap
+    //DESCRIPTION: calls the event for opening world map
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void OpenMap()
+    {
+        if (inputEnabled)
+            WorldMap?.Invoke();
     }
 
     //Function: TriggerJump
