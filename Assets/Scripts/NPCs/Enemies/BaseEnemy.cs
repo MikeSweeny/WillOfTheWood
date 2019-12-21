@@ -46,6 +46,7 @@ public class BaseEnemy : BaseNpc
                     break;
 
                 case CurrentState.moving:
+                    ResetAnims();
                     RoamingPatterns();
                     FindTarget(attackRange);
                     break;
@@ -67,16 +68,15 @@ public class BaseEnemy : BaseNpc
     }
 
     //Function: ResetAnims
-    //DESCRIPTION: function used to reset the animations so the enemy is idle
+    //DESCRIPTION: function used to reset the animations so the enemy is walking
     //PARAMETERS: None
     //RETURNS: None
     private void ResetAnims()
     {
         animController.SetLayerWeight(1, 1);
-        animController.SetLayerWeight(1, 0);
         animController.SetLayerWeight(2, 0);
         animController.SetBool("Attacking", false);
-        animController.SetBool("Walking", false);
+        animController.SetBool("Walking", true);
     }
 
     //Function: CheckIfActive
@@ -99,7 +99,7 @@ public class BaseEnemy : BaseNpc
     {
         if (state == CurrentState.attacking)
         {
-            if (Time.time >= nextAttack)
+            if (Time.time > nextAttack)
             {
                 nextAttack = Time.time + attackSpeed;
                 AttackTarget();
@@ -141,11 +141,12 @@ public class BaseEnemy : BaseNpc
     //RETURNS: None
     private void AttackTarget()
     {
-        if ((player.transform.position - transform.position).magnitude <= attackRange)
+        animController.SetLayerWeight(2, 1);
+        pathingPattern.GetNavMeshAgent().SetDestination(attackingDestination);
+        animController.SetBool("Attacking", true);
+        if(animController.GetCurrentAnimatorStateInfo(2).normalizedTime > 1)
         {
-            animController.SetLayerWeight(2, 1);
-            pathingPattern.GetNavMeshAgent().SetDestination(attackingDestination);
-            animController.SetBool("Attacking", true);
+            animController.SetBool("Attacking", false);
         }
     }
 
