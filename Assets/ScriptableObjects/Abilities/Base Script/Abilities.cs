@@ -28,9 +28,9 @@ public class Abilities: ScriptableObject
     protected bool isCollected = false;
 
     public virtual void OnLoad() { }
-    public virtual void noviceLevelAct() { }
-    public virtual void adeptLevelAct() { }
-    public virtual void masterLevelAct() { }
+    public virtual void NoviceLevelAct() { }
+    public virtual void AdeptLevelAct() { }
+    public virtual void MasterLevelAct() { }
 
     private void OnDestroy()
     {
