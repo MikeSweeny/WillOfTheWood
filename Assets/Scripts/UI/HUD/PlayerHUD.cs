@@ -12,17 +12,18 @@ public class PlayerHUD : MonoBehaviour
 {
     private List<HUDElement> elements;
 
-    //Function : Awake
-    //DESCRIPTION : called when the object is initialized
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    void Start()
     {
-        Player player = GameObject.Find("Player").GetComponent<Player>();
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         elements = new List<HUDElement>();
         for (int i = 0; i < transform.childCount; ++i)
         {
-            elements.Add(transform.GetChild(i).GetComponent<HUDElement>());
+            if (transform.GetChild(i).GetComponent<HUDElement>() != null)
+                elements.Add(transform.GetChild(i).GetComponent<HUDElement>());
         }
 
         foreach (HUDElement element in elements)
@@ -33,7 +34,7 @@ public class PlayerHUD : MonoBehaviour
 
 
     //Function : Update
-    //DESCRIPTION : called ever frame
+    //DESCRIPTION : called every frame
     //PARAMETERS : none
     //RETURNS : none
     void Update()

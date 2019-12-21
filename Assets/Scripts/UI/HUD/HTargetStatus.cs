@@ -19,6 +19,7 @@ public class HTargetStatus : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        target = player.GetPlayerTarget().GetComponent<CharacterBase>();
+        if (player.GetPlayerTarget() != null)
+            target = player.GetPlayerTarget().GetComponent<CharacterBase>();
     }
 }
