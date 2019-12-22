@@ -62,7 +62,7 @@ public class CharacterBase : MonoBehaviour
     {
         painThreshold = strong / 2;
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         
             currentHealth -= damage;
