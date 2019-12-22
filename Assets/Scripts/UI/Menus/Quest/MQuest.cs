@@ -92,7 +92,7 @@ public class MQuest : Menu
             for (int i = 0; i < difference; ++i)
             {
                 GameObject gObject = Instantiate(questbuttonPrefab);
-                gObject.transform.SetParent(buttonHolder);
+                gObject.transform.SetParent(buttonHolder, false);
                 buttons.Add(gObject.GetComponent<UQuestButton>());
             }
         }
