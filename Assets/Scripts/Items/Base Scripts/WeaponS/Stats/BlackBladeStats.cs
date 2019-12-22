@@ -6,9 +6,9 @@ public class BlackBladeStats : WeaponStats
 {
     public BlackBladeStats()
     {
-        attackSpeed = 0.75f;
-        attackMinDamage = 4f;
-        attackMaxDamage = 15f;
+        attackSpeed = 2;
+        attackMinDamage = 4;
+        attackMaxDamage = 15;
         isTwoHanded = true;
     }
 }
