@@ -88,6 +88,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         if(isPartOfQuest)
         {
             Cleared();
+
         }
     }
 
@@ -101,5 +102,6 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         hasBeenTalkedTo = true;
         QuestEvents.ItemCleared(this);
+        Debug.Log("Talked to " + IDName);
     }
 }

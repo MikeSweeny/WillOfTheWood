@@ -28,6 +28,9 @@ public class UNextDialogueButton : UIButton
         else if (Qtarget)
             Qtarget.NextDialogue();
 
+        target = null;
+        Qtarget = null;
+
     }
 
     //Function : SetTarget
