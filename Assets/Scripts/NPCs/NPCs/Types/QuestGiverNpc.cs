@@ -52,10 +52,10 @@ public class QuestGiverNpc : BaseInteractableNpc
         }
         else if (isSecondaryNPC)
         {
-            if(!Quest.Completed)
+            UIEventManager.TriggerOpenDialogue();
+            if (!Quest.Completed)
             {
-            //what do you want!
-            //currentText = Quest.SecondInprogressText;
+            currentText = Quest.SecondInprogressText;
             }
             else if (Quest.Completed)
             {

@@ -28,6 +28,7 @@ public class Quests : ScriptableObject
     public bool NPCKill { get; set; }
     protected GameObject NPCtoKill;
     protected GameObject NPCHandIn;
+    
     public bool SecondNPC { get; set; }
 
     //Changeable in script able list
@@ -55,6 +56,8 @@ public class Quests : ScriptableObject
     public string InprogressQuestText;
     [TextArea(3, 10)]
     public string CompletedQuestText;
+
+    public string SecondInprogressText;
 
 
     public virtual void Load() { }
