@@ -12,6 +12,7 @@ public class UNextDialogueButton : UIButton
 {
 
     private ConversationNpc target;
+    private QuestGiverNpc Qtarget;
 
     //Function : Clicked
     //DESCRIPTION : sets the current slot string to the name of the parent containing this button
@@ -19,7 +20,14 @@ public class UNextDialogueButton : UIButton
     //RETURNS : none
     public override void Clicked()
     {
-        target.NextDialogue();
+        //needs a method that will allow for the button to be set in the NPC or something, 
+        //cause if you visit a conversation NPC, then a quest NPC, it wants to use the ConversationNPC button info
+
+        if (target)
+            target.NextDialogue();
+        else if (Qtarget)
+            Qtarget.NextDialogue();
+
     }
 
     //Function : SetTarget
@@ -29,5 +37,10 @@ public class UNextDialogueButton : UIButton
     public void SetTarget(ConversationNpc nTarget)
     {
         target = nTarget;
+    }
+
+    public void QSetTarget(QuestGiverNpc nTarget)
+    {
+        Qtarget = nTarget;
     }
 }

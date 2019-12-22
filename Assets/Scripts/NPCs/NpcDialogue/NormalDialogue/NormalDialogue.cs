@@ -13,8 +13,6 @@ public class NormalDialogue : BaseNpcDialogue
 
     public override void Welcome()
     {
-        DH = FindObjectOfType<HDialogueInterface>();
-
         Debug.Log(welcomeText);
     }
 

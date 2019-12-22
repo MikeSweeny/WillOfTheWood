@@ -17,7 +17,7 @@ using System.Linq;
 public class Quests : ScriptableObject
 {
     //Items not to be touched. 
-    //public QuestUIManager QUIM;
+    public HDialogueInterface QUIM;
     //public Player player;
 
     public List<QuestGoal> Goals = new List<QuestGoal>();
@@ -63,7 +63,7 @@ public class Quests : ScriptableObject
     //DESCRIPTION : Allowing the quests to pass text into the UI
     //PARAMETERS : 
     //RETURNS : 
-    public virtual void TrackingQuest(){ }
+    public virtual void TrackingQuest() { }
     public virtual void StartText() { }
     public virtual void InprogressText() { }
     public virtual void CompletedText() { }

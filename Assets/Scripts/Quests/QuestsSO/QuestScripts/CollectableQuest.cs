@@ -21,10 +21,10 @@ public class CollectableQuest : Quests
 
     public override void StartText()
     {
-        //QUIM = FindObjectOfType<QuestUIManager>();
+        //QUIM = FindObjectOfType<HDialogueInterface>();
         //if (QUIM)
         //{
-        //    QUIM.NPCBoxTwo.text = StartQuestText;
+        //    QUIM.dialogueText.text = StartQuestText;
         //}
         Debug.Log("StartText " + QuestName);
     }
@@ -47,19 +47,19 @@ public class CollectableQuest : Quests
     }
     public override void InprogressText()
     {
-        //QUIM = FindObjectOfType<QuestUIManager>();
+        //QUIM = FindObjectOfType<HDialogueInterface>();
         //if (QUIM)
         //{
-        //    QUIM.NPCBoxTwo.text = InprogressQuestText;
+        //    QUIM.dialogueText.text = InprogressQuestText;
         //}
         Debug.Log("In Progress " + QuestName);
     }
     public override void CompletedText()
     {
-        //QUIM = FindObjectOfType<QuestUIManager>();
+        //QUIM = FindObjectOfType<HDialogueInterface>();
         //if (QUIM)
         //{
-        //    QUIM.NPCBoxTwo.text = CompletedQuestText;
+        //    QUIM.dialogueText.text = CompletedQuestText;
         //}
         Debug.Log("Completed Text " + QuestName);
     }

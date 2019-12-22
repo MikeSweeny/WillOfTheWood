@@ -12,7 +12,6 @@ using UnityEngine;
 public class QuestGiverNpc : BaseInteractableNpc
 {
     //UI and Quests.cs to link to
-    //QuestUIManager QUIM;
     QuestManager QM;
     public Quests Quest { get; set; }
     public bool AssignedQuest { get; set; } //Has quest been assigned
@@ -20,12 +19,12 @@ public class QuestGiverNpc : BaseInteractableNpc
     public List<Quests> QuestList = new List<Quests>(); //List of quests for NPC
     private int i = 0; //quest counter
     public bool isSecondaryNPC = false;
+    private string currentText = "";
 
 
 
     void Awake()
     {
-        //QUIM = FindObjectOfType<QuestUIManager>();
         QM = FindObjectOfType<QuestManager>();
     }
     //Function: OnInteract
@@ -36,14 +35,10 @@ public class QuestGiverNpc : BaseInteractableNpc
     {
         if (!isSecondaryNPC)
         {
+            UIEventManager.TriggerOpenDialogue();
+
             if (!AssignedQuest && !Helped)
             {
-                //if (QUIM)
-                //{
-                //    QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
-                //    QUIM.NPCBoxTwo.text = "Will you please help me out with my quest?";
-                //}
-
                 AssignQuest();
             }
             else if (AssignedQuest && !Helped)
@@ -60,10 +55,11 @@ public class QuestGiverNpc : BaseInteractableNpc
             if(!Quest.Completed)
             {
             //what do you want!
+            //currentText = Quest.SecondInprogressText;
             }
             else if (Quest.Completed)
             {
-                //customized dialog
+                currentText = Quest.CompletedQuestText;
                 Quest.GiveReward();
                 QM.addToCQNList(Quest.QuestName);
                 Quest.isActive = false;
@@ -93,14 +89,14 @@ public class QuestGiverNpc : BaseInteractableNpc
 
                     AssignedQuest = true;
                     Quest.Load();
-                    Quest.StartText();
+                    currentText = Quest.StartQuestText;
                     Quest.isActive = true;
                     QM.AddActiveQuests();
                     return;
                 }
             }
         }
-        //NoMoreQuest();
+        NoMoreQuest();
     }
 
     //FUNCTION : CheckQuest
@@ -113,14 +109,14 @@ public class QuestGiverNpc : BaseInteractableNpc
             Helped = true;
             AssignedQuest = false;
             QM.addToCQNList(Quest.QuestName);
-            Quest.CompletedText();
+            currentText = Quest.CompletedQuestText;
             Quest.isActive = false;
             QM.RemoveActiveQuest(Quest);
 
         }
         else
         {
-            Quest.InprogressText();
+            currentText = Quest.InprogressQuestText;
         }
     }
 
@@ -131,7 +127,7 @@ public class QuestGiverNpc : BaseInteractableNpc
         i++;
         if (i >= QuestList.Count)
         {
-            //NoMoreQuest();
+           NoMoreQuest();
         }
         else
         {
@@ -146,11 +142,18 @@ public class QuestGiverNpc : BaseInteractableNpc
     //DESCRIPTION : Calls the dialog if no more quests are to be found
     void NoMoreQuest()
     {
-        //    if (QUIM)
-        //    {
-        //        QUIM.NPCBoxOne.text = "Welcome to Wonderland!";
-        //        QUIM.NPCBoxTwo.text = "No Available Quests";
-        //    }
+        currentText = "Thanks for you Help";
         Debug.Log("No Quest Got");
     }
+
+    public string GetCurrentText()
+    {
+        return currentText;
+    }
+
+    public void NextDialogue()
+    {
+        UIEventManager.TriggerCloseDialogue();
+    }
+
 }
