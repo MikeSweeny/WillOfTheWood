@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400000}
-  - component: {fileID: 11100000}
+  - component: {fileID: 8440751458928575760}
+  - component: {fileID: 143774865736078832}
   m_Layer: 0
   m_Name: samuzai
   m_TagString: Untagged
@@ -33,26 +34,43 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!111 &11100000
-Animation:
+--- !u!95 &8440751458928575760
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400008, guid: e156495aa9aa3424d85dac51d5fdbd21, type: 3}
-  m_Animations:
-  - {fileID: 7400002, guid: e156495aa9aa3424d85dac51d5fdbd21, type: 3}
-  - {fileID: 7400004, guid: e156495aa9aa3424d85dac51d5fdbd21, type: 3}
-  - {fileID: 7400006, guid: e156495aa9aa3424d85dac51d5fdbd21, type: 3}
-  - {fileID: 7400008, guid: e156495aa9aa3424d85dac51d5fdbd21, type: 3}
-  - {fileID: 7400010, guid: e156495aa9aa3424d85dac51d5fdbd21, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_Avatar: {fileID: 9000000, guid: f63f399ea05d0c5468321f532086d33e, type: 3}
+  m_Controller: {fileID: 9100000, guid: 7c6687a0c529279449f2979db8fb0a5d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!143 &143774865736078832
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,9 +1480,9 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+    m_Center: {x: 0.01586017, y: -0.009841837, z: -0.005810201}
+    m_Extent: {x: 0.25026354, y: 0.06395831, z: 0.64897436}
+  m_DirtyAABB: 0
 --- !u!1 &100098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,6 +3016,6 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 1
+    m_Center: {x: -0.00954026, y: -0.114145726, z: 0.9179112}
+    m_Extent: {x: 0.37320557, y: 0.4696826, z: 0.91750264}
+  m_DirtyAABB: 0

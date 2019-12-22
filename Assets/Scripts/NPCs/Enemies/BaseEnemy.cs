@@ -8,12 +8,14 @@ using UnityEngine;
 
 //NAME: BaseEnemy
 //PURPOSE: this class serves as the parent for all enemies
-public class BaseEnemy : BaseNpc
+public class BaseEnemy : BaseNpc, IQuestID
 {
     public EnemyObject objectBrain;
     public int vigilant;
     public float attackRange;
+    public string ID { get; set; }
 
+    public string IDName;
     private Player player;
     private float turnSpeed = 1.0f;
     private float singleStep;
@@ -33,6 +35,7 @@ public class BaseEnemy : BaseNpc
         animController = GetComponent<Animator>();
         nextAttack = Time.time;
         attackSpeed = animController.GetAnimatorTransitionInfo(2).duration;
+        ID = IDName;
     }
 
     private void Update()
@@ -178,6 +181,11 @@ public class BaseEnemy : BaseNpc
     public void getStats()
     {
         objectBrain.Initialize();
+    }
+
+    public void Cleared()
+    {
+        QuestEvents.ItemCleared(this);
     }
 
 }
