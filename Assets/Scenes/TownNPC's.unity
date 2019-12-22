@@ -1241,6 +1241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JSword
       objectReference: {fileID: 0}
+    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 4673611459674428, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.887085
@@ -2564,7 +2568,7 @@ GameObject:
   - component: {fileID: 1915851060}
   m_Layer: 0
   m_Name: BloodTrail
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

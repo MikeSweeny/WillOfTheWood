@@ -16,9 +16,10 @@ MonoBehaviour:
   preReqStatName2: 
   numInStatReq1: 0
   numInStatReq2: 0
-  welcomeText: 'The blood seems to be leading to the houses over there. '
+  welcomeText: You've found blood
   welcomeButtonText: Exit
-  conversationText: 
+  conversationText: 'The blood seems to be leading to the houses over there. '
   conversationButtonText: 
-  goodbyeText: 
+  goodbyeText: isn't that where Jorran lives?
   goodbyeButtonText: 
+  DH: {fileID: 0}
