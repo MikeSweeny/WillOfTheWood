@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e95ffded68d9a0428c63967cacf083b, type: 3}
   m_Name: TheBody
   m_EditorClassIdentifier: 
+  QUIM: {fileID: 0}
   QuestName: TheBody
   Prereq1: NULL
   Prereq2: NULL
@@ -31,3 +32,9 @@ MonoBehaviour:
     a little worse
   CompletedQuestText: visit the sherif
   NPCHandInName: Bandit1
+  CNPC:
+  - Azfoldo
+  - Sendora
+  - Milea
+  - BloodTrail
+  - JSword

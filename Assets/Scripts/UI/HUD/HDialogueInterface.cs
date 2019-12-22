@@ -35,11 +35,20 @@ public class HDialogueInterface : HUDElement
     public override void UpdateElement()
     {
         GameObject playerTarget = player.GetPlayerTarget();
-        if (playerTarget != null)
+        if (playerTarget != null && playerTarget.CompareTag("NPC"))
         { 
-            ConversationNpc target = playerTarget.GetComponent<ConversationNpc>();
-            dialogueText.text = target.GetCurrentText();
-            button.SetTarget(target); 
+            if (playerTarget.GetComponent<ConversationNpc>())
+            {
+                ConversationNpc target = playerTarget.GetComponent<ConversationNpc>();
+                dialogueText.text = target.GetCurrentText();
+                button.SetTarget(target);
+            }
+            else if(playerTarget.GetComponent<QuestGiverNpc>())
+            {
+                QuestGiverNpc Qtarget = playerTarget.GetComponent<QuestGiverNpc>();
+                dialogueText.text = Qtarget.GetCurrentText();
+                button.QSetTarget(Qtarget);
+            }
         }
     }
 

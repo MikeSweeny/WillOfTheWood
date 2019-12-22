@@ -2,6 +2,7 @@
 //PROJECT : Will of the Woods
 //PROGRAMMER : Rebecca Stewart
 //FIRST VERSION : 19/12/2019
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Quest", menuName = "Quests/TurnInQuest")]
@@ -9,6 +10,7 @@ using UnityEngine;
 public class TurnInQuests : Quests
 {
     public string NPCHandInName;
+    public List<string> CNPC = new List<string>();
     
     public override void Load()
     {
@@ -24,6 +26,16 @@ public class TurnInQuests : Quests
             NPCHandIn.GetComponent<QuestGiverNpc>().isSecondaryNPC = true;
             NPCHandIn.GetComponent<QuestGiverNpc>().Quest = this;
         }
+        for (int i = 0; i < CNPC.Count; i++)
+        {
+            GameObject NPC;
+            NPC = GameObject.Find(CNPC[i]);
+            if (NPC)
+            {
+                NPC.GetComponent<ConversationNpc>().hasBeenTalkedTo = false;
+            }
+        }
+
     }
 
 

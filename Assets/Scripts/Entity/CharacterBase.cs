@@ -18,8 +18,8 @@ public class CharacterBase : MonoBehaviour
     public int quick;
     public int strong;
     public int toughness;
-    public float maxHealth;
-    protected float currentHealth;
+    public int maxHealth;
+    protected int currentHealth;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
     [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
@@ -62,7 +62,7 @@ public class CharacterBase : MonoBehaviour
     {
         painThreshold = strong / 2;
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         
             currentHealth -= damage;

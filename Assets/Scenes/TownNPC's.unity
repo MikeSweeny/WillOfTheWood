@@ -766,6 +766,7 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
+  hasBeenTalkedTo: 1
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -1238,7 +1239,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
       propertyPath: m_Name
-      value: Sword_DH
+      value: JSword
       objectReference: {fileID: 0}
     - target: {fileID: 4673611459674428, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1347,6 +1348,7 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 9e721c440d60b9e44a5b5f276dcd2e19, type: 2}
+  hasBeenTalkedTo: 1
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -2278,9 +2280,10 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
+  hasBeenTalkedTo: 0
   IDName: 
   isPartOfQuest: 0
-  hasConversation: 0
+  hasConversation: 1
 --- !u!114 &1691343735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2401,6 +2404,7 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
+  hasBeenTalkedTo: 1
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -2473,6 +2477,7 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
+  hasBeenTalkedTo: 1
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1
@@ -2602,6 +2607,7 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   dialogueList:
   - {fileID: 11400000, guid: 95ca0ff7fa06a5d4a8f454e51095db97, type: 2}
+  hasBeenTalkedTo: 1
   IDName: bodyclue
   isPartOfQuest: 1
   hasConversation: 1

@@ -16,11 +16,11 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     public BaseNpcDialogue dialogue { get; set; }
     public string ID { get; set; }
 
+    public bool hasBeenTalkedTo = false;
     public string IDName;
     public bool isPartOfQuest = false;
     public bool hasConversation = false;
-    private bool isTalking = false;
-    private bool hasBeenTalkedTo = false;
+    private bool isTalking = false; 
     private string currentText = "";
 
     private void Awake()
@@ -34,6 +34,8 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     //RETURNS: None
     public override void OnInteract()
     {
+        if (isPartOfQuest && hasBeenTalkedTo)
+            return;
         if(!isTalking)
         {
             UIEventManager.TriggerOpenDialogue();
@@ -50,6 +52,10 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         else if(currentText == dialogue.conversationText || !hasConversation)
         {
             StopTalking();
+        }
+        else
+        {
+            isTalking = false;
             UIEventManager.TriggerCloseDialogue();
         }
     }
@@ -63,7 +69,6 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         for (int i = 0; i < dialogueList.Count; i++)
         {
             dialogue = dialogueList[i];
-
             dialogue.Welcome();
             currentText = dialogue.welcomeText;
             isTalking = true;
@@ -83,19 +88,20 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         if(isPartOfQuest)
         {
             Cleared();
+
         }
     }
 
     private void StopTalking()
     {
-        currentText = "";
+        currentText = dialogue.goodbyeText;
         dialogue.Goodbye();
-        isTalking = false;
     }
 
     public void Cleared()
     {
         hasBeenTalkedTo = true;
         QuestEvents.ItemCleared(this);
+        Debug.Log("Talked to " + IDName);
     }
 }

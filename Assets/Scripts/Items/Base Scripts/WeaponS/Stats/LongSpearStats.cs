@@ -6,9 +6,9 @@ public class LongSpearStats : WeaponStats
 {
     public LongSpearStats()
     {
-        attackSpeed = 0.5f;
-        attackMinDamage = 1f;
-        attackMaxDamage = 10f;
+        attackSpeed = 1;
+        attackMinDamage = 1;
+        attackMaxDamage = 10;
         isTwoHanded = true;
         isLongWeapon = true;
     }

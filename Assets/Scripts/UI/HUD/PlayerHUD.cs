@@ -37,7 +37,7 @@ public class PlayerHUD : MonoBehaviour
     //DESCRIPTION : called every frame
     //PARAMETERS : none
     //RETURNS : none
-    void Update()
+    void LateUpdate()
     {
         foreach (HUDElement element in elements)
         {

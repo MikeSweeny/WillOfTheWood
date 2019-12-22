@@ -6,9 +6,9 @@ public class ShortSwordStats : WeaponStats
 {
     public ShortSwordStats()
     {
-        attackSpeed = 1.5f;
-        attackMinDamage = 1f;
-        attackMaxDamage = 6f;
+        attackSpeed = 1;
+        attackMinDamage = 1;
+        attackMaxDamage = 6;
         isDagger = true;
         isOneHanded = true;
     }

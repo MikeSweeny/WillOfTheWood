@@ -10,9 +10,9 @@ using UnityEngine;
 //PURPOSE : The base class for all weapon stats
 public class WeaponStats 
 {
-    protected float attackSpeed;
-    protected float attackMinDamage;
-    protected float attackMaxDamage;
+    protected int attackSpeed;
+    protected int attackMinDamage;
+    protected int attackMaxDamage;
     protected bool isOneHanded = false;
     protected bool isTwoHanded = false;
     protected bool isDagger = false;
@@ -29,7 +29,7 @@ public class WeaponStats
     //DESCRIPTION : checks weapons attack minimum damage
     //PARAMETERS : none
     //RETURNS : attackMinDamage
-    public float GetAttackMinDamage()
+    public int GetAttackMinDamage()
     {
         return attackMinDamage;
     }
@@ -37,7 +37,7 @@ public class WeaponStats
     //DESCRIPTION : checks weapons attack maximum damage
     //PARAMETERS : none
     //RETURNS : attackMaxDamage
-    public float GetAttackMaxDamage()
+    public int GetAttackMaxDamage()
     {
         return attackMaxDamage;
     }
