@@ -36,6 +36,7 @@ public class MQuest : Menu
         requirements = detailsBox.Find("RequirementsText").GetComponent<Text>();
         reward = detailsBox.Find("RewardsText").GetComponent<Text>();
         buttons = new List<UQuestButton>();
+        buttonHolder = transform.Find("Viewport").Find("Content");
         UIEventManager.OpenQuests += OpenMenu;
         UIEventManager.OpenQuests += UpdateQuestList;
         UIEventManager.CloseQuests += CloseMenu;
@@ -87,7 +88,7 @@ public class MQuest : Menu
         QuestManager qmRef = GameObject.Find("Managers").GetComponent<QuestManager>();
         if (buttons.Count < qmRef.ActiveQuest.Count)
         {
-            int difference = buttons.Count - qmRef.ActiveQuest.Count;
+            int difference = qmRef.ActiveQuest.Count - buttons.Count;
             for (int i = 0; i < difference; ++i)
             {
                 GameObject gObject = Instantiate(questbuttonPrefab);
