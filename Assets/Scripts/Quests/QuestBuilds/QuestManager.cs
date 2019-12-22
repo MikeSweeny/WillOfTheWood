@@ -33,14 +33,14 @@ public class QuestManager: MonoBehaviour
         addToCQNList("NULL");
         //find all quest givers
 
-        NPC.AddRange(GameObject.FindGameObjectsWithTag("NPC"));
-        for (int i = 0; i < NPC.Count; i++)
-        {
-            if (NPC[i].GetComponent<QuestGiverNpc>())
-            {
-                QuestNPC.Add(NPC[i]);
-            }
-        }
+        //NPC.AddRange(GameObject.FindGameObjectsWithTag("NPC"));
+        //for (int i = 0; i < NPC.Count; i++)
+        //{
+        //    if (NPC[i].GetComponent<QuestGiverNpc>())
+        //    {
+        //        QuestNPC.Add(NPC[i]);
+        //    }
+        //}
         
     }
     public bool searchCQNList(string name)
@@ -74,33 +74,22 @@ public class QuestManager: MonoBehaviour
        // ActiveQuests();
     }
 
-    public void AddActiveQuests()
+    public void AddActiveQuests(Quests quest)
     {
-        for (int i = 0; i < QuestNPC.Count; i++)
+
+        for (int j = 0; j < ActiveQuest.Count; j++)
         {
-            if (QuestNPC[i].GetComponent<QuestGiverNpc>().Quest)
-            isActive = QuestNPC[i].GetComponent<QuestGiverNpc>().Quest.isActive;
-
-            if (isActive == true)
+            if (ActiveQuest[j] == quest)
             {
-
-                for (int j = 0; j < ActiveQuest.Count; j++)
-                {
-                    if (ActiveQuest[j] == QuestNPC[i].GetComponent<QuestGiverNpc>().Quest)
-                    {
-                        checklist = true;
-                        break;
-                    }
-                    else
-                        checklist = false;
-                }
-
-                if (checklist == false)
-                    ActiveQuest.Add(QuestNPC[i].GetComponent<QuestGiverNpc>().Quest);
-
-                
+                checklist = true;
+                break;
             }
+            else
+                checklist = false;
         }
+
+        if (checklist == false)
+            ActiveQuest.Add(quest);
     }
 
     public void RemoveActiveQuest(Quests quest)

@@ -91,7 +91,7 @@ public class QuestGiverNpc : BaseInteractableNpc
                     Quest.Load();
                     currentText = Quest.StartQuestText;
                     Quest.isActive = true;
-                    QM.AddActiveQuests();
+                    QM.AddActiveQuests(Quest);
                     return;
                 }
             }
