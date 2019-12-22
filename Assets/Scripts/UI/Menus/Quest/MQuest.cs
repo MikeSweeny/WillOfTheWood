@@ -39,6 +39,7 @@ public class MQuest : Menu
         UIEventManager.OpenQuests += OpenMenu;
         UIEventManager.OpenQuests += UpdateQuestList;
         UIEventManager.CloseQuests += CloseMenu;
+        
     }
 
 
@@ -48,9 +49,12 @@ public class MQuest : Menu
     //RETURNS : none
     private void Update()
     {
-        title.text = selectedQuest.QuestName;
-        description.text = selectedQuest.Description;
-        requirements.text = selectedQuest.QuestObjectives;
+        if (selectedQuest)
+        {
+            title.text = selectedQuest.QuestName;
+            description.text = selectedQuest.Description;
+            requirements.text = selectedQuest.QuestObjectives;
+        }
     }
 
     //Function : OnDestroy
