@@ -10,10 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 8440751458928575760}
-  - component: {fileID: 143774865736078832}
+  - component: {fileID: 708692253}
+  - component: {fileID: 2843603716877780929}
+  - component: {fileID: 2280111047970619510}
+  - component: {fileID: 7448261499080020753}
   m_Layer: 0
   m_Name: samuzai
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +56,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &143774865736078832
+--- !u!143 &708692253
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -71,6 +74,75 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &2843603716877780929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
+  WaypointContainer: {fileID: 0}
+  waypoints: []
+  enemy: []
+  target: {fileID: 0}
+  fleeingPoints: []
+  fleeingDestinationContainer: {fileID: 0}
+  canWait: 0
+  distanceToCover: 1
+--- !u!114 &2280111047970619510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  maxHealth: 50
+  defence: 0
+  painThreshold: 0
+  pathingPattern: {fileID: 0}
+  objectBrain: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e, type: 2}
+  vigilant: 0
+  attackRange: 4
+  IDName: 
+--- !u!195 &7448261499080020753
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 8
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1411,6 +1483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400094}
   - component: {fileID: 13700000}
+  - component: {fileID: 2547698435423777072}
   m_Layer: 0
   m_Name: Cylinder001
   m_TagString: Untagged
@@ -1483,6 +1556,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.01586017, y: -0.009841837, z: -0.005810201}
     m_Extent: {x: 0.25026354, y: 0.06395831, z: 0.64897436}
   m_DirtyAABB: 0
+--- !u!114 &2547698435423777072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee26845344f33645824df6ae12d51c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &100098
 GameObject:
   m_ObjectHideFlags: 0
