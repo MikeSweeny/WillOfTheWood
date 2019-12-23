@@ -1606,6 +1606,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8440751458928575760, guid: 1ca74154cf6c10e4f8262108edf810b3,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4f256e9796c3bf347b699f08f629d188, type: 2}
+    - target: {fileID: 8440751458928575760, guid: 1ca74154cf6c10e4f8262108edf810b3,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 81a125a46ac274e499c389815294bab8, type: 3}
+    - target: {fileID: 2280111047970619510, guid: 1ca74154cf6c10e4f8262108edf810b3,
+        type: 3}
+      propertyPath: IDName
+      value: Jorran
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca74154cf6c10e4f8262108edf810b3, type: 3}
 --- !u!1001 &1233997194
