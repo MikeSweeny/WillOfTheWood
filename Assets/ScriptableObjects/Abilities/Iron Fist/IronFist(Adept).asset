@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db7b4588c0bb5443ad5c3e870daf409, type: 3}
   m_Name: IronFist(Adept)
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilityDescription: 
+  abilityName: IronFist(Adept)
+  abilityDescription: Players strength is added to accuracy for melee attacks.
   abilityImage: {fileID: 0}
   isNovice: 0
-  isAdept: 0
+  isAdept: 1
   isMaster: 0

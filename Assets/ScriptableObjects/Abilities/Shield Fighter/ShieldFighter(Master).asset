@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2c9ef7047e7ae46bc7a6d98a2334fe, type: 3}
-  m_Name: NaturalWarrior(Master)
+  m_Script: {fileID: 11500000, guid: 4d5d6a5148eaefc40a50344e849e5959, type: 3}
+  m_Name: ShieldFighter(Master)
   m_EditorClassIdentifier: 
-  abilityName: NaturalWarrior(Master)
-  abilityDescription: While activated, melee attack damage is 2-12. Unnarmed attacks
-    have a second attack while activated.
+  abilityName: ShieldFighter(Master)
+  abilityDescription: One handed weapons equipped get +1 to attack damage and sheilds
+    get +2 defence instead of regular +1. Every successfull attack follows up with
+    a sheild bash attack dealing 1-6 damage.
   abilityImage: {fileID: 0}
   isNovice: 0
   isAdept: 0

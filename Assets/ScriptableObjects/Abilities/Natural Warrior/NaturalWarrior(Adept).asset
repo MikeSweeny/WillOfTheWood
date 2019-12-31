@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f2c9ef7047e7ae46bc7a6d98a2334fe, type: 3}
   m_Name: NaturalWarrior(Adept)
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilityDescription: 
+  abilityName: NaturalWarrior(Adept)
+  abilityDescription: While activated, melee attack damage is 1-6. Unnarmed attacks
+    have a second attack while activated.
   abilityImage: {fileID: 0}
   isNovice: 0
-  isAdept: 0
+  isAdept: 1
   isMaster: 0

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa75929e957d28546a390a5ae735c0d8, type: 3}
   m_Name: Poisoner(Novice)
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilityDescription: 
+  abilityName: Poisoner(Novice)
+  abilityDescription: "While activated the weapon equipped becomes poisonous for 1
+    strike. \r\nEnemy hit will have a poison effect added."
   abilityImage: {fileID: 0}
-  isNovice: 0
+  isNovice: 1
   isAdept: 0
   isMaster: 0

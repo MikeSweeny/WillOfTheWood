@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d92ecc2044407d941be71e5ee0e8d5be, type: 3}
   m_Name: Dominate(Master)
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilityDescription: 
+  abilityName: Dominate(Master)
+  abilityDescription: Half of players persuasive stat is added to their accuracy check.
+    Chance to hit another enemy within range for 1-4 damage. When successfull, enemies
+    now flee for 25 seconds.
   abilityImage: {fileID: 0}
   isNovice: 0
   isAdept: 0
-  isMaster: 0
+  isMaster: 1

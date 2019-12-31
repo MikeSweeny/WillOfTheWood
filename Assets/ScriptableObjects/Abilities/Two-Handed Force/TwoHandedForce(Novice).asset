@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d92ecc2044407d941be71e5ee0e8d5be, type: 3}
-  m_Name: Dominate(Adept)
+  m_Script: {fileID: 11500000, guid: 52be2d5ce94919744adbe9f4cdb0a1bf, type: 3}
+  m_Name: TwoHandedForce(Novice)
   m_EditorClassIdentifier: 
-  abilityName: Dominate(Adept)
-  abilityDescription: Half of players persuasive stat is added to their accuracy check.
-    Chance to hit another enemy within range for 1-4 damage.
+  abilityName: TwoHandedForce(Novice)
+  abilityDescription: While activated, two-handed weapons have 1-12 damage or added
+    damage to special two-handed weapons.
   abilityImage: {fileID: 0}
-  isNovice: 0
-  isAdept: 1
+  isNovice: 1
+  isAdept: 0
   isMaster: 0

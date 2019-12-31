@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f2c9ef7047e7ae46bc7a6d98a2334fe, type: 3}
-  m_Name: NaturalWarrior(Master)
+  m_Script: {fileID: 11500000, guid: b3bf3662a22aa6d448264f6a719af685, type: 3}
+  m_Name: TwinAttack(Master)
   m_EditorClassIdentifier: 
-  abilityName: NaturalWarrior(Master)
-  abilityDescription: While activated, melee attack damage is 2-12. Unnarmed attacks
-    have a second attack while activated.
+  abilityName: TwinAttack(Master)
+  abilityDescription: When active, one-handed weapons can be equipped on the shield
+    arm and two-handed weapons can be equipped on the weapon arm. Attacking twice
+    per attack.
   abilityImage: {fileID: 0}
   isNovice: 0
   isAdept: 0

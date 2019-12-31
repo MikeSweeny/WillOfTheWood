@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5efac43d826529948ab4e1c2a1a641a7, type: 3}
   m_Name: Recovery(Adept)
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilityDescription: 
+  abilityName: Recovery(Adept)
+  abilityDescription: Gain Toughness 1-6
   abilityImage: {fileID: 0}
   isNovice: 0
-  isAdept: 0
+  isAdept: 1
   isMaster: 0
