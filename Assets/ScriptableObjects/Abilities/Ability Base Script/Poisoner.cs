@@ -15,6 +15,7 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
+        isActive = false;
         if (isCollected)
         {
             if (isNovice)

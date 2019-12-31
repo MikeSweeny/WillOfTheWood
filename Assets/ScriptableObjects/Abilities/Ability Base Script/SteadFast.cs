@@ -1,15 +1,15 @@
-﻿//FILE          :   IronFist.cs
+﻿//FILE          :   SteadFast.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "IronFist()", menuName = "Abilities/IronFist")]
-//NAME : IronFist
-//PURPOSE : All the funcionality of the IronFist ability as a child of abilities
-public class IronFist : Abilities
+[CreateAssetMenu(fileName = "SteadFast()", menuName = "Abilities/SteadFast")]
+//NAME : SteadFast
+//PURPOSE : All the funcionality of the SteadFast ability as a child of abilities
+public class SteadFast : Abilities
 {
     private bool isActive { get; set; }
-    PlayerStats stats;
+    Player stats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -48,11 +48,11 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
-        //{
-        isNovice = true;
-        ////add 1/2 of strength stat to accuracy check when using melee attacks.
-        //}
+        if (isActive)
+        {
+            isNovice = true;
+            //stats.resistance = stats.resistance + 1
+        }
     }
     //Function : AdeptLevelAct
     //DESCRIPTION : what happens when the adept level of the spell is used
@@ -60,12 +60,11 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
-        //{
-        isAdept = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
-        //}
+        if (isActive)
+        {
+            isAdept = true;
+            //stats.resistance = stats.resistance + 2
+        }
     }
     //Function : MasterLevelAct
     //DESCRIPTION : what happens when the master level of the spell is used
@@ -73,12 +72,12 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
-        //{
-        isMaster = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
-        //if the player lands another hit within 10 in game seconds, apply extra 1-4 damage on that attack.
-        //}
+        if (isActive)
+        {
+            isMaster = true;
+            //stats.resistance = stats.resistance + 3
+            //if (stats.resistance > 3 && attackingEnemyEquippedWeapon.statusEffect)
+            //attacking enemy takes 1-6 damage
+        }
     }
 }

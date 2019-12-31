@@ -1,15 +1,15 @@
-﻿//FILE          :   IronFist.cs
+﻿//FILE          :   ShieldFighter.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "IronFist()", menuName = "Abilities/IronFist")]
-//NAME : IronFist
-//PURPOSE : All the funcionality of the IronFist ability as a child of abilities
-public class IronFist : Abilities
+[CreateAssetMenu(fileName = "ShieldFighter()", menuName = "Abilities/ShieldFighter")]
+//NAME : ShieldFighter
+//PURPOSE : All the funcionality of the ShieldFighter ability as a child of abilities
+public class ShieldFighter : Abilities
 {
     private bool isActive { get; set; }
-    PlayerStats stats;
+    Player stats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -48,10 +48,10 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == oneHanded)
         //{
-        isNovice = true;
-        ////add 1/2 of strength stat to accuracy check when using melee attacks.
+        //    isNovice = true;
+        //    equippedWeapon adds 1 to its max range and equippedShield adds 2 to its defence max range.
         //}
     }
     //Function : AdeptLevelAct
@@ -60,11 +60,11 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == oneHanded)
         //{
-        isAdept = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
+        //    isAdept = true;
+        //    equippedWeapon adds 1 to its max range and equippedShield adds 2 to its defence max range.
+        //    if player lands succesfull hit, added shield bash attack deals extra 1-4 damage to enemy. 
         //}
     }
     //Function : MasterLevelAct
@@ -73,12 +73,11 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == oneHanded)
         //{
-        isMaster = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
-        //if the player lands another hit within 10 in game seconds, apply extra 1-4 damage on that attack.
+        //    isMaster = true;
+        //    equippedWeapon adds 1 to its max range and equippedShield adds 2 to its defence max range.
+        //    if player lands succesfull hit, added shield bash attack deals extra 1-6 damage to enemy. 
         //}
     }
 }
