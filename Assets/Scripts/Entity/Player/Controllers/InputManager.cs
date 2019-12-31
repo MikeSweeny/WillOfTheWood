@@ -57,6 +57,8 @@ public class InputManager : MonoBehaviour
         }
         GameEventManager.Pause += OnPause;
         GameEventManager.UnPause += UnPause;
+        UIEventManager.OpenLeveling += OnPause;
+        UIEventManager.CloseLeveling += UnPause;
     }
 
     private void Update()
@@ -81,7 +83,7 @@ public class InputManager : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Inventory"))
-            UIEventManager.TriggerOpenInventory();
+            UIEventManager.TriggerOpenLeveling();
 
         if (Input.GetButtonDown("Cancel"))
             GameEventManager.TriggerPause();
