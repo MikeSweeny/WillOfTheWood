@@ -1,14 +1,15 @@
-﻿//FILE          :   NaturalWarrior.cs
+﻿//FILE          :   Recovery.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "NaturalWarrior()", menuName = "Abilities/NaturalWarrior")]
-//NAME : NaturalWarrior
-//PURPOSE : All the funcionality of the NaturalWarrior ability as a child of abilities
-public class NaturalWarrior : Abilities
+[CreateAssetMenu(fileName = "Recovery()", menuName = "Abilities/Recovery")]
+//NAME : Recovery
+//PURPOSE : All the funcionality of the Recovery ability as a child of abilities
+public class Recovery : Abilities
 {
     private bool isActive { get; set; }
+    Player stats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -46,10 +47,10 @@ public class NaturalWarrior : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && stats.currentHealth != stats.maxHealth)
         //{
-        isNovice = true;
-        ////melee damage is now 1-6 instead of 1-4
+        //    isNovice = true;
+        //    //random range between 1-4, integer returned is applied to player toughness
         //}
     }
     //Function : AdeptLevelAct
@@ -58,10 +59,10 @@ public class NaturalWarrior : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && stats.currentHealth != stats.maxHealth)
         //{
-        isNovice = true;
-        ////melee damage is now 1-6 instead of 1-4 and player strikes twice per attack
+        //    isAdept = true;
+        //    //random range between 1-6, integer returned is applied to player toughness
         //}
     }
     //Function : MasterLevelAct
@@ -70,10 +71,10 @@ public class NaturalWarrior : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && stats.currentHealth != stats.maxHealth)
         //{
-        isNovice = true;
-        ////melee damage is now 2-12 instead of 1-4 and player strikes twice per attack
+        //    isMaster = true;
+        //    //random range between 1-8, integer returned is applied to player toughness
         //}
     }
 }

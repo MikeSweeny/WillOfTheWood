@@ -61,7 +61,7 @@ public class IronFist : Abilities
     {
         //if (isActive && equippedWeapon == melee)
         //{
-        isNovice = true;
+        isAdept = true;
         //add strength stat to accuracy check when using melee attacks.
         //melee damage is now 1-6 instead of 1-4
         //}
@@ -74,7 +74,7 @@ public class IronFist : Abilities
     {
         //if (isActive && equippedWeapon == melee)
         //{
-        isNovice = true;
+        isMaster = true;
         //add strength stat to accuracy check when using melee attacks.
         //melee damage is now 1-6 instead of 1-4
         //if the player lands another hit within 10 in game seconds, apply extra 1-4 damage on that attack.

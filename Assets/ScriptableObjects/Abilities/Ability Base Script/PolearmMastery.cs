@@ -1,12 +1,12 @@
-﻿//FILE          :   Poisoner.cs
+﻿//FILE          :   PolearmMastery.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "Poisoner()", menuName = "Abilities/Poisoner")]
-//NAME : NaturalWarrior
-//PURPOSE : All the funcionality of the NaturalWarrior ability as a child of abilities
-public class Poisoner : Abilities
+[CreateAssetMenu(fileName = "PolearmMastery()", menuName = "Abilities/PolearmMastery")]
+//NAME : PolearmMastery
+//PURPOSE : All the funcionality of the PolearmMastery ability as a child of abilities
+public class PolearmMastery : Abilities
 {
     private bool isActive { get; set; }
     //Function : OnLoad
@@ -46,12 +46,11 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        if (isActive)
-        {
+        //if (isActive && equippedWeapon == Long)
+        //{
         isNovice = true;
-        //equippedWeapon == isPoisonous;
-        //if successfully hit enemy, apply poison damage for x ammount of time to enemy and remove poison status from weapon.
-        }
+        ////Equipped long weapon goes up a tier, staves 1-8 and all other long weapons equipped doing 1-10
+        //}
     }
     //Function : AdeptLevelAct
     //DESCRIPTION : what happens when the adept level of the spell is used
@@ -59,13 +58,11 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        if (isActive)
-        {
-            isAdept = true;
-            //equippedWeapon == isPoisonous;
-            //if successfully hit enemy, apply poison damage for x ammount of time to enemy
-            //remove poison effect from equipped weapon when combat is over.
-        }
+        //if (isActive && equippedWeapon == Long)
+        //{
+        isAdept = true;
+        ////Equipped long weapon goes up a tier, staves 1-8 and all other long weapons equipped doing 1-10. Player attacks twice per attack
+        //}
     }
     //Function : MasterLevelAct
     //DESCRIPTION : what happens when the master level of the spell is used
@@ -73,12 +70,11 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        if (isActive)
-        {
-            isMaster = true;
-            //equippedWeapon == isPoisonous;
-            //if successfully hit enemy, apply 2x poison damage for x ammount of time to enemy
-            //remove poison effect from equipped weapon when combat is over.
-        }
+        //if (isActive && equippedWeapon == Long)
+        //{
+        isMaster = true;
+        ////Equipped long weapon goes up a tier, staves 1-8 and all other long weapons equipped doing 1-10. Player attacks twice per attack
+        ////when active and attacking, even if player doesnt hit, enemies cannot get close enough to attack with anything but designated 'long' weaponary.
+        //}
     }
 }

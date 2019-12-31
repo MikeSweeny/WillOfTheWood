@@ -1,12 +1,12 @@
-﻿//FILE          :   Poisoner.cs
+﻿//FILE          :   NaturalWarrior.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "Poisoner()", menuName = "Abilities/Poisoner")]
+[CreateAssetMenu(fileName = "NaturalWarrior()", menuName = "Abilities/NaturalWarrior")]
 //NAME : NaturalWarrior
 //PURPOSE : All the funcionality of the NaturalWarrior ability as a child of abilities
-public class Poisoner : Abilities
+public class NaturalWarrior : Abilities
 {
     private bool isActive { get; set; }
     //Function : OnLoad
@@ -46,12 +46,11 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        if (isActive)
-        {
+        //if (isActive && equippedWeapon == melee)
+        //{
         isNovice = true;
-        //equippedWeapon == isPoisonous;
-        //if successfully hit enemy, apply poison damage for x ammount of time to enemy and remove poison status from weapon.
-        }
+        ////melee damage is now 1-6 instead of 1-4
+        //}
     }
     //Function : AdeptLevelAct
     //DESCRIPTION : what happens when the adept level of the spell is used
@@ -59,13 +58,11 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        if (isActive)
-        {
-            isAdept = true;
-            //equippedWeapon == isPoisonous;
-            //if successfully hit enemy, apply poison damage for x ammount of time to enemy
-            //remove poison effect from equipped weapon when combat is over.
-        }
+        //if (isActive && equippedWeapon == melee)
+        //{
+        isAdept = true;
+        ////melee damage is now 1-6 instead of 1-4 and player strikes twice per attack
+        //}
     }
     //Function : MasterLevelAct
     //DESCRIPTION : what happens when the master level of the spell is used
@@ -73,12 +70,10 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        if (isActive)
-        {
-            isMaster = true;
-            //equippedWeapon == isPoisonous;
-            //if successfully hit enemy, apply 2x poison damage for x ammount of time to enemy
-            //remove poison effect from equipped weapon when combat is over.
-        }
+        //if (isActive && equippedWeapon == melee)
+        //{
+        isMaster = true;
+        ////melee damage is now 2-12 instead of 1-4 and player strikes twice per attack
+        //}
     }
 }
