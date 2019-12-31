@@ -1,14 +1,12 @@
-﻿//FILE          :   Backstab.cs
+﻿//FILE          :   Dominate.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
-//FIRST VERSION :   17/12/2019
-
+//FIRST VERSION :   31/12/2019
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Backstab()", menuName = "Abilities/Backstab")]
-//NAME : Backstab
-//PURPOSE : All the funcionality of the backstab ability as a child of abilities
-public class Backstab : Abilities
+[CreateAssetMenu(fileName = "Dominate()", menuName = "Abilities/Dominate")]
+//NAME : Dominate
+//PURPOSE : All the funcionality of the dominate ability as a child of abilities
+public class Dominate : Abilities
 {
     private bool isActive { get; set; }
     PlayerStats stats;
@@ -49,16 +47,10 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        stats.defence = stats.defence - 1;
-        if(stats.defence <= 0)
-        {
-            stats.defence = 0;
-        }
-
-        if (stats.isDetected == false)
+        if (isActive)
         {
             isNovice = true;
-            AdditionalDamage();
+            //add persuasive stat to the accuracy check for attacking (combat not setup for this yet)
         }
     }
     //Function : AdeptLevelAct
@@ -67,16 +59,11 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        stats.defence = stats.defence - 1;
-        if (stats.defence <= 0)
-        {
-            stats.defence = 0;
-        }
-
-        if (!stats.isDetected == false)
+        if (isActive)
         {
             isAdept = true;
-            AdditionalDamage();
+            //add persuasive stat to the accuracy check for attacking (combat not setup for this yet)
+            //check to see if another enemy is within range, if true, apply 1-4 damage to other enemy player is currently not attacking that is within range.
         }
     }
     //Function : MasterLevelAct
@@ -85,26 +72,12 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        if (!stats.isDetected == false)
+        if (isActive)
         {
             isMaster = true;
-            AdditionalDamage();
-
-        }
-    }
-    //Function : AdditionalDamage
-    //DESCRIPTION : adds additional damage in 2 different ways
-    //PARAMETERS : none
-    //RETURNS : none
-    public void AdditionalDamage()
-    {
-        if(isNovice || isAdept)
-        {
-            Random.Range(1, 6);
-        }
-        else if (isMaster)
-        {
-            Random.Range(1, 8);
+            //add persuasive stat to the accuracy check for attacking (combat not setup for this yet)
+            //check to see if another enemy is within range, if true, apply 1-4 damage to other enemy player is currently not attacking that is within range.
+            //if another enemy takes dominate damage, random range between 1-10, if integer output is > 5, enemies flee for 25 in game seconds.
         }
     }
 }
