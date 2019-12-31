@@ -17,6 +17,7 @@ public class MOptions : Menu
     //RETURNS : none
     private void Awake()
     {
+        gameObject.SetActive(false);
         UIEventManager.OpenOptions += OpenMenu;
         UIEventManager.CloseOptions += CloseMenu;
     }
