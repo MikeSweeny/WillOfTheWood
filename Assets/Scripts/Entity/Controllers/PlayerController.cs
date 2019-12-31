@@ -43,6 +43,7 @@ public class PlayerController : BaseController
         InputManager.Jump += PlayerJump;
         InputManager.Attack += Attack;
         InputManager.Interact += PlayerInteract;
+        InputManager.Sprint += PlayerSprint;
         InputManager.HotbarSlot1 += ActivateHotbarSlot1;
         InputManager.HotbarSlot2 += ActivateHotbarSlot2;
         InputManager.HotbarSlot3 += ActivateHotbarSlot3;
@@ -108,11 +109,18 @@ public class PlayerController : BaseController
             animController.SetFloat("Speed", moveDirection.z);
         }
 
-        moveDirection *= isWalking ? walkSpeed * speedMultiplier : runSpeed * speedMultiplier;
-
+        moveDirection *= walkSpeed * speedMultiplier;
         moveDirection = transform.TransformDirection(moveDirection);
+    }
 
-       
+    //Function: PlayerSprint
+    //DESCRIPTION: this function is used to set the player to be able to run
+    //PARAMETERS: None
+    //RETURNS: None
+    private void PlayerSprint()
+    {
+        isWalking = !walkByDefault;
+        moveDirection *= runSpeed * speedMultiplier;
     }
 
     //Function: PlayerInteract
