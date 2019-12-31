@@ -1,17 +1,14 @@
-﻿//FILE          :   Backstab.cs
+﻿//FILE          :   Feign.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
-//FIRST VERSION :   17/12/2019
-
+//FIRST VERSION :   31/12/2019
 using UnityEngine;
-
-[CreateAssetMenu(fileName = "Backstab()", menuName = "Abilities/Backstab")]
-//NAME : Backstab
-//PURPOSE : All the funcionality of the backstab ability as a child of abilities
-public class Backstab : Abilities
+[CreateAssetMenu(fileName = "Feign()", menuName = "Abilities/Feign")]
+//NAME : Feign
+//PURPOSE : All the funcionality of the Feign ability as a child of abilities
+public class Feign : Abilities
 {
     private bool isActive { get; set; }
-    PlayerStats stats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -49,17 +46,11 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        stats.defence = stats.defence - 1;
-        if(stats.defence <= 0)
-        {
-            stats.defence = 0;
-        }
-
-        if (stats.isDetected == false)
-        {
+        //if (isActive && equippedWeapon == short)
+        //{
             isNovice = true;
-            AdditionalDamage();
-        }
+            //random range between 1 - 10, if the integer returned is > 5, apply 1-4 damage to enemy and the enemy stays idle. otherwise enemy detects and attacks.
+        //}
     }
     //Function : AdeptLevelAct
     //DESCRIPTION : what happens when the adept level of the spell is used
@@ -67,16 +58,10 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        stats.defence = stats.defence - 1;
-        if (stats.defence <= 0)
-        {
-            stats.defence = 0;
-        }
-
-        if (!stats.isDetected == false)
+        if (isActive)
         {
             isAdept = true;
-            AdditionalDamage();
+            //random range between 1 - 10, if the integer returned is > 3, apply 1-4 damage to enemy and the enemy stays idle. otherwise enemy detects and attacks.
         }
     }
     //Function : MasterLevelAct
@@ -85,26 +70,10 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        if (!stats.isDetected == false)
+        if (isActive)
         {
             isMaster = true;
-            AdditionalDamage();
-
-        }
-    }
-    //Function : AdditionalDamage
-    //DESCRIPTION : adds additional damage in 2 different ways
-    //PARAMETERS : none
-    //RETURNS : none
-    public void AdditionalDamage()
-    {
-        if(isNovice || isAdept)
-        {
-            Random.Range(1, 6);
-        }
-        else if (isMaster)
-        {
-            Random.Range(1, 8);
+            //random range between 1 - 10, if the integer returned is > 3, apply 2-8 damage to enemy and the enemy stays idle. otherwise enemy detects and attacks.
         }
     }
 }
