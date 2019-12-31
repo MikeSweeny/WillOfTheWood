@@ -79,7 +79,9 @@ public class InputManager : MonoBehaviour
         {
             //put code here for binding to open the map
         }
-           
+
+        if (Input.GetButtonDown("Inventory"))
+            UIEventManager.TriggerOpenInventory();
 
         if (Input.GetButtonDown("Cancel"))
             GameEventManager.TriggerPause();
