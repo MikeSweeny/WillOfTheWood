@@ -1,15 +1,13 @@
-﻿//FILE          :   Backstab.cs
+﻿//FILE          :   Berserker.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
-//FIRST VERSION :   17/12/2019
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//FIRST VERSION :   30/12/2019
 
-[CreateAssetMenu(fileName = "New Backstab", menuName = "Abilities/Backstab")]
-//NAME : Backstab
-//PURPOSE : All the funcionality of the backstab ability as a child of abilities
-public class Backstab : Abilities
+using UnityEngine;
+[CreateAssetMenu(fileName = "Berserker()", menuName = "Abilities/Berserker")]
+//NAME : Berserker
+//PURPOSE : All the funcionality of the berserker ability as a child of abilities
+public class Berserker : Abilities
 {
     private bool isActive { get; set; }
     PlayerStats stats;
@@ -50,16 +48,16 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        stats.defence = stats.defence - 1;
-        if(stats.defence <= 0)
+        stats.defence = stats.defence - 2;
+        if (stats.defence <= 0)
         {
             stats.defence = 0;
         }
 
-        if (stats.isDetected == false)
+        if (isActive)
         {
             isNovice = true;
-            AdditionalDamage();
+            //equipped weapon deals additional 1-6 damage
         }
     }
     //Function : AdeptLevelAct
@@ -68,16 +66,17 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        stats.defence = stats.defence - 1;
+        stats.defence = stats.defence - 2;
         if (stats.defence <= 0)
         {
             stats.defence = 0;
         }
 
-        if (!stats.isDetected == false)
+        if (isActive)
         {
             isAdept = true;
-            AdditionalDamage();
+            //equipped weapon deals additional 1-6 damage
+            //player takes 1-4 less damage from enemies while activated
         }
     }
     //Function : MasterLevelAct
@@ -86,26 +85,11 @@ public class Backstab : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        if (!stats.isDetected == false)
+        if (isActive)
         {
             isMaster = true;
-            AdditionalDamage();
-
-        }
-    }
-    //Function : AdditionalDamage
-    //DESCRIPTION : adds additional damage in 2 different ways
-    //PARAMETERS : none
-    //RETURNS : none
-    public void AdditionalDamage()
-    {
-        if(isNovice || isAdept)
-        {
-            Random.Range(1, 6);
-        }
-        else if (isMaster)
-        {
-            Random.Range(1, 8);
+            //equipped weapon deals additional 1-6 damage
+            //player takes 1-4 less damage from enemies while activated
         }
     }
 }

@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b4e415ab75d82b478aacc7d42589a9d, type: 3}
-  m_Name: New Backstab
+  m_Script: {fileID: 11500000, guid: 1762ae5864880c241a30425a8e392947, type: 3}
+  m_Name: Berserker(Novice)
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilityDescription: 
+  abilityName: Berserker(Novice)
+  abilityDescription: Equipped weapons gain additional 1-6 damage, defence lowered
+    by 2.
   abilityImage: {fileID: 0}
-  isNovice: 0
+  isNovice: 1
   isAdept: 0
   isMaster: 0
