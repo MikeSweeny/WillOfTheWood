@@ -33,9 +33,5 @@ public class ShopKeeperNpc : BaseInteractableNpc
     public override void OnInteract()
     {
         UIEventManager.TriggerCloseShop();
-        for (int i = 0; i < items.Count; i++)
-        {
-            print(items[i]);
-        }
     }
 }
