@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d92ecc2044407d941be71e5ee0e8d5be, type: 3}
-  m_Name: Dominate(Adept)
+  m_Script: {fileID: 11500000, guid: fa75929e957d28546a390a5ae735c0d8, type: 3}
+  m_Name: Poisoner(Master)
   m_EditorClassIdentifier: 
-  abilityName: Dominate(Adept)
-  abilityDescription: Half of players persuasive stat is added to their accuracy check.
-    Chance to hit another enemy within range for 1-4 damage.
+  abilityName: Poisoner(Master)
+  abilityDescription: "While activated the weapon equipped becomes poisonous until
+    combat is over. \r\nEnemies hit will have a stronger poison effect added."
   abilityImage: {fileID: 0}
   isNovice: 0
-  isAdept: 1
-  isMaster: 0
+  isAdept: 0
+  isMaster: 1

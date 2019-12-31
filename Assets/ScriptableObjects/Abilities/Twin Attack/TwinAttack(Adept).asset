@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d92ecc2044407d941be71e5ee0e8d5be, type: 3}
-  m_Name: Dominate(Adept)
+  m_Script: {fileID: 11500000, guid: b3bf3662a22aa6d448264f6a719af685, type: 3}
+  m_Name: TwinAttack(Adept)
   m_EditorClassIdentifier: 
-  abilityName: Dominate(Adept)
-  abilityDescription: Half of players persuasive stat is added to their accuracy check.
-    Chance to hit another enemy within range for 1-4 damage.
+  abilityName: TwinAttack(Adept)
+  abilityDescription: When active, one-handed weapons can be equipped on the shield
+    arm. Attacking twice per attack.
   abilityImage: {fileID: 0}
   isNovice: 0
   isAdept: 1
