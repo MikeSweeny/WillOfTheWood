@@ -12,11 +12,19 @@ using UnityEngine.UI;
 //PURPOSE: this class will outline what is supposed to happen with the shop NPCs
 public class ShopKeeperNpc : BaseInteractableNpc
 {
-    public GameObject shopDisplayWindow;
-
+    public List<Item> items;
     private Inventory shopInventory;
     private Player player;
 
+
+    private void Awake()
+    {
+        shopInventory = GetComponent<Inventory>();
+        for (int i = 0; i < items.Count; i++)
+        {
+            shopInventory.AddItem(items[i]);
+        }
+    }
 
     //Function: OnInteract
     //DESCRIPTION: this function is an override from the parent class so that this npc knows what to do when its interacted with
@@ -24,6 +32,10 @@ public class ShopKeeperNpc : BaseInteractableNpc
     //RETURNS: None
     public override void OnInteract()
     {
-        
+        UIEventManager.TriggerCloseShop();
+        for (int i = 0; i < items.Count; i++)
+        {
+            print(items[i]);
+        }
     }
 }

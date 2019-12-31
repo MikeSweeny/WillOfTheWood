@@ -140,7 +140,6 @@ public class PlayerController : BaseController
                 case "NPC":
                     if (hit.collider.gameObject.GetComponent<BaseInteractableNpc>())
                     {
-                        print("Interacted with quest NPC");
                         hit.collider.gameObject.GetComponent<BaseInteractableNpc>().OnInteract();
                     }
                     break;
