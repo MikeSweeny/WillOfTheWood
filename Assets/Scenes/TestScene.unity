@@ -677,8 +677,9 @@ GameObject:
   - component: {fileID: 1597755598}
   - component: {fileID: 1597755597}
   - component: {fileID: 1597755596}
-  - component: {fileID: 1597755601}
   - component: {fileID: 1597755600}
+  - component: {fileID: 1597755602}
+  - component: {fileID: 1597755601}
   m_Layer: 0
   m_Name: Cube
   m_TagString: NPC
@@ -788,7 +789,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1597755595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
+  m_Script: {fileID: 11500000, guid: f54ffc65c62c77948b0fdc71c16b3649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1597755602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597755595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58148cc919cb5c440b8746428d6175f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   accuracy: 0
@@ -801,12 +814,8 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
-  dialogueList:
-  - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
-  hasBeenTalkedTo: 0
-  IDName: blah
-  isPartOfQuest: 0
-  hasConversation: 0
+  items:
+  - {fileID: 5748311389613679903}
 --- !u!1 &1606930203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,3 +1631,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 529f568424ca3bb419a39273f468b7a2, type: 3}
+--- !u!114 &5748311389613679903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4538631597012871574, guid: 529f568424ca3bb419a39273f468b7a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5748311389613679902}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee26845344f33645824df6ae12d51c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

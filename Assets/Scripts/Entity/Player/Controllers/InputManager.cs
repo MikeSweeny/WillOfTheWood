@@ -25,6 +25,7 @@ public class InputManager : MonoBehaviour
     public static event InputEvent Jump;
     public static event InputEvent Interact;
     public static event InputEvent Attack;
+    public static event InputEvent Sprint;
     public static event InputEvent HotbarSlot1;
     public static event InputEvent HotbarSlot2;
     public static event InputEvent HotbarSlot3;
@@ -81,7 +82,7 @@ public class InputManager : MonoBehaviour
         {
             //put code here for binding to open the map
         }
-
+            
         if (Input.GetButtonDown("Inventory"))
             UIEventManager.TriggerOpenLeveling();
 
@@ -133,6 +134,9 @@ public class InputManager : MonoBehaviour
 
             Rotate?.Invoke(Input.GetAxis("Horizontal"));
         }
+
+        if (Input.GetAxis("Sprint") != 0)
+            TriggerSprint();
     }
 
     //Function: OnPause
@@ -151,6 +155,16 @@ public class InputManager : MonoBehaviour
     public static void UnPause()
     {
         inputEnabled = true;
+    }
+
+    //Function: TriggerSprint
+    //DESCRIPTION: function used to trigger the sprint event
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerSprint()
+    {
+        if (inputEnabled)
+            Sprint?.Invoke();
     }
 
     //Function: TriggerJump

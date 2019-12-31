@@ -1,20 +1,22 @@
-﻿//FILE          :   NaturalWarrior.cs
+﻿//FILE          :   SteadFast.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "NaturalWarrior()", menuName = "Abilities/NaturalWarrior")]
-//NAME : NaturalWarrior
-//PURPOSE : All the funcionality of the NaturalWarrior ability as a child of abilities
-public class NaturalWarrior : Abilities
+[CreateAssetMenu(fileName = "SteadFast()", menuName = "Abilities/SteadFast")]
+//NAME : SteadFast
+//PURPOSE : All the funcionality of the SteadFast ability as a child of abilities
+public class SteadFast : Abilities
 {
     private bool isActive { get; set; }
+    Player stats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
     public override void OnLoad()
     {
+        isActive = false;
         if (isCollected)
         {
             if (isNovice)
@@ -46,11 +48,11 @@ public class NaturalWarrior : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
-        //{
-        isNovice = true;
-        ////melee damage is now 1-6 instead of 1-4
-        //}
+        if (isActive)
+        {
+            isNovice = true;
+            //stats.resistance = stats.resistance + 1
+        }
     }
     //Function : AdeptLevelAct
     //DESCRIPTION : what happens when the adept level of the spell is used
@@ -58,11 +60,11 @@ public class NaturalWarrior : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
-        //{
-        isNovice = true;
-        ////melee damage is now 1-6 instead of 1-4 and player strikes twice per attack
-        //}
+        if (isActive)
+        {
+            isAdept = true;
+            //stats.resistance = stats.resistance + 2
+        }
     }
     //Function : MasterLevelAct
     //DESCRIPTION : what happens when the master level of the spell is used
@@ -70,10 +72,12 @@ public class NaturalWarrior : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
-        //{
-        isNovice = true;
-        ////melee damage is now 2-12 instead of 1-4 and player strikes twice per attack
-        //}
+        if (isActive)
+        {
+            isMaster = true;
+            //stats.resistance = stats.resistance + 3
+            //if (stats.resistance > 3 && attackingEnemyEquippedWeapon.statusEffect)
+            //attacking enemy takes 1-6 damage
+        }
     }
 }

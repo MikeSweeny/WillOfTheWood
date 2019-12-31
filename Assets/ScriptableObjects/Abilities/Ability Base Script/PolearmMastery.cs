@@ -1,15 +1,14 @@
-﻿//FILE          :   IronFist.cs
+﻿//FILE          :   PolearmMastery.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "IronFist()", menuName = "Abilities/IronFist")]
-//NAME : IronFist
-//PURPOSE : All the funcionality of the IronFist ability as a child of abilities
-public class IronFist : Abilities
+[CreateAssetMenu(fileName = "PolearmMastery()", menuName = "Abilities/PolearmMastery")]
+//NAME : PolearmMastery
+//PURPOSE : All the funcionality of the PolearmMastery ability as a child of abilities
+public class PolearmMastery : Abilities
 {
     private bool isActive { get; set; }
-    PlayerStats stats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -48,10 +47,10 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == Long)
         //{
         isNovice = true;
-        ////add 1/2 of strength stat to accuracy check when using melee attacks.
+        ////Equipped long weapon goes up a tier, staves 1-8 and all other long weapons equipped doing 1-10
         //}
     }
     //Function : AdeptLevelAct
@@ -60,11 +59,10 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == Long)
         //{
         isAdept = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
+        ////Equipped long weapon goes up a tier, staves 1-8 and all other long weapons equipped doing 1-10. Player attacks twice per attack
         //}
     }
     //Function : MasterLevelAct
@@ -73,12 +71,11 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == Long)
         //{
         isMaster = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
-        //if the player lands another hit within 10 in game seconds, apply extra 1-4 damage on that attack.
+        ////Equipped long weapon goes up a tier, staves 1-8 and all other long weapons equipped doing 1-10. Player attacks twice per attack
+        ////when active and attacking, even if player doesnt hit, enemies cannot get close enough to attack with anything but designated 'long' weaponary.
         //}
     }
 }

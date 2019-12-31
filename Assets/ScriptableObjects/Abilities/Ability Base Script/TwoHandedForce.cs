@@ -1,15 +1,16 @@
-﻿//FILE          :   IronFist.cs
+﻿//FILE          :   TwoHandedForce.cs
 //PROJECT       :   Will of the Wood
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-[CreateAssetMenu(fileName = "IronFist()", menuName = "Abilities/IronFist")]
-//NAME : IronFist
-//PURPOSE : All the funcionality of the IronFist ability as a child of abilities
-public class IronFist : Abilities
+[CreateAssetMenu(fileName = "TwoHandedForce()", menuName = "Abilities/TwoHandedForce")]
+//NAME : TwoHandedForce
+//PURPOSE : All the funcionality of the TwoHandedForce ability as a child of abilities
+public class TwoHandedForce : Abilities
 {
     private bool isActive { get; set; }
-    PlayerStats stats;
+    private bool hasMissed { get; set; }
+    Player stats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -48,10 +49,11 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void NoviceLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == TwoHanded)
         //{
-        isNovice = true;
-        ////add 1/2 of strength stat to accuracy check when using melee attacks.
+            isNovice = true;
+        //    equippedWeapon damage is now 1-12 instead of 1-10
+        //    if equippedWeapon == BlackBlade, add 2 to min and max damage range
         //}
     }
     //Function : AdeptLevelAct
@@ -60,11 +62,13 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void AdeptLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == TwoHanded)
         //{
         isAdept = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
+        //    equippedWeapon damage is now 1-12 instead of 1-10
+        //    if equippedWeapon == BlackBlade, add 2 to min and max damage range
+        //    if player attack misses while activated, hasMissed = true
+        //    if hasMissed, next attack landed deals additional 1-6 damage
         //}
     }
     //Function : MasterLevelAct
@@ -73,12 +77,14 @@ public class IronFist : Abilities
     //RETURNS : none
     public override void MasterLevelAct()
     {
-        //if (isActive && equippedWeapon == melee)
+        //if (isActive && equippedWeapon == TwoHanded)
         //{
         isMaster = true;
-        //add strength stat to accuracy check when using melee attacks.
-        //melee damage is now 1-6 instead of 1-4
-        //if the player lands another hit within 10 in game seconds, apply extra 1-4 damage on that attack.
+        //    equippedWeapon damage is now 1-12 instead of 1-10
+        //    if equippedWeapon == BlackBlade, add 2 to min and max damage range
+        //    if player attack misses while activated, hasMissed = true
+        //    if hasMissed, next attack landed deals additional 1-6 damage
+        //    bypass enemy armor checks on successfull attack landed
         //}
     }
 }
