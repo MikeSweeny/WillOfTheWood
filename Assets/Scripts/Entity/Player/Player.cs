@@ -93,7 +93,7 @@ public class Player : CharacterBase
     //RETURNS: float
     public float GetXPPercent()
     {
-        return expCap / currentEXP;
+        return currentEXP / expCap;
     }
 
     //Function: GetPlayerCoins
