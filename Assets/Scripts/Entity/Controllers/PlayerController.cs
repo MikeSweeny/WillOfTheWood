@@ -77,6 +77,7 @@ public class PlayerController : BaseController
 
         midRayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1), transform.position.z);
         bottomRayFiringPoint = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
+        
     }
 
     //Function: Movement
@@ -187,8 +188,8 @@ public class PlayerController : BaseController
             animController.SetBool("Jumping", true);
             jumping = true;
             moveDirection.y = jumpSpeed;
+            controller.Move(moveDirection * Time.deltaTime);
             moveDirection.y -= gravity * Time.deltaTime;
-            // controller.Move(moveDirection * Time.deltaTime);
         }
     }
 
