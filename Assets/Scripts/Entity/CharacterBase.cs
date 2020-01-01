@@ -26,6 +26,8 @@ public class CharacterBase : MonoBehaviour
     public int painThreshold;
     protected bool isBleeding = false;
     private IArmour armour;
+    protected Inventory inventory;
+
     private void Start()
     {
         maxHealth = toughness;

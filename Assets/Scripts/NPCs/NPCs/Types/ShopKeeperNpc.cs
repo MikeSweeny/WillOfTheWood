@@ -13,16 +13,15 @@ using UnityEngine.UI;
 public class ShopKeeperNpc : BaseInteractableNpc
 {
     public List<Item> items;
-    private Inventory shopInventory;
     private Player player;
 
 
     private void Awake()
     {
-        shopInventory = GetComponent<Inventory>();
+        inventory = GetComponent<Inventory>();
         for (int i = 0; i < items.Count; i++)
         {
-            shopInventory.AddItem(items[i]);
+            inventory.AddItem(items[i]);
         }
     }
 
@@ -32,6 +31,6 @@ public class ShopKeeperNpc : BaseInteractableNpc
     //RETURNS: None
     public override void OnInteract()
     {
-        UIEventManager.TriggerCloseShop();
+        UIEventManager.TriggerOpenShop();
     }
 }
