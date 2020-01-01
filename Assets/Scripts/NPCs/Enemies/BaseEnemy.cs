@@ -67,7 +67,6 @@ public class BaseEnemy : BaseNpc, IQuestID
                 default:
                     break;
             }
-            print(currentHealth);
         }
     }
 
