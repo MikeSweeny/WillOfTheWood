@@ -9,12 +9,16 @@ public class Player : CharacterBase
     private bool canShootTargetRay = false;
     private GameObject target;
     private Vector3 rayFiringPoint;
+    private float expCap;
+    private float currentEXP;
 
 
     private void Awake()
     {
         getStats();
         setStats();
+        expCap = 200f;
+        currentEXP = 0;
     }
 
     private void Update()
@@ -78,5 +82,14 @@ public class Player : CharacterBase
     public GameObject GetPlayerTarget()
     {
         return target;
+    }
+
+    //Function: GetXPPercent
+    //DESCRIPTION: function used to get the current percent of xp bar filled
+    //PARAMETERS: None
+    //RETURNS: float
+    public float GetXPPercent()
+    {
+        return expCap / currentEXP;
     }
 }

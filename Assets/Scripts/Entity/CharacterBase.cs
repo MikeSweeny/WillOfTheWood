@@ -67,4 +67,13 @@ public class CharacterBase : MonoBehaviour
         
             currentHealth -= damage;
     }
+
+    //Function: GetHealthPercent
+    //DESCRIPTION: function used to find the current health percent
+    //PARAMETERS: None
+    //RETURNS: float
+    public float GetHealthPercent()
+    {
+        return (float)maxHealth / (float)currentHealth;
+    }
 }
