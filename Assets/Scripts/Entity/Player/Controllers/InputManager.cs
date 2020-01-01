@@ -80,7 +80,7 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetButtonDown("WorldMap"))
         {
-            //put code here for binding to open the map
+            //UIEventManager.TriggerOpenMap();
         }
             
         if (Input.GetButtonDown("Inventory"))

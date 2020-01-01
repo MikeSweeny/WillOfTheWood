@@ -11,6 +11,7 @@ public class Player : CharacterBase
     private Vector3 rayFiringPoint;
     private float expCap;
     private float currentEXP;
+    private int playerCoins;
 
 
     private void Awake()
@@ -19,6 +20,7 @@ public class Player : CharacterBase
         setStats();
         expCap = 200f;
         currentEXP = 0;
+        playerCoins = 0;
     }
 
     private void Update()
@@ -91,5 +93,32 @@ public class Player : CharacterBase
     public float GetXPPercent()
     {
         return expCap / currentEXP;
+    }
+
+    //Function: GetPlayerCoins
+    //DESCRIPTION: function used to get the player coins
+    //PARAMETERS: None
+    //RETURNS: float playerCoins
+    public int GetPlayerCoins()
+    {
+        return playerCoins;
+    }
+
+    //Function: SubtractCoins
+    //DESCRIPTION: function used to spend / remove coins
+    //PARAMETERS: int amount
+    //RETURNS: None
+    public void SubtractCoins(int amount)
+    {
+        playerCoins -= amount;
+    }
+
+    //Function: AddCoins
+    //DESCRIPTION: function used to add / recieve coins
+    //PARAMETERS: int amount
+    //RETURNS: None
+    public void AddCoins(int amount)
+    {
+        playerCoins += amount;
     }
 }
