@@ -18,7 +18,7 @@ public class CharacterBase : MonoBehaviour
     public int quick;
     public int strong;
     public int toughness;
-    public int maxHealth;
+    protected int maxHealth;
     protected int currentHealth;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
@@ -66,8 +66,7 @@ public class CharacterBase : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        
-            currentHealth -= damage;
+        currentHealth -= damage;
     }
 
     //Function: GetHealthPercent

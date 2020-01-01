@@ -1,18 +1,32 @@
-﻿using System.Collections;
+﻿//FILE: BaseNpc.cs
+//PROJECT: Will Of The Woods
+//PROGRAMMER: John Gotts
+//FIRST VERSION: 01/01/2020
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//NAME: BaseNpc
+//PURPOSE: the parent class for the different types of NPCs
 public class BaseNpc : CharacterBase
 {
 
 
     public NpcPathing pathingPattern;
 
-    private void Start()
+    //Function: SetPathingComp
+    //DESCRIPTION: sets the pathingPattern variable
+    //PARAMETERS: None
+    //RETURNS: None
+    protected void SetPathingComp()
     {
         pathingPattern = GetComponent<NpcPathing>();
     }
 
+    //Function: RoamingPatterns
+    //DESCRIPTION: function used to cycle between a waiting pattern and a just patrolling pattern
+    //PARAMETERS: None
+    //RETURNS: None
     protected void RoamingPatterns()
     {
         if (pathingPattern.WaypointContainer && pathingPattern.canWait)

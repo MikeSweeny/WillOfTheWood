@@ -49,6 +49,7 @@ public class Player : CharacterBase
         persuasive = playerBrain.pursuasive;
         quick = playerBrain.quick;
         strong = playerBrain.strong;
+        toughness = playerBrain.toughness;
     }
 
     //FUNCTION : getStats()

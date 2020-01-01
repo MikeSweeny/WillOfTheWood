@@ -30,12 +30,12 @@ public class BaseEnemy : BaseNpc, IQuestID
     {
         getStats();
         setStats();
-        currentHealth = maxHealth;
         player = FindObjectOfType<Player>();
         animController = GetComponent<Animator>();
         nextAttack = Time.time;
         attackSpeed = animController.GetAnimatorTransitionInfo(2).duration;
         ID = IDName;
+        SetPathingComp();
     }
 
     private void Update()
@@ -67,6 +67,7 @@ public class BaseEnemy : BaseNpc, IQuestID
                 default:
                     break;
             }
+            print(currentHealth);
         }
     }
 
