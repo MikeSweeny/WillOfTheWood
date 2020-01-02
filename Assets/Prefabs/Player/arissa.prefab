@@ -1691,7 +1691,6 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   playerBrain: {fileID: 11400000, guid: eb7201ec47f6d844e85edcffb64bfb09, type: 2}
@@ -1710,7 +1709,7 @@ MonoBehaviour:
   weaponCollider: {fileID: 4660821598186548923}
   walkByDefault: 1
   gravity: 20
-  jumpSpeed: 30
+  jumpSpeed: 12
   runSpeed: 6
   walkSpeed: 4
   turnSpeed: 150

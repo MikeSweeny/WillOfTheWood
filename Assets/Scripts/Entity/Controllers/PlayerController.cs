@@ -187,7 +187,7 @@ public class PlayerController : BaseController
         {
             animController.SetBool("Jumping", true);
             jumping = true;
-            moveDirection.y = jumpSpeed;
+            moveDirection.y += jumpSpeed;
             controller.Move(moveDirection * Time.deltaTime);
             moveDirection.y -= gravity * Time.deltaTime;
         }
