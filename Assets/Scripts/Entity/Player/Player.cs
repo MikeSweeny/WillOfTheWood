@@ -96,6 +96,22 @@ public class Player : CharacterBase
         return currentEXP / expCap;
     }
 
+    //Function: AddXP
+    //DESCRIPTION: this function will be used to add xp to the player
+    //PARAMETERS: int amount
+    //RETURNS: None
+    public void AddXP(int amount)
+    {
+        if(currentEXP < expCap)
+        {
+            currentEXP += (float)amount;
+        }
+        else if(currentEXP >= expCap)
+        {
+            currentEXP = expCap;
+        }
+    }
+
     //Function: GetPlayerCoins
     //DESCRIPTION: function used to get the player coins
     //PARAMETERS: None
