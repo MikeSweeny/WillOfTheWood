@@ -12,12 +12,12 @@ public class CharacterBase : MonoBehaviour
         dead
     }
 
-    public int accuracy;
-    public int discrete;
-    public int persuasive;
-    public int quick;
-    public int strong;
-    public int toughness;
+    protected int accuracy;
+    protected int discrete;
+    protected int persuasive;
+    protected int quick;
+    protected int strong;
+    protected int toughness;
     protected int maxHealth;
     protected int currentHealth;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]

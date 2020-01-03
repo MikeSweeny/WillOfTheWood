@@ -75,10 +75,6 @@ public class Player : CharacterBase
             target = hit.collider.gameObject;
             return target;
         }
-        else
-        {
-            target = null;
-        }
         return null;
     }
 
