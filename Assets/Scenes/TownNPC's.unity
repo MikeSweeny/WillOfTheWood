@@ -457,10 +457,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: 9f7a8aac7980f7449926e9d8d6cc561d, type: 2}
+  vigilant: 0
   QuestList:
   - {fileID: 11400000, guid: 13c285c6b9315914f83c8814ccf4ecdc, type: 2}
   isSecondaryNPC: 0
@@ -760,10 +761,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
   hasBeenTalkedTo: 1
@@ -1188,6 +1190,12 @@ PrefabInstance:
       propertyPath: IDName
       value: Jorran
       objectReference: {fileID: 0}
+    - target: {fileID: 5748311389085041655, guid: 529f568424ca3bb419a39273f468b7a2,
+        type: 3}
+      propertyPath: npcBrain
+      value: 
+      objectReference: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 529f568424ca3bb419a39273f468b7a2, type: 3}
 --- !u!1001 &1075667296
@@ -1396,10 +1404,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: 58abfcbd27e32c34088004e48f8e7a09, type: 2}
+  vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 9e721c440d60b9e44a5b5f276dcd2e19, type: 2}
   hasBeenTalkedTo: 1
@@ -1618,10 +1627,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  vigilant: 0
   QuestList:
   - {fileID: 11400000, guid: 004e9a3942e57964ab4e50222907c3a8, type: 2}
   isSecondaryNPC: 0
@@ -2183,10 +2193,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
   hasBeenTalkedTo: 0
@@ -2307,10 +2318,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
   hasBeenTalkedTo: 1
@@ -2380,10 +2392,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
   hasBeenTalkedTo: 1
@@ -2510,10 +2523,11 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
+  npcBrain: {fileID: 11400000, guid: 58abfcbd27e32c34088004e48f8e7a09, type: 2}
+  vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 95ca0ff7fa06a5d4a8f454e51095db97, type: 2}
   hasBeenTalkedTo: 1
@@ -2673,11 +2687,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraveKeeper
       objectReference: {fileID: 0}
-    - target: {fileID: 3595030781650534866, guid: cfeaec1d1c6377145a2e6b1c8b447f5e,
-        type: 3}
-      propertyPath: m_TagString
-      value: NPC
-      objectReference: {fileID: 0}
     - target: {fileID: 3595030781651033522, guid: cfeaec1d1c6377145a2e6b1c8b447f5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2733,16 +2742,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4168984471731066389, guid: cfeaec1d1c6377145a2e6b1c8b447f5e,
-        type: 3}
-      propertyPath: QuestList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4168984471731066389, guid: cfeaec1d1c6377145a2e6b1c8b447f5e,
-        type: 3}
-      propertyPath: QuestList.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c343023269daa3e4ea174c2738c93521,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfeaec1d1c6377145a2e6b1c8b447f5e, type: 3}

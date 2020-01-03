@@ -13,6 +13,8 @@ public class BaseNpc : CharacterBase
 
 
     public NpcPathing pathingPattern;
+    public EnemyObject npcBrain;
+    public int vigilant;
 
     //Function: SetPathingComp
     //DESCRIPTION: sets the pathingPattern variable
@@ -37,6 +39,28 @@ public class BaseNpc : CharacterBase
         {
             pathingPattern.RoamingPath();
         }
+    }
+
+    //Function: setStats
+    //DESCRIPTION: function used to set local variables
+    //PARAMETERS: None
+    //RETURNS: None
+    public void setStats()
+    {
+        accuracy = npcBrain.accuracy;
+        quick = npcBrain.quick;
+        strong = npcBrain.strong;
+        toughness = npcBrain.toughness;
+        vigilant = npcBrain.vigilant;
+    }
+
+    //FUNCTION : getStats()
+    //DESCRIPTION : Getting the Stats from the objectBrain
+    //PARAMETERS : void
+    //RETURNS : void
+    public void getStats()
+    {
+        npcBrain.Initialize();
     }
 
 }

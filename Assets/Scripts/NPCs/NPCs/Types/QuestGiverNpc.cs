@@ -26,6 +26,8 @@ public class QuestGiverNpc : BaseInteractableNpc
     void Awake()
     {
         QM = FindObjectOfType<QuestManager>();
+        getStats();
+        setStats();
     }
     //Function: OnInteract
     //DESCRIPTION: this function is used to say what the quest giver does when it is interacted with

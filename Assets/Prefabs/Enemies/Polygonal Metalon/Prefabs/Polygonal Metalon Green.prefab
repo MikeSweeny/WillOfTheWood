@@ -1232,11 +1232,10 @@ MonoBehaviour:
   quick: 0
   strong: 0
   toughness: 0
-  maxHealth: 50
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
-  objectBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  npcBrain: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e, type: 2}
   vigilant: 0
   attackRange: 3
   IDName: 

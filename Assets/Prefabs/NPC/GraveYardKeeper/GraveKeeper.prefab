@@ -799,7 +799,7 @@ GameObject:
   - component: {fileID: 6336954665800538262}
   m_Layer: 0
   m_Name: GraveKeeper
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -811,7 +811,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3595030781650534866}
-  m_LocalRotation: {x: -0, y: -0.9884051, z: -0, w: 0.15184028}
+  m_LocalRotation: {x: 0, y: -0.9884053, z: 0, w: 0.1518388}
   m_LocalPosition: {x: 1064.4827, y: -747.8796, z: 227.94073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -872,8 +872,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accuracy: 0
+  discrete: 0
+  persuasive: 0
+  quick: 0
+  strong: 0
+  toughness: 0
+  defence: 0
+  painThreshold: 0
   pathingPattern: {fileID: 0}
-  QuestList: []
+  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  vigilant: 0
+  QuestList:
+  - {fileID: 11400000, guid: c343023269daa3e4ea174c2738c93521, type: 2}
   isSecondaryNPC: 0
 --- !u!143 &6336954665800538262
 CharacterController:
