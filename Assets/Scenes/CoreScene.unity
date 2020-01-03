@@ -29750,7 +29750,7 @@ GameObject:
   - component: {fileID: 1983999267}
   - component: {fileID: 1983999268}
   m_Layer: 0
-  m_Name: xpBar
+  m_Name: XPBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
