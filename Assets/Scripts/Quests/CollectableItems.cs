@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class CollectableItems : MonoBehaviour, IQuestID
 {
+    public string ItemID;
+    public int ResetTime;
+
     public string ID { get; set; }
 
     PlayerController PC;
 
     private void Awake()
     {
-        ID = "wood";
+        ID = ItemID;
 
     }
     public void OnInteract()
@@ -18,7 +21,7 @@ public class CollectableItems : MonoBehaviour, IQuestID
         gameObject.SetActive(false);
         Cleared();
 
-        Invoke("reset", 10);
+        Invoke("reset", ResetTime);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +33,7 @@ public class CollectableItems : MonoBehaviour, IQuestID
             gameObject.SetActive(false);
             Cleared();
         }
-        this.Invoke("reset", 10);
+        this.Invoke("reset", ResetTime);
 
     }
 
