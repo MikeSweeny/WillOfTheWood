@@ -28,7 +28,7 @@ public class Inventory : MonoBehaviour
     //DESCRIPTION : adds the provided item to the inventory's contents
     //PARAMETERS : Item item : the item to add to the list
     //RETURNS : none
-    public void AddItem(Item item)
+    public virtual void AddItem(Item item)
     {
         contents.Add(item);
     }
@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour
     //DESCRIPTION : removes the provided item from the inventory's contents
     //PARAMETERS : Item item : the item to remove from the list
     //RETURNS : none
-    public void RemoveItem(Item item)
+    public virtual void RemoveItem(Item item)
     {
         contents.Remove(item);
     }

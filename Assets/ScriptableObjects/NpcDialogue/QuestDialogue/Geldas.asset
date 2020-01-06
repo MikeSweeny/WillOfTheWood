@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a41837675e35f43a83121f7a8f95c0, type: 3}
+  m_Name: Geldas
+  m_EditorClassIdentifier: 
+  preReqStatName1: 
+  preReqStatName2: 
+  numInStatReq1: 0
+  numInStatReq2: 0
+  welcomeText: You approach a scared looking timber-jack, his felling axe shacking
+    in his hands, "Gah! Who are you what do ya want!"
+  welcomeButtonText: Calm down, I'm  looking for a lost timber-jack, you it?
+  conversationText: '"I-I lost my way, my name''s Geldas," a ray of hope shining in
+    his eyes. "Who, sent you looking for me?"'
+  conversationButtonText: Father Sarek, he tells me your wife misses you.
+  goodbyeText: '"Really! Thank heavens I''m saved!" the timber-jack exclaims, giddly
+    dancing with joy, "go on good sir, lead on."'
+  goodbyeButtonText: Follow me.
+  DH: {fileID: 0}

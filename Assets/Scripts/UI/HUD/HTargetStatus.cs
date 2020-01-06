@@ -31,8 +31,11 @@ public class HTargetStatus : HUDElement
     public override void UpdateElement()
     {
         if (player.GetPlayerTarget() != null)
+        {
             target = player.GetPlayerTarget().GetComponent<CharacterBase>();
-        if (target != null)
             healthBar.value = target.GetHealthPercent();
+        }
+        else
+            target = null;
     }
 }

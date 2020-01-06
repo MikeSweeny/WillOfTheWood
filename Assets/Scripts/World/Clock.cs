@@ -45,4 +45,9 @@ public class Clock
             currentDay++;
         }
     }
+
+    public static float GetTimeOfDay()
+    {
+        return (hours * 3600) + seconds;
+    }
 }

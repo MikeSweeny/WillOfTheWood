@@ -5,11 +5,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : MInventory
 //PURPOSE : serves as the inventory menu
 public class MInventory : Menu
 {
+
+    protected List<Image> slotImages;
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
@@ -18,6 +21,7 @@ public class MInventory : Menu
     void Awake()
     {
         gameObject.SetActive(false);
+        slotImages = new List<Image>();
         UIEventManager.OpenInventory += OpenMenu;
         UIEventManager.CloseInventory += CloseMenu;
     }

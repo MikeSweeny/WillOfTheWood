@@ -36,7 +36,7 @@ public class MQuest : Menu
         requirements = detailsBox.Find("RequirementsText").GetComponent<Text>();
         reward = detailsBox.Find("RewardsText").GetComponent<Text>();
         buttons = new List<UQuestButton>();
-        buttonHolder = transform.Find("Viewport").Find("Content");
+        buttonHolder = transform.Find("Viewport").Find("Content").Find("holder");
         UIEventManager.OpenQuests += OpenMenu;
         UIEventManager.OpenQuests += UpdateQuestList;
         UIEventManager.CloseQuests += CloseMenu;
