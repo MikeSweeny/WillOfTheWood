@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mail : ArmorStats
+public class MailStats : ArmorStats
 {
-    public Mail()
+    public MailStats()
     {
+        armourType = armourTypes.HEAVY;
         minDefence = 1;
         maxDefence = 8;
     }

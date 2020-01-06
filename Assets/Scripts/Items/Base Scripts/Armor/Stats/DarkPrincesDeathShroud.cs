@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DarkPrincesDeathShroud : ArmorStats
+public class DarkPrincesDeathShroudStats : ArmorStats
 {
-    public DarkPrincesDeathShroud()
+    public DarkPrincesDeathShroudStats()
     {
+        armourType = armourTypes.LIGHT;
         minDefence = 4;
         maxDefence = 11;
     }

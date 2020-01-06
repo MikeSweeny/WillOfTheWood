@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8173adec161249147b7cc0d20e2b39f2, type: 3}
   m_Name: HerbalCure
   m_EditorClassIdentifier: 
+  QUIM: {fileID: 0}
   QuestName: Herbal Cure
   Prereq1: NULL
   Prereq2: NULL
@@ -27,3 +28,4 @@ MonoBehaviour:
   TrackingQuestText: 
   InprogressQuestText: 
   CompletedQuestText: 
+  SecondInprogressText: 

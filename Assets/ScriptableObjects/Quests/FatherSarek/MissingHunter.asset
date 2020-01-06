@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 967da1efc5917874b92775e1a45078bf, type: 3}
+  m_Name: MissingHunter
+  m_EditorClassIdentifier: 
+  QUIM: {fileID: 0}
+  QuestName: MissingHunter
+  Prereq1: NULL
+  Prereq2: NULL
+  Description: Gind Geldas
+  NPCID: Geldas
+  TurnInNPCName: Sarek
+  RequiredAmount: 1
+  ExperenceReward: 1
+  CoinReward: 0
+  UnitReward: 0
+  QuestObjectives: The hunter Geldas has wandered into the woods and hasn't been seen
+    in some time. Seek out the hunter near the outskirts of the woods.
+  StartQuestText: With a glassy aged eye, the priest looks you up and down and pouting
+    his lips says. "Mayhaps you could assist me, one of my followers, Geldas, hunts
+    elk from the wood but he has not returned in some days. His wife, Soyela, comes
+    to the church everyday and begs divinity to save her beloved. I comfort her as
+    best I can, but everyday Geldas remains missing is a torment to her. Would you
+    seek out Geldas?"
+  TrackingQuestText: Find Geldas in the Woods
+  InprogressQuestText: '"Haven''t you found that Geldas yet?"'
+  CompletedQuestText: With eyes teared in joy, the priest says, "You found him! Praise
+    be, may the great divinity smile upon you for all eternity. You have done Thorngard
+    and Soyela a great mercy."
+  SecondInprogressText: 

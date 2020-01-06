@@ -38,6 +38,8 @@ public class UIEventManager
     public static event UIEvent CloseLeveling;
     public static event UIEvent OpenDialogue;
     public static event UIEvent CloseDialogue;
+    public static event UIEvent OpenDeathMenu;
+    public static event UIEvent CloseDeathMenu;
 
     //Function : TriggerOpenMainMenu
     //DESCRIPTION : Opens the main menu
@@ -297,5 +299,17 @@ public class UIEventManager
     {
         if (CloseDialogue != null)
             CloseDialogue();
+    }
+
+    public static void TriggerOpenDeathMenu()
+    {
+        if (OpenDeathMenu != null)
+            OpenDeathMenu();
+    }
+
+    public static void TriggerCloseDeathMenu()
+    {
+        if (CloseDeathMenu != null)
+            CloseDeathMenu();
     }
 }
