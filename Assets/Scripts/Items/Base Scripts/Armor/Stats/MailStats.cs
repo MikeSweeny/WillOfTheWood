@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mail : ArmorStats
+public class MailStats : ArmorStats
 {
-    public Mail()
+    public MailStats()
     {
         minDefence = 1;
         maxDefence = 8;
