@@ -12,7 +12,7 @@ public class Backstab : Abilities
 {
     private bool isActive { get; set; }
     PlayerStats stats;
-    WeaponStats weaponStats;
+    ShortSwordStats dagger;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -42,7 +42,8 @@ public class Backstab : Abilities
 
         if (stats.isDetected == false)
         {
-            AdditionalDamage();
+            dagger.AdditionalDamage();
         }
+        dagger.ReSetAttackMaxDamage();
     }
 }
