@@ -1,14 +1,14 @@
-﻿//FILE          :   MMainMenu.cs
+﻿//FILE          :   MDeathMenu.cs
 //PROJECT       :   Will of the Wood
-//PROGRAMMER    :   Gavin McGuire
-//FIRST VERSION :   11/12/2019
+//PROGRAMMER    :   Michael Sweeny
+//FIRST VERSION :   01/06/20
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//NAME : MMainMenu
-//PURPOSE : serves as the main menu
-public class MMainMenu : Menu
+//NAME : MDeathMenu
+//PURPOSE : serves as the death menu
+public class MDeathMenu : Menu
 {
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
@@ -16,8 +16,8 @@ public class MMainMenu : Menu
     //RETURNS : none
     private void Awake()
     {
-        UIEventManager.OpenMainMenu += OpenMenu;
-        UIEventManager.CloseMainMenu += CloseMenu;
+        UIEventManager.OpenDeathMenu += OpenMenu;
+        UIEventManager.CloseDeathMenu += CloseMenu;
     }
 
     //Function : OnDestroy
@@ -26,7 +26,7 @@ public class MMainMenu : Menu
     //RETURNS : none
     private void OnDestroy()
     {
-        UIEventManager.OpenMainMenu -= OpenMenu;
-        UIEventManager.CloseMainMenu -= CloseMenu;
+        UIEventManager.OpenDeathMenu -= OpenMenu;
+        UIEventManager.CloseDeathMenu -= CloseMenu;
     }
 }
