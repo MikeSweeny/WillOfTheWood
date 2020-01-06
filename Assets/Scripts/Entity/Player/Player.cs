@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : CharacterBase
 {
@@ -33,6 +34,12 @@ public class Player : CharacterBase
         else
         {
             canShootTargetRay = true;
+        }
+
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+            SceneManager.LoadScene("DeathScene");
         }
 
         rayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1f), transform.position.z);
