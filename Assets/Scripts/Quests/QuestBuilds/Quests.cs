@@ -92,6 +92,16 @@ public class Quests : ScriptableObject
     public virtual void InprogressText() { }
     public virtual void CompletedText() { }
 
+    public virtual string TrackText()
+    {
+        string TrackingText;
+        if (Completed == false)
+            TrackingText = TrackingQuestText;
+        else
+            TrackingText = "Completed";
+
+        return TrackingText;
+    }
 
     void OnEnable()
     {
