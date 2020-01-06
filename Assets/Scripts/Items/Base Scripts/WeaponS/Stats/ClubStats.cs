@@ -6,9 +6,9 @@ public class ClubStats : WeaponStats
 {
     public ClubStats()
     {
+        weaponType = weaponTypes.ONEHANDED;
         attackSpeed = 1;
         attackMinDamage = 1;
         attackMaxDamage = 6;
-        isOneHanded = true;
     }
 }
