@@ -12,5 +12,14 @@ public class ShortSwordStats : WeaponStats
         attackMinDamage = 1;
         attackMaxDamage = 6;
     }
-
+    //Function : AdditionalDamage
+    //DESCRIPTION : returns additional damage int between 1 - 6
+    //PARAMETERS : none
+    //RETURNS : none
+    public int AdditionalDamage()
+    {
+        int AD;
+        AD = Random.Range(1, 6);
+        return AD;
+    }
 }

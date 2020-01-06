@@ -28,10 +28,6 @@ public class IWeapon : Item
     {
         return stats;
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        Random.Range(stats.GetAttackMinDamage(), stats.GetAttackMaxDamage());
-    }
     public bool ToggleCollider(bool isActive)
     {
         if (isActive)

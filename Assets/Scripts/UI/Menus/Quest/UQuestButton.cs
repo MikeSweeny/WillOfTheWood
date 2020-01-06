@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : UQuestButton
 //PURPOSE : sets which quest is selected in the menu
@@ -12,6 +13,7 @@ public class UQuestButton : UIButton
 {
 
     private Quests quest;
+    private Text title; 
     private MQuest questMenuRef;
 
 
@@ -30,6 +32,8 @@ public class UQuestButton : UIButton
     //RETURNS : none
     public void SetQuest(Quests aQuest)
     {
+        title = transform.Find("Text").GetComponent<Text>();
+        title.text = aQuest.QuestName;
         quest = aQuest;
     }
 

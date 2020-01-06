@@ -25,10 +25,14 @@ public class CharacterBase : MonoBehaviour
     public int painThreshold;
     protected bool isBleeding = false;
     private IArmour armour;
+    private IWeapon weapon;
+    public GameObject weaponPrefab;
     protected Inventory inventory;
 
     private void Start()
     {
+        armour = null;
+        weapon = GameObject.Instantiate(weaponPrefab.GetComponent<IWeapon>());
         maxHealth = toughness;
         currentHealth = maxHealth;
     }
