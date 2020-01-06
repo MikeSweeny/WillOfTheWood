@@ -53,8 +53,9 @@ public class MQuest : Menu
         if (selectedQuest)
         {
             title.text = selectedQuest.QuestName;
-            description.text = selectedQuest.Description;
-            requirements.text = selectedQuest.QuestObjectives;
+            description.text = selectedQuest.QuestObjectives;
+            requirements.text = selectedQuest.Description;
+            reward.text = selectedQuest.Reward();
         }
     }
 
