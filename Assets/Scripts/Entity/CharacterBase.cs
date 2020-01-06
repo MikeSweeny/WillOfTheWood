@@ -2,7 +2,6 @@
 
 public class CharacterBase : MonoBehaviour
 {
-
     protected enum CurrentState
     {
         waiting,

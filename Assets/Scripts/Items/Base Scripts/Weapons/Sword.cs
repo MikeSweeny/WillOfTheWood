@@ -9,6 +9,7 @@ using UnityEngine;
 public class Sword : IWeapon
 {
     CharacterBase character;
+    IArmour armour;
     private int roll;
 
     //Function : start
