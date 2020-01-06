@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : IWeapon
 //PURPOSE : the base class for weapons
@@ -20,6 +21,7 @@ public class IWeapon : Item
     public void Awake()
     {
         itemType = ItemTypes.WEAPON;
+        itemSprite = GetComponent<Image>();
     }
 
     public WeaponStats GetStats()

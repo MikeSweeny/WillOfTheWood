@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : IArmour
 //PURPOSE : the base class for armour items
@@ -18,6 +19,7 @@ public class IArmour : Item
     public void Awake()
     {
         itemType = ItemTypes.ARMOUR;
+        itemSprite = GetComponent<Image>();
     }
     public ArmorStats GetStats()
     {

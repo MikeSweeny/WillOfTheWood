@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : IMiscellanious
 //PURPOSE : the base class of all miscellanious items
@@ -18,5 +19,6 @@ public class IMiscellanious : Item
     public void Awake()
     {
         itemType = ItemTypes.MISC;
+        itemSprite = GetComponent<Image>();
     }
 }
