@@ -13,10 +13,8 @@ public class WeaponStats
     protected int attackSpeed;
     protected int attackMinDamage;
     protected int attackMaxDamage;
-    protected bool isOneHanded = false;
-    protected bool isTwoHanded = false;
-    protected bool isDagger = false;
-    protected bool isLongWeapon = false;
+    protected enum weaponTypes {ONEHANDED,TWOHANDED,DAGGER,LONG}
+    protected weaponTypes weaponType;
     //Function : GetAttackSpeed
     //DESCRIPTION : checks weapons attack speed
     //PARAMETERS : none
