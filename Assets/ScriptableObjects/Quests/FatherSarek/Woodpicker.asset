@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8173adec161249147b7cc0d20e2b39f2, type: 3}
+  m_Name: Woodpicker
+  m_EditorClassIdentifier: 
+  QUIM: {fileID: 0}
+  QuestName: Woodpicker
+  Prereq1: MissingHunter
+  Prereq2: NULL
+  Description: Collect 12 Wood
+  NPCID: Lumber
+  TurnInNPCName: FatherSarek
+  RequiredAmount: 12
+  ExperenceReward: 1
+  CoinReward: 3
+  UnitReward: 0
+  QuestObjectives: Gongomo the logger has had his cart turned over and his lumber
+    cast about the outskirts of the woods, collect the goods and bring them to Father
+    Sarek.
+  StartQuestText: '"Gooday friend, if you are keen on earning some gold, I have another
+    task for you," the priest says, once more thumbing his holy sigil. "The Cathedral
+    is the strongest place in Thorngard to resist the long-eared vermin of the woods,
+    yet, I think it might be strengthened. The doors would be well served by a palisade
+    and braces. I sent Gongomo, a timber-jack, to cut us some wood from the forest."
+    The priest sighs deeply, "However, Gongomo was attacked by the elves and his cart
+    was overtuned. His lumber is all about the outskirts of Thorngard, would you collect
+    it?"'
+  TrackingQuestText: Collect wood from Outskirts
+  InprogressQuestText: '"The Cathedral needs that lumber, bring it to us as quickly
+    as you can."'
+  CompletedQuestText: '"Excellent my son, you brought the lumber."'
+  SecondInprogressText: 
