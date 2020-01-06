@@ -12,6 +12,7 @@ public class Backstab : Abilities
 {
     private bool isActive { get; set; }
     PlayerStats stats;
+    WeaponStats weaponStats;
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
@@ -21,26 +22,9 @@ public class Backstab : Abilities
         isActive = false;
         if (isCollected)
         {
-            if (isNovice)
+            if (isActive)
             {
-                if (isActive)
-                {
-                    NoviceLevelAct();
-                }
-            }
-            else if (isAdept)
-            {
-                if (isActive)
-                {
-                    AdeptLevelAct();
-                }
-            }
-            else if (isMaster)
-            {
-                if (isActive)
-                {
-                    MasterLevelAct();
-                }
+                Act();
             }
         }
     }
@@ -48,25 +32,7 @@ public class Backstab : Abilities
     //DESCRIPTION : what happens when the novice level of the spell is used
     //PARAMETERS : none
     //RETURNS : none
-    public override void NoviceLevelAct()
-    {
-        stats.defence = stats.defence - 1;
-        if(stats.defence <= 0)
-        {
-            stats.defence = 0;
-        }
-
-        if (stats.isDetected == false)
-        {
-            isNovice = true;
-            AdditionalDamage();
-        }
-    }
-    //Function : AdeptLevelAct
-    //DESCRIPTION : what happens when the adept level of the spell is used
-    //PARAMETERS : none
-    //RETURNS : none
-    public override void AdeptLevelAct()
+    public override void Act()
     {
         stats.defence = stats.defence - 1;
         if (stats.defence <= 0)
@@ -74,38 +40,9 @@ public class Backstab : Abilities
             stats.defence = 0;
         }
 
-        if (!stats.isDetected == false)
+        if (stats.isDetected == false)
         {
-            isAdept = true;
             AdditionalDamage();
-        }
-    }
-    //Function : MasterLevelAct
-    //DESCRIPTION : what happens when the master level of the spell is used
-    //PARAMETERS : none
-    //RETURNS : none
-    public override void MasterLevelAct()
-    {
-        if (!stats.isDetected == false)
-        {
-            isMaster = true;
-            AdditionalDamage();
-
-        }
-    }
-    //Function : AdditionalDamage
-    //DESCRIPTION : adds additional damage in 2 different ways
-    //PARAMETERS : none
-    //RETURNS : none
-    public void AdditionalDamage()
-    {
-        if(isNovice || isAdept)
-        {
-            Random.Range(1, 6);
-        }
-        else if (isMaster)
-        {
-            Random.Range(1, 8);
         }
     }
 }
