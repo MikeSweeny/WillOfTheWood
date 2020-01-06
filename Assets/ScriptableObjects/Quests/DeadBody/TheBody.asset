@@ -16,14 +16,15 @@ MonoBehaviour:
   QuestName: TheBody
   Prereq1: NULL
   Prereq2: NULL
-  Description: Find clues about the women's death
+  Description: Find 5 clues
   NPCID: bodyclue
   TurnInNPCName: Sheriff
   RequiredAmount: 5
-  ExperenceReward: 0
-  CoinReward: 0
+  ExperenceReward: 1
+  CoinReward: 3
   UnitReward: 0
-  QuestObjectives: 
+  QuestObjectives: 'Find clues about the women''s death, then return to the Sherif
+    to tell him what you found. '
   StartQuestText: 'You stumble upon a dead body, looking around it seems she might
     have been ready to attend a party, you look about the body for any clues that
     might be able to help you out. '
@@ -31,8 +32,9 @@ MonoBehaviour:
   InprogressQuestText: The body still looks as dead as you first found it, maybe looking
     a little worse
   CompletedQuestText: visit the sherif
-  NPCHandInName: Sheriff
   SecondInprogressText: What do you want?
+  RewardsList: 'Coin: 3 Experence: 1'
+  NPCHandInName: Sheriff
   CNPC:
   - Azfoldo
   - Sendora
