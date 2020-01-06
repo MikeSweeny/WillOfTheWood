@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc5057f776b1ef4b98dfa9d84f1ab3c, type: 3}
+  m_Name: Retribution
+  m_EditorClassIdentifier: 
+  QUIM: {fileID: 0}
+  QuestName: Retribution
+  Prereq1: Woodpicker
+  Prereq2: NULL
+  Description: Kill the Elves at the Far end of Town
+  NPCID: FarmElf
+  TurnInNPCName: FatherSarek
+  RequiredAmount: 8
+  ExperenceReward: 2
+  CoinReward: 0
+  UnitReward: 0
+  QuestObjectives: The elves have slaughtered a homestead on the outskirts of town,
+    and kill the 8 elves there.
+  StartQuestText: Sarek turns to face you, his knuckles white as his hands grasp his
+    robes, "They have come again, they are here still! Those foul elves, eight have
+    come from their woods and taken another of my faithful." The priest releases his
+    grip on his robes and attempts to steady himself, shaking like a man bearing a
+    heavy load. "Deldas and his entire family were... were... it was not enough for
+    them to take their lives but they are now dancing in the glee of their carnage
+    upon his lands. Please... rid Deldas' home of those monsters. Take back his home
+    at the far end of town."
+  TrackingQuestText: Kill the Elves Dancing around Deldas' Home
+  InprogressQuestText: '"Rid Deldas'' lands of those cretins!"'
+  CompletedQuestText: Sarek releases a long-held breath and falls silent for a few
+    moments. "This is well. Once again, Thorngard owes you a debt, I fear we will
+    owe you a great many more before this calamity is done."
+  SecondInprogressText: 
