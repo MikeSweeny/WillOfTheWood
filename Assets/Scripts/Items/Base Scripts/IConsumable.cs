@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : IConsumable
 //PURPOSE : the base class for consumable items
@@ -18,5 +19,6 @@ public class IConsumable : Item
     public void Awake()
     {
         itemType = ItemTypes.CONSUMABLE;
+        itemSprite = GetComponent<Image>();
     }
 }

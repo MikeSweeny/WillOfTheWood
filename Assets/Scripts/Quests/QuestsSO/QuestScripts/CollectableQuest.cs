@@ -27,6 +27,7 @@ public class CollectableQuest : Quests
                 NPC.GetComponent<ConversationNpc>().hasBeenTalkedTo = false;
             }
         }
+
     }
 
 

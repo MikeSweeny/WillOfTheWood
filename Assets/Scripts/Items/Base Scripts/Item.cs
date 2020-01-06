@@ -15,6 +15,10 @@ public class Item : MonoBehaviour
 
     protected Image itemSprite;
 
+    //Function : GetSprite
+    //DESCRIPTION : retrieves the item sprite
+    //PARAMETERS : none
+    //RETURNS : Image itemSprite : the sprite image for the item
     public Image GetSprite()
     {
         return itemSprite;

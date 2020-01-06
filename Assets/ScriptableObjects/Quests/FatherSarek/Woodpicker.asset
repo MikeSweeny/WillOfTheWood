@@ -19,7 +19,7 @@ MonoBehaviour:
   Description: Collect 12 Wood
   NPCID: Lumber
   TurnInNPCName: FatherSarek
-  RequiredAmount: 12
+  RequiredAmount: 1
   ExperenceReward: 1
   CoinReward: 3
   UnitReward: 0
@@ -39,3 +39,4 @@ MonoBehaviour:
     as you can."'
   CompletedQuestText: '"Excellent my son, you brought the lumber."'
   SecondInprogressText: 
+  CNPC: []

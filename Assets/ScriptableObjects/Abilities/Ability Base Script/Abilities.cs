@@ -18,19 +18,10 @@ public class Abilities: ScriptableObject
     private string abilityDescription;
     [SerializeField]
     private Sprite abilityImage;
-    //Variables that are applied when needed.
-    [SerializeField]
-    public bool isNovice = false;
-    [SerializeField]
-    public bool isAdept = false;
-    [SerializeField]
-    public bool isMaster = false;
     protected bool isCollected = false;
 
     public virtual void OnLoad() { }
-    public virtual void NoviceLevelAct() { }
-    public virtual void AdeptLevelAct() { }
-    public virtual void MasterLevelAct() { }
+    public virtual void Act() { }
 
     private void OnDestroy()
     {

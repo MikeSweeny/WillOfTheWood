@@ -42,16 +42,28 @@ public class Inventory : MonoBehaviour
         contents.Remove(item);
     }
 
+    //Function : AddCurrency
+    //DESCRIPTION : adds an amount to the currency value
+    //PARAMETERS : int amount : the amount of currency to be added
+    //RETURNS : none
     private void AddCurrency(int amount)
     {
         currency += amount;
     }
 
+    //Function : GetCurrency
+    //DESCRIPTION : retrieves the value of currency in the inventory
+    //PARAMETERS : none
+    //RETURNS : int currency : the amount of currency in the inventory
     private int GetCurrency()
     {
         return currency;
     }
 
+    //Function : RemoveCurrency
+    //DESCRIPTION : removes an amount from the currency value
+    //PARAMETERS : int amount : the amount of currency to remove
+    //RETURNS : none
     private void RemoveCurrency(int amount)
     {
         AddCurrency(-amount);
