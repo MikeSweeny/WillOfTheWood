@@ -451,12 +451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
@@ -755,12 +749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
@@ -1359,7 +1347,8 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.3131
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8158956427685968433, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
 --- !u!4 &1099352393 stripped
 Transform:
@@ -1398,12 +1387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
@@ -1621,12 +1604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
@@ -2187,12 +2164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
@@ -2312,12 +2283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
@@ -2386,12 +2351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
@@ -2517,12 +2476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accuracy: 0
-  discrete: 0
-  persuasive: 0
-  quick: 0
-  strong: 0
-  toughness: 0
   defence: 0
   painThreshold: 0
   pathingPattern: {fileID: 0}
