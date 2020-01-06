@@ -5,10 +5,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : Item
 //PURPOSE : represents anything that can exist in an inventory
 public class Item : MonoBehaviour
 {
     protected ItemTypes itemType;
+
+    protected Image itemSprite;
+
+    public Image GetSprite()
+    {
+        return itemSprite;
+    }
 }
