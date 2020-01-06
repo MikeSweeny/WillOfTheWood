@@ -6,6 +6,7 @@ public class ElvenArmourStats : ArmorStats
 {
     public ElvenArmourStats()
     {
+        armourType = armourTypes.LIGHT;
         minDefence = 1;
         maxDefence = 8;
     }

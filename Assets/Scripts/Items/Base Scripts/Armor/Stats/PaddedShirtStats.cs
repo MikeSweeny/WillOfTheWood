@@ -6,6 +6,7 @@ public class PaddedShirtStats : ArmorStats
 {
     public PaddedShirtStats()
     {
+        armourType = armourTypes.LIGHT;
         minDefence = 1;
         maxDefence = 4;
     }

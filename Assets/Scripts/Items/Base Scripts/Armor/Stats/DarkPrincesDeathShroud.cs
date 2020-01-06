@@ -6,6 +6,7 @@ public class DarkPrincesDeathShroudStats : ArmorStats
 {
     public DarkPrincesDeathShroudStats()
     {
+        armourType = armourTypes.LIGHT;
         minDefence = 4;
         maxDefence = 11;
     }
