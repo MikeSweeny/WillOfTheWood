@@ -40,8 +40,8 @@ public class Quests : ScriptableObject
     public string TurnInNPCName;
     
     public int RequiredAmount;
-    public int ExperenceReward;
-    public int CoinReward;
+    public int ExperenceReward = 0;
+    public int CoinReward = 0;
     public int UnitReward;
     //public variable for item reward needed;
 
@@ -59,6 +59,27 @@ public class Quests : ScriptableObject
 
     public string SecondInprogressText;
 
+    public string RewardsList; 
+
+    public virtual string Reward()
+    {
+        string coin;
+        string exp;
+        if (CoinReward > 0)
+        {
+            coin = "Coin: " + CoinReward;
+        }
+        else
+            coin = "";
+        if (ExperenceReward > 0)
+        {
+            exp = "Experence: " + ExperenceReward;
+        }
+        else
+            exp = "";
+
+        return RewardsList = coin + " " + exp;
+    }
 
     public virtual void Load() { }
 
