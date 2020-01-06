@@ -12,6 +12,7 @@ using UnityEngine;
 //PURPOSE :Checks to see what Quests have been done and what quests can be unlocked because of the completed quests. 
 public class QuestManager: MonoBehaviour
 {
+    public Quests TrackingQuest { get; set; }
     public List<string> completedQuestNames;
     private bool isMatch = false;
     private bool isActive = false;
