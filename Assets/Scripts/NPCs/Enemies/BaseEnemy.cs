@@ -40,6 +40,7 @@ public class BaseEnemy : BaseNpc, IQuestID
     {
         if (state != CurrentState.dead)
         {
+            CheckEnemyHealth();
             switch (state)
             {
                 case CurrentState.waiting:
@@ -65,6 +66,10 @@ public class BaseEnemy : BaseNpc, IQuestID
                 default:
                     break;
             }
+        }
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 
@@ -160,6 +165,15 @@ public class BaseEnemy : BaseNpc, IQuestID
         if (Vector2.Distance(transform.position, player.transform.position) > attackRange)
         {
             state = CurrentState.moving;
+        }
+    }
+
+    private void CheckEnemyHealth()
+    {
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+            state = CurrentState.dead;
         }
     }
 
