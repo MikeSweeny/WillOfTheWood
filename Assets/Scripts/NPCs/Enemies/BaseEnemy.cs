@@ -178,6 +178,7 @@ public class BaseEnemy : BaseNpc, IQuestID
         {
             currentHealth = 0;
             state = CurrentState.dead;
+            Cleared();
         }
     }
 

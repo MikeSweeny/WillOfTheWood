@@ -17,7 +17,7 @@ MonoBehaviour:
   Prereq1: NULL
   Prereq2: NULL
   Description: Kill Grave Robber
-  NPCID: 
+  NPCID: GraveRobber
   TurnInNPCName: GraveKeeper Abraso
   RequiredAmount: 1
   ExperenceReward: 1

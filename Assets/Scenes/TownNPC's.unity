@@ -2817,6 +2817,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e,
         type: 2}
+    - target: {fileID: 5748311389085041655, guid: 529f568424ca3bb419a39273f468b7a2,
+        type: 3}
+      propertyPath: IDName
+      value: GraveRobber
+      objectReference: {fileID: 0}
     - target: {fileID: 5748311389085041653, guid: 529f568424ca3bb419a39273f468b7a2,
         type: 3}
       propertyPath: enemy.Array.size
