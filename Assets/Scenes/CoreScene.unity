@@ -12465,7 +12465,6 @@ GameObject:
   m_Component:
   - component: {fileID: 869672830}
   - component: {fileID: 869672832}
-  - component: {fileID: 869672831}
   m_Layer: 9
   m_Name: FaceCam
   m_TagString: Untagged
@@ -12487,14 +12486,6 @@ Transform:
   m_Father: {fileID: 1023680801}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 12.354001, y: -163.59201, z: -5.7110004}
---- !u!81 &869672831
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869672829}
-  m_Enabled: 1
 --- !u!20 &869672832
 Camera:
   m_ObjectHideFlags: 0
@@ -26179,21 +26170,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4,
-        type: 3}
-      propertyPath: jumpSpeed
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4,
-        type: 3}
-      propertyPath: runSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4,
-        type: 3}
-      propertyPath: weaponCollider
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 763419800, guid: 9cacffa9922ea65498a5e23efd58dea4, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -26607,6 +26583,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4,
+        type: 3}
+      propertyPath: jumpSpeed
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4,
+        type: 3}
+      propertyPath: runSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4,
+        type: 3}
+      propertyPath: weaponCollider
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4, type: 3}

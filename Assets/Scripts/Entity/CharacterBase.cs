@@ -32,7 +32,7 @@ public class CharacterBase : MonoBehaviour
     private void Start()
     {
         armour = null;
-        weapon = GameObject.Instantiate(weaponPrefab.GetComponent<IWeapon>());
+        //weapon = GameObject.Instantiate(weaponPrefab.GetComponent<IWeapon>());
         maxHealth = toughness;
         currentHealth = maxHealth;
     }
