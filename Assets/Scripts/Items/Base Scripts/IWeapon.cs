@@ -14,6 +14,7 @@ public class IWeapon : Item
     private int roll;
     protected WeaponStats stats;
     Collider collider;
+    public bool isPoisonous = false;
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
@@ -60,5 +61,10 @@ public class IWeapon : Item
     {
         roll = (int)Random.Range(stats.GetAttackMinDamage(), stats.GetAttackMaxDamage());
         return roll;
+    }
+    public void AddPoisonDamageModifier()
+    {
+        stats.SetAttackMinDamageModifier(1);
+        stats.SetAttackMinDamageModifier(4);
     }
 }

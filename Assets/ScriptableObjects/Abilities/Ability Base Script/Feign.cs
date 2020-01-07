@@ -9,6 +9,7 @@ using UnityEngine;
 public class Feign : Abilities
 {
     public WeaponStats equippedWeapon;
+    PlayerStats stats;
     private bool isActive { get; set; }
     //Function : OnLoad
     //DESCRIPTION : what happens when the script is loaded in the game
@@ -30,9 +31,21 @@ public class Feign : Abilities
     //RETURNS : none
     public override void Act()
     {
-        //if (isActive && equippedWeapon.)
-        //{
-        //    random range between 1 - 10, if the integer returned is > 5, apply 1 - 4 damage to enemy and the enemy stays idle. otherwise enemy detects and attacks.
-        //}
+        if (isActive && equippedWeapon.weaponType == WeaponStats.weaponTypes.DAGGER)
+        {
+            //random range between 1 - 10, if the integer returned is > 5, apply 1 - 4 damage to enemy and the enemy stays idle. otherwise enemy detects and attacks.
+            int RR;
+            RR = Random.Range(1, 10);
+            if(RR >= 5)
+            {
+                //apply 1-4 damage to enemy
+                stats.isDetected = false;
+            }
+            else
+            {
+                stats.isDetected = true;
+                isActive = false;
+            }
+        }
     }
 }
