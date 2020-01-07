@@ -92,6 +92,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
             Cleared();
 
         }
+
     }
 
     private void StopTalking()
