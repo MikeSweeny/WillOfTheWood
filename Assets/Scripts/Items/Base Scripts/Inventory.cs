@@ -11,7 +11,7 @@ using UnityEngine;
 public class Inventory
 {
 
-    private List<Item> contents;
+    protected List<Item> contents;
 
     private int currency;
 
