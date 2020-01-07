@@ -80,9 +80,10 @@ public class Player : CharacterBase
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(midRayFiringPoint, transform.forward, out hit, 8) || Physics.Raycast(bottomRayFiringPoint, transform.forward, out hit, 8))
+        if ((Physics.Raycast(midRayFiringPoint, transform.forward, out hit, 8) || Physics.Raycast(bottomRayFiringPoint, transform.forward, out hit, 8)))
         {
-            target = hit.collider.gameObject;
+            if(hit.collider.gameObject != this.gameObject)
+                target = hit.collider.gameObject;
             return target;
         } 
         else
