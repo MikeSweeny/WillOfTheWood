@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1762ae5864880c241a30425a8e392947, type: 3}
   m_Name: Berserker
   m_EditorClassIdentifier: 
-  abilityName: Berserker(Novice)
+  abilityName: Berserker
   abilityDescription: Equipped weapons gain additional 1-6 damage, defence lowered
     by 2.
   abilityImage: {fileID: 0}

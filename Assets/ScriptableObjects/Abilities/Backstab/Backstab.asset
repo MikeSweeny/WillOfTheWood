@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b4e415ab75d82b478aacc7d42589a9d, type: 3}
   m_Name: Backstab
   m_EditorClassIdentifier: 
-  abilityName: BackStab(Novice)
+  abilityName: BackStab
   abilityDescription: Stealth attacks from behind an enemy will deal an additional
     1-6 damage.
   abilityImage: {fileID: 0}

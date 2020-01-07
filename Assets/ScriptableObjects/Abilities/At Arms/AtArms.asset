@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b5f69022975624faac65e5c6b5b565, type: 3}
   m_Name: AtArms
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilityDescription: 
+  abilityName: At Arms
+  abilityDescription: increases armour rating to the next tier while active.
   abilityImage: {fileID: 0}

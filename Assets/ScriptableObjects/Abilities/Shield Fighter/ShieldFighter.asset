@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5d6a5148eaefc40a50344e849e5959, type: 3}
   m_Name: ShieldFighter
   m_EditorClassIdentifier: 
-  abilityName: ShieldFighter(Novice)
+  abilityName: ShieldFighter
   abilityDescription: One handed weapons equipped get +1 to attack damage and sheilds
     get +2 defence instead of regular +1.
   abilityImage: {fileID: 0}

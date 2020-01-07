@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 493cb5c58f053fa4a8028efd117a6a6b, type: 3}
   m_Name: Feign
   m_EditorClassIdentifier: 
-  abilityName: Feign(Novice)
+  abilityName: Feign
   abilityDescription: "Player attacks enemy with a chance\r of the enemy not realizing
     it has taken damage for 1-4 damage."
   abilityImage: {fileID: 0}

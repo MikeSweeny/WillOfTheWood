@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52be2d5ce94919744adbe9f4cdb0a1bf, type: 3}
   m_Name: TwoHandedForce
   m_EditorClassIdentifier: 
-  abilityName: TwoHandedForce(Novice)
+  abilityName: TwoHandedForce
   abilityDescription: While activated, two-handed weapons have 1-12 damage or added
     damage to special two-handed weapons.
   abilityImage: {fileID: 0}

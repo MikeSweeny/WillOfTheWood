@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 521d2716d398add48b6d9d123fac894a, type: 3}
   m_Name: PolearmMastery
   m_EditorClassIdentifier: 
-  abilityName: PolearmMastery(Novice)
+  abilityName: PolearmMastery
   abilityDescription: On activation, weapons designated "Long" have extra damage.
   abilityImage: {fileID: 0}

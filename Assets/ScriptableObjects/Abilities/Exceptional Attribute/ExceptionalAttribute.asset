@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4ed90b0eb839e49aa1b7200ee36bc7, type: 3}
   m_Name: ExceptionalAttribute
   m_EditorClassIdentifier: 
-  abilityName: ExceptionalAttribute(Novice)
+  abilityName: ExceptionalAttribute
   abilityDescription: Player can add 1 point to one of the player stats.
   abilityImage: {fileID: 0}
