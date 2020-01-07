@@ -43,6 +43,9 @@ public class NpcPathing : BaseController
         {
             distanceLeftToTravel[i] = float.MaxValue;
         }
+
+        if (weaponCollider && weaponCollider.enabled == true)
+            ToggleWeaponCollider();
     }
 
     public override void Attack()
