@@ -86,4 +86,13 @@ public class CharacterBase : MonoBehaviour
     {
         return (float)maxHealth / (float)currentHealth;
     }
+    public void RecoverHealth()
+    {
+        if(currentHealth != maxHealth)
+        {
+            int heal;
+            heal = Random.Range(1, 4);
+            currentHealth = currentHealth + heal;
+        }
+    }
 }

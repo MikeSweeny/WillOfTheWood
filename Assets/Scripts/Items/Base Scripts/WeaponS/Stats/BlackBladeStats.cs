@@ -6,7 +6,7 @@ public class BlackBladeStats : WeaponStats
 {
     public BlackBladeStats()
     {
-        weaponType = weaponTypes.TWOHANDED;
+        weaponType = weaponTypes.BLACKBLADE;
         attackSpeed = 2;
         attackMinDamage = 4;
         attackMaxDamage = 15;

@@ -13,7 +13,7 @@ public class WeaponStats
     protected int attackSpeed;
     protected int attackMinDamage;
     protected int attackMaxDamage;
-    public enum weaponTypes {ONEHANDED,TWOHANDED,DAGGER,LONG}
+    public enum weaponTypes {ONEHANDED,TWOHANDED,DAGGER,LONG,BLACKBLADE}
     public weaponTypes weaponType;
     //Function : GetAttackSpeed
     //DESCRIPTION : checks weapons attack speed

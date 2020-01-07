@@ -19,64 +19,21 @@
 //        isActive = false;
 //        if (isCollected)
 //        {
-//            if (isNovice)
+//            if (isActive)
 //            {
-//                if (isActive)
-//                {
-//                    NoviceLevelAct();
-//                }
-//            }
-//            else if (isAdept)
-//            {
-//                if (isActive)
-//                {
-//                    AdeptLevelAct();
-//                }
-//            }
-//            else if (isMaster)
-//            {
-//                if (isActive)
-//                {
-//                    MasterLevelAct();
-//                }
+//                Act();
 //            }
 //        }
 //    }
-//    //Function : noviceLevelAct
-//    //DESCRIPTION : what happens when the novice level of the spell is used
+//    //Function : Act
+//    //DESCRIPTION : what happens when the spell is used
 //    //PARAMETERS : none
 //    //RETURNS : none
-//    public override void NoviceLevelAct()
+//    public override void Act()
 //    {
 //        if (isActive)
 //        {
-//            isNovice = true;
-//            //while activated the player can equip short weapons to his sheild arm and can attack twice(more animations needed for this style of combat)
-//        }
-//    }
-//    //Function : AdeptLevelAct
-//    //DESCRIPTION : what happens when the adept level of the spell is used
-//    //PARAMETERS : none
-//    //RETURNS : none
-//    public override void AdeptLevelAct()
-//    {
-//        if (isActive)
-//        {
-//            isAdept = true;
-//            //while activated the player can equip one handed weapons to his sheild arm and can attack twice(more animations needed for this style of combat)
-//        }
-//    }
-//    //Function : MasterLevelAct
-//    //DESCRIPTION : what happens when the master level of the spell is used
-//    //PARAMETERS : none
-//    //RETURNS : none
-//    public override void MasterLevelAct()
-//    {
-//        if (isActive)
-//        {
-//            isMaster = true;
-//            //while activated the player can equip one handed weapons to his sheild arm and two handed weapons to his weapon arm 
-//            //can attack twice(more animations needed for this style of combat)
+//            //while activated the player can equip short or one-handed weapons to his sheild arm and can attack twice(more animations needed for this style of combat)
 //        }
 //    }
 //}
