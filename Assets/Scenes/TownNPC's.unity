@@ -1251,7 +1251,7 @@ PrefabInstance:
     - target: {fileID: 8761054186239608234, guid: a847e6497ac08f44e90fb147f752ecfd,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8761054186239608234, guid: a847e6497ac08f44e90fb147f752ecfd,
         type: 3}
@@ -1261,7 +1261,7 @@ PrefabInstance:
     - target: {fileID: 8761054186239608234, guid: a847e6497ac08f44e90fb147f752ecfd,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 8761054186239608234, guid: a847e6497ac08f44e90fb147f752ecfd,
         type: 3}
@@ -2583,14 +2583,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1530342099}
     m_Modifications:
-    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
-      propertyPath: m_Name
-      value: JSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
-      propertyPath: m_TagString
-      value: NPC
-      objectReference: {fileID: 0}
     - target: {fileID: 4673611459674428, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.887085
@@ -2646,6 +2638,14 @@ PrefabInstance:
     - target: {fileID: 4673611459674428, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.3131
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
+      propertyPath: m_Name
+      value: JSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8158956427685968433, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
@@ -2811,6 +2811,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5748311389085041655, guid: 529f568424ca3bb419a39273f468b7a2,
+        type: 3}
+      propertyPath: npcBrain
+      value: 
+      objectReference: {fileID: 11400000, guid: 54bcd83366f2b534fa50d2c87fdedf1e,
+        type: 2}
     - target: {fileID: 5748311389085041653, guid: 529f568424ca3bb419a39273f468b7a2,
         type: 3}
       propertyPath: enemy.Array.size

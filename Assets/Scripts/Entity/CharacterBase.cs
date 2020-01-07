@@ -1,5 +1,11 @@
-﻿using UnityEngine;
+﻿//FILE: CharacterBase.cs
+//PROJECT: Will Of The Woods
+//PROGRAMMER: John Gotts
+//FIRST VERSION: 19/12/2019
+using UnityEngine;
 
+//NAME: CharacterBase
+//PURPOSE: the base parent class of all characters, npcs and enemies
 public class CharacterBase : MonoBehaviour
 {
     protected enum CurrentState

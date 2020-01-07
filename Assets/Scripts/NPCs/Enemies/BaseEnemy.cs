@@ -168,6 +168,10 @@ public class BaseEnemy : BaseNpc, IQuestID
         }
     }
 
+    //Function: CheckEnemyHealth
+    //DESCRIPTION: checks to see if the enemy is dead
+    //PARAMETERS: None
+    //RETURNS: None
     private void CheckEnemyHealth()
     {
         if(currentHealth < 0)
