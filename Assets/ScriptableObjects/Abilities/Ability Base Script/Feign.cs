@@ -30,9 +30,9 @@ public class Feign : Abilities
     //RETURNS : none
     public override void Act()
     {
-        if (isActive && equippedWeapon.)
-        {
-            random range between 1 - 10, if the integer returned is > 5, apply 1 - 4 damage to enemy and the enemy stays idle. otherwise enemy detects and attacks.
-        }
+        //if (isActive && equippedWeapon.)
+        //{
+        //    random range between 1 - 10, if the integer returned is > 5, apply 1 - 4 damage to enemy and the enemy stays idle. otherwise enemy detects and attacks.
+        //}
     }
 }
