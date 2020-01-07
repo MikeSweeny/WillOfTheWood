@@ -24,6 +24,7 @@ public class Player : CharacterBase
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
+        inventory = new IPlayerInventory();
     }
 
     private void Update()
