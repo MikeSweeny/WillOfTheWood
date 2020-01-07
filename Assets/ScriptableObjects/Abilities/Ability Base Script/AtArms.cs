@@ -17,12 +17,13 @@ public class AtArms : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
-        if (isCollected)
+        AbilityManager.UnlockAtArms += UnlockAbility;
+    }
+    public override void UpdateAbility()
+    {
+        if (isActive)
         {
-            if (isActive)
-            {
-                Act();
-            }
+            Act();
         }
     }
     //Function : Act

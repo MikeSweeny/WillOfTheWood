@@ -18,13 +18,12 @@ public class Abilities: ScriptableObject
     private string abilityDescription;
     [SerializeField]
     private Sprite abilityImage;
-    protected bool isCollected = false;
-
+    protected bool isUnlocked = false;
     public virtual void OnLoad() { }
     public virtual void Act() { }
-
-    private void OnDestroy()
+    public virtual void UpdateAbility() { }
+    public void UnlockAbility()
     {
-        isCollected = true;
+        isUnlocked = true;
     }
 }

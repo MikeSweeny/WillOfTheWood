@@ -7,6 +7,7 @@ public class Player : CharacterBase
 {
     public PlayerObject playerBrain;
 
+    List<Abilities> abilities;
     private bool canShootTargetRay = false;
     private GameObject target;
     private Vector3 midRayFiringPoint;
@@ -19,15 +20,32 @@ public class Player : CharacterBase
 
     private void Awake()
     {
+        abilities = new List<Abilities>();
+        abilities.Add(new AtArms());
+        abilities.Add(new Backstab());
+        abilities.Add(new Berserker());
+        abilities.Add(new Dominate());
+        abilities.Add(new ExceptionalAttribute());
+        abilities.Add(new Feign());
+        abilities.Add(new Poisoner());
+        abilities.Add(new PolearmMastery());
+        abilities.Add(new Recovery());
+        abilities.Add(new ShieldFighter());
+        abilities.Add(new TwoHandedForce());
         getStats();
         setStats();
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
+        inventory = new IPlayerInventory();
     }
 
     private void Update()
     {
+        foreach (Abilities ability in abilities)
+        {
+            ability.UpdateAbility();
+        }
         if (canShootTargetRay == true)
         {
             canShootTargetRay = false;

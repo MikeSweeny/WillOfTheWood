@@ -20,6 +20,7 @@ public class IPlayerInventory : Inventory
     public IPlayerInventory()
     {
         inventoryMenu = GameObject.Find("InventoryCanvas").GetComponent<MInventory>();
+        AddItem(inventoryMenu.testItem);
         
     }
 
@@ -32,6 +33,7 @@ public class IPlayerInventory : Inventory
         if (inventoryMenu.GetCurrentCount() + 1 < inventoryMenu.GetMaxCount())
         { 
             base.AddItem(item);
+            inventoryMenu.UpdateSlots(contents);
             inventoryMenu.IncrementCurrentCount();
         }
     }
@@ -43,6 +45,7 @@ public class IPlayerInventory : Inventory
     public override void RemoveItem(Item item)
     {
         base.RemoveItem(item);
+        inventoryMenu.UpdateSlots(contents);
         inventoryMenu.DecrementCurrentCount();
     }
 }
