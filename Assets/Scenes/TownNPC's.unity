@@ -2397,6 +2397,11 @@ PrefabInstance:
       propertyPath: enemy.Array.data[0]
       value: 
       objectReference: {fileID: 1047744192}
+    - target: {fileID: 5748311389085041653, guid: 529f568424ca3bb419a39273f468b7a2,
+        type: 3}
+      propertyPath: weaponCollider
+      value: 
+      objectReference: {fileID: 1047744193}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 529f568424ca3bb419a39273f468b7a2, type: 3}
 --- !u!114 &1047744192 stripped
@@ -2411,6 +2416,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1047744193 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 1442645895653223522, guid: 529f568424ca3bb419a39273f468b7a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1047744191}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1075333269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2583,6 +2594,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1530342099}
     m_Modifications:
+    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
+      propertyPath: m_Name
+      value: JSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 4673611459674428, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 33.887085
@@ -2638,14 +2657,6 @@ PrefabInstance:
     - target: {fileID: 4673611459674428, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
       propertyPath: m_LocalScale.z
       value: 1.3131
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
-      propertyPath: m_Name
-      value: JSword
-      objectReference: {fileID: 0}
-    - target: {fileID: 1845237839428460, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
-      propertyPath: m_TagString
-      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8158956427685968433, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
@@ -2842,6 +2853,11 @@ PrefabInstance:
       propertyPath: canWait
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5748311389085041653, guid: 529f568424ca3bb419a39273f468b7a2,
+        type: 3}
+      propertyPath: weaponCollider
+      value: 
+      objectReference: {fileID: 1159559429}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 529f568424ca3bb419a39273f468b7a2, type: 3}
 --- !u!114 &1159559428 stripped
@@ -2856,6 +2872,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1159559429 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 1442645895653223522, guid: 529f568424ca3bb419a39273f468b7a2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1159559427}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1166904128
 PrefabInstance:
   m_ObjectHideFlags: 0

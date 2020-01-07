@@ -150,9 +150,11 @@ public class BaseEnemy : BaseNpc, IQuestID
         animController.SetLayerWeight(2, 1);
         pathingPattern.GetNavMeshAgent().SetDestination(attackingDestination);
         animController.SetBool("Attacking", true);
+        pathingPattern.ToggleWeaponCollider();
         if(animController.GetCurrentAnimatorStateInfo(2).normalizedTime > 1)
         {
             animController.SetBool("Attacking", false);
+            pathingPattern.ToggleWeaponCollider();
         }
     }
 
