@@ -17,7 +17,7 @@ public class IPlayerInventory : Inventory
     //DESCRIPTION : called when the object is initialized after Awake
     //PARAMETERS : none
     //RETURNS : none
-    private void Start()
+    public IPlayerInventory()
     {
         inventoryMenu = GameObject.Find("InventoryCanvas").GetComponent<MInventory>();
         

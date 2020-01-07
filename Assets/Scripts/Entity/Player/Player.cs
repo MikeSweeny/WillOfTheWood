@@ -9,10 +9,12 @@ public class Player : CharacterBase
 
     private bool canShootTargetRay = false;
     private GameObject target;
-    private Vector3 rayFiringPoint;
+    private Vector3 midRayFiringPoint;
+    private Vector3 bottomRayFiringPoint;
     private float expCap;
     private float currentEXP;
     private int playerCoins;
+    private int playerStatPoints;
 
 
     private void Awake()
@@ -42,7 +44,8 @@ public class Player : CharacterBase
             SceneManager.LoadScene("DeathScene");
         }
 
-        rayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1f), transform.position.z);
+        midRayFiringPoint = new Vector3(transform.position.x, (transform.position.y + 1), transform.position.z);
+        bottomRayFiringPoint = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
     }
 
     //FUNCTION : setStats()
@@ -77,12 +80,16 @@ public class Player : CharacterBase
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(rayFiringPoint, transform.forward, out hit, 8))
+        if (Physics.Raycast(midRayFiringPoint, transform.forward, out hit, 8) || Physics.Raycast(bottomRayFiringPoint, transform.forward, out hit, 8))
         {
             target = hit.collider.gameObject;
             return target;
+        } 
+        else
+        {
+            target = null;
         }
-        return null;
+        return target;
     }
 
     //Function: GetPlayerTarget
@@ -144,5 +151,21 @@ public class Player : CharacterBase
     public void AddCoins(int amount)
     {
         playerCoins += amount;
+    }
+    public void LevelUp()
+    {
+        if(currentEXP == expCap)
+        {
+            playerStatPoints = 1;
+            currentEXP = 0;
+        }
+    }
+    public void UsedStatPoint()
+    {
+        playerStatPoints -= 1;
+    }
+    public int GetStatPoints()
+    {
+        return playerStatPoints;
     }
 }

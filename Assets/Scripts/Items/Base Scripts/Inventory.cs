@@ -8,7 +8,7 @@ using UnityEngine;
 
 //NAME : Inventory
 //PURPOSE : contains all the items the character is carrying
-public class Inventory : MonoBehaviour
+public class Inventory
 {
 
     private List<Item> contents;
@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Awake()
+    public Inventory()
     {
         contents = new List<Item>();
     }
