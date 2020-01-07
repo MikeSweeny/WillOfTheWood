@@ -15,4 +15,4 @@ MonoBehaviour:
   abilityName: Feign
   abilityDescription: "Player attacks enemy with a chance\r of the enemy not realizing
     it has taken damage for 1-4 damage."
-  abilityImage: {fileID: 0}
+  abilityImage: {fileID: 21300080, guid: 0baf8a7355c1fd84bbc53843f7bebe20, type: 3}
