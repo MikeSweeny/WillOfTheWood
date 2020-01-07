@@ -11,7 +11,7 @@ using UnityEngine.UI;
 //PURPOSE : serves as the inventory menu
 public class MInventory : Menu
 {
-
+    public Item testItem;
     protected List<Image> slotImages;
     private Image defaultSlotImage;
     private int invContentsCount;

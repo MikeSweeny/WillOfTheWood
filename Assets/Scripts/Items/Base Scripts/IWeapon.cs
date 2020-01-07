@@ -50,7 +50,10 @@ public class IWeapon : Item
         if (other.gameObject.transform.root.tag != gameObject.transform.root.tag)
         {
             CharacterBase character = other.gameObject.GetComponent<CharacterBase>();
-            character.TakeDamage(AttackRoll());
+            if(character)
+            {
+                character.TakeDamage(AttackRoll());
+            }
         }
     }
     //Function : OnTriggerEnter

@@ -14,6 +14,7 @@ public class Player : CharacterBase
     private float expCap;
     private float currentEXP;
     private int playerCoins;
+    private int playerStatPoints;
 
 
     private void Awake()
@@ -150,5 +151,21 @@ public class Player : CharacterBase
     public void AddCoins(int amount)
     {
         playerCoins += amount;
+    }
+    public void LevelUp()
+    {
+        if(currentEXP == expCap)
+        {
+            playerStatPoints = 1;
+            currentEXP = 0;
+        }
+    }
+    public void UsedStatPoint()
+    {
+        playerStatPoints -= 1;
+    }
+    public int GetStatPoints()
+    {
+        return playerStatPoints;
     }
 }
