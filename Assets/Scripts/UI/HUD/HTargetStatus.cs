@@ -30,7 +30,7 @@ public class HTargetStatus : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        if (player.GetPlayerTarget() != null)
+        if (player.GetPlayerTarget() != null && !player.CompareTag("Player"))
         {
             target = player.GetPlayerTarget().GetComponent<CharacterBase>();
             healthBar.value = target.GetHealthPercent();
