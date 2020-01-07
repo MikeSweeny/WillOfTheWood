@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Retribution
   m_EditorClassIdentifier: 
   QUIM: {fileID: 0}
+  player: {fileID: 0}
   QuestName: Retribution
   Prereq1: Woodpicker
   Prereq2: NULL
@@ -20,7 +21,7 @@ MonoBehaviour:
   NPCID: FarmElf
   TurnInNPCName: FatherSarek
   RequiredAmount: 8
-  ExperenceReward: 2
+  ExperenceReward: 20
   CoinReward: 0
   UnitReward: 0
   QuestObjectives: The elves have slaughtered a homestead on the outskirts of town,
@@ -39,3 +40,5 @@ MonoBehaviour:
     moments. "This is well. Once again, Thorngard owes you a debt, I fear we will
     owe you a great many more before this calamity is done."
   SecondInprogressText: 
+  SecondCompletedText: 
+  RewardsList: 

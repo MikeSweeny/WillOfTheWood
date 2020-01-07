@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3bf3662a22aa6d448264f6a719af685, type: 3}
-  m_Name: TwinAttack(Novice)
+  m_Name: TwinAttack
   m_EditorClassIdentifier: 
   abilityName: TwinAttack(Novice)
   abilityDescription: When active, short weapons can be equipped on the shield arm.

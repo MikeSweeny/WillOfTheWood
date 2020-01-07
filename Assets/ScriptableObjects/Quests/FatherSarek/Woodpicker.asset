@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Woodpicker
   m_EditorClassIdentifier: 
   QUIM: {fileID: 0}
+  player: {fileID: 0}
   QuestName: Woodpicker
   Prereq1: MissingHunter
   Prereq2: NULL
@@ -20,7 +21,7 @@ MonoBehaviour:
   NPCID: Lumber
   TurnInNPCName: FatherSarek
   RequiredAmount: 1
-  ExperenceReward: 1
+  ExperenceReward: 10
   CoinReward: 3
   UnitReward: 0
   QuestObjectives: Gongomo the logger has had his cart turned over and his lumber
@@ -39,4 +40,6 @@ MonoBehaviour:
     as you can."'
   CompletedQuestText: '"Excellent my son, you brought the lumber."'
   SecondInprogressText: 
+  SecondCompletedText: 
+  RewardsList: 
   CNPC: []

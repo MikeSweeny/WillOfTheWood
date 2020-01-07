@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d74557fa8a9cdc42895ab1fbafc8e96, type: 3}
   m_Name: MurderJorran
   m_EditorClassIdentifier: 
+  QUIM: {fileID: 0}
+  player: {fileID: 0}
   QuestName: MurderJorran
   Prereq1: TheBody
   Prereq2: NULL
@@ -19,7 +21,7 @@ MonoBehaviour:
   NPCID: Jorran
   TurnInNPCName: The Sheriff
   RequiredAmount: 1
-  ExperenceReward: 4
+  ExperenceReward: 40
   CoinReward: 10
   UnitReward: 0
   QuestObjectives: 'Find Jorran and avenge Anne death. '
@@ -30,4 +32,7 @@ MonoBehaviour:
     you find him. \n"
   CompletedQuestText: " \"I hear you have defeated Jorran, this town owes you a debt\"
     , \"Here is a reward for your effort , it is all we can afford right now\" \r\n\r\n"
+  SecondInprogressText: 
+  SecondCompletedText: 
+  RewardsList: 
   NPCKilled: Jorran

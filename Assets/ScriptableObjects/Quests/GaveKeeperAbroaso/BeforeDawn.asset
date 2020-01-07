@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BeforeDawn
   m_EditorClassIdentifier: 
   QUIM: {fileID: 0}
+  player: {fileID: 0}
   QuestName: BeforeDawn
   Prereq1: NULL
   Prereq2: NULL
@@ -20,7 +21,7 @@ MonoBehaviour:
   NPCID: GraveRobber
   TurnInNPCName: GraveKeeper Abraso
   RequiredAmount: 1
-  ExperenceReward: 1
+  ExperenceReward: 10
   CoinReward: 2
   UnitReward: 0
   QuestObjectives: There is a Grave Robber that appears in the graveyard during a
@@ -34,4 +35,5 @@ MonoBehaviour:
   CompletedQuestText: 'Thank you traveler, I knew my faith in you was well placed,
     now we can visit our dead in peace now. '
   SecondInprogressText: 
+  SecondCompletedText: 
   RewardsList: 

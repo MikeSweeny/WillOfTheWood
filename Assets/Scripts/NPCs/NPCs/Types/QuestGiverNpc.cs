@@ -61,7 +61,7 @@ public class QuestGiverNpc : BaseInteractableNpc
             }
             else if (Quest.Completed)
             {
-                currentText = Quest.CompletedQuestText;
+                currentText = Quest.SecondCompletedText;
                 Quest.GiveReward();
                 QM.addToCQNList(Quest.QuestName);
                 Quest.isActive = false;
@@ -115,6 +115,10 @@ public class QuestGiverNpc : BaseInteractableNpc
             Quest.isActive = false;
             QM.RemoveActiveQuest(Quest);
 
+        }
+        else if (Quest.Completed && Quest.SecondNPC)
+        {
+            currentText = Quest.CompletedQuestText;
         }
         else
         {

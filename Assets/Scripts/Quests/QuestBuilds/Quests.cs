@@ -18,7 +18,7 @@ public class Quests : ScriptableObject
 {
     //Items not to be touched. 
     public HDialogueInterface QUIM;
-    //public Player player;
+    public Player player;
 
     public List<QuestGoal> Goals = new List<QuestGoal>();
     public bool currentQuest { get; set; }
@@ -58,6 +58,7 @@ public class Quests : ScriptableObject
     public string CompletedQuestText;
 
     public string SecondInprogressText;
+    public string SecondCompletedText;
 
     public string RewardsList; 
 
@@ -116,9 +117,13 @@ public class Quests : ScriptableObject
     //RETURNS : 
     public virtual void GiveReward()
     {
-        //player = FindObjectOfType<player>();
-        //if (player)
-        //    player.SetCoin(CoinReward);
+        player = FindObjectOfType<Player>();
+        if (player)
+        {
+            player.AddXP(ExperenceReward);
+            player.AddCoins(CoinReward);
+        }
+           
 
         Debug.Log("Quest Reward Given.");
     }
