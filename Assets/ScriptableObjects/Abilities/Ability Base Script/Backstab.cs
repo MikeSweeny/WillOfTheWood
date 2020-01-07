@@ -28,8 +28,8 @@ public class Backstab : Abilities
             }
         }
     }
-    //Function : noviceLevelAct
-    //DESCRIPTION : what happens when the novice level of the spell is used
+    //Function : Act
+    //DESCRIPTION : what happens when the spell is used
     //PARAMETERS : none
     //RETURNS : none
     public override void Act()

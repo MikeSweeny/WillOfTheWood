@@ -13,8 +13,8 @@ public class WeaponStats
     protected int attackSpeed;
     protected int attackMinDamage;
     protected int attackMaxDamage;
-    protected enum weaponTypes {ONEHANDED,TWOHANDED,DAGGER,LONG}
-    protected weaponTypes weaponType;
+    public enum weaponTypes {ONEHANDED,TWOHANDED,DAGGER,LONG}
+    public weaponTypes weaponType;
     //Function : GetAttackSpeed
     //DESCRIPTION : checks weapons attack speed
     //PARAMETERS : none
@@ -38,5 +38,13 @@ public class WeaponStats
     public int GetAttackMaxDamage()
     {
         return attackMaxDamage;
+    }
+    public void SetAttackMinDamageModifier(int changeMin)
+    {
+        attackMinDamage = attackMinDamage + changeMin;
+    }
+    public void SetAttackMaxDamageModifier(int changeMax)
+    {
+        attackMaxDamage = attackMaxDamage + changeMax;
     }
 }
