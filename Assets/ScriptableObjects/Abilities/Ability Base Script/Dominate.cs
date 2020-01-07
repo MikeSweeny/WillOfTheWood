@@ -16,13 +16,13 @@ public class Dominate : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
-        isActive = false;
-        if (isCollected)
+        AbilityManager.UnlockDominate += UnlockAbility;
+    }
+    public override void UpdateAbility()
+    {
+        if (isActive)
         {
-            if (isActive)
-            {
-                Act();
-            }
+            Act();
         }
     }
     //Function : Act

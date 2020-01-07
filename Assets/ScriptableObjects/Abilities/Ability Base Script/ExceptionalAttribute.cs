@@ -15,12 +15,13 @@ public class ExceptionalAttribute : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
-        if (isCollected)
+        AbilityManager.UnlockExceptionalAttribute += UnlockAbility;
+    }
+    public override void UpdateAbility()
+    {
+        if (isActive)
         {
-            if (isActive)
-            {
-                Act();
-            }
+            Act();
         }
     }
     //Function : Act

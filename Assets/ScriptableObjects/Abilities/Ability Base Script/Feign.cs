@@ -17,12 +17,13 @@ public class Feign : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
-        if (isCollected)
+        AbilityManager.UnlockFeign += UnlockAbility;
+    }
+    public override void UpdateAbility()
+    {
+        if (isActive)
         {
-            if (isActive)
-            {
-                Act();
-            }
+            Act();
         }
     }
     //Function : Act

@@ -16,13 +16,13 @@ public class PolearmMastery : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
-        isActive = false;
-        if (isCollected)
+        AbilityManager.UnlockPoleArmMastery += UnlockAbility;
+    }
+    public override void UpdateAbility()
+    {
+        if (isActive)
         {
-                if (isActive)
-                {
-                    Act();
-                }
+            Act();
         }
     }
     //Function : Act

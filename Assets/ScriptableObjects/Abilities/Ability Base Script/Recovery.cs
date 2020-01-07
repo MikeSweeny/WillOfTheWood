@@ -16,13 +16,13 @@ public class Recovery : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
-        isActive = false;
-        if (isCollected)
+        AbilityManager.UnlockRecovery += UnlockAbility;
+    }
+    public override void UpdateAbility()
+    {
+        if (isActive)
         {
-            if (isActive)
-            {
-                Act();
-            }       
+            Act();
         }
     }
     //Function : Act

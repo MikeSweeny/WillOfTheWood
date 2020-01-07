@@ -16,13 +16,13 @@ public class Poisoner : Abilities
     //RETURNS : none
     public override void OnLoad()
     {
-        isActive = false;
-        if (isCollected)
+        AbilityManager.UnlockPoisoner += UnlockAbility;
+    }
+    public override void UpdateAbility()
+    {
+        if (isActive)
         {
-            if (isActive)
-            {
-                Act();
-            }
+            Act();
         }
     }
     //Function : Act
