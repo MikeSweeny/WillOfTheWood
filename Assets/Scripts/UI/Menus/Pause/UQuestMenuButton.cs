@@ -10,6 +10,11 @@ using UnityEngine;
 //PURPOSE : Opens the quest menu
 public class UQuestMenuButton : UIButton
 {
+    //Function : Clicked
+    //DESCRIPTION : Calls the function in the UI event manager that closes the pause menu
+    // and opens the quest menu
+    //PARAMETERS :  none
+    //RETURNS : none
     public override void Clicked()
     {
         UIEventManager.TriggerClosePause();
