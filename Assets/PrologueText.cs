@@ -78,6 +78,10 @@ public class PrologueText : MonoBehaviour
         {
             currentChar = PROLOGUE_TEXT.Length;
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.UnloadSceneAsync("IntroCutScene");
+        }
     }
 
     // FixedUpdate is called once per ms

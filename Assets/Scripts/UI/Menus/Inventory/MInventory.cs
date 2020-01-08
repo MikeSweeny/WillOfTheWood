@@ -11,11 +11,10 @@ using UnityEngine.UI;
 //PURPOSE : serves as the inventory menu
 public class MInventory : Menu
 {
-    public Item testItem;
-    protected List<Image> slotImages;
-    private Image defaultSlotImage;
+    private Transform slotHolder;
+    private Sprite defaultSlotSprite;
     private int invContentsCount;
-    private int maxContentsCount;
+    private const int MAXCONTENTSCOUNT = 16;
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
@@ -23,17 +22,10 @@ public class MInventory : Menu
     //RETURNS : none
     void Awake()
     {
-        gameObject.SetActive(false);
-        slotImages = new List<Image>();
         UIEventManager.OpenInventory += OpenMenu;
         UIEventManager.CloseInventory += CloseMenu;
-        Transform slotHolder = transform.Find("InventorySlotHolder");
-        maxContentsCount = slotHolder.childCount;
-        for (int i = 0; i < maxContentsCount; ++i)
-        {
-            slotImages.Add(transform.GetChild(i).GetComponent<Image>());
-        }
-        defaultSlotImage.Equals(slotImages[0]);
+        slotHolder = transform.Find("InventorySlotHolder");
+        defaultSlotSprite = GameObject.Instantiate(slotHolder.GetChild(0)).GetComponent<InventorySlot>().GetImageSprite();
     }
 
     //Function : OnDestroy
@@ -52,7 +44,7 @@ public class MInventory : Menu
     //RETURNS : int maxContentsCount : the maximum amount of items in the inventory
     public int GetMaxCount()
     {
-        return maxContentsCount;
+        return MAXCONTENTSCOUNT;
     }
 
     //Function : GetCurrentCount
@@ -88,15 +80,15 @@ public class MInventory : Menu
     //RETURNS : none
     public void UpdateSlots(List<Item> inventory)
     {
-        for (int i = 0; i < maxContentsCount; ++i)
+        for (int i = 0; i < MAXCONTENTSCOUNT; ++i)
         {
-            if (i < invContentsCount)
+            if (i < inventory.Count)
             {
-                slotImages[i] = inventory[i].GetSprite();
+                slotHolder.GetChild(i).GetComponent<InventorySlot>().SetImageSprite(inventory[i].GetSprite().sprite);
             }
             else
             {
-                slotImages[i] = defaultSlotImage;
+                slotHolder.GetChild(i).GetComponent<InventorySlot>().SetImageSprite(defaultSlotSprite);
             }
         }
     }
