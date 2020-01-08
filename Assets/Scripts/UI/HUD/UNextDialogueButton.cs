@@ -11,8 +11,8 @@ using UnityEngine;
 public class UNextDialogueButton : UIButton
 {
 
-    private ConversationNpc target;
-    private QuestGiverNpc Qtarget;
+    private BaseInteractableNpc target;
+
 
     //Function : Clicked
     //DESCRIPTION : sets the current slot string to the name of the parent containing this button
@@ -20,16 +20,10 @@ public class UNextDialogueButton : UIButton
     //RETURNS : none
     public override void Clicked()
     {
-        //needs a method that will allow for the button to be set in the NPC or something, 
-        //cause if you visit a conversation NPC, then a quest NPC, it wants to use the ConversationNPC button info
-
         if (target)
             target.NextDialogue();
-        else if (Qtarget)
-            Qtarget.NextDialogue();
-
         target = null;
-        Qtarget = null;
+
 
     }
 
@@ -37,13 +31,9 @@ public class UNextDialogueButton : UIButton
     //DESCRIPTION :
     //PARAMETERS :
     //RETURNS : 
-    public void SetTarget(ConversationNpc nTarget)
+    public void SetTarget(BaseInteractableNpc nTarget)
     {
         target = nTarget;
     }
 
-    public void QSetTarget(QuestGiverNpc nTarget)
-    {
-        Qtarget = nTarget;
-    }
 }

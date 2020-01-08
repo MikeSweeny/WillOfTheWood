@@ -37,17 +37,11 @@ public class HDialogueInterface : HUDElement
         GameObject playerTarget = player.FindPlayerTarget();
         if (playerTarget != null && playerTarget.CompareTag("NPC"))
         { 
-            if (playerTarget.GetComponent<ConversationNpc>())
+            if (playerTarget.GetComponent<BaseInteractableNpc>())
             {
-                ConversationNpc target = playerTarget.GetComponent<ConversationNpc>();
+                BaseInteractableNpc target = playerTarget.GetComponent<BaseInteractableNpc>();
                 dialogueText.text = target.GetCurrentText();
                 button.SetTarget(target);
-            }
-            else if(playerTarget.GetComponent<QuestGiverNpc>())
-            {
-                QuestGiverNpc Qtarget = playerTarget.GetComponent<QuestGiverNpc>();
-                dialogueText.text = Qtarget.GetCurrentText();
-                button.QSetTarget(Qtarget);
             }
         }
     }

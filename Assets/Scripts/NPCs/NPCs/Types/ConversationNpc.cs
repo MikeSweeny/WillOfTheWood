@@ -44,7 +44,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         }
     }
 
-    public void NextDialogue()
+    public override void NextDialogue()
     {
         if(currentText == dialogue.welcomeText && hasConversation)
         {
@@ -77,7 +77,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         }
     }
 
-    public string GetCurrentText()
+    public override string GetCurrentText()
     {
         return currentText;
     }

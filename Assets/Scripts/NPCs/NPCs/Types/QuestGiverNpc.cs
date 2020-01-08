@@ -151,12 +151,12 @@ public class QuestGiverNpc : BaseInteractableNpc
         Debug.Log("No Quest Got");
     }
 
-    public string GetCurrentText()
+    public override string GetCurrentText()
     {
         return currentText;
     }
 
-    public void NextDialogue()
+    public override void NextDialogue()
     {
         UIEventManager.TriggerCloseDialogue();
     }

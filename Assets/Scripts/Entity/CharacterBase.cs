@@ -99,4 +99,6 @@ public class CharacterBase : MonoBehaviour
     {
         defence = speed;
     }
+
+
 }
