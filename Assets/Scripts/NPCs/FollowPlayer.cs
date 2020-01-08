@@ -16,6 +16,7 @@ public class FollowPlayer : BaseNpc
     public bool BeginFollowing;
 
     public string TargetTag;
+    public string CompletionArea;
 
     private GameObject Target;
     private Transform ToTarget;
@@ -24,8 +25,7 @@ public class FollowPlayer : BaseNpc
     {
         StopFollowing = false;
         BeginFollowing = false;
-        Target = GameObject.FindGameObjectWithTag(TargetTag);
-        ToTarget = Target.transform;
+        
 
         pathingPattern = GetComponent<NpcPathing>();
         SetPathingComp();
@@ -36,7 +36,30 @@ public class FollowPlayer : BaseNpc
 
         if (BeginFollowing)
         {
+            GetTargetPosition();
             pathingPattern.FollowPlayer(Target);
+        }
+        else
+        {
+            GetTargetPosition();
+            pathingPattern.FollowPlayer(Target);
+        }
+    }
+
+    private void GetTargetPosition()
+    {
+        Target = GameObject.FindGameObjectWithTag(TargetTag);
+        //ToTarget = Target.transform;
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "SarekEscortHandin")
+        {
+            BeginFollowing = false;
+            Target = GameObject.FindGameObjectWithTag(TargetTag);
+            //ToTarget = Target.transform;
         }
     }
 }
