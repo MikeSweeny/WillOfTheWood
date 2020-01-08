@@ -5630,7 +5630,7 @@ MonoBehaviour:
   vigilant: 0
   BeginFollowing: 0
   TargetTag: Player
-  CompletionArea: 
+  CompletionArea: SarekEscortHandin
 --- !u!195 &2011817188
 NavMeshAgent:
   m_ObjectHideFlags: 0
