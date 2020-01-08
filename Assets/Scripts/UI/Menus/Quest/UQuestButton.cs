@@ -55,9 +55,9 @@ public class UQuestButton : UIButton
     public void ToggleTrackingQuest()
     {
         if (tracked)
-            questMenuRef.TrackQuest(quest);
-        else
             questMenuRef.UntrackQuest();
+        else
+            questMenuRef.TrackQuest(quest);
 
         tracked = !tracked;
     }
