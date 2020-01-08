@@ -1013,6 +1013,37 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2.3206787, z: 3.2789612}
   m_Center: {x: 0, y: 0.66033936, z: -0.15512085}
+--- !u!1 &507799563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507799564}
+  m_Layer: 0
+  m_Name: EscortHandin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &507799564
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507799563}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1076.9, y: -747.08, z: 178.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1607204818}
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &514376439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4478,11 +4509,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607204816}
   m_LocalRotation: {x: -0, y: 0.07361875, z: -0, w: 0.9972865}
-  m_LocalPosition: {x: 1076.9, y: -747.08, z: 178.7}
-  m_LocalScale: {x: 17.845346, y: 1, z: 15.374276}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 17.845346, y: 1, z: 15.374274}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_Father: {fileID: 507799564}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 8.444, z: 0}
 --- !u!4 &1646059598 stripped
 Transform:
@@ -5547,6 +5578,28 @@ PrefabInstance:
       propertyPath: source
       value: 
       objectReference: {fileID: 2011817189}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: hasBeenTalkedTo
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: isPartOfQuest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: hasConversation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: dialogueList.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 457b95f1015d697469c9d618811b4cb9,
+        type: 2}
+    - target: {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
+      propertyPath: dialogueList.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 457b95f1015d697469c9d618811b4cb9,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
 --- !u!1 &2011817186 stripped
@@ -5577,6 +5630,7 @@ MonoBehaviour:
   vigilant: 0
   BeginFollowing: 0
   TargetTag: Player
+  CompletionArea: 
 --- !u!195 &2011817188
 NavMeshAgent:
   m_ObjectHideFlags: 0

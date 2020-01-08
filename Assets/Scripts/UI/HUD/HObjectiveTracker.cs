@@ -5,11 +5,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : HObjectiveTracker
 //PURPOSE : displays current objective for tracked quest
 public class HObjectiveTracker : HUDElement
 {
+    private QuestManager qmRef;
+    private Text counter;
+    private Text description;
+
+    private void Awake()
+    {
+        qmRef = GameObject.Find("Managers").GetComponent<QuestManager>();
+        counter = transform.Find("Counter").GetComponent<Text>();
+        description = counter.transform.GetChild(0).GetComponent<Text>();
+    }
+
 
     //Function : UpdateElement
     //DESCRIPTION : Updates the relevant information to the element
@@ -17,6 +29,10 @@ public class HObjectiveTracker : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        throw new System.NotImplementedException();
+        if (qmRef.TrackingQuest != null)
+        {
+            description.text = qmRef.TrackingQuest.TrackText();
+            counter.text = qmRef.TrackingQuest.CurrentAmount + "/" + qmRef.TrackingQuest.RequiredAmount;
+        }
     }
 }

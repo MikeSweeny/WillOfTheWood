@@ -58,10 +58,15 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         {
             StopTalking();
         }
+        else if (EscortCharacter && hasBeenTalkedTo)
+        {
+            ActivateEscort();
+        }
         else
         {
             isTalking = false;
             UIEventManager.TriggerCloseDialogue();
+
         }
     }
 
@@ -106,7 +111,11 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         currentText = dialogue.goodbyeText;
         dialogue.Goodbye();
+        
+    }
 
+    public void ActivateEscort()
+    {
         if (EscortCharacter)
         {
             followPlayer = GetComponent<FollowPlayer>();
@@ -114,10 +123,11 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
             if (followPlayer)
             {
                 followPlayer.BeginFollowing = true;
+                isTalking = false;
+                UIEventManager.TriggerCloseDialogue();
             }
         }
     }
-
     public void Cleared()
     {
         hasBeenTalkedTo = true;
