@@ -4471,7 +4471,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48196d54e3ce97d40b28e660474f1d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetTag: 
+  currentHealth: 0
+  defence: 0
+  painThreshold: 0
+  weaponPrefab: {fileID: 0}
+  CharacterName: 
+  pathingPattern: {fileID: 0}
+  npcStats: {fileID: 0}
+  vigilant: 0
+  TargetTag: Player
 --- !u!195 &1712551972
 NavMeshAgent:
   m_ObjectHideFlags: 0
