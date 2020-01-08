@@ -11,10 +11,11 @@ using UnityEngine.UI;
 //PURPOSE : Slowly prints text to the screen for the prologue "loadscreen"
 public class PrologueText : MonoBehaviour
 {
-    private Text prologueTextComponent, skipTextPrompt, prologueTitle;
+    private Text prologueTextComponent, skipPromptTextComponent, prologueTitleTextComponent;
+    private Color prologueTextColor, skipPromptTextColor, prologueTitleTextColor;
     private int textLength, currentChar;
     private bool textDone;
-    private float textStartDelay, textTimerCurrent, textTimerPrevious, textTimerRandomDelta, textMinDelta, textMaxDelta;
+    private float textStartDelay, textTimerCurrent, textTimerPrevious, textTimerRandomDelta, textMinDelta, textMaxDelta, textEndTime, timeBeforeTextFade;
     private const string PROLOGUE_TEXT = 
         "The Forest is old. Older now than seems even possible. " +
         "Older than the memories of men have will to recall.          " +
@@ -23,7 +24,7 @@ public class PrologueText : MonoBehaviour
         "weary with age. The tall black sentinel " +
         "trees have stood vigil and witnessed the coming of " +
         "kings and the passing of ages untold, and it has " +
-        "permitted neither the footsteps of men or the swing " +
+        "permitted neither the footsteps of men nor the swing " +
         "of their foul axes. The ways of the old world are " +
         "strong here, and it is those lordly ones who yet " +
         "dwell upon their withered thrones who kept it. " +
@@ -39,10 +40,10 @@ public class PrologueText : MonoBehaviour
         "these lands, to Thorngard, the last friendly home to " +
         "men south of this aged realm. Named for its defiance " +
         "of the woodland kings and their dark wills, Thorngard " +
-        "has earned the ire of the elves who now mass to storm " +
+        "has earned the ire of the elves who now amass to storm " +
         "the town. Though Thorngard’s people know little of the " +
         "elder folk they remain resolute, intent on keeping their " +
-        "homes and riding their land of these elf folk. Lands in " +
+        "homes and ridding their land of these elf-folk. Lands in " +
         "such times hold the promise of gold, ancient treasure and " +
         "knowledge of powers beyond the ken of mortal understanding.";
 
@@ -50,22 +51,58 @@ public class PrologueText : MonoBehaviour
     void Start()
     {
         prologueTextComponent = GetComponent<Text>();
+        prologueTitleTextComponent = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
+        skipPromptTextComponent = gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
+        prologueTextColor = prologueTextComponent.color;
+        prologueTitleTextColor = prologueTitleTextComponent.color;
+        skipPromptTextColor = skipPromptTextComponent.color;
+
         textStartDelay = 1;
         textTimerCurrent = 0;
         textTimerPrevious = textStartDelay;
         currentChar = 0;
         textMinDelta = 0.02f;
         textMaxDelta = 0.1f;
+        timeBeforeTextFade = 3f;
         textLength = PROLOGUE_TEXT.Length;
         RandomizeDelta(textMinDelta, textMaxDelta);
+    }
+
+    // Update is called every frame, independant of game speed
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            currentChar = PROLOGUE_TEXT.Length;
+        }
     }
 
     // FixedUpdate is called once per ms
     void FixedUpdate()
     {
-        if (textDone)
-            return;
         IncrementTimer();
+        // This section handles if the text is finished writing out, fades out the prologue text and skip text, then fades in the title
+        if (textDone)
+        {
+            if (textTimerCurrent >= (textTimerPrevious + timeBeforeTextFade))
+            {
+                prologueTextColor.a -= 0.02f;
+                prologueTextComponent.color = prologueTextColor;
+                skipPromptTextColor.a -= 0.02f;
+                skipPromptTextComponent.color = skipPromptTextColor;
+            }
+            if (textTimerCurrent >= (textTimerPrevious + (timeBeforeTextFade * 1.5)))
+            {
+                prologueTitleTextColor.a += 0.002f;
+                prologueTitleTextComponent.color = prologueTitleTextColor;
+            }
+            if (textTimerCurrent >= (textTimerPrevious + (timeBeforeTextFade * 3)))
+            {
+                /////////////////////// CODE FOR MOVING TO MAIN MENU GOES HERE ///////////////////////
+            }
+            return;
+        }
+        // This section deals with randomized typing out of hte prologue, and handles when the text is finished typing
         if (textTimerCurrent > textStartDelay)
         {
             if (textTimerCurrent >= textTimerPrevious + textTimerRandomDelta)
@@ -75,8 +112,14 @@ public class PrologueText : MonoBehaviour
                 currentChar++;
                 textTimerPrevious = textTimerCurrent;
                 RandomizeDelta(textMinDelta, textMaxDelta);
+                if (currentChar >= 50)
+                {
+                    skipPromptTextColor.a += 0.02f;
+                    skipPromptTextComponent.color = skipPromptTextColor;
+                }
                 if (currentChar >= PROLOGUE_TEXT.Length)
                 {
+                    textEndTime = textTimerCurrent;
                     textDone = true;
                 }
             }
