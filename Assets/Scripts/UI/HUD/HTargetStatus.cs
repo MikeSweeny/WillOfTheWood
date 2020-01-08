@@ -14,6 +14,7 @@ public class HTargetStatus : HUDElement
 
     private CharacterBase target;
     private Slider healthBar;
+    public Text nameText { get; set; }
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
@@ -22,6 +23,7 @@ public class HTargetStatus : HUDElement
     private void Awake()
     {
         healthBar = transform.Find("HealthBar").GetComponent<Slider>();
+        nameText = transform.Find("TargetName").GetComponent<Text>();
     }
 
     //Function : UpdateElement
@@ -30,12 +32,21 @@ public class HTargetStatus : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        if (player.GetPlayerTarget() != null && !player.CompareTag("Player"))
+        if (player.FindPlayerTarget() != null && !player.FindPlayerTarget().CompareTag("Player"))
         {
-            target = player.GetPlayerTarget().GetComponent<CharacterBase>();
-            healthBar.value = target.GetHealthPercent();
+            target = player.FindPlayerTarget().GetComponent<CharacterBase>();
+            if(target)
+            {
+                healthBar.value = target.GetHealthPercent();
+                nameText.text = target.CharacterName;
+            }
+
         }
         else
+        {
             target = null;
+            nameText.text = "";
+        }
+            
     }
 }

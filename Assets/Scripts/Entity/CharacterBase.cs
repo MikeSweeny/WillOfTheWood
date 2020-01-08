@@ -34,6 +34,7 @@ public class CharacterBase : MonoBehaviour
     private IWeapon weapon;
     public GameObject weaponPrefab;
     protected Inventory inventory;
+    public string CharacterName;
 
     private void Start()
     {

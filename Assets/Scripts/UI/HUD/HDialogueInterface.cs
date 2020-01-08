@@ -34,7 +34,7 @@ public class HDialogueInterface : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        GameObject playerTarget = player.GetPlayerTarget();
+        GameObject playerTarget = player.FindPlayerTarget();
         if (playerTarget != null && playerTarget.CompareTag("NPC"))
         { 
             if (playerTarget.GetComponent<ConversationNpc>())

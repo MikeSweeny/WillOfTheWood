@@ -37,7 +37,7 @@ public class Player : CharacterBase
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
-        inventory = new IPlayerInventory();
+        //inventory = new IPlayerInventory(); This causes the update function to no longer run, causing other errors in game play. 
     }
 
     private void Update()
