@@ -1,6 +1,6 @@
 ﻿//FILE: CharacterBase.cs
 //PROJECT: Will Of The Woods
-//PROGRAMMER: John Gotts, Jeff Oldfield
+//PROGRAMMER: John Gotts
 //FIRST VERSION: 19/12/2019
 using UnityEngine;
 
