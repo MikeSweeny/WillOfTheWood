@@ -971,7 +971,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Anna
   pathingPattern: {fileID: 0}
   npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Sendora
   pathingPattern: {fileID: 0}
   npcStats: {fileID: 11400000, guid: 43c6640eaf4ce5d4f949bed09b74ea84, type: 2}
   vigilant: 0
@@ -3115,7 +3115,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Sheriff
   pathingPattern: {fileID: 0}
   npcStats: {fileID: 11400000, guid: bc4e168ef62edd24692e912ad0d4b3e8, type: 2}
   vigilant: 0
@@ -4312,7 +4312,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Talking NPC
   pathingPattern: {fileID: 0}
   npcStats: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382, type: 2}
   vigilant: 0
@@ -4428,7 +4428,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Geldas
   pathingPattern: {fileID: 0}
   npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
@@ -4568,7 +4568,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Azfoldo
   pathingPattern: {fileID: 0}
   npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
@@ -4718,7 +4718,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Milea
   pathingPattern: {fileID: 0}
   npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0

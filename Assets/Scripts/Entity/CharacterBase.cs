@@ -1,6 +1,6 @@
 ﻿//FILE: CharacterBase.cs
 //PROJECT: Will Of The Woods
-//PROGRAMMER: John Gotts
+//PROGRAMMER: John Gotts, Jeff Oldfield
 //FIRST VERSION: 19/12/2019
 using UnityEngine;
 
@@ -80,7 +80,7 @@ public class CharacterBase : MonoBehaviour
     //RETURNS: float
     public float GetHealthPercent()
     {
-        return ((float)currentHealth / (float)maxHealth) * 100;
+        return (float)currentHealth / (float)maxHealth;
     }
     public void RecoverHealth()
     {

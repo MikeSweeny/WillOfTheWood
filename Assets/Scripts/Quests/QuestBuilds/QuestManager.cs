@@ -78,18 +78,18 @@ public class QuestManager: MonoBehaviour
     public void AddActiveQuests(Quests quest)
     {
 
-        for (int j = 0; j < ActiveQuest.Count; j++)
-        {
-            if (ActiveQuest[j] == quest)
-            {
-                checklist = true;
-                break;
-            }
-            else
-                checklist = false;
-        }
+        //for (int j = 0; j < ActiveQuest.Count; j++)
+        //{
+        //    if (ActiveQuest[j] == quest)
+        //    {
+        //        checklist = true;
+        //        break;
+        //    }
+        //    else
+        //        checklist = false;
+        //}
 
-        if (checklist == false)
+        //if (checklist == false)
             ActiveQuest.Add(quest);
     }
 

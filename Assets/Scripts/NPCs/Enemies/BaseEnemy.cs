@@ -190,10 +190,6 @@ public class BaseEnemy : BaseNpc, IQuestID
     {
         QuestEvents.ItemCleared(this);
     }
-    //FUNCTION :  CalcToughness()
-    //DESCRIPTION : Calcualting the Toughness of the Entity
-    //PARAMETERS : void
-    //RETURNS : void
 
     public void OnDeath()
     {
