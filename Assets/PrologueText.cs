@@ -6,13 +6,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //NAME : PrologueText
 //PURPOSE : Slowly prints text to the screen for the prologue "loadscreen"
 public class PrologueText : MonoBehaviour
 {
-    private Text prologueTextComponent, skipPromptTextComponent, prologueTitleTextComponent;
-    private Color prologueTextColor, skipPromptTextColor, prologueTitleTextColor;
+    private Text prologueTextComponent, skipPromptTextComponent, prologueTitleTextComponent, continueTextComponent;
+    private Color prologueTextColor, skipPromptTextColor, prologueTitleTextColor, continueTextColor;
     private int textLength, currentChar;
     private bool textDone;
     private float textStartDelay, textTimerCurrent, textTimerPrevious, textTimerRandomDelta, textMinDelta, textMaxDelta, textEndTime, timeBeforeTextFade;
@@ -53,9 +54,11 @@ public class PrologueText : MonoBehaviour
         prologueTextComponent = GetComponent<Text>();
         prologueTitleTextComponent = gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
         skipPromptTextComponent = gameObject.transform.GetChild(1).gameObject.GetComponent<Text>();
+        continueTextComponent = gameObject.transform.GetChild(2).gameObject.GetComponent<Text>();
         prologueTextColor = prologueTextComponent.color;
         prologueTitleTextColor = prologueTitleTextComponent.color;
         skipPromptTextColor = skipPromptTextComponent.color;
+        continueTextColor = continueTextComponent.color;
 
         textStartDelay = 1;
         textTimerCurrent = 0;
@@ -86,19 +89,21 @@ public class PrologueText : MonoBehaviour
         {
             if (textTimerCurrent >= (textTimerPrevious + timeBeforeTextFade))
             {
-                prologueTextColor.a -= 0.02f;
+                prologueTextColor.a -= 0.2f;
                 prologueTextComponent.color = prologueTextColor;
-                skipPromptTextColor.a -= 0.02f;
+                skipPromptTextColor.a -= 0.2f;
                 skipPromptTextComponent.color = skipPromptTextColor;
             }
             if (textTimerCurrent >= (textTimerPrevious + (timeBeforeTextFade * 1.5)))
             {
                 prologueTitleTextColor.a += 0.002f;
                 prologueTitleTextComponent.color = prologueTitleTextColor;
-            }
-            if (textTimerCurrent >= (textTimerPrevious + (timeBeforeTextFade * 3)))
-            {
-                /////////////////////// CODE FOR MOVING TO MAIN MENU GOES HERE ///////////////////////
+                continueTextColor.a += 0.002f;
+                continueTextComponent.color = continueTextColor;
+                if (Input.anyKey)
+                {
+                    SceneManager.UnloadSceneAsync("IntroCutScene");
+                }
             }
             return;
         }

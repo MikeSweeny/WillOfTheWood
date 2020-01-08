@@ -23,7 +23,8 @@ public class InstanceManager : MonoBehaviour
         InvokeRepeating("ProgressTime", incrementClockTime, incrementClockTime);
 
         var parameters = new LoadSceneParameters(LoadSceneMode.Additive);
-
+        scene = SceneManager.LoadScene("IntroCutScene", parameters);
+        Debug.Log("Load scene: " + scene.name);
         scene = SceneManager.LoadScene("WorldTerrain", parameters);
         Debug.Log("Load scene: " + scene.name);
         scene = SceneManager.LoadScene("Town", parameters);
