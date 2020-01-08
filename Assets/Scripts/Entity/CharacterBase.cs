@@ -80,7 +80,7 @@ public class CharacterBase : MonoBehaviour
     //RETURNS: float
     public float GetHealthPercent()
     {
-        return ((float)currentHealth / (float)maxHealth) * 100;
+        return (float)currentHealth / (float)maxHealth;
     }
     public void RecoverHealth()
     {
