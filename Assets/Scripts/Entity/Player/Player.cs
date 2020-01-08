@@ -36,9 +36,9 @@ public class Player : CharacterBase
         //getStats();
         setStats();
 
-        Debug.Log("Stats" + " accuracy : " + accuracy + " discrete : " + discrete + " persuasive : " + persuasive + " quick : " + quick + " strong : " + strong);
+        Debug.Log("Stats" + " accuracy : " + accuracy + " discrete : " + discrete + " persuasive : " + persuasive + " quick : " + speed + " strong : " + strong);
         Debug.Log("Stats" + " toughness : " + toughness + " maxHealth : " + maxHealth + " currentHealth : " + currentHealth + " currentEXP : " + currentEXP);
-        Debug.Log("Health Perc : " + healthPerc);
+        Debug.Log("Defence : " + defence);
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
@@ -80,15 +80,16 @@ public class Player : CharacterBase
     //RETURNS : type and use 
     public void setStats()
     {
-        CalcToughness();
-        CalcPainThreshold();
-        SetMaxHealth();
         currentHealth = maxHealth;
         accuracy = playerBrain.accuracy;
         discrete = playerBrain.discrete;
         persuasive = playerBrain.pursuasive;
-        quick = playerBrain.quick;
+        speed = playerBrain.speed;
         strong = playerBrain.strong;
+        CalcToughness();
+        CalcPainThreshold();
+        SetMaxHealth();
+        SetDefence();
     }
 
 

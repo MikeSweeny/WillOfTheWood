@@ -48,7 +48,7 @@ public class BaseNpc : CharacterBase
     public void setStats()
     {
         accuracy = npcBrain.accuracy;
-        quick = npcBrain.quick;
+        speed = npcBrain.quick;
         strong = npcBrain.strong;
         toughness = npcBrain.toughness;
         vigilant = npcBrain.vigilant;

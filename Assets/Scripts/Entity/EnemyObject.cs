@@ -34,7 +34,7 @@ public class EnemyObject : EntityObject
     public void Initialize()
     {
         accuracy = eStats.Accuracy;
-        quick = eStats.Quick;
+        quick = eStats.Speed;
         strong = eStats.Strong;
         vigilant = eStats.Vigilant;
         CalcToughness();
