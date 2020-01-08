@@ -57,6 +57,7 @@ public class Player : CharacterBase
         if(firstUpdate)
         {
             inventory = new IPlayerInventory();
+            firstUpdate = false;
         }
 
         foreach (Abilities ability in abilities)
