@@ -99,6 +99,9 @@ public class CharacterBase : MonoBehaviour
     {
         defence = speed;
     }
-
+    public void SetArmour(IArmour armour)
+    {
+        this.armour = armour;
+    }
 
 }
