@@ -43,9 +43,9 @@ public class PrologueText : MonoBehaviour
         "has earned the ire of the elves who now amass to storm " +
         "the town. Though Thorngard’s people know little of the " +
         "elder folk they remain resolute, intent on keeping their " +
-        "homes and ridding their land of these elf-folk. Lands in " +
+        "homes and ridding their land of these elf-folk. For " +
         "such times hold the promise of gold, ancient treasure and " +
-        "knowledge of powers beyond the ken of mortal understanding.";
+        "knowledge of powers beyond the ken of mortal understanding...";
 
     // Start is called before the first frame update
     void Start()
