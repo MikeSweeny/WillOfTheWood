@@ -15,6 +15,8 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     public List<BaseNpcDialogue> dialogueList = new List<BaseNpcDialogue>();
     public BaseNpcDialogue dialogue { get; set; }
     public string ID { get; set; }
+    private FollowPlayer followPlayer;
+    public bool EscortCharacter = false;
 
     public bool hasBeenTalkedTo = false;
     public string IDName;
@@ -56,10 +58,15 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         {
             StopTalking();
         }
+        else if (EscortCharacter && hasBeenTalkedTo)
+        {
+            ActivateEscort();
+        }
         else
         {
             isTalking = false;
             UIEventManager.TriggerCloseDialogue();
+
         }
     }
 
@@ -104,8 +111,23 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         currentText = dialogue.goodbyeText;
         dialogue.Goodbye();
+        
     }
 
+    public void ActivateEscort()
+    {
+        if (EscortCharacter)
+        {
+            followPlayer = GetComponent<FollowPlayer>();
+
+            if (followPlayer)
+            {
+                followPlayer.BeginFollowing = true;
+                isTalking = false;
+                UIEventManager.TriggerCloseDialogue();
+            }
+        }
+    }
     public void Cleared()
     {
         hasBeenTalkedTo = true;

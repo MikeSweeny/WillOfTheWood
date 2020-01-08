@@ -11,12 +11,12 @@ using UnityEngine.AI;
 //PURPOSE: this script moves NPCs so that they follow the player 
 public class FollowPlayer : BaseNpc
 {
-    private NavMeshAgent agent;
 
     private bool StopFollowing;
-    private bool BeginFollowing;
+    public bool BeginFollowing;
 
     public string TargetTag;
+    public string CompletionArea;
 
     private GameObject Target;
     private Transform ToTarget;
@@ -25,22 +25,41 @@ public class FollowPlayer : BaseNpc
     {
         StopFollowing = false;
         BeginFollowing = false;
-        Target = GameObject.FindGameObjectWithTag(TargetTag);
-        ToTarget = Target.transform;
-        agent = GetComponent<NavMeshAgent>();
+        
 
-        //pathingPattern = GetComponent<NpcPathing>();
-        //SetPathingComp();
+        pathingPattern = GetComponent<NpcPathing>();
+        SetPathingComp();
     }
 
     private void FixedUpdate()
     {            
-        BeginFollowing = true;
 
         if (BeginFollowing)
         {
-            agent.SetDestination(ToTarget.position);
-            //pathingPattern.FollowPlayer(Target);
+            GetTargetPosition();
+            pathingPattern.FollowPlayer(Target);
+        }
+        else
+        {
+            GetTargetPosition();
+            pathingPattern.FollowPlayer(Target);
+        }
+    }
+
+    private void GetTargetPosition()
+    {
+        Target = GameObject.FindGameObjectWithTag(TargetTag);
+        //ToTarget = Target.transform;
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "SarekEscortHandin")
+        {
+            BeginFollowing = false;
+            Target = GameObject.FindGameObjectWithTag(TargetTag);
+            //ToTarget = Target.transform;
         }
     }
 }

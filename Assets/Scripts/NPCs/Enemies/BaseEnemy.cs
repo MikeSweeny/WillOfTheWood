@@ -21,6 +21,10 @@ public class BaseEnemy : BaseNpc, IQuestID
     private Vector3 attackingDestination;
     private float nextAttack;
     private float attackSpeed;
+    private bool isDead = false;
+
+    private float respawnDelay = 30f;
+    private float respawnTimer;
 
     protected CurrentState state = CurrentState.waiting;
 
@@ -69,9 +73,10 @@ public class BaseEnemy : BaseNpc, IQuestID
                     break;
             }
         }
-        else
+        else if(state == CurrentState.dead)
         {
-            Destroy(this.gameObject);
+            isDead = true;
+            DespawnEnemyCorpse();
         }
     }
 
@@ -182,7 +187,38 @@ public class BaseEnemy : BaseNpc, IQuestID
         {
             currentHealth = 0;
             state = CurrentState.dead;
+        }
+    }
+
+    //Function: DespawnEnemyCorpse
+    //DESCRIPTION: function used to despawn enemies
+    //PARAMETERS: None
+    //RETURNS: None
+    private void DespawnEnemyCorpse()
+    {
+        this.gameObject.SetActive(false);
+        if (isDead == true)
+        {
             Cleared();
+            isDead = false;
+            Invoke("RespawnEnemy", 2);
+        }
+
+    }
+
+    //Function: RespawnEnemy
+    //DESCRIPTION: this function is used to respawn the enemy
+    //PARAMETERS: None
+    //RETURNS: None
+    private void RespawnEnemy()
+    {
+        respawnTimer += Time.time;
+        if (respawnTimer >= respawnDelay)
+        {
+            respawnTimer = 0;
+            currentHealth = maxHealth;
+            state = CurrentState.waiting;
+            gameObject.SetActive(true);
         }
     }
 

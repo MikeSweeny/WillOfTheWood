@@ -15,7 +15,13 @@ public class UQuestButton : UIButton
     private Quests quest;
     private Text title; 
     private MQuest questMenuRef;
+    private bool tracked;
 
+    private void Awake()
+    {
+        tracked = false;
+        transform.Find("Toggle").GetComponent<UQuestToggle>().SetQBRef(this);
+    }
 
     //Function : Clicked
     //DESCRIPTION : calls the function in the quest menu that sets the selected quest
@@ -44,5 +50,15 @@ public class UQuestButton : UIButton
     public void SetQuestMenuRef(MQuest mQuest)
     {
         questMenuRef = mQuest;
+    }
+
+    public void ToggleTrackingQuest()
+    {
+        if (tracked)
+            questMenuRef.UntrackQuest();
+        else
+            questMenuRef.TrackQuest(quest);
+
+        tracked = !tracked;
     }
 }
