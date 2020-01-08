@@ -62,7 +62,7 @@ public class Player : CharacterBase
             canShootTargetRay = true;
         }
         healthPerc = GetHealthPercent();
-        Debug.Log("Health Perc : " + healthPerc);
+        //Debug.Log("Health Perc : " + healthPerc);
 
         if (currentHealth < 0)
         {
