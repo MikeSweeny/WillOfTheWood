@@ -13,7 +13,7 @@ public class BaseNpc : CharacterBase
 
 
     public NpcPathing pathingPattern;
-    public EnemyObject npcBrain;
+    public StatsObject npcStats;
     public int vigilant;
 
     //Function: SetPathingComp
@@ -47,20 +47,10 @@ public class BaseNpc : CharacterBase
     //RETURNS: None
     public void setStats()
     {
-        accuracy = npcBrain.accuracy;
-        speed = npcBrain.quick;
-        strong = npcBrain.strong;
-        toughness = npcBrain.toughness;
-        vigilant = npcBrain.vigilant;
-    }
-
-    //FUNCTION : getStats()
-    //DESCRIPTION : Getting the Stats from the objectBrain
-    //PARAMETERS : void
-    //RETURNS : void
-    public void getStats()
-    {
-        npcBrain.Initialize();
+        accuracy = npcStats.Accuracy;
+        speed = npcStats.Speed;
+        strong = npcStats.Strong;
+        vigilant = npcStats.Vigilant;
     }
 
 }

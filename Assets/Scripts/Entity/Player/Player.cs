@@ -36,9 +36,9 @@ public class Player : CharacterBase
         //getStats();
         setStats();
 
-        Debug.Log("Stats" + " accuracy : " + accuracy + " discrete : " + discrete + " persuasive : " + persuasive + " quick : " + speed + " strong : " + strong);
-        Debug.Log("Stats" + " toughness : " + toughness + " maxHealth : " + maxHealth + " currentHealth : " + currentHealth + " currentEXP : " + currentEXP);
-        Debug.Log("Defence : " + defence);
+        //Debug.Log("Stats" + " accuracy : " + accuracy + " discrete : " + discrete + " persuasive : " + persuasive + " quick : " + speed + " strong : " + strong);
+        //Debug.Log("Stats" + " toughness : " + toughness + " maxHealth : " + maxHealth + " currentHealth : " + currentHealth + " currentEXP : " + currentEXP);
+        //Debug.Log("Defence : " + defence);
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;

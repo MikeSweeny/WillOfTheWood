@@ -639,6 +639,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &164274341 stripped
@@ -822,6 +828,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &231166820 stripped
@@ -955,12 +967,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Anna
+  CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: 9f7a8aac7980f7449926e9d8d6cc561d, type: 2}
+  npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
   QuestList:
   - {fileID: 11400000, guid: 13c285c6b9315914f83c8814ccf4ecdc, type: 2}
@@ -1319,6 +1332,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &568312143 stripped
@@ -1572,12 +1591,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Sendora
+  CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  npcStats: {fileID: 11400000, guid: 43c6640eaf4ce5d4f949bed09b74ea84, type: 2}
   vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
@@ -2404,6 +2424,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Jorran
       objectReference: {fileID: 0}
+    - target: {fileID: 5748311389085041655, guid: 529f568424ca3bb419a39273f468b7a2,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: bc4e168ef62edd24692e912ad0d4b3e8,
+        type: 2}
     - target: {fileID: 5748311389085041653, guid: 529f568424ca3bb419a39273f468b7a2,
         type: 3}
       propertyPath: enemy.Array.size
@@ -2516,6 +2542,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &1075333270 stripped
@@ -2725,12 +2757,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
   CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: 58abfcbd27e32c34088004e48f8e7a09, type: 2}
+  npcStats: {fileID: 11400000, guid: bc4e168ef62edd24692e912ad0d4b3e8, type: 2}
   vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 9e721c440d60b9e44a5b5f276dcd2e19, type: 2}
@@ -2866,6 +2899,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Grave Robber
       objectReference: {fileID: 0}
+    - target: {fileID: 5748311389085041655, guid: 529f568424ca3bb419a39273f468b7a2,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: bc4e168ef62edd24692e912ad0d4b3e8,
+        type: 2}
     - target: {fileID: 5748311389085041653, guid: 529f568424ca3bb419a39273f468b7a2,
         type: 3}
       propertyPath: enemy.Array.size
@@ -3072,12 +3111,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db331223d66b46b41bedbe928efdf168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Sheriff
+  CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  npcStats: {fileID: 11400000, guid: bc4e168ef62edd24692e912ad0d4b3e8, type: 2}
   vigilant: 0
   QuestList:
   - {fileID: 11400000, guid: 004e9a3942e57964ab4e50222907c3a8, type: 2}
@@ -3387,6 +3427,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &1290760185 stripped
@@ -3687,6 +3733,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &1397118072 stripped
@@ -4176,6 +4228,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &1603001461 stripped
@@ -4250,12 +4308,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Talking NPC
+  CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  npcStats: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382, type: 2}
   vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
@@ -4365,12 +4424,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Geldas
+  CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 457b95f1015d697469c9d618811b4cb9, type: 2}
@@ -4504,12 +4564,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Azfoldo
+  CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
@@ -4653,12 +4714,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Milea
+  CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: be91d7cd77c3ff042b346d8feb922fe1, type: 2}
+  npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
@@ -4798,12 +4860,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
   CharacterName: 
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: 58abfcbd27e32c34088004e48f8e7a09, type: 2}
+  npcStats: {fileID: 11400000, guid: 8ee60a5ef7bb2384aaaff06eb75837ef, type: 2}
   vigilant: 0
   dialogueList:
   - {fileID: 11400000, guid: 95ca0ff7fa06a5d4a8f454e51095db97, type: 2}
@@ -5257,6 +5320,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Farm Elf
       objectReference: {fileID: 0}
+    - target: {fileID: 8761054185863554503, guid: a847e6497ac08f44e90fb147f752ecfd,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a847e6497ac08f44e90fb147f752ecfd, type: 3}
 --- !u!4 &5748311389056392181 stripped
@@ -5337,6 +5406,12 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Graveyard Keeper
       objectReference: {fileID: 0}
+    - target: {fileID: 4168984471731066389, guid: cfeaec1d1c6377145a2e6b1c8b447f5e,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: bc4e168ef62edd24692e912ad0d4b3e8,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfeaec1d1c6377145a2e6b1c8b447f5e, type: 3}
 --- !u!1001 &9048834152144385714
@@ -5428,5 +5503,11 @@ PrefabInstance:
       propertyPath: CharacterName
       value: Father Sarek
       objectReference: {fileID: 0}
+    - target: {fileID: 5777180027467426892, guid: d5d96ef832d99d84c9b4e9e540487d45,
+        type: 3}
+      propertyPath: npcStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5d96ef832d99d84c9b4e9e540487d45, type: 3}

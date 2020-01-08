@@ -44,11 +44,6 @@ public class CharacterBase : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    private void FixedUpdate()
-    {
-        CalcToughness();
-        CalcPainThreshold();
-    }
     //FUNCTION :  CalcToughness()
     //DESCRIPTION : Calcualting the Toughness of the Entity
     //PARAMETERS : void

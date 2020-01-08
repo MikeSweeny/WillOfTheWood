@@ -26,8 +26,10 @@ public class BaseEnemy : BaseNpc, IQuestID
 
     private void Awake()
     {
-        getStats();
         setStats();
+        CalcToughness();
+        CalcPainThreshold();
+        SetDefence();
         player = FindObjectOfType<Player>();
         animController = GetComponent<Animator>();
         nextAttack = Time.time;
@@ -187,6 +189,18 @@ public class BaseEnemy : BaseNpc, IQuestID
     public void Cleared()
     {
         QuestEvents.ItemCleared(this);
+    }
+    //FUNCTION :  CalcToughness()
+    //DESCRIPTION : Calcualting the Toughness of the Entity
+    //PARAMETERS : void
+    //RETURNS : void
+
+    public void OnDeath()
+    {
+        if (WaveManager.enemyCount > 0)
+        {
+            WaveManager.enemyCount--;
+        }
     }
 
 }
