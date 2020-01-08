@@ -34,13 +34,6 @@ public class PlayerStats : StatsObject
     private int modValue;
     private void Awake()
     {
-        Accuracy = 10;
-        Discrete = 10;
-        Pursuasive = 10;
-        Quick = 10;
-        Strong = 10;
-        Defence = 5;
-
         accuracy = Accuracy;
         discrete = Discrete;
         pursuasive = Pursuasive;

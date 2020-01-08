@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : CharacterBase
 {
-    public PlayerObject playerBrain;
+    public PlayerStats playerBrain;
 
     List<Abilities> abilities;
     private bool canShootTargetRay = false;
@@ -32,11 +32,15 @@ public class Player : CharacterBase
         abilities.Add(new Recovery());
         abilities.Add(new ShieldFighter());
         abilities.Add(new TwoHandedForce());
-        getStats();
+        //getStats();
         setStats();
+
+        Debug.Log("Stats" + " accuracy : " + accuracy + " discrete : " + discrete + " persuasive : " + persuasive + " quick : " + quick + " strong : " + strong);
+        Debug.Log("Stats" + " toughness : " + toughness + " maxHealth : " + maxHealth + " currentHealth : " + currentHealth + " currentEXP : " + currentEXP);
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
+
         //inventory = new IPlayerInventory(); This causes the update function to no longer run, causing other errors in game play. 
     }
 
@@ -72,23 +76,17 @@ public class Player : CharacterBase
     //RETURNS : type and use 
     public void setStats()
     {
+        CalcToughness();
+        CalcPainThreshold();
+        SetMaxHealth();
+        currentHealth = maxHealth;
         accuracy = playerBrain.accuracy;
         discrete = playerBrain.discrete;
         persuasive = playerBrain.pursuasive;
         quick = playerBrain.quick;
         strong = playerBrain.strong;
-        toughness = playerBrain.toughness;
     }
 
-    //FUNCTION : getStats()
-    //DESCRIPTION : Getting the Stats from the playerObject
-    //PARAMETERS : void
-    //RETURNS : void
-    public void getStats()
-    {
-        playerBrain.Initialize();
-
-    }
 
     //Function: FindPlayerTarget
     //DESCRIPTION: finds the target in front of the player if there is one
@@ -187,4 +185,14 @@ public class Player : CharacterBase
     {
         return playerStatPoints;
     }
+    //Function: SetMaxHealth
+    //DESCRIPTION: Setting maxHealth variable at start of game, and when maxHealth is increased
+    //PARAMETERS: void
+    //RETURNS: maxHealth
+    public int SetMaxHealth()
+    {
+        maxHealth = toughness;
+        return maxHealth;
+    }
+
 }
