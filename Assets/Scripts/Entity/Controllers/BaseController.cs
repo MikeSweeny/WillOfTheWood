@@ -22,14 +22,7 @@ public abstract class BaseController : MonoBehaviour
         if (weaponCollider)
         {
             weaponCollider.enabled = !weaponCollider.enabled;
-            if (weaponCollider.enabled)
-            {
-                weaponCollider.isTrigger = true;
-            }
-            else if(weaponCollider.enabled == false)
-            {
-                weaponCollider.isTrigger = false;
-            }
+            weaponCollider.isTrigger = weaponCollider.enabled;
                 
         }
     }
