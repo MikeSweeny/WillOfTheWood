@@ -13,7 +13,6 @@ public class IWeapon : Item
 {
     private int roll;
     protected WeaponStats stats;
-    Collider collider;
     public bool isPoisonous = false;
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
@@ -29,18 +28,6 @@ public class IWeapon : Item
     {
         return stats;
     }
-    public bool ToggleCollider(bool isActive)
-    {
-        if (isActive)
-        {
-            collider.gameObject.SetActive(true);
-        }
-        else
-        {
-            collider.gameObject.SetActive(false);
-        }
-        return isActive;
-    }
     //Function : OnTriggerEnter
     //DESCRIPTION : checks the collider for the object being hit and applies damage to that object
     //PARAMETERS : none
@@ -52,6 +39,7 @@ public class IWeapon : Item
             CharacterBase character = other.gameObject.GetComponent<CharacterBase>();
             if(character)
             {
+                gameObject.GetComponent<Collider>().isTrigger = false;
                 character.TakeDamage(AttackRoll());
             }
         }

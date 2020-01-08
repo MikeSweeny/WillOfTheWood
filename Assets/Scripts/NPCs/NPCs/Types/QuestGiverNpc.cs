@@ -20,6 +20,7 @@ public class QuestGiverNpc : BaseInteractableNpc
     private int i = 0; //quest counter
     public bool isSecondaryNPC = false;
     private string currentText = "";
+    public AudioSource source;
 
 
 
@@ -27,6 +28,7 @@ public class QuestGiverNpc : BaseInteractableNpc
     {
         QM = FindObjectOfType<QuestManager>();
         setStats();
+        source = GetComponent<AudioSource>();
     }
     //Function: OnInteract
     //DESCRIPTION: this function is used to say what the quest giver does when it is interacted with
@@ -34,6 +36,8 @@ public class QuestGiverNpc : BaseInteractableNpc
     //RETURNS: None
     public override void OnInteract()
     {
+        if (source)
+            source.Play();
         if (!isSecondaryNPC)
         {
             UIEventManager.TriggerOpenDialogue();
@@ -151,12 +155,12 @@ public class QuestGiverNpc : BaseInteractableNpc
         Debug.Log("No Quest Got");
     }
 
-    public string GetCurrentText()
+    public override string GetCurrentText()
     {
         return currentText;
     }
 
-    public void NextDialogue()
+    public override void NextDialogue()
     {
         UIEventManager.TriggerCloseDialogue();
     }

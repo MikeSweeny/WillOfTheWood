@@ -219,7 +219,8 @@ public class PlayerController : BaseController
         if (isAttacking == false && animController.GetCurrentAnimatorStateInfo(0).IsName("PlayerAttack") && animController.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
         {
             animController.SetBool("Attacking", false);
-            weaponCollider.enabled = false;
+            if(weaponCollider.enabled)
+                ToggleWeaponCollider();
         }
 
         if (grounded && (animController.GetCurrentAnimatorStateInfo(0).IsName("Jumping") && animController.GetCurrentAnimatorStateInfo(0).normalizedTime > 1))

@@ -33,4 +33,6 @@ public class ShopKeeperNpc : BaseInteractableNpc
     {
         UIEventManager.TriggerOpenShop();
     }
+
+    public override void NextDialogue() { }
 }

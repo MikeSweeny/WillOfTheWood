@@ -22,11 +22,13 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     public bool hasConversation = false;
     private bool isTalking = false; 
     private string currentText = "";
+    public AudioSource source;
 
     private void Awake()
     {
         ID = IDName;
         setStats();
+        source = GetComponent<AudioSource>();
     }
 
     //Function: OnInteract
@@ -44,7 +46,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         }
     }
 
-    public void NextDialogue()
+    public override void NextDialogue()
     {
         if(currentText == dialogue.welcomeText && hasConversation)
         {
@@ -73,11 +75,15 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
             dialogue.Welcome();
             currentText = dialogue.welcomeText;
             isTalking = true;
+            if(source)
+                source.Play();
             return;
         }
+
+
     }
 
-    public string GetCurrentText()
+    public override string GetCurrentText()
     {
         return currentText;
     }

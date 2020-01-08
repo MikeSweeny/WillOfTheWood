@@ -15,6 +15,7 @@ public class Player : CharacterBase
 
     List<Abilities> abilities;
     private bool canShootTargetRay = false;
+    private bool firstUpdate = true;
     private GameObject target;
     private Vector3 midRayFiringPoint;
     private Vector3 bottomRayFiringPoint;
@@ -48,12 +49,17 @@ public class Player : CharacterBase
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
-
-        //inventory = new IPlayerInventory(); This causes the update function to no longer run, causing other errors in game play. 
+ 
     }
 
     private void Update()
     {
+        if(firstUpdate)
+        {
+            inventory = new IPlayerInventory();
+            firstUpdate = false;
+        }
+
         foreach (Abilities ability in abilities)
         {
             ability.UpdateAbility();
