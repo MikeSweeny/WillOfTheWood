@@ -1,8 +1,14 @@
-﻿using System.Collections;
+﻿//FILE: Player.cs
+//PROJECT: Will Of The Woods
+//PROGRAMMER: John Gotts, Jeff Oldfield
+//FIRST VERSION: 17/12/2019
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//NAME: Player
+//PURPOSE: the player class, used to track stats and abilities that the player has
 public class Player : CharacterBase
 {
     public PlayerStats playerBrain;
