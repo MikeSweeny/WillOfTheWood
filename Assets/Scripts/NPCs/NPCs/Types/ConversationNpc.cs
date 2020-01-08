@@ -26,7 +26,6 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     private void Awake()
     {
         ID = IDName;
-        getStats();
         setStats();
     }
 

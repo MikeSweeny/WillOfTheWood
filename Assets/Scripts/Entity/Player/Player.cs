@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : CharacterBase
 {
-    public PlayerObject playerBrain;
+    public PlayerStats playerBrain;
 
     List<Abilities> abilities;
     private bool canShootTargetRay = false;
@@ -16,6 +16,7 @@ public class Player : CharacterBase
     private float currentEXP;
     private int playerCoins;
     private int playerStatPoints;
+    private float healthPerc;
 
 
     private void Awake()
@@ -32,11 +33,16 @@ public class Player : CharacterBase
         abilities.Add(new Recovery());
         abilities.Add(new ShieldFighter());
         abilities.Add(new TwoHandedForce());
-        getStats();
+        //getStats();
         setStats();
+
+        //Debug.Log("Stats" + " accuracy : " + accuracy + " discrete : " + discrete + " persuasive : " + persuasive + " quick : " + speed + " strong : " + strong);
+        //Debug.Log("Stats" + " toughness : " + toughness + " maxHealth : " + maxHealth + " currentHealth : " + currentHealth + " currentEXP : " + currentEXP);
+        //Debug.Log("Defence : " + defence);
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
+
         //inventory = new IPlayerInventory(); This causes the update function to no longer run, causing other errors in game play. 
     }
 
@@ -55,8 +61,10 @@ public class Player : CharacterBase
         {
             canShootTargetRay = true;
         }
+        healthPerc = GetHealthPercent();
+        Debug.Log("Health Perc : " + healthPerc);
 
-        if(currentHealth < 0)
+        if (currentHealth < 0)
         {
             currentHealth = 0;
             SceneManager.LoadScene("DeathScene");
@@ -72,23 +80,18 @@ public class Player : CharacterBase
     //RETURNS : type and use 
     public void setStats()
     {
+        currentHealth = maxHealth;
         accuracy = playerBrain.accuracy;
         discrete = playerBrain.discrete;
         persuasive = playerBrain.pursuasive;
-        quick = playerBrain.quick;
+        speed = playerBrain.speed;
         strong = playerBrain.strong;
-        toughness = playerBrain.toughness;
+        CalcToughness();
+        CalcPainThreshold();
+        SetMaxHealth();
+        SetDefence();
     }
 
-    //FUNCTION : getStats()
-    //DESCRIPTION : Getting the Stats from the playerObject
-    //PARAMETERS : void
-    //RETURNS : void
-    public void getStats()
-    {
-        playerBrain.Initialize();
-
-    }
 
     //Function: FindPlayerTarget
     //DESCRIPTION: finds the target in front of the player if there is one
@@ -186,5 +189,14 @@ public class Player : CharacterBase
     public int GetStatPoints()
     {
         return playerStatPoints;
+    }
+    //Function: SetMaxHealth
+    //DESCRIPTION: Setting maxHealth variable at start of game, and when maxHealth is increased
+    //PARAMETERS: void
+    //RETURNS: maxHealth
+    public int SetMaxHealth()
+    {
+        maxHealth = toughness;
+        return maxHealth;
     }
 }

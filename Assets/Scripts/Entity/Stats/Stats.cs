@@ -15,7 +15,7 @@ public abstract class StatsObject : ScriptableObject
     public int Accuracy { get; set; }
     public int Discrete { get; set; }
     public int Pursuasive { get; set; }
-    public int Quick { get; set; }
+    public int Speed { get; set; }
     public int Strong { get; set; }
     public int Vigilant { get; set; }
     public int Defence { get; set; }

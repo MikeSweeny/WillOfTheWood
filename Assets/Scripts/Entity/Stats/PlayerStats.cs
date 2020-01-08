@@ -23,7 +23,7 @@ public class PlayerStats : StatsObject
     [Range(5, 18)]
     public int pursuasive;
     [Range(5, 18)]
-    public int quick;
+    public int speed;
     [Range(5, 18)]
     public int strong;
     [Range(5, 18)]
@@ -34,17 +34,10 @@ public class PlayerStats : StatsObject
     private int modValue;
     private void Awake()
     {
-        Accuracy = 10;
-        Discrete = 10;
-        Pursuasive = 10;
-        Quick = 10;
-        Strong = 10;
-        Defence = 5;
-
         accuracy = Accuracy;
         discrete = Discrete;
         pursuasive = Pursuasive;
-        quick = Quick;
+        speed = Speed;
         strong = Strong;
         defence = Defence;
     }

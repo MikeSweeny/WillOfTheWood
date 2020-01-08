@@ -27,12 +27,12 @@ public class NormalEnemyStats : StatsObject
     private void Awake()
     {
         Accuracy = 10;
-        Quick = 10;
+        Speed = 10;
         Strong = 10;
         vigilant = 10;
 
         accuracy = Accuracy;
-        quick = Quick;
+        quick = Speed;
         strong = Strong;
         vigilant = Vigilant;
     }

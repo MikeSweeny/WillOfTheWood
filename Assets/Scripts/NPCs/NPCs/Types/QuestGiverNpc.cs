@@ -26,7 +26,6 @@ public class QuestGiverNpc : BaseInteractableNpc
     void Awake()
     {
         QM = FindObjectOfType<QuestManager>();
-        getStats();
         setStats();
     }
     //Function: OnInteract

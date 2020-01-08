@@ -20,12 +20,12 @@ public class CharacterBase : MonoBehaviour
     protected int accuracy;
     protected int discrete;
     protected int persuasive;
-    protected int quick;
+    protected int speed;
     protected int strong;
     protected int toughness;
     protected int maxHealth;
-    protected int currentHealth;
-    [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
+    public int currentHealth;
+    [Tooltip(" Defense = Quick")]
     public int defence;
     [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
     public int painThreshold;
@@ -44,11 +44,6 @@ public class CharacterBase : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    private void FixedUpdate()
-    {
-        CalcToughness();
-        CalcPainThreshold();
-    }
     //FUNCTION :  CalcToughness()
     //DESCRIPTION : Calcualting the Toughness of the Entity
     //PARAMETERS : void
@@ -85,7 +80,7 @@ public class CharacterBase : MonoBehaviour
     //RETURNS: float
     public float GetHealthPercent()
     {
-        return (float)maxHealth / (float)currentHealth;
+        return ((float)currentHealth / (float)maxHealth) * 100;
     }
     public void RecoverHealth()
     {
@@ -95,5 +90,13 @@ public class CharacterBase : MonoBehaviour
             heal = Random.Range(1, 4);
             currentHealth = currentHealth + heal;
         }
+    }
+    //Function: SetDefence
+    //DESCRIPTION: function used to Set the Defence of the object
+    //PARAMETERS: None
+    //RETURNS: int
+    public void SetDefence()
+    {
+        defence = speed;
     }
 }
