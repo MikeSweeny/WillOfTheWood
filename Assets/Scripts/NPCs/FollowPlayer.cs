@@ -11,7 +11,6 @@ using UnityEngine.AI;
 //PURPOSE: this script moves NPCs so that they follow the player 
 public class FollowPlayer : BaseNpc
 {
-    private NavMeshAgent agent;
 
     private bool StopFollowing;
     private bool BeginFollowing;
@@ -27,10 +26,9 @@ public class FollowPlayer : BaseNpc
         BeginFollowing = false;
         Target = GameObject.FindGameObjectWithTag(TargetTag);
         ToTarget = Target.transform;
-        agent = GetComponent<NavMeshAgent>();
 
-        //pathingPattern = GetComponent<NpcPathing>();
-        //SetPathingComp();
+       pathingPattern = GetComponent<NpcPathing>();
+        SetPathingComp();
     }
 
     private void FixedUpdate()
@@ -39,8 +37,8 @@ public class FollowPlayer : BaseNpc
 
         if (BeginFollowing)
         {
-            agent.SetDestination(ToTarget.position);
-            //pathingPattern.FollowPlayer(Target);
+            //agent.SetDestination(ToTarget.position);
+            pathingPattern.FollowPlayer(Target);
         }
     }
 }
