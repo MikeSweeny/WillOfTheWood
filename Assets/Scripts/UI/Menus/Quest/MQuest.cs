@@ -13,7 +13,7 @@ public class MQuest : Menu
 {
 
     public GameObject questbuttonPrefab;
-
+    private QuestManager qmRef;
     private Transform detailsBox;
     private Transform buttonHolder;
     private Text title;
@@ -40,6 +40,7 @@ public class MQuest : Menu
         UIEventManager.OpenQuests += OpenMenu;
         UIEventManager.OpenQuests += UpdateQuestList;
         UIEventManager.CloseQuests += CloseMenu;
+        qmRef = GameObject.Find("Managers").GetComponent<QuestManager>();
         
     }
 
@@ -86,7 +87,6 @@ public class MQuest : Menu
     //RETURNS : none
     public void UpdateQuestList()
     {
-        QuestManager qmRef = GameObject.Find("Managers").GetComponent<QuestManager>();
         if (buttons.Count < qmRef.ActiveQuest.Count)
         {
             int difference = qmRef.ActiveQuest.Count - buttons.Count;
@@ -103,5 +103,15 @@ public class MQuest : Menu
             buttons[i].SetQuestMenuRef(this);
             buttons[i].SetQuest(qmRef.ActiveQuest[i]);
         }
+    }
+
+    public void TrackQuest(Quests quest)
+    {
+        qmRef.TrackingQuest = quest;
+    }
+
+    public void UntrackQuest()
+    {
+        qmRef.TrackingQuest = null;
     }
 }
