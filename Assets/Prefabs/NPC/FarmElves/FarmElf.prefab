@@ -1126,7 +1126,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8761054186239777162}
-  m_LocalRotation: {x: -0, y: 0.9999216, z: -0, w: -0.012525066}
+  m_LocalRotation: {x: 0, y: 0.9999216, z: -0, w: -0.0125224395}
   m_LocalPosition: {x: 10, y: 8.645508, z: 35.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1206,11 +1206,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52886468f4da7f048bda5b39a4889f0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
+  CharacterName: Farm Elf
   pathingPattern: {fileID: 0}
-  npcBrain: {fileID: 11400000, guid: 9f7a8aac7980f7449926e9d8d6cc561d, type: 2}
+  npcStats: {fileID: 11400000, guid: 6456c1b699f66a0419fa3c5b30683382, type: 2}
   vigilant: 0
   attackRange: 2
   IDName: FarmElf
@@ -1226,7 +1228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponCollider: {fileID: 0}
+  weaponCollider: {fileID: 2474394095791000146}
   WaypointContainer: {fileID: 0}
   waypoints: []
   enemy: []
@@ -2754,6 +2756,12 @@ PrefabInstance:
 --- !u!4 &8756438873031357611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4673611459674428, guid: ab8ac2017bc4c9e40b484324e5ee20e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 8761054185533470103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &2474394095791000146 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 6612221092240670661, guid: ab8ac2017bc4c9e40b484324e5ee20e7,
     type: 3}
   m_PrefabInstance: {fileID: 8761054185533470103}
   m_PrefabAsset: {fileID: 0}
