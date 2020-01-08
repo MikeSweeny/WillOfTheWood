@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - QuestGiver
   - Enemy
+  - FaceCam
   layers:
   - Default
   - TransparentFX
