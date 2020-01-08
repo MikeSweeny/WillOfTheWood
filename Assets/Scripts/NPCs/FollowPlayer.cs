@@ -13,7 +13,7 @@ public class FollowPlayer : BaseNpc
 {
 
     private bool StopFollowing;
-    private bool BeginFollowing;
+    public bool BeginFollowing;
 
     public string TargetTag;
 
@@ -27,17 +27,15 @@ public class FollowPlayer : BaseNpc
         Target = GameObject.FindGameObjectWithTag(TargetTag);
         ToTarget = Target.transform;
 
-       pathingPattern = GetComponent<NpcPathing>();
+        pathingPattern = GetComponent<NpcPathing>();
         SetPathingComp();
     }
 
     private void FixedUpdate()
     {            
-        BeginFollowing = true;
 
         if (BeginFollowing)
         {
-            //agent.SetDestination(ToTarget.position);
             pathingPattern.FollowPlayer(Target);
         }
     }
