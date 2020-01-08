@@ -16,6 +16,7 @@ public class Player : CharacterBase
     private float currentEXP;
     private int playerCoins;
     private int playerStatPoints;
+    private float healthPerc;
 
 
     private void Awake()
@@ -37,6 +38,7 @@ public class Player : CharacterBase
 
         Debug.Log("Stats" + " accuracy : " + accuracy + " discrete : " + discrete + " persuasive : " + persuasive + " quick : " + quick + " strong : " + strong);
         Debug.Log("Stats" + " toughness : " + toughness + " maxHealth : " + maxHealth + " currentHealth : " + currentHealth + " currentEXP : " + currentEXP);
+        Debug.Log("Health Perc : " + healthPerc);
         expCap = 200f;
         currentEXP = 0;
         playerCoins = 0;
@@ -59,8 +61,10 @@ public class Player : CharacterBase
         {
             canShootTargetRay = true;
         }
+        healthPerc = GetHealthPercent();
+        Debug.Log("Health Perc : " + healthPerc);
 
-        if(currentHealth < 0)
+        if (currentHealth < 0)
         {
             currentHealth = 0;
             SceneManager.LoadScene("DeathScene");
@@ -194,5 +198,4 @@ public class Player : CharacterBase
         maxHealth = toughness;
         return maxHealth;
     }
-
 }

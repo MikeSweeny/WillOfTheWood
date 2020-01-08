@@ -24,7 +24,7 @@ public class CharacterBase : MonoBehaviour
     protected int strong;
     protected int toughness;
     protected int maxHealth;
-    protected int currentHealth;
+    public int currentHealth;
     [Tooltip(" Defense = [Quick –Armor’s Impeding value]")]
     public int defence;
     [Tooltip(" Pain Threshold = Strong/2 (rounded up)")]
@@ -85,7 +85,7 @@ public class CharacterBase : MonoBehaviour
     //RETURNS: float
     public float GetHealthPercent()
     {
-        return (float)maxHealth / (float)currentHealth;
+        return ((float)currentHealth / (float)maxHealth) * 100;
     }
     public void RecoverHealth()
     {
