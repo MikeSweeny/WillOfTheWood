@@ -24,10 +24,16 @@ public class Player : CharacterBase
     private int playerCoins;
     private int playerStatPoints;
     private float healthPerc;
-
-
+    protected int unlockedAbilityCount;
+    private List<HotbarSlot> hotBar;
+    private const int hotbarSlots = 8;
     private void Awake()
     {
+        hotBar = new List<HotbarSlot>();
+        for (int i = 0; i < hotbarSlots; i++)
+        {
+            hotBar.Add(new HotbarSlot());
+        }
         abilities = new List<Abilities>();
         abilities.Add(new AtArms());
         abilities.Add(new Backstab());
@@ -210,5 +216,22 @@ public class Player : CharacterBase
     {
         maxHealth = toughness;
         return maxHealth;
+    }
+    public void updateHotbar()
+    {
+        for (int i = 0; i < unlockedAbilityCount; i++)
+        {
+            foreach (Abilities ability in abilities)
+            {
+                if(ability.IsUnlocked())
+                {
+
+                }
+            }
+        }
+    }
+    public List<HotbarSlot> GetHotbar()
+    {
+        return hotBar;
     }
 }
