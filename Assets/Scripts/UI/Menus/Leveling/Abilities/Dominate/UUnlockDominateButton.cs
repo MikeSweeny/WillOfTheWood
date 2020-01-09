@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UUnlockDominateButton : MonoBehaviour
+public class UUnlockDominateButton : UIButton
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Clicked()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        AbilityManager.TriggerUnlockDominate();
     }
 }

@@ -15,7 +15,6 @@ public class QuestManager: MonoBehaviour
     public Quests TrackingQuest { get; set; }
     public List<string> completedQuestNames;
     private bool isMatch = false;
-    private bool isActive = false;
     private bool checklist;
 
     public List<Quests> ActiveQuest = new List<Quests>();
