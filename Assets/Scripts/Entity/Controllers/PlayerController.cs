@@ -284,7 +284,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot2()
     {
-        print("Used slot 2");
         GetComponent<Player>().GetHotbar()[1].AbilityAct();
     }
 
@@ -294,7 +293,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot3()
     {
-        print("Used slot 3");
         GetComponentInParent<Player>().GetHotbar()[2].AbilityAct();
     }
 
@@ -304,7 +302,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot4()
     {
-        print("Used slot 4");
         GetComponent<Player>().GetHotbar()[3].AbilityAct();
     }
 
@@ -314,7 +311,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot5()
     {
-        print("Used slot 5");
         GetComponent<Player>().GetHotbar()[4].AbilityAct();
     }
 
@@ -324,7 +320,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot6()
     {
-        print("Used slot 6");
         GetComponent<Player>().GetHotbar()[5].AbilityAct();
     }
 
@@ -334,7 +329,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot7()
     {
-        print("Used slot 7");
         GetComponent<Player>().GetHotbar()[6].AbilityAct();
     }
 
@@ -344,7 +338,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot8()
     {
-        print("Used slot 8");
         GetComponent<Player>().GetHotbar()[7].AbilityAct();
     }
 
@@ -354,7 +347,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateLeftHotbarSlot1()
     {
-        print("used left first slot");
         GetComponent<Player>().GetHotbar()[0].AbilityAct();
     }
 
@@ -364,7 +356,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateLeftHotbarSlot2()
     {
-        print("used left second slot");
         GetComponent<Player>().GetHotbar()[1].AbilityAct();
     }
 
@@ -374,7 +365,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateLeftHotbarSlot3()
     {
-        print("used left third slot");
         GetComponent<Player>().GetHotbar()[2].AbilityAct();
     }
 
@@ -384,7 +374,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateLeftHotbarSlot4()
     {
-        print("used left fourth slot");
         GetComponent<Player>().GetHotbar()[3].AbilityAct();
     }
 
@@ -394,7 +383,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateRightHotbarSlot1()
     {
-        print("used Right first slot");
         GetComponent<Player>().GetHotbar()[4].AbilityAct();
     }
 
@@ -404,7 +392,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateRightHotbarSlot2()
     {
-        print("used Right second slot");
         GetComponent<Player>().GetHotbar()[5].AbilityAct();
     }
 
@@ -414,7 +401,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateRightHotbarSlot3()
     {
-        print("used Right third slot");
         GetComponent<Player>().GetHotbar()[6].AbilityAct();
     }
 
@@ -424,7 +410,6 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateRightHotbarSlot4()
     {
-        print("used Right fourth slot");
         GetComponent<Player>().GetHotbar()[7].AbilityAct();
     }
 }
