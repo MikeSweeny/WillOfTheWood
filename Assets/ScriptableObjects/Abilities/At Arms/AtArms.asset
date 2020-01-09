@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: At Arms
   abilityDescription: increases armour rating to the next tier while active.
-  abilityImage: {fileID: 21300088, guid: 0baf8a7355c1fd84bbc53843f7bebe20, type: 3}
+  abilityImage: {fileID: 21300092, guid: 0baf8a7355c1fd84bbc53843f7bebe20, type: 3}
