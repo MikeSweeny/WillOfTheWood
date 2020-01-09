@@ -22,7 +22,7 @@ public class Player : CharacterBase
     private float expCap;
     private float currentEXP;
     private int playerCoins;
-    private int playerStatPoints;
+    public int playerStatPoints { get; set; }
     private float healthPerc;
     protected int unlockedAbilityCount;
     private List<HotbarSlot> hotBar;

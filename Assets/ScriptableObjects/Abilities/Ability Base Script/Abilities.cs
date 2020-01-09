@@ -22,9 +22,13 @@ public class Abilities: ScriptableObject
     public virtual void OnLoad() { }
     public virtual void Act() { }
     public virtual void UpdateAbility() { }
+    Player player;
     public void UnlockAbility()
     {
-        isUnlocked = true;
+        if(player.playerStatPoints > 0)
+        {
+            isUnlocked = true;
+        }
     }
     public bool IsUnlocked()
     {
