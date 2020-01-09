@@ -44,7 +44,8 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         if(!isTalking)
         {
             UIEventManager.TriggerOpenDialogue();
-             StartTalking();
+            StartTalking();
+            isActive = true;
         }
     }
 
@@ -65,6 +66,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         else
         {
             isTalking = false;
+            isActive = false;
             UIEventManager.TriggerCloseDialogue();
 
         }
@@ -133,5 +135,22 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         hasBeenTalkedTo = true;
         QuestEvents.ItemCleared(this);
         Debug.Log("Talked to " + IDName);
+    }
+
+    public override void DialogeBox()
+    {
+        if (isActive)
+        {
+            player = FindObjectOfType<Player>();
+            if (player)
+            {
+                if (Vector2.Distance(transform.position, player.transform.position) >= 2)
+                {
+                    UIEventManager.TriggerCloseDialogue();
+                    isActive = false;
+                    isTalking = false;
+                }
+            }
+        }
     }
 }
