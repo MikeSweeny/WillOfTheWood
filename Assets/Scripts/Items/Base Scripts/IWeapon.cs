@@ -84,7 +84,7 @@ public class IWeapon : Item
             {
                 defValue = other.gameObject.GetComponent<CharacterBase>().defence;
 
-                accValue = gameObject.GetComponent<BaseEnemy>().GetComponent<StatsObject>().Accuracy;
+                accValue = gameObject.GetComponentInParent<BaseEnemy>().npcStats.Accuracy;
                 Debug.Log("Attacker(Enemy) Accuracy : " + accValue);
                 Debug.Log("Roll at start: " + roll);
                 roll = D20Roll();

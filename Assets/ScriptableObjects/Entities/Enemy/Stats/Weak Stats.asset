@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e018d13370d20ba4fb826d42eadf565c, type: 3}
   m_Name: Weak Stats
   m_EditorClassIdentifier: 
-  accuracy: 13
+  accuracy: 11
   quick: 9
   strong: 12
-  vigilant: 10
+  vigilant: 12

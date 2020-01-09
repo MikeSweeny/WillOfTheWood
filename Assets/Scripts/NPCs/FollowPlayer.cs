@@ -39,7 +39,7 @@ public class FollowPlayer : BaseNpc
             GetTargetPosition();
             pathingPattern.FollowPlayer(Target);
         }
-        else
+        else if (StopFollowing)
         {
             GetTargetPosition();
             pathingPattern.FollowPlayer(Target);
@@ -55,10 +55,11 @@ public class FollowPlayer : BaseNpc
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "SarekEscortHandin")
+        if (other.gameObject.name == CompletionArea)
         {
             BeginFollowing = false;
-            Target = GameObject.FindGameObjectWithTag(TargetTag);
+            //StopFollowing = true;
+            //Target = GameObject.Find("SarekHandin");
             //ToTarget = Target.transform;
         }
     }

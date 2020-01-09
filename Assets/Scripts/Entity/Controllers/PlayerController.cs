@@ -32,12 +32,14 @@ public class PlayerController : BaseController
 
     private Animator animController;
     private CharacterController controller;
+    private AudioSource source;
 
 
     private void Start()
     {
         animController = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
+        source = GetComponent<AudioSource>();
         InputManager.Walk += Movement;
         InputManager.Rotate += TurnPlayer;
         InputManager.Jump += PlayerJump;
@@ -206,6 +208,8 @@ public class PlayerController : BaseController
                 ToggleWeaponCollider();
             }
             animController.SetBool("Attacking", true);
+            if (source)
+                source.Play();
             isAttacking = true;
         }
     }

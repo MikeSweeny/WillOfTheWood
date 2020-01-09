@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   accuracy: 12
   discrete: 10
-  pursuasive: 12
-  quick: 11
-  strong: 12
-  defence: 0
+  pursuasive: 14
+  speed: 11
+  strong: 13
+  defence: 14
   isDetected: 0

@@ -23,13 +23,11 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     public bool isPartOfQuest = false;
     public bool hasConversation = false;
     private bool isTalking = false; 
-    private string currentText = "";
     public AudioSource source;
 
     private void Awake()
     {
         ID = IDName;
-        setStats();
         source = GetComponent<AudioSource>();
     }
 
@@ -39,12 +37,15 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     //RETURNS: None
     public override void OnInteract()
     {
+        if (source)
+            source.Play();
         if (isPartOfQuest && hasBeenTalkedTo)
             return;
         if(!isTalking)
         {
             UIEventManager.TriggerOpenDialogue();
-             StartTalking();
+            StartTalking();
+            isActive = true;
         }
     }
 
@@ -65,6 +66,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         else
         {
             isTalking = false;
+            isActive = false;
             UIEventManager.TriggerCloseDialogue();
 
         }
@@ -82,8 +84,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
             dialogue.Welcome();
             currentText = dialogue.welcomeText;
             isTalking = true;
-            if(source)
-                source.Play();
+
             return;
         }
 
@@ -133,5 +134,22 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
         hasBeenTalkedTo = true;
         QuestEvents.ItemCleared(this);
         Debug.Log("Talked to " + IDName);
+    }
+
+    public override void DialogeBox()
+    {
+        if (isActive)
+        {
+            player = FindObjectOfType<Player>();
+            if (player)
+            {
+                if (Vector2.Distance(transform.position, player.transform.position) >= 2)
+                {
+                    UIEventManager.TriggerCloseDialogue();
+                    isActive = false;
+                    isTalking = false;
+                }
+            }
+        }
     }
 }

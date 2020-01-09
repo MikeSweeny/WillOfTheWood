@@ -19,7 +19,6 @@ public class QuestGiverNpc : BaseInteractableNpc
     public List<Quests> QuestList = new List<Quests>(); //List of quests for NPC
     private int i = 0; //quest counter
     public bool isSecondaryNPC = false;
-    private string currentText = "";
     public AudioSource source;
 
 
@@ -27,7 +26,6 @@ public class QuestGiverNpc : BaseInteractableNpc
     void Awake()
     {
         QM = FindObjectOfType<QuestManager>();
-        setStats();
         source = GetComponent<AudioSource>();
     }
     //Function: OnInteract

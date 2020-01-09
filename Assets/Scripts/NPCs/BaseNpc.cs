@@ -13,7 +13,6 @@ public class BaseNpc : CharacterBase
 
 
     public NpcPathing pathingPattern;
-    public StatsObject npcStats;
     public int vigilant;
 
     //Function: SetPathingComp
@@ -45,12 +44,4 @@ public class BaseNpc : CharacterBase
     //DESCRIPTION: function used to set local variables
     //PARAMETERS: None
     //RETURNS: None
-    public void setStats()
-    {
-        accuracy = npcStats.Accuracy;
-        speed = npcStats.Speed;
-        strong = npcStats.Strong;
-        vigilant = npcStats.Vigilant;
-    }
-
 }

@@ -46,6 +46,7 @@ public class HTargetStatus : HUDElement
         {
             target = null;
             nameText.text = "";
+            healthBar.value = 0;
         }
             
     }
