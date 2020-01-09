@@ -17,6 +17,7 @@ public abstract class BaseInteractableNpc : BaseNpc
     protected bool isActive;
     protected Vector3 currentPos;
     protected Vector3 originalPos;
+    public bool NotMoveable;
     //Function: OnInteract
     //DESCRIPTION: this function is used for overriding in children to say what is supposed to happen when they are interacted with
     //PARAMETERS: None
@@ -37,7 +38,8 @@ public abstract class BaseInteractableNpc : BaseNpc
 
     public void Update()
     {
-        LookAt();
+        if(!Moveable)
+            LookAt();
         DialogeBox();
     }
 
