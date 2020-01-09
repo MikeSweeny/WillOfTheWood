@@ -26,4 +26,8 @@ public class Abilities: ScriptableObject
     {
         isUnlocked = true;
     }
+    public bool IsUnlocked()
+    {
+        return isUnlocked;
+    }
 }
