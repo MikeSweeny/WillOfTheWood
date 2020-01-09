@@ -38,11 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-<<<<<<< HEAD
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
-=======
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
->>>>>>> 82bd628edd71a80a030e9ad67c26f6930c646c2c
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23090,11 +23086,7 @@ RectTransform:
   - {fileID: 842276100}
   - {fileID: 1408843627}
   - {fileID: 1976651024}
-<<<<<<< HEAD
-  - {fileID: 976547}
-=======
   - {fileID: 1008690609}
->>>>>>> 82bd628edd71a80a030e9ad67c26f6930c646c2c
   m_Father: {fileID: 1656910298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
