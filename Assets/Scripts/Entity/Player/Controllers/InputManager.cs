@@ -37,6 +37,10 @@ public class InputManager : MonoBehaviour
     public static event InputEvent HotbarSlot8;
     public static event InputEvent HotbarSlot9;
     public static event InputEvent HotbarSlot0;
+    public static event InputEvent ControllerHotbarSlot1;
+    public static event InputEvent ControllerHotbarSlot2;
+    public static event InputEvent ControllerHotbarSlot3;
+    public static event InputEvent ControllerHotbarSlot4;
 
     public static event WalkInputEvent Walk;
     public static event RotateInputEvent Rotate;
@@ -80,6 +84,24 @@ public class InputManager : MonoBehaviour
             TriggerAttack();
             axisInUse = true;
         }
+
+        if (Input.GetButtonDown("LeftBumper"))
+            TriggerLeftBumper();
+
+        if (Input.GetButtonDown("RightBumper"))
+            TriggerRightBumper();
+
+        if ((Input.GetButtonDown("CHotbarSlot1") && LeftBumper != null) || (Input.GetButtonDown("CHotbarSlot1") && RightBumper != null))
+            TriggerControllerHotbarSlot1();
+
+        if ((Input.GetButtonDown("CHotbarSlot2") && LeftBumper != null) || (Input.GetButtonDown("CHotbarSlot2") && RightBumper != null))
+            TriggerControllerHotbarSlot2();
+
+        if ((Input.GetButtonDown("CHotbarSlot3") && LeftBumper != null) || (Input.GetButtonDown("CHotbarSlot3") && RightBumper != null))
+            TriggerControllerHotbarSlot3();
+
+        if ((Input.GetButtonDown("CHotbarSlot4") && LeftBumper != null) || (Input.GetButtonDown("CHotbarSlot4") && RightBumper != null))
+            TriggerControllerHotbarSlot4();
 
         if (Input.GetButtonDown("WorldMap"))
         {
@@ -158,6 +180,66 @@ public class InputManager : MonoBehaviour
     public static void UnPause()
     {
         inputEnabled = true;
+    }
+
+    //Function: TriggerControllerHotbarSlot1
+    //DESCRIPTION: function used to trigger the event for the first slot on controller hotbars
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerControllerHotbarSlot1()
+    {
+        if(inputEnabled)
+            ControllerHotbarSlot1?.Invoke();
+    }
+
+    //Function: TriggerControllerHotbarSlot2
+    //DESCRIPTION: function used to trigger the second slot event for controllers
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerControllerHotbarSlot2()
+    {
+        if (inputEnabled)
+            ControllerHotbarSlot2?.Invoke();
+    }
+
+    //Function: TriggerControllerHotbarSlot3
+    //DESCRIPTION: function used to trigger the third slot event for controllers
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerControllerHotbarSlot3()
+    {
+        if (inputEnabled)
+            ControllerHotbarSlot3?.Invoke();
+    }
+
+    //Function: TriggerControllerHotbarSlot4
+    //DESCRIPTION: function used to trigger the fourth slot event for controllers
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerControllerHotbarSlot4()
+    {
+        if (inputEnabled)
+            ControllerHotbarSlot4?.Invoke();
+    }
+
+    //Function: TriggerLeftBumper
+    //DESCRIPTION: function used to trigger the left bumper event
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerLeftBumper()
+    {
+        if (inputEnabled)
+            LeftBumper?.Invoke(true);
+    }
+
+    //Function: TriggerRightBumper
+    //DESCRIPTION: function used to trigger the right bumper event
+    //PARAMETERS: None
+    //RETURNS: None
+    public static void TriggerRightBumper()
+    {
+        if (inputEnabled)
+            RightBumper?.Invoke(true);
     }
 
     //Function: TriggerSprint

@@ -1,18 +1,22 @@
-﻿using System.Collections;
+﻿//FILE          :   UUnlockBerserkerButton.cs
+//PROJECT       :   Will of the Wood
+//PROGRAMMER    :   Gavin McGuire
+//FIRST VERSION :   09/01/2020
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UUnlockBerserkerButton : MonoBehaviour
+//NAME : UUnlockBerserkerButton
+//PURPOSE : unlocks the Berserker ability
+public class UUnlockBerserkerButton : UIButton
 {
-    // Start is called before the first frame update
-    void Start()
+    //Function : Clicked
+    //DESCRIPTION : calls the function in the ability manager 
+    //that unlocks the desired ability
+    //PARAMETERS : none
+    //RETURNS : none
+    public override void Clicked()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        AbilityManager.TriggerUnlockBerserker();
     }
 }

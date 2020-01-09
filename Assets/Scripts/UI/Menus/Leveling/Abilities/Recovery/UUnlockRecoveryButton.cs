@@ -1,18 +1,22 @@
-﻿using System.Collections;
+﻿//FILE          :   UUnlockRecoveryButton.cs
+//PROJECT       :   Will of the Wood
+//PROGRAMMER    :   Gavin McGuire
+//FIRST VERSION :   09/01/2020
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UUnlockRecoveryButton : MonoBehaviour
+//NAME : UUnlockRecoveryButton
+//PURPOSE : unlocks the Recovery ability
+public class UUnlockRecoveryButton : UIButton
 {
-    // Start is called before the first frame update
-    void Start()
+    //Function : Clicked
+    //DESCRIPTION : calls the function in the ability manager 
+    //that unlocks the desired ability
+    //PARAMETERS : none
+    //RETURNS : none
+    public override void Clicked()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        AbilityManager.TriggerUnlockRecovery();
     }
 }

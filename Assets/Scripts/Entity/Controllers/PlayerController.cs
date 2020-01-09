@@ -33,7 +33,7 @@ public class PlayerController : BaseController
     private Animator animController;
     private CharacterController controller;
     private AudioSource source;
-
+    private Player player;
 
     private void Start()
     {
@@ -54,8 +54,8 @@ public class PlayerController : BaseController
         InputManager.HotbarSlot6 += ActivateHotbarSlot6;
         InputManager.HotbarSlot7 += ActivateHotbarSlot7;
         InputManager.HotbarSlot8 += ActivateHotbarSlot8;
-        InputManager.HotbarSlot9 += ActivateHotbarSlot9;
-        InputManager.HotbarSlot0 += ActivateHotbarSlot0;
+        InputManager.LeftBumper += LeftBumperPressed;
+        InputManager.RightBumper += RightBumperPressed;
         if(weaponCollider && weaponCollider.enabled == true)
             ToggleWeaponCollider();
     }
@@ -179,6 +179,42 @@ public class PlayerController : BaseController
         }
     }
 
+    //Function: LeftBumperPressed 
+    //DESCRIPTION: function used to enable hotbar for controllers
+    //PARAMETERS: bool pressed
+    //RETURNS: None
+    private void LeftBumperPressed(bool pressed)
+    {
+        InputManager.ControllerHotbarSlot1 -= ActivateRightHotbarSlot1;
+        InputManager.ControllerHotbarSlot2 -= ActivateRightHotbarSlot2;
+        InputManager.ControllerHotbarSlot3 -= ActivateRightHotbarSlot3;
+        InputManager.ControllerHotbarSlot4 -= ActivateRightHotbarSlot4;
+
+        if (pressed)
+        {
+            InputManager.ControllerHotbarSlot1 += ActivateLeftHotbarSlot1;
+            InputManager.ControllerHotbarSlot2 += ActivateLeftHotbarSlot2;
+            InputManager.ControllerHotbarSlot3 += ActivateLeftHotbarSlot3;
+            InputManager.ControllerHotbarSlot4 += ActivateLeftHotbarSlot4;
+        }
+    }
+
+    private void RightBumperPressed(bool pressed)
+    {
+        InputManager.ControllerHotbarSlot1 -= ActivateLeftHotbarSlot1;
+        InputManager.ControllerHotbarSlot2 -= ActivateLeftHotbarSlot2;
+        InputManager.ControllerHotbarSlot3 -= ActivateLeftHotbarSlot3;
+        InputManager.ControllerHotbarSlot4 -= ActivateLeftHotbarSlot4;
+
+        if (pressed)
+        {
+            InputManager.ControllerHotbarSlot1 += ActivateRightHotbarSlot1;
+            InputManager.ControllerHotbarSlot2 += ActivateRightHotbarSlot2;
+            InputManager.ControllerHotbarSlot3 += ActivateRightHotbarSlot3;
+            InputManager.ControllerHotbarSlot4 += ActivateRightHotbarSlot4;
+        }
+    }
+
     //Function: PlayerJump
     //DESCRIPTION: function for allowing the player to jump
     //PARAMETERS: None
@@ -239,8 +275,8 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot1()
     {
-        print("Used slot 1");
-    }
+        GetComponent<Player>().GetHotbar()[0].AbilityAct();
+    } 
 
     //Function: ActivateHotbarSlot2
     //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 2 of the player hotbar
@@ -248,7 +284,7 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot2()
     {
-        print("Used slot 2");
+        GetComponent<Player>().GetHotbar()[1].AbilityAct();
     }
 
     //Function: ActivateHotbarSlot3
@@ -257,7 +293,7 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot3()
     {
-        print("Used slot 3");
+        GetComponentInParent<Player>().GetHotbar()[2].AbilityAct();
     }
 
     //Function: ActivateHotbarSlot4
@@ -266,7 +302,7 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot4()
     {
-        print("Used slot 4");
+        GetComponent<Player>().GetHotbar()[3].AbilityAct();
     }
 
     //Function: ActivateHotbarSlot5
@@ -275,7 +311,7 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot5()
     {
-        print("Used slot 5");
+        GetComponent<Player>().GetHotbar()[4].AbilityAct();
     }
 
     //Function: ActivateHotbarSlot6
@@ -284,7 +320,7 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot6()
     {
-        print("Used slot 6");
+        GetComponent<Player>().GetHotbar()[5].AbilityAct();
     }
 
     //Function: ActivateHotbarSlot7
@@ -293,7 +329,7 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot7()
     {
-        print("Used slot 7");
+        GetComponent<Player>().GetHotbar()[6].AbilityAct();
     }
 
     //Function: ActivateHotbarSlot8
@@ -302,25 +338,78 @@ public class PlayerController : BaseController
     //RETURNS: None
     private void ActivateHotbarSlot8()
     {
-        print("Used slot 8");
+        GetComponent<Player>().GetHotbar()[7].AbilityAct();
     }
 
-    //Function: ActivateHotbarSlot9
-    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 9 of the player hotbar
+    //Function: ActivateLeftHotbarSlot1
+    //DESCRIPTION: function used to activate the first left slot for controller
     //PARAMETERS: None
     //RETURNS: None
-    private void ActivateHotbarSlot9()
+    private void ActivateLeftHotbarSlot1()
     {
-        print("Used slot 9");
+        GetComponent<Player>().GetHotbar()[0].AbilityAct();
     }
 
-    //Function: ActivateHotbarSlot0
-    //DESCRIPTION: this function is used to activate whichever powerup / item is in slot 0 of the player hotbar
+    //Function: ActivateLeftHotbarSlot2
+    //DESCRIPTION: function used to activate the second left slot for controller
     //PARAMETERS: None
     //RETURNS: None
-    private void ActivateHotbarSlot0()
+    private void ActivateLeftHotbarSlot2()
     {
-        print("Used slot 0");
+        GetComponent<Player>().GetHotbar()[1].AbilityAct();
     }
 
+    //Function: ActivateLeftHotbarSlot3
+    //DESCRIPTION: function used to activate the third left slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateLeftHotbarSlot3()
+    {
+        GetComponent<Player>().GetHotbar()[2].AbilityAct();
+    }
+
+    //Function: ActivateLeftHotbarSlot4
+    //DESCRIPTION: function used to activate the fourth left slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateLeftHotbarSlot4()
+    {
+        GetComponent<Player>().GetHotbar()[3].AbilityAct();
+    }
+
+    //Function: ActivateRightHotbarSlot1
+    //DESCRIPTION: function used to activate the first right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot1()
+    {
+        GetComponent<Player>().GetHotbar()[4].AbilityAct();
+    }
+
+    //Function: ActivateRightHotbarSlot2
+    //DESCRIPTION: function used to activate the second right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot2()
+    {
+        GetComponent<Player>().GetHotbar()[5].AbilityAct();
+    }
+
+    //Function: ActivateRightHotbarSlot3
+    //DESCRIPTION: function used to activate the third right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot3()
+    {
+        GetComponent<Player>().GetHotbar()[6].AbilityAct();
+    }
+
+    //Function: ActivateRightHotbarSlot4
+    //DESCRIPTION: function used to activate the fourth right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot4()
+    {
+        GetComponent<Player>().GetHotbar()[7].AbilityAct();
+    }
 }

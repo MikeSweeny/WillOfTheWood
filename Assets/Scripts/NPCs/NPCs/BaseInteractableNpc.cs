@@ -15,8 +15,9 @@ public abstract class BaseInteractableNpc : BaseNpc
     protected string currentText;
     protected Player player;
     protected bool isActive;
-    protected Vector3 currentPos;
-    protected Vector3 originalPos;
+    protected Transform startTransform;
+    private Quaternion startRotation;
+
     public bool NotMoveable;
     //Function: OnInteract
     //DESCRIPTION: this function is used for overriding in children to say what is supposed to happen when they are interacted with
@@ -25,8 +26,14 @@ public abstract class BaseInteractableNpc : BaseNpc
 
     private void Start()
     {
-        currentPos = gameObject.transform.position;
-        originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+        GetStartRotation();
+    }
+    public Quaternion GetStartRotation()
+    {
+        startTransform = gameObject.transform;
+        startRotation = startTransform.rotation;
+
+        return startRotation;
     }
     public abstract void OnInteract();
     public abstract void NextDialogue();
@@ -75,7 +82,9 @@ public abstract class BaseInteractableNpc : BaseNpc
     }
     public void ResetPosition()
     {
-        gameObject.transform.position = originalPos;
+        //Debug.Log("Return to oringinal position");
+
+        transform.rotation = startRotation;
     }
 
 }
