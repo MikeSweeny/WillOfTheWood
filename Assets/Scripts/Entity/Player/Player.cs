@@ -22,7 +22,7 @@ public class Player : CharacterBase
     private float expCap;
     private float currentEXP;
     private int playerCoins;
-    private int playerStatPoints;
+    public int playerStatPoints { get; set; }
     private float healthPerc;
     protected int unlockedAbilityCount;
     private List<HotbarSlot> hotBar;
@@ -46,6 +46,19 @@ public class Player : CharacterBase
         abilities.Add(new Recovery());
         abilities.Add(new ShieldFighter());
         abilities.Add(new TwoHandedForce());
+
+        AbilityManager.UnlockAtArms += updateHotbar;
+        AbilityManager.UnlockBackStab += updateHotbar;
+        AbilityManager.UnlockBerserker += updateHotbar;
+        AbilityManager.UnlockDominate += updateHotbar;
+        AbilityManager.UnlockExceptionalAttribute += updateHotbar;
+        AbilityManager.UnlockFeign += updateHotbar;
+        AbilityManager.UnlockPoisoner += updateHotbar;
+        AbilityManager.UnlockPoleArmMastery += updateHotbar;
+        AbilityManager.UnlockRecovery += updateHotbar;
+        AbilityManager.UnlockShieldFighter += updateHotbar;
+        AbilityManager.UnlockTwinAttack += updateHotbar;
+        AbilityManager.UnlockTwoHandedForce += updateHotbar;
         //getStats();
         setStats();
 
