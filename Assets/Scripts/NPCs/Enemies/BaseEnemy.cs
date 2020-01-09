@@ -22,6 +22,7 @@ public class BaseEnemy : BaseNpc, IQuestID
     private float nextAttack;
     private float attackSpeed;
     private bool isDead = false;
+    private AudioSource source;
 
     public StatsObject npcStats;
 
@@ -44,6 +45,7 @@ public class BaseEnemy : BaseNpc, IQuestID
         attackSpeed = animController.GetAnimatorTransitionInfo(2).duration;
         ID = IDName;
         SetPathingComp();
+        source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -167,6 +169,8 @@ public class BaseEnemy : BaseNpc, IQuestID
             animController.SetBool("Attacking", false);
             pathingPattern.ToggleWeaponCollider();
         }
+        //if (source)
+        //    source.Play();
     }
 
     //Function: StopAttacking
