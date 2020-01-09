@@ -17,7 +17,7 @@ public class ExceptionalAttribute : Abilities
     {
         AbilityManager.UnlockExceptionalAttribute += UnlockAbility;
     }
-    public override void UpdateAbility()
+    public ExceptionalAttribute()
     {
         if (isActive)
         {
