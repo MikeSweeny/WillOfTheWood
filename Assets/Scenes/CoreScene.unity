@@ -19608,7 +19608,7 @@ GameObject:
   - component: {fileID: 1414705300}
   - component: {fileID: 1414705299}
   m_Layer: 0
-  m_Name: Quest1 - Description
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27439,7 +27439,7 @@ GameObject:
   - component: {fileID: 1877373715}
   - component: {fileID: 1877373714}
   m_Layer: 0
-  m_Name: Quest1 - Counter
+  m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
