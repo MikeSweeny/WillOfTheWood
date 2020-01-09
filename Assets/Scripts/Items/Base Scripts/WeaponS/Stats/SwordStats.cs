@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class SwordStats : WeaponStats
 {
-    private void Start()
-    {
-        
-    }
     public SwordStats()
     {
         weaponType = weaponTypes.ONEHANDED;

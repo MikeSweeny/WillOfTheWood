@@ -19,7 +19,6 @@ public class Abilities: ScriptableObject
     [SerializeField]
     private Sprite abilityImage;
     protected bool isUnlocked = false;
-    public virtual void OnLoad() { }
     public virtual void Act() { }
     public virtual void UpdateAbility() { }
     Player player;

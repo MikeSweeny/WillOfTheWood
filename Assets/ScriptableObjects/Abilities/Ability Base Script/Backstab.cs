@@ -17,7 +17,7 @@ public class Backstab : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public override void OnLoad()
+    public Backstab()
     {
         AbilityManager.UnlockBackStab += UnlockAbility;
     }
