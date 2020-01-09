@@ -29,7 +29,6 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     private void Awake()
     {
         ID = IDName;
-        setStats();
         source = GetComponent<AudioSource>();
     }
 

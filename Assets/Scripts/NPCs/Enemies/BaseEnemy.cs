@@ -23,6 +23,9 @@ public class BaseEnemy : BaseNpc, IQuestID
     private float attackSpeed;
     private bool isDead = false;
 
+    public StatsObject npcStats;
+
+
     private float respawnDelay = 30f;
     private float respawnTimer;
 
@@ -30,7 +33,8 @@ public class BaseEnemy : BaseNpc, IQuestID
 
     private void Awake()
     {
-        setStats();
+        RespawnEnemy();
+        SetStats();
         CalcToughness();
         CalcPainThreshold();
         SetDefence();
@@ -157,7 +161,7 @@ public class BaseEnemy : BaseNpc, IQuestID
         animController.SetLayerWeight(2, 1);
         pathingPattern.GetNavMeshAgent().SetDestination(attackingDestination);
         animController.SetBool("Attacking", true);
-        pathingPattern.ToggleWeaponCollider();
+        //pathingPattern.ToggleWeaponCollider();
         if(animController.GetCurrentAnimatorStateInfo(2).normalizedTime > 1)
         {
             animController.SetBool("Attacking", false);
@@ -217,6 +221,8 @@ public class BaseEnemy : BaseNpc, IQuestID
         {
             respawnTimer = 0;
             currentHealth = maxHealth;
+            SetStats();
+            SetDefence();
             state = CurrentState.waiting;
             gameObject.SetActive(true);
         }
@@ -234,6 +240,14 @@ public class BaseEnemy : BaseNpc, IQuestID
             WaveManager.enemyCount--;
         }
     }
+    public void SetStats()
+    {
+        accuracy = npcStats.Accuracy;
+        speed = npcStats.Speed;
+        strong = npcStats.Strong;
+        vigilant = npcStats.Vigilant;
+    }
+
 
 }
 

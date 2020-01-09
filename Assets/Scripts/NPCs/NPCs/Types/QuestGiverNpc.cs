@@ -27,7 +27,6 @@ public class QuestGiverNpc : BaseInteractableNpc
     void Awake()
     {
         QM = FindObjectOfType<QuestManager>();
-        setStats();
         source = GetComponent<AudioSource>();
     }
     //Function: OnInteract
