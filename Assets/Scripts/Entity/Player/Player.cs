@@ -46,6 +46,19 @@ public class Player : CharacterBase
         abilities.Add(new Recovery());
         abilities.Add(new ShieldFighter());
         abilities.Add(new TwoHandedForce());
+
+        AbilityManager.UnlockAtArms += updateHotbar;
+        AbilityManager.UnlockBackStab += updateHotbar;
+        AbilityManager.UnlockBerserker += updateHotbar;
+        AbilityManager.UnlockDominate += updateHotbar;
+        AbilityManager.UnlockExceptionalAttribute += updateHotbar;
+        AbilityManager.UnlockFeign += updateHotbar;
+        AbilityManager.UnlockPoisoner += updateHotbar;
+        AbilityManager.UnlockPoleArmMastery += updateHotbar;
+        AbilityManager.UnlockRecovery += updateHotbar;
+        AbilityManager.UnlockShieldFighter += updateHotbar;
+        AbilityManager.UnlockTwinAttack += updateHotbar;
+        AbilityManager.UnlockTwoHandedForce += updateHotbar;
         //getStats();
         setStats();
 
