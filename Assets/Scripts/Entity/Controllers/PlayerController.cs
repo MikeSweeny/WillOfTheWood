@@ -56,6 +56,8 @@ public class PlayerController : BaseController
         InputManager.HotbarSlot8 += ActivateHotbarSlot8;
         InputManager.HotbarSlot9 += ActivateHotbarSlot9;
         InputManager.HotbarSlot0 += ActivateHotbarSlot0;
+        InputManager.LeftBumper += LeftBumperPressed;
+        InputManager.RightBumper += RightBumperPressed;
         if(weaponCollider && weaponCollider.enabled == true)
             ToggleWeaponCollider();
     }
@@ -176,6 +178,42 @@ public class PlayerController : BaseController
         else
         {
             transform.Rotate(0, horizontalRotation * turnSpeed * Time.deltaTime, 0);
+        }
+    }
+
+    //Function: LeftBumperPressed 
+    //DESCRIPTION: function used to enable hotbar for controllers
+    //PARAMETERS: bool pressed
+    //RETURNS: None
+    private void LeftBumperPressed(bool pressed)
+    {
+        InputManager.ControllerHotbarSlot1 -= ActivateRightHotbarSlot1;
+        InputManager.ControllerHotbarSlot2 -= ActivateRightHotbarSlot2;
+        InputManager.ControllerHotbarSlot3 -= ActivateRightHotbarSlot3;
+        InputManager.ControllerHotbarSlot4 -= ActivateRightHotbarSlot4;
+
+        if (pressed)
+        {
+            InputManager.ControllerHotbarSlot1 += ActivateLeftHotbarSlot1;
+            InputManager.ControllerHotbarSlot2 += ActivateLeftHotbarSlot2;
+            InputManager.ControllerHotbarSlot3 += ActivateLeftHotbarSlot3;
+            InputManager.ControllerHotbarSlot4 += ActivateLeftHotbarSlot4;
+        }
+    }
+
+    private void RightBumperPressed(bool pressed)
+    {
+        InputManager.ControllerHotbarSlot1 -= ActivateLeftHotbarSlot1;
+        InputManager.ControllerHotbarSlot2 -= ActivateLeftHotbarSlot2;
+        InputManager.ControllerHotbarSlot3 -= ActivateLeftHotbarSlot3;
+        InputManager.ControllerHotbarSlot4 -= ActivateLeftHotbarSlot4;
+
+        if (pressed)
+        {
+            InputManager.ControllerHotbarSlot1 += ActivateRightHotbarSlot1;
+            InputManager.ControllerHotbarSlot2 += ActivateRightHotbarSlot2;
+            InputManager.ControllerHotbarSlot3 += ActivateRightHotbarSlot3;
+            InputManager.ControllerHotbarSlot4 += ActivateRightHotbarSlot4;
         }
     }
 
@@ -323,4 +361,75 @@ public class PlayerController : BaseController
         print("Used slot 0");
     }
 
+    //Function: ActivateLeftHotbarSlot1
+    //DESCRIPTION: function used to activate the first left slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateLeftHotbarSlot1()
+    {
+        print("used left first slot");
+    }
+
+    //Function: ActivateLeftHotbarSlot2
+    //DESCRIPTION: function used to activate the second left slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateLeftHotbarSlot2()
+    {
+        print("used left second slot");
+    }
+
+    //Function: ActivateLeftHotbarSlot3
+    //DESCRIPTION: function used to activate the third left slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateLeftHotbarSlot3()
+    {
+        print("used left third slot");
+    }
+
+    //Function: ActivateLeftHotbarSlot4
+    //DESCRIPTION: function used to activate the fourth left slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateLeftHotbarSlot4()
+    {
+        print("used left fourth slot");
+    }
+
+    //Function: ActivateRightHotbarSlot1
+    //DESCRIPTION: function used to activate the first right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot1()
+    {
+        print("used Right first slot");
+    }
+
+    //Function: ActivateRightHotbarSlot2
+    //DESCRIPTION: function used to activate the second right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot2()
+    {
+        print("used Right second slot");
+    }
+
+    //Function: ActivateRightHotbarSlot3
+    //DESCRIPTION: function used to activate the third right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot3()
+    {
+        print("used Right third slot");
+    }
+
+    //Function: ActivateRightHotbarSlot4
+    //DESCRIPTION: function used to activate the fourth right slot for controller
+    //PARAMETERS: None
+    //RETURNS: None
+    private void ActivateRightHotbarSlot4()
+    {
+        print("used Right fourth slot");
+    }
 }
