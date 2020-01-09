@@ -66,7 +66,7 @@ public abstract class BaseInteractableNpc : BaseNpc
             }
             else
             {
-                transform.rotation = myTransform;
+                transform.rotation = myTransform.rotation;
             }
         }
     }
