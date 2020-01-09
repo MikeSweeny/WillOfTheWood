@@ -20466,6 +20466,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: c97e881b428964e4380e1a92cf8afe72,
         type: 2}
+    - target: {fileID: 5542095663594345589, guid: 9cacffa9922ea65498a5e23efd58dea4,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5542095665073027158, guid: 9cacffa9922ea65498a5e23efd58dea4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
