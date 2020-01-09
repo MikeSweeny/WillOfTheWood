@@ -23,7 +23,6 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     public bool isPartOfQuest = false;
     public bool hasConversation = false;
     private bool isTalking = false; 
-    private string currentText = "";
     public AudioSource source;
 
     private void Awake()
@@ -38,6 +37,8 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     //RETURNS: None
     public override void OnInteract()
     {
+        if (source)
+            source.Play();
         if (isPartOfQuest && hasBeenTalkedTo)
             return;
         if(!isTalking)
@@ -83,8 +84,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
             dialogue.Welcome();
             currentText = dialogue.welcomeText;
             isTalking = true;
-            if(source)
-                source.Play();
+
             return;
         }
 

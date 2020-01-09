@@ -60,7 +60,7 @@ public abstract class BaseInteractableNpc : BaseNpc
         player = FindObjectOfType<Player>();
         if (player)
         {
-            if (Vector2.Distance(transform.position, player.transform.position) <= 1)
+            if (Vector2.Distance(transform.position, player.transform.position) <= 2)
             {
                 transform.LookAt(player.transform);
             }
