@@ -520,6 +520,7 @@ MonoBehaviour:
   CharacterName: Rebecca
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &142616470
 MonoBehaviour:
@@ -937,6 +938,7 @@ MonoBehaviour:
   CharacterName: Rose
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &180099210
 MonoBehaviour:
@@ -1456,6 +1458,7 @@ MonoBehaviour:
   CharacterName: Anna
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 1
   QuestList:
   - {fileID: 11400000, guid: 13c285c6b9315914f83c8814ccf4ecdc, type: 2}
   isSecondaryNPC: 0
@@ -1726,6 +1729,7 @@ MonoBehaviour:
   CharacterName: John
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &554846351
 MonoBehaviour:
@@ -2143,6 +2147,7 @@ MonoBehaviour:
   CharacterName: Richard
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &568840745
 MonoBehaviour:
@@ -2384,6 +2389,7 @@ MonoBehaviour:
   CharacterName: Susan
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &582142483
 MonoBehaviour:
@@ -2564,6 +2570,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9c16e4c16fc35a4f8da3a8a2ebe32ab, type: 3}
+--- !u!1001 &595919509
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1915851059}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_Name
+      value: blood1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0008093418
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.49599165
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7024027
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.70240265
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7024027
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
 --- !u!1 &624653965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1773016726961540, guid: 860f1ef61724f0a44a072087734ca3cf,
@@ -2628,6 +2703,7 @@ MonoBehaviour:
   CharacterName: Sendora
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
   EscortCharacter: 0
@@ -4023,6 +4099,7 @@ MonoBehaviour:
   CharacterName: Norman
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1094034380
 MonoBehaviour:
@@ -4260,6 +4337,7 @@ MonoBehaviour:
   CharacterName: 
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 9e721c440d60b9e44a5b5f276dcd2e19, type: 2}
   EscortCharacter: 0
@@ -4332,6 +4410,7 @@ MonoBehaviour:
   CharacterName: Mike
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1157825697
 MonoBehaviour:
@@ -4856,6 +4935,7 @@ MonoBehaviour:
   CharacterName: Sheriff
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   QuestList:
   - {fileID: 11400000, guid: 004e9a3942e57964ab4e50222907c3a8, type: 2}
   isSecondaryNPC: 0
@@ -5105,6 +5185,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f638648f0ddcd545bfa64683efffd99, type: 3}
+--- !u!4 &1249821886 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 358b75ea5451cf143ab19029a189097d,
+    type: 3}
+  m_PrefabInstance: {fileID: 595919509}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1259868086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6436,6 +6522,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1195912187}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1661263421
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661263422}
+  - component: {fileID: 1661263423}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661263422
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661263421}
+  m_LocalRotation: {x: 0.27811006, y: -0, z: -0, w: 0.96054924}
+  m_LocalPosition: {x: 0, y: 1.38, z: -1.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1099352393}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 32.295002, y: 0, z: 0}
+--- !u!108 &1661263423
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661263421}
+  m_Enabled: 1
+  serializedVersion: 8
+  m_Type: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 4.32
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1671626847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1458336687690522, guid: 186ec65d3a27e9f448c5603f147f80d0,
@@ -6597,6 +6752,7 @@ MonoBehaviour:
   CharacterName: Bobby
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1671626851}
 --- !u!1 &1691343732 stripped
 GameObject:
@@ -6641,6 +6797,7 @@ MonoBehaviour:
   CharacterName: Mary
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
   EscortCharacter: 0
@@ -6816,6 +6973,7 @@ MonoBehaviour:
   CharacterName: Tracy
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1728748710
 MonoBehaviour:
@@ -6978,6 +7136,7 @@ MonoBehaviour:
   CharacterName: Gavin
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1744361074
 MonoBehaviour:
@@ -7219,6 +7378,7 @@ MonoBehaviour:
   CharacterName: Tom
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1773719481
 MonoBehaviour:
@@ -7293,6 +7453,7 @@ MonoBehaviour:
   CharacterName: Azfoldo
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
   EscortCharacter: 0
@@ -7541,6 +7702,7 @@ MonoBehaviour:
   CharacterName: Milea
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
   EscortCharacter: 0
@@ -7739,7 +7901,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1915851059}
-  - component: {fileID: 1915851065}
   - component: {fileID: 1915851064}
   - component: {fileID: 1915851063}
   - component: {fileID: 1915851062}
@@ -7762,7 +7923,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 48.25244, y: -0.44329834, z: 2.8032227}
   m_LocalScale: {x: 0.22624, y: 0.22624, z: 0.22624}
-  m_Children: []
+  m_Children:
+  - {fileID: 1249821886}
   m_Father: {fileID: 1530342099}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7785,6 +7947,7 @@ MonoBehaviour:
   CharacterName: 
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 1
   dialogueList:
   - {fileID: 11400000, guid: 95ca0ff7fa06a5d4a8f454e51095db97, type: 2}
   EscortCharacter: 0
@@ -7878,14 +8041,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &1915851065
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915851058}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1920217347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8418,6 +8573,7 @@ MonoBehaviour:
   CharacterName: Jeff
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &2125347447
 MonoBehaviour:
@@ -8580,6 +8736,7 @@ MonoBehaviour:
   CharacterName: Tim
   pathingPattern: {fileID: 0}
   vigilant: 0
+  Moveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &2140060384
 MonoBehaviour:

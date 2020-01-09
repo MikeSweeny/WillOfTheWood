@@ -38,7 +38,7 @@ public abstract class BaseInteractableNpc : BaseNpc
 
     public void Update()
     {
-        if(!Moveable)
+        if(!NotMoveable)
             LookAt();
         DialogeBox();
     }
