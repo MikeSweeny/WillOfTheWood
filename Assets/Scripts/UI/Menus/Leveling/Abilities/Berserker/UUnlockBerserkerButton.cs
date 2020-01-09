@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UUnlockBerserkerButton : MonoBehaviour
+public class UUnlockBerserkerButton : UIButton
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Clicked()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        AbilityManager.TriggerUnlockBerserker();
     }
 }
