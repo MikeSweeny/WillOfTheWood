@@ -15,8 +15,8 @@ public abstract class BaseInteractableNpc : BaseNpc
     protected string currentText;
     protected Player player;
     protected bool isActive;
-    protected Transform myTransform;
-
+    protected Vector3 currentPos;
+    protected Vector3 originalPos;
     //Function: OnInteract
     //DESCRIPTION: this function is used for overriding in children to say what is supposed to happen when they are interacted with
     //PARAMETERS: None
@@ -24,7 +24,8 @@ public abstract class BaseInteractableNpc : BaseNpc
 
     private void Start()
     {
-        myTransform = transform;
+        currentPos = gameObject.transform.position;
+        originalPos = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
     }
     public abstract void OnInteract();
     public abstract void NextDialogue();
@@ -47,7 +48,7 @@ public abstract class BaseInteractableNpc : BaseNpc
             player = FindObjectOfType<Player>();
             if (player)
             {
-                if (Vector2.Distance(transform.position, player.transform.position) >= 2)
+                if (Vector3.Distance(transform.position, player.transform.position) >= 2)
                 {
                     UIEventManager.TriggerCloseDialogue();
                     isActive = false;
@@ -60,14 +61,19 @@ public abstract class BaseInteractableNpc : BaseNpc
         player = FindObjectOfType<Player>();
         if (player)
         {
-            if (Vector2.Distance(transform.position, player.transform.position) <= 2)
+            if (Vector3.Distance(transform.position, player.transform.position) <= 2)
             {
                 transform.LookAt(player.transform);
             }
             else
             {
-                transform.rotation = myTransform.rotation;
+                ResetPosition();
             }
         }
     }
+    public void ResetPosition()
+    {
+        gameObject.transform.position = originalPos;
+    }
+
 }
