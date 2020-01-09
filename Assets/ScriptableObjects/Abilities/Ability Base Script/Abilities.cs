@@ -33,4 +33,9 @@ public class Abilities: ScriptableObject
     {
         return isUnlocked;
     }
+    public void SetPlayer(Player player)
+    {
+        this.player = player;
+    }
+
 }

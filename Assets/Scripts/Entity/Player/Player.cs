@@ -29,6 +29,7 @@ public class Player : CharacterBase
     private const int hotbarSlots = 8;
     private void Awake()
     {
+        playerStatPoints = 1;
         hotBar = new List<HotbarSlot>();
         for (int i = 0; i < hotbarSlots; i++)
         {
@@ -46,6 +47,11 @@ public class Player : CharacterBase
         abilities.Add(new Recovery());
         abilities.Add(new ShieldFighter());
         abilities.Add(new TwoHandedForce());
+
+        for (int i = 0; i < abilities.Count; i++)
+        {
+            abilities[i].SetPlayer(this);
+        }
 
         AbilityManager.UnlockAtArms += updateHotbar;
         AbilityManager.UnlockBackStab += updateHotbar;
