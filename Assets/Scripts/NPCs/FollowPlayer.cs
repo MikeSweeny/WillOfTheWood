@@ -14,6 +14,9 @@ public class FollowPlayer : BaseNpc
 
     private bool StopFollowing;
     public bool BeginFollowing;
+
+    public float hangBack;
+
     protected bool CanWalk;
     protected Animator characterAnim;
    
@@ -21,7 +24,8 @@ public class FollowPlayer : BaseNpc
     public string CompletionArea;
 
     private GameObject Target;
-    private Transform ToTarget;
+    private float distBetweenTarget;
+    private Vector3 ToTarget;
 
 
 
@@ -46,10 +50,13 @@ public class FollowPlayer : BaseNpc
         
         if (BeginFollowing)
         {
-            GetTargetPosition();
-            pathingPattern.FollowPlayer(Target);
-            SpeedCheck();
-            //characterAnim.Play("Walking");
+            if (distBetweenTarget  > hangBack)
+            {
+                GetTargetPosition();
+                pathingPattern.FollowPlayer(Target);
+                SpeedCheck();
+
+            } 
 
         }
         else if (StopFollowing)
@@ -58,6 +65,7 @@ public class FollowPlayer : BaseNpc
             //pathingPattern.FollowPlayer(Target);
             SpeedCheck();
         }
+     
     }
 
     private void SpeedCheck()
@@ -85,7 +93,10 @@ public class FollowPlayer : BaseNpc
     private void GetTargetPosition()
     {
         Target = GameObject.FindGameObjectWithTag(TargetTag);
-        //ToTarget = Target.transform;
+        ToTarget = Target.transform.position;
+
+        distBetweenTarget = Vector3.Distance(this.transform.position, ToTarget);
+
     }
 
 

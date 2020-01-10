@@ -13,7 +13,7 @@ public class ExceptionalAttribute : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public ExceptionalAttribute()
+    public override void OnLoad()
     {
         AbilityManager.UnlockExceptionalAttribute += UnlockAbility;
     }

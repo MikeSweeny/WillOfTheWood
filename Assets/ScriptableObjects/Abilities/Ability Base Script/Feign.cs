@@ -15,7 +15,7 @@ public class Feign : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public Feign()
+    public override void OnLoad()
     {
         AbilityManager.UnlockFeign += UnlockAbility;
     }

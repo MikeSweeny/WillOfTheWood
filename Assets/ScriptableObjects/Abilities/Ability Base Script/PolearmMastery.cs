@@ -14,7 +14,7 @@ public class PolearmMastery : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public PolearmMastery()
+    public override void OnLoad()
     {
         AbilityManager.UnlockPoleArmMastery += UnlockAbility;
     }

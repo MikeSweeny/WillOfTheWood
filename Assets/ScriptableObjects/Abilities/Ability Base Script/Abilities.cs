@@ -19,23 +19,15 @@ public class Abilities: ScriptableObject
     [SerializeField]
     private Sprite abilityImage;
     protected bool isUnlocked = false;
+    public virtual void OnLoad() { }
     public virtual void Act() { }
     public virtual void UpdateAbility() { }
-    Player player;
     public void UnlockAbility()
     {
-        if(player.playerStatPoints > 0)
-        {
-            isUnlocked = true;
-        }
+        isUnlocked = true;
     }
     public bool IsUnlocked()
     {
         return isUnlocked;
     }
-    public void SetPlayer(Player player)
-    {
-        this.player = player;
-    }
-
 }

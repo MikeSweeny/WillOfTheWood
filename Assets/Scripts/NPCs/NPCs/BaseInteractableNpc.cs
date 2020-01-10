@@ -15,8 +15,7 @@ public abstract class BaseInteractableNpc : BaseNpc
     protected string currentText;
     protected Player player;
     protected bool isActive;
-    protected Transform startTransform;
-    private Quaternion startRotation;
+    protected Transform StartPosition;
 
     public bool NotMoveable;
     //Function: OnInteract
@@ -26,14 +25,11 @@ public abstract class BaseInteractableNpc : BaseNpc
 
     private void Start()
     {
-        GetStartRotation();
+        //GetStartPosition();
     }
-    public Quaternion GetStartRotation()
+    public void GetStartPosition()
     {
-        startTransform = gameObject.transform;
-        startRotation = startTransform.rotation;
-
-        return startRotation;
+        StartPosition = gameObject.transform;
     }
     public abstract void OnInteract();
     public abstract void NextDialogue();
@@ -83,8 +79,8 @@ public abstract class BaseInteractableNpc : BaseNpc
     public void ResetPosition()
     {
         //Debug.Log("Return to oringinal position");
-
-        transform.rotation = startRotation;
+        
+        transform.position = StartPosition.position;
     }
 
 }

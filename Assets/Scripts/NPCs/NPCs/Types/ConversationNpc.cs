@@ -29,6 +29,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         ID = IDName;
         source = GetComponent<AudioSource>();
+        GetStartPosition();
     }
 
     //Function: OnInteract
