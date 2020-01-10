@@ -19,7 +19,7 @@ public class HotbarHUDSlot : MonoBehaviour
     {
         if (slot != null)
         {
-            
+            image.sprite = slot.ability.abilityImage;
         }
     }
 
