@@ -21490,6 +21490,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a84cd08a35bd54980f583aea090d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorSprite: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!4 &1463508991
 Transform:
   m_ObjectHideFlags: 0
@@ -21702,7 +21704,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1472406420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0940510fecfaba42a2bbeb28d70a9dd, type: 3}
+  m_Script: {fileID: 11500000, guid: 69b5eec050460414193e3cfdc42149df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1472406423
@@ -22605,7 +22607,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1708574210}
   m_Direction: 2
   m_Value: 0.99501014
-  m_Size: 0.33200002
+  m_Size: 0.332
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
