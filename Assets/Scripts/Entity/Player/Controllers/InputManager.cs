@@ -75,7 +75,8 @@ public class InputManager : MonoBehaviour
 
     private void Update()
     {
-        MoveCamera?.Invoke();
+        if(inputEnabled)
+            MoveCamera?.Invoke();
 
         if (Input.GetButtonDown("Jump") && dialogueBox.activeInHierarchy == false)
             TriggerJump();
@@ -119,7 +120,10 @@ public class InputManager : MonoBehaviour
             UIEventManager.TriggerOpenLeveling();
 
         if (Input.GetButtonDown("Cancel"))
+        {
             GameEventManager.TriggerPause();
+        }
+            
 
         if (Input.GetAxis("ControllerAttack") == 0)
             axisInUse = false;
@@ -387,6 +391,15 @@ public class InputManager : MonoBehaviour
     {
         if (inputEnabled)
             HotbarSlot0?.Invoke();
+    }
+
+    //Function: RefocusEventSystem
+    //DESCRIPTION: this function is used to refocus the event system
+    //PARAMETERS: GameObject focus
+    //RETURNS: None
+    public static void RefocusEventSystem(GameObject focus)
+    {
+        EventSystem.current.SetSelectedGameObject(focus.GetComponentInChildren<Button>().gameObject);
     }
 
 }
