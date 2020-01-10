@@ -55,23 +55,28 @@ public class FollowPlayer : BaseNpc
         else if (StopFollowing)
         {
             GetTargetPosition();
-            pathingPattern.FollowPlayer(Target);
+            //pathingPattern.FollowPlayer(Target);
+            SpeedCheck();
         }
     }
 
     private void SpeedCheck()
     {
 
-        if (Target.transform.position == gameObject.transform.position)
+        if (Vector3.Distance(transform.position, Target.transform.position) <= 1.5)
         {
             CanWalk = false;
             characterAnim.SetBool("CanWalk", false);
+            BeginFollowing = false;
+            StopFollowing = true;
 
         }
         else
         {
             CanWalk = true;
             characterAnim.SetBool("CanWalk", true);
+            BeginFollowing = true;
+            StopFollowing = false;
         }
 
 
@@ -88,6 +93,10 @@ public class FollowPlayer : BaseNpc
         if (other.gameObject.name == CompletionArea)
         {
             BeginFollowing = false;
+            StopFollowing = false;
+            CanWalk = false;
+            characterAnim.SetBool("CanWalk", false);
+            gameObject.GetComponent<ConversationNpc>().NotMoveable = false;
             //StopFollowing = true;
             //Target = GameObject.Find("SarekHandin");
             //ToTarget = Target.transform;
