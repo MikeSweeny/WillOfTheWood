@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a84cd08a35bd54980f583aea090d26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorSprite: {fileID: 0}
+  dialogueBox: {fileID: 0}
 --- !u!4 &45217799
 Transform:
   m_ObjectHideFlags: 0
@@ -732,7 +734,8 @@ PrefabInstance:
       propertyPath: IDName
       value: clue1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1937398640, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d57a606738b9f614e80cd96095127f1a, type: 3}
 --- !u!1 &1597755595
 GameObject:
@@ -879,10 +882,10 @@ MonoBehaviour:
   weaponPrefab: {fileID: 0}
   CharacterName: 
   pathingPattern: {fileID: 0}
-  npcStats: {fileID: 0}
   vigilant: 0
+  NotMoveable: 0
   items:
-  - {fileID: 5748311389613679903}
+  - {fileID: 0}
 --- !u!1 &1606930203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,6 +1319,56 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5831068, y: 12.41022, z: 10.909917}
   m_Center: {x: 0.13458703, y: 5.7051096, z: -0.4923985}
+--- !u!1 &2024195714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1999711273916728, guid: d57a606738b9f614e80cd96095127f1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1501974454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2024195715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024195714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48196d54e3ce97d40b28e660474f1d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  defence: 0
+  painThreshold: 0
+  weaponPrefab: {fileID: 0}
+  CharacterName: 
+  pathingPattern: {fileID: 0}
+  vigilant: 0
+  BeginFollowing: 0
+  TargetTag: Player
+  CompletionArea: 
+--- !u!195 &2024195716
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024195714}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &2032364776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1726,15 +1779,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 529f568424ca3bb419a39273f468b7a2, type: 3}
---- !u!114 &5748311389613679903 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4538631597012871574, guid: 529f568424ca3bb419a39273f468b7a2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5748311389613679902}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eee26845344f33645824df6ae12d51c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
