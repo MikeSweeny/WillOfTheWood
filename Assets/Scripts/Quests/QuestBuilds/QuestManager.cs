@@ -66,7 +66,7 @@ public class QuestManager: MonoBehaviour
     public void addToCQNList(string addName)
     {
         completedQuestNames.Add(addName);
-        Debug.Log(addName);
+        Debug.Log("Quest name: " + addName);
     }
 
     private void FixedUpdate()
