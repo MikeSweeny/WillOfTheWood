@@ -87,8 +87,11 @@ public class InputManager : MonoBehaviour
     {
         MoveCamera?.Invoke();
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && dialogueBox.activeInHierarchy == false)
             TriggerJump();
+
+        if (Input.GetButtonDown("Jump") && dialogueBox.activeInHierarchy)
+            dialogueBox.GetComponentInChildren<UNextDialogueButton>().Clicked();
 
         if (Input.GetButtonDown("Fire1") || (Input.GetAxis("ControllerAttack") != 0 && axisInUse == false))
         {

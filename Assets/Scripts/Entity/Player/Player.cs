@@ -84,11 +84,6 @@ public class Player : CharacterBase
             inventory = new IPlayerInventory();
             firstUpdate = false;
         }
-
-        foreach (Abilities ability in abilities)
-        {
-            ability.UpdateAbility();
-        }
         if (canShootTargetRay == true)
         {
             canShootTargetRay = false;
@@ -234,13 +229,14 @@ public class Player : CharacterBase
     }
     public void updateHotbar()
     {
+        unlockedAbilityCount++;
         for (int i = 0; i < unlockedAbilityCount; i++)
         {
             foreach (Abilities ability in abilities)
             {
                 if(ability.IsUnlocked())
                 {
-
+                    hotBar[i].ability = ability;
                 }
             }
         }
