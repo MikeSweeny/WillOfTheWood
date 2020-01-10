@@ -15,6 +15,8 @@ public class Poisoner : Abilities
     //RETURNS : none
     public Poisoner()
     {
+        abilityName = "Poisoner";
+        abilityDescription = " ";
         AbilityManager.UnlockPoisoner += UnlockAbility;
     }
     public override void UpdateAbility()

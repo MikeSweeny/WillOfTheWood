@@ -15,6 +15,8 @@ public class PolearmMastery : Abilities
     //RETURNS : none
     public PolearmMastery()
     {
+        abilityName = "PolearmMastery";
+        abilityDescription = " ";
         AbilityManager.UnlockPoleArmMastery += UnlockAbility;
     }
     public override void UpdateAbility()

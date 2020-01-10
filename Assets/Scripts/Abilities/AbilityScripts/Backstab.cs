@@ -18,6 +18,8 @@ public class Backstab : Abilities
     //RETURNS : none
     public Backstab()
     {
+        abilityName = "BackStab";
+        abilityDescription = " ";
         AbilityManager.UnlockBackStab += UnlockAbility;
     }
     public override void UpdateAbility()
