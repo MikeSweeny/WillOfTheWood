@@ -16,7 +16,8 @@ public class Poisoner : Abilities
     public Poisoner()
     {
         abilityName = "Poisoner";
-        abilityDescription = " ";
+        abilityDescription = "Add 1-4 extra damage to weapons when active. ";
+        abilityImage = sprites[175];
         AbilityManager.UnlockPoisoner += UnlockAbility;
     }
     public override void UpdateAbility()

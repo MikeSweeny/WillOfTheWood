@@ -20,7 +20,7 @@ public class SunAbilities : MonoBehaviour
     {
         GetTime();
         UpdateSun();
-        Debug.Log("Time of day: " + Hours);
+        //Debug.Log("Time of day: " + Hours);
     }
 
     private float GetTime()

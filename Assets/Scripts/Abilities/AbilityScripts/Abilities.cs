@@ -13,6 +13,8 @@ public class Abilities
     //Sets the name and description of ability
     public string abilityName;
     public string abilityDescription;
+    public string spriteSheetName;
+    protected Sprite[] sprites;
     public Sprite abilityImage{ get; set; }
     protected bool isUnlocked = false;
     public virtual void Act() { }
@@ -33,5 +35,9 @@ public class Abilities
     {
         this.player = player;
     }
-
+    public void SetSprites()
+    {
+        spriteSheetName = "AbilitySpriteSheet";
+        sprites = (Sprite[])Resources.LoadAll(spriteSheetName);
+    }
 }

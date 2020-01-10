@@ -17,7 +17,8 @@ public class TwoHandedForce : Abilities
     public TwoHandedForce()
     {
         abilityName = "TwoHandedForces";
-        abilityDescription = " ";
+        abilityDescription = "Increases Two-Handed max damage and BlackBlade min/max damage.";
+        abilityImage = sprites[6];
         AbilityManager.UnlockTwoHandedForce += UnlockAbility;
     }
     public override void UpdateAbility()

@@ -19,7 +19,8 @@ public class Backstab : Abilities
     public Backstab()
     {
         abilityName = "BackStab";
-        abilityDescription = " ";
+        abilityDescription = "Do extra damage while undetected.";
+        abilityImage = sprites[44];
         AbilityManager.UnlockBackStab += UnlockAbility;
     }
     public override void UpdateAbility()
