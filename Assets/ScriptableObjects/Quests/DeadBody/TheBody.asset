@@ -23,7 +23,7 @@ MonoBehaviour:
   RequiredAmount: 5
   ExperenceReward: 10
   CoinReward: 3
-  UnitReward: 0
+  AbilityReward: 1
   QuestObjectives: 'Find clues about the women''s death, then return to the Sheriff
     to tell him what you found. '
   StartQuestText: 'You stumble upon a dead body, looking around it seems she might

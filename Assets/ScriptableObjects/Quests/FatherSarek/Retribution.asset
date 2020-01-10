@@ -23,7 +23,7 @@ MonoBehaviour:
   RequiredAmount: 8
   ExperenceReward: 20
   CoinReward: 0
-  UnitReward: 0
+  AbilityReward: 1
   QuestObjectives: The elves have slaughtered a homestead on the outskirts of town,
     and kill the 8 elves there.
   StartQuestText: Sarek turns to face you, his knuckles white as his hands grasp his

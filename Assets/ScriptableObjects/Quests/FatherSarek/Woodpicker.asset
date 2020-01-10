@@ -23,7 +23,7 @@ MonoBehaviour:
   RequiredAmount: 1
   ExperenceReward: 10
   CoinReward: 3
-  UnitReward: 0
+  AbilityReward: 1
   QuestObjectives: Gongomo the logger has had his cart turned over and his lumber
     cast about the outskirts of the woods, collect the goods and bring them to Father
     Sarek.

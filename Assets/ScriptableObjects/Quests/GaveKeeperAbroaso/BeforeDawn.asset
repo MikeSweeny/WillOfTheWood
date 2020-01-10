@@ -23,7 +23,7 @@ MonoBehaviour:
   RequiredAmount: 1
   ExperenceReward: 10
   CoinReward: 2
-  UnitReward: 0
+  AbilityReward: 1
   QuestObjectives: There is a Grave Robber that appears in the graveyard during a
     certain night of the week, attacking anything it says its eyes upon, dispatch
     of the hound.

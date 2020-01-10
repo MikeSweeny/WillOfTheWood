@@ -23,7 +23,7 @@ MonoBehaviour:
   RequiredAmount: 1
   ExperenceReward: 10
   CoinReward: 0
-  UnitReward: 0
+  AbilityReward: 1
   QuestObjectives: The hunter Geldas has wandered into the woods and hasn't been seen
     in some time. Seek out the hunter near the outskirts of the woods.
   StartQuestText: With a glassy aged eye, the priest looks you up and down and pouting
@@ -39,6 +39,6 @@ MonoBehaviour:
     and Soyela a great mercy."
   SecondInprogressText: 
   SecondCompletedText: 
-  RewardsList: 
+  RewardsList: ' Experence: 10'
   CNPC:
   - Geldas
