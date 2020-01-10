@@ -211,13 +211,9 @@ public class Player : CharacterBase
     {
         playerCoins += amount;
     }
-    public void LevelUp()
+    public void AddStatPoint(int addPoint)
     {
-        if(currentEXP == expCap)
-        {
-            playerStatPoints = 1;
-            currentEXP = 0;
-        }
+        playerStatPoints += addPoint;
     }
     public void UsedStatPoint()
     {
