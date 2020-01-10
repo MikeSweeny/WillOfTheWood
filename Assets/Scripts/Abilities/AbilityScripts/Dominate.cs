@@ -15,6 +15,8 @@ public class Dominate : Abilities
     //RETURNS : none
     public Dominate()
     {
+        abilityName = "Dominate";
+        abilityDescription = " ";
         AbilityManager.UnlockDominate += UnlockAbility;
     }
     public override void UpdateAbility()

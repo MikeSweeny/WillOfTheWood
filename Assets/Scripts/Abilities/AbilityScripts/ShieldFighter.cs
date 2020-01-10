@@ -15,6 +15,8 @@ public class ShieldFighter : Abilities
     //RETURNS : none
     public ShieldFighter()
     {
+        abilityName = "ShieldFighter";
+        abilityDescription = " ";
         AbilityManager.UnlockShieldFighter += UnlockAbility;
     }
     public override void UpdateAbility()

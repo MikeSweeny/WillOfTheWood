@@ -16,6 +16,8 @@ public class Feign : Abilities
     //RETURNS : none
     public Feign()
     {
+        abilityName = "Feign";
+        abilityDescription = " ";
         AbilityManager.UnlockFeign += UnlockAbility;
     }
     public override void UpdateAbility()

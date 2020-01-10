@@ -14,6 +14,8 @@ public class ExceptionalAttribute : Abilities
     //RETURNS : none
     public ExceptionalAttribute()
     {
+        abilityName = "ExceptionalAttribute";
+        abilityDescription = " ";
         AbilityManager.UnlockExceptionalAttribute += UnlockAbility;
     }
     public override void UpdateAbility()

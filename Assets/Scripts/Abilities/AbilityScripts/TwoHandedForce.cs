@@ -16,6 +16,8 @@ public class TwoHandedForce : Abilities
     //RETURNS : none
     public TwoHandedForce()
     {
+        abilityName = "TwoHandedForces";
+        abilityDescription = " ";
         AbilityManager.UnlockTwoHandedForce += UnlockAbility;
     }
     public override void UpdateAbility()

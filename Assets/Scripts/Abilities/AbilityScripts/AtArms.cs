@@ -16,6 +16,8 @@ public class AtArms : Abilities
     //RETURNS : none
     public AtArms()
     {
+        abilityName = "AtArms";
+        abilityDescription = " ";
         AbilityManager.UnlockAtArms += UnlockAbility;
     }
     public override void UpdateAbility()
