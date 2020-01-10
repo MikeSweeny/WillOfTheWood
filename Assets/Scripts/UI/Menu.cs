@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
     //RETURNS : none
     protected void OpenMenu()
     {
+        InputManager.RefocusEventSystem(this);
         gameObject.SetActive(true);
     }
 
