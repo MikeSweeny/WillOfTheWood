@@ -55,11 +55,6 @@ public class InputManager : MonoBehaviour
 
     public Texture2D cursorSprite;
     public GameObject dialogueBox;
-    private Vector2 cursorPosition;
-    private int cursorHeight;
-    private int cursorWidth;
-    private float cursorHorizontalSpeed = 2f;
-    private float cursorVerticalSpeed = 2f;
 
     private void Awake()
     {
@@ -76,11 +71,6 @@ public class InputManager : MonoBehaviour
         GameEventManager.UnPause += UnPause;
         UIEventManager.OpenLeveling += OnPause;
         UIEventManager.CloseLeveling += UnPause;
-
-        //cursorHeight = cursorSprite.height;
-        //cursorWidth = cursorSprite.width;
-        //cursorPosition = new Vector2(Screen.width/2f, Screen.height/2f);
-        //Cursor.visible = false;
     }
 
     private void Update()
@@ -398,16 +388,5 @@ public class InputManager : MonoBehaviour
         if (inputEnabled)
             HotbarSlot0?.Invoke();
     }
-
-    //private void OnGUI()
-    //{
-    //    float horizontal = cursorHorizontalSpeed * Input.GetAxis("RightJoystickHorizontal") * Time.deltaTime;
-    //    float vertical = cursorVerticalSpeed * Input.GetAxis("RightJoystickVertical") * Time.deltaTime;
-
-    //    cursorPosition.x += horizontal;
-    //    cursorPosition.y += vertical;
-
-    //    GUI.DrawTexture(new Rect(cursorPosition.x, Screen.height - cursorPosition.y, cursorWidth, cursorHeight), cursorSprite);
-    //}
 
 }
