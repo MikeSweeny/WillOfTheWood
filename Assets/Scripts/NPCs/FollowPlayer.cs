@@ -15,11 +15,14 @@ public class FollowPlayer : BaseNpc
     private bool StopFollowing;
     public bool BeginFollowing;
 
+    public float hangBack;
+
     public string TargetTag;
     public string CompletionArea;
 
     private GameObject Target;
-    private Transform ToTarget;
+    private float distBetweenTarget;
+    private Vector3 ToTarget;
 
     private void Awake()
     {
@@ -36,20 +39,23 @@ public class FollowPlayer : BaseNpc
 
         if (BeginFollowing)
         {
-            GetTargetPosition();
-            pathingPattern.FollowPlayer(Target);
+            if (distBetweenTarget  > hangBack)
+            {
+                GetTargetPosition();
+                pathingPattern.FollowPlayer(Target);
+            } 
+            
         }
-        else if (StopFollowing)
-        {
-            GetTargetPosition();
-            pathingPattern.FollowPlayer(Target);
-        }
+     
     }
 
     private void GetTargetPosition()
     {
         Target = GameObject.FindGameObjectWithTag(TargetTag);
-        //ToTarget = Target.transform;
+        ToTarget = Target.transform.position;
+
+        distBetweenTarget = Vector3.Distance(this.transform.position, ToTarget);
+
     }
 
 
