@@ -14,6 +14,9 @@ public class MLeveling : Menu
     private Text skillPointsCount;
     private Player player;
     private Abilities selectedAbility;
+    private Text abilityName;
+    private Text abilityDescription;
+
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
@@ -30,6 +33,9 @@ public class MLeveling : Menu
         {
             holder.GetChild(i).Find("Button").GetComponent<UAbilitySlotButton>().SetMLRef(this);
         }
+        holder = transform.Find("AbilityInfoHolder");
+        abilityName = holder.Find("AbilityNameText").GetComponent<Text>();
+        abilityDescription = holder.Find("AbilityDescriptionText").GetComponent<Text>();
     }
 
     //Function : Update
@@ -39,6 +45,11 @@ public class MLeveling : Menu
     private void Update()
     {
         skillPointsCount.text = "" + player.GetStatPoints();
+        if (selectedAbility != null)
+        {
+            abilityName.text = selectedAbility.abilityName;
+            abilityDescription.text = selectedAbility.abilityDescription;
+        }
     }
 
     //Function : OnDestroy
@@ -51,6 +62,10 @@ public class MLeveling : Menu
         UIEventManager.CloseLeveling -= CloseMenu;
     }
 
+    //Function : SetSelectedAbility
+    //DESCRIPTION : sets the selected ability reference
+    //PARAMETERS : Abilities ability : the ability being referenced
+    //RETURNS : none
     public void SetSelectedAbility(Abilities ability)
     {
         selectedAbility = ability;
