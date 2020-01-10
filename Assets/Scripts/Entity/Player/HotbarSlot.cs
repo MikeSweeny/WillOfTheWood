@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HotbarSlot
 {
-    Abilities ability { get; set; }
+    public Abilities ability { get; set; }
 
     public void AbilityAct()
     {
