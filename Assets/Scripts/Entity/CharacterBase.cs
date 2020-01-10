@@ -33,13 +33,13 @@ public class CharacterBase : MonoBehaviour
     private IArmour armour;
     private IWeapon weapon;
     public GameObject weaponPrefab;
+
     protected Inventory inventory;
     public string CharacterName;
 
     private void Start()
     {
         armour = null;
-        //weapon = GameObject.Instantiate(weaponPrefab.GetComponent<IWeapon>());
         maxHealth = toughness;
         currentHealth = maxHealth;
     }
@@ -48,6 +48,15 @@ public class CharacterBase : MonoBehaviour
     //DESCRIPTION : Calcualting the Toughness of the Entity
     //PARAMETERS : void
     //RETURNS : void
+    public void EquipArmour(IArmour item)
+    {
+        item = armour;
+    }
+
+    public void EquipWeapon(IWeapon item)
+    {
+        item = weapon;
+    }
 
     public void CalcToughness()
     {
