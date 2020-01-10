@@ -16,7 +16,8 @@ public class Recovery : Abilities
     public Recovery()
     {
         abilityName = "Recovery";
-        abilityDescription = " ";
+        abilityDescription = "Heal a random ammount between 1-4.";
+        abilityImage = sprites[140];
         AbilityManager.UnlockRecovery += UnlockAbility;
     }
     public override void UpdateAbility()

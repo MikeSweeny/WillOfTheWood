@@ -15,7 +15,8 @@ public class ExceptionalAttribute : Abilities
     public ExceptionalAttribute()
     {
         abilityName = "ExceptionalAttribute";
-        abilityDescription = " ";
+        abilityDescription = "Add 1 point to any stat.";
+        abilityImage = sprites[50];
         AbilityManager.UnlockExceptionalAttribute += UnlockAbility;
     }
     public override void UpdateAbility()

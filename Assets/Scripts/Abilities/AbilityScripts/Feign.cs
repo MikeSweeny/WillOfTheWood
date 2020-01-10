@@ -17,7 +17,8 @@ public class Feign : Abilities
     public Feign()
     {
         abilityName = "Feign";
-        abilityDescription = " ";
+        abilityDescription = "Chance to attack without being detected while active.";
+        abilityImage = sprites[41];
         AbilityManager.UnlockFeign += UnlockAbility;
     }
     public override void UpdateAbility()

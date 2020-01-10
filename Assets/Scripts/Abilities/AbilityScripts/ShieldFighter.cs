@@ -16,7 +16,8 @@ public class ShieldFighter : Abilities
     public ShieldFighter()
     {
         abilityName = "ShieldFighter";
-        abilityDescription = " ";
+        abilityDescription = "Not a working ability...";
+        abilityImage = sprites[79];
         AbilityManager.UnlockShieldFighter += UnlockAbility;
     }
     public override void UpdateAbility()
