@@ -19228,6 +19228,8 @@ MonoBehaviour:
   alwaysRotateToRearofTarget: 0
   allowMouseInputX: 1
   allowMouseInputY: 1
+  allowControllerInputX: 1
+  allowControllerInputY: 1
 --- !u!81 &1380930503
 AudioListener:
   m_ObjectHideFlags: 0
@@ -21491,7 +21493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorSprite: {fileID: 0}
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 517844710}
 --- !u!4 &1463508991
 Transform:
   m_ObjectHideFlags: 0

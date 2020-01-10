@@ -30,6 +30,8 @@ public class PlayerCamera : MonoBehaviour
     public bool alwaysRotateToRearofTarget = false;
     public bool allowMouseInputX = true;
     public bool allowMouseInputY = true;
+    public bool allowControllerInputX = true;
+    public bool allowControllerInputY = true;
 
     private float xDeg = 0.0f;
     private float yDeg = 0.0f;
@@ -80,7 +82,24 @@ public class PlayerCamera : MonoBehaviour
                 if (!alwaysRotateToRearofTarget)
                     rotateBehind = false;
             }
-            else if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0 || rotateBehind)
+            else if(Input.GetButton("AllowCamera"))
+            {
+                if (allowControllerInputX)
+                {
+                    xDeg += Input.GetAxis("RightJoystickHorizontal") * xSpeed * 0.02f;
+                }
+                else
+                {
+                    RotateBehindTarget();
+                }
+                if (allowControllerInputY)
+                {
+                    yDeg -= Input.GetAxis("RightJoystickVertical") * ySpeed * 0.02f;
+                }
+                if (!alwaysRotateToRearofTarget)
+                    rotateBehind = false;
+            }
+            else if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0 || Input.GetAxis("RightJoystickVertical") != 0 || Input.GetAxis("RightJoystickHorizontal") != 0 || rotateBehind)
             {
                 RotateBehindTarget();
             }
