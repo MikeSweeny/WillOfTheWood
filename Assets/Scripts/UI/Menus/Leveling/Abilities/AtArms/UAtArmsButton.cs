@@ -9,7 +9,14 @@ using UnityEngine;
 //NAME : UAtArmsButton
 //PURPOSE : sets the selected ability in the 
 //leveling menu to the at arms ability
-public class UAbilitySlotButton : MonoBehaviour
+public class UAtArmsButton : UAbilitySlotButton
 {
-
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Awake()
+    {
+        ability = new AtArms();
+    }
 }

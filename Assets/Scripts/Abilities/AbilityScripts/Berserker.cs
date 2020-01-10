@@ -17,6 +17,8 @@ public class Berserker : Abilities
     //RETURNS : none
     public Berserker()
     {
+        abilityName = "Berseker";
+        abilityDescription = " ";
         AbilityManager.UnlockBerserker += UnlockAbility;
     }
     public override void UpdateAbility()

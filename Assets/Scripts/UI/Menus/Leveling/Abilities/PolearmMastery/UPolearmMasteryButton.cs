@@ -9,17 +9,14 @@ using UnityEngine;
 //NAME : UPolearmMasteryButton
 //PURPOSE : sets the selected ability in the 
 //leveling menu to the PolearmMastery ability
-public class UPolearmMasteryButton : MonoBehaviour
+public class UPolearmMasteryButton : UAbilitySlotButton
 {
-    // Start is called before the first frame update
-    void Start()
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ability = new PolearmMastery();
     }
 }

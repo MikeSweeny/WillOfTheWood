@@ -15,6 +15,8 @@ public class Recovery : Abilities
     //RETURNS : none
     public Recovery()
     {
+        abilityName = "Recovery";
+        abilityDescription = " ";
         AbilityManager.UnlockRecovery += UnlockAbility;
     }
     public override void UpdateAbility()

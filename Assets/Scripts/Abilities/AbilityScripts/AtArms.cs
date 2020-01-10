@@ -16,6 +16,8 @@ public class AtArms : Abilities
     //RETURNS : none
     public AtArms()
     {
+        abilityName = "AtArms";
+        abilityDescription = " ";
         AbilityManager.UnlockAtArms += UnlockAbility;
     }
     public override void UpdateAbility()
@@ -31,17 +33,17 @@ public class AtArms : Abilities
     //RETURNS : none
     public override void Act()
     {
-        if(armour.armourType == ArmorStats.armourTypes.LIGHT)
-        {
-            armour.SetMaxDefenceStats(6);
-        }
-        if (armour.armourType == ArmorStats.armourTypes.MEDIUM)
-        {
-            armour.SetMaxDefenceStats(8);
-        }
-        if (armour.armourType == ArmorStats.armourTypes.HEAVY)
-        {
-            armour.SetMaxDefenceStats(10);
-        }
+    //    if(armour.armourType == ArmorStats.armourTypes.LIGHT)
+    //    {
+    //        armour.SetMaxDefenceStats(6);
+    //    }
+    //    if (armour.armourType == ArmorStats.armourTypes.MEDIUM)
+    //    {
+    //        armour.SetMaxDefenceStats(8);
+    //    }
+    //    if (armour.armourType == ArmorStats.armourTypes.HEAVY)
+    //    {
+    //        armour.SetMaxDefenceStats(10);
+    //    }
     }
 }

@@ -15,6 +15,8 @@ public class TwinAttack : Abilities
     //RETURNS : none
     public TwinAttack()
     {
+        abilityName = "TwinAttack";
+        abilityDescription = " ";
         if (isActive)
         {
             Act();
