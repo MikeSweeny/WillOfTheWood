@@ -14,7 +14,6 @@ public class FollowPlayer : BaseNpc
 
     private bool StopFollowing;
     public bool BeginFollowing;
-
     protected bool CanWalk;
     protected Animator characterAnim;
    
@@ -22,8 +21,7 @@ public class FollowPlayer : BaseNpc
     public string CompletionArea;
 
     private GameObject Target;
-    private float distBetweenTarget;
-    private Vector3 ToTarget;
+    private Transform ToTarget;
 
 
 
@@ -39,43 +37,41 @@ public class FollowPlayer : BaseNpc
         
     }
 
+    private void Update()
+    {
+
+    }
     private void FixedUpdate()
     {
         
         if (BeginFollowing)
         {
-                GetTargetPosition();
-                pathingPattern.FollowPlayer(Target);
-                SpeedCheck();
+            GetTargetPosition();
+            pathingPattern.FollowPlayer(Target);
+            SpeedCheck();
+            //characterAnim.Play("Walking");
 
         }
         else if (StopFollowing)
         {
             GetTargetPosition();
-            //pathingPattern.FollowPlayer(Target);
-            SpeedCheck();
+            pathingPattern.FollowPlayer(Target);
         }
-     
     }
 
     private void SpeedCheck()
     {
 
-        //if (Target.transform.position == gameObject.transform.position)
-        if (Vector3.Distance(transform.position, Target.transform.position) <= 1.25)
+        if (Target.transform.position == gameObject.transform.position)
         {
             CanWalk = false;
             characterAnim.SetBool("CanWalk", false);
-            BeginFollowing = false;
-            StopFollowing = true;
 
         }
         else
         {
             CanWalk = true;
             characterAnim.SetBool("CanWalk", true);
-            BeginFollowing = true;
-            StopFollowing = false;
         }
 
 
@@ -83,10 +79,7 @@ public class FollowPlayer : BaseNpc
     private void GetTargetPosition()
     {
         Target = GameObject.FindGameObjectWithTag(TargetTag);
-        //ToTarget = Target.transform.position;
-
-        //distBetweenTarget = Vector3.Distance(this.transform.position, ToTarget);
-
+        //ToTarget = Target.transform;
     }
 
 
@@ -95,10 +88,7 @@ public class FollowPlayer : BaseNpc
         if (other.gameObject.name == CompletionArea)
         {
             BeginFollowing = false;
-            StopFollowing = false;
-            CanWalk = false;
-            characterAnim.SetBool("CanWalk", false);
-            gameObject.GetComponent<ConversationNpc>().NotMoveable = false;
+            //StopFollowing = true;
             //Target = GameObject.Find("SarekHandin");
             //ToTarget = Target.transform;
         }

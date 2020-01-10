@@ -1891,6 +1891,7 @@ GameObject:
   - component: {fileID: 129877948}
   - component: {fileID: 129877947}
   - component: {fileID: 129877946}
+  - component: {fileID: 129877949}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -1957,7 +1958,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 129877947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 129877949}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &129877947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1993,6 +2005,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129877944}
   m_CullTransparentMesh: 0
+--- !u!114 &129877949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129877944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c3f13236247f240ac8b6153e809196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &133566695
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,6 +3154,7 @@ GameObject:
   - component: {fileID: 188263635}
   - component: {fileID: 188263634}
   - component: {fileID: 188263633}
+  - component: {fileID: 188263636}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -3196,7 +3221,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 188263634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 188263636}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &188263634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3232,6 +3268,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188263631}
   m_CullTransparentMesh: 0
+--- !u!114 &188263636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188263631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84be3977edaa9314d8e7eb3edecf904f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &193868227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3552,6 +3600,7 @@ GameObject:
   - component: {fileID: 229978402}
   - component: {fileID: 229978401}
   - component: {fileID: 229978400}
+  - component: {fileID: 229978403}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -3618,7 +3667,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 229978401}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229978403}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &229978401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3654,6 +3714,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229978398}
   m_CullTransparentMesh: 0
+--- !u!114 &229978403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229978398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c313084e2fdec4f85820525dc5dd4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &232716861
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,6 +4249,7 @@ GameObject:
   - component: {fileID: 256275063}
   - component: {fileID: 256275062}
   - component: {fileID: 256275061}
+  - component: {fileID: 256275064}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -4243,7 +4316,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 256275062}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 256275064}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &256275062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4279,6 +4363,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 256275059}
   m_CullTransparentMesh: 0
+--- !u!114 &256275064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256275059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a07a6f144d39c0c4e8f3da3e397ee8e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &257457469
 GameObject:
   m_ObjectHideFlags: 0
@@ -5247,6 +5343,7 @@ GameObject:
   - component: {fileID: 320685565}
   - component: {fileID: 320685564}
   - component: {fileID: 320685563}
+  - component: {fileID: 320685566}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -5313,7 +5410,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 320685564}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 320685566}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &320685564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5349,6 +5457,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320685561}
   m_CullTransparentMesh: 0
+--- !u!114 &320685566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320685561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56d44af64bb2978439ae5280939b5256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &323156406
 GameObject:
   m_ObjectHideFlags: 0
@@ -5438,6 +5558,7 @@ GameObject:
   - component: {fileID: 327506830}
   - component: {fileID: 327506829}
   - component: {fileID: 327506828}
+  - component: {fileID: 327506832}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -5504,7 +5625,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 327506829}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 327506832}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &327506829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5540,6 +5672,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327506826}
   m_CullTransparentMesh: 0
+--- !u!114 &327506832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327506826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc33880516e87d4a8a4f62dc42b76e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &331940989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5676,6 +5820,7 @@ GameObject:
   - component: {fileID: 340003911}
   - component: {fileID: 340003910}
   - component: {fileID: 340003909}
+  - component: {fileID: 340003912}
   m_Layer: 0
   m_Name: ClockHUD
   m_TagString: Untagged
@@ -5695,6 +5840,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1933965376}
+  - {fileID: 676508486}
   m_Father: {fileID: 154017539}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5763,6 +5909,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &340003912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340003907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c2030acffc48949a05de52adde7752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &340075053
 GameObject:
   m_ObjectHideFlags: 0
@@ -7687,6 +7845,7 @@ GameObject:
   - component: {fileID: 504356829}
   - component: {fileID: 504356828}
   - component: {fileID: 504356827}
+  - component: {fileID: 504356830}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -7753,7 +7912,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 504356828}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 504356830}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &504356828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7789,6 +7959,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504356825}
   m_CullTransparentMesh: 0
+--- !u!114 &504356830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504356825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4142a4c045bceb479a7bfa5b96449bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &504961661
 GameObject:
   m_ObjectHideFlags: 0
@@ -10641,14 +10823,14 @@ RectTransform:
   m_GameObject: {fileID: 676508485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06563481, y: 0.07350275, z: 0.105087996}
+  m_LocalScale: {x: 0.0656348, y: 0.07350275, z: 0.10508799}
   m_Children: []
-  m_Father: {fileID: 876560515}
-  m_RootOrder: 5
+  m_Father: {fileID: 340003908}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.9, y: -1.8}
+  m_AnchoredPosition: {x: -8.9, y: 15}
   m_SizeDelta: {x: 337.6, y: 290.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &676508487
@@ -10664,7 +10846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.91372555, g: 0.7960785, b: 0.27450982, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10775,6 +10957,7 @@ GameObject:
   - component: {fileID: 725698765}
   - component: {fileID: 725698764}
   - component: {fileID: 725698763}
+  - component: {fileID: 725698766}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -10841,7 +11024,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 725698764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 725698766}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &725698764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10877,6 +11071,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725698761}
   m_CullTransparentMesh: 0
+--- !u!114 &725698766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725698761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7cc2ef1bfd0c914f9290710495cc854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &731636340
 GameObject:
   m_ObjectHideFlags: 0
@@ -12601,7 +12807,6 @@ RectTransform:
   - {fileID: 1454407081}
   - {fileID: 883457931}
   - {fileID: 2030516365}
-  - {fileID: 676508486}
   m_Father: {fileID: 154017539}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19403,7 +19608,7 @@ GameObject:
   - component: {fileID: 1414705300}
   - component: {fileID: 1414705299}
   m_Layer: 0
-  m_Name: Quest1 - Description
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19459,7 +19664,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Kill gooblies!
+  m_Text: 
 --- !u!222 &1414705300
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21670,6 +21875,7 @@ GameObject:
   - component: {fileID: 1493680746}
   - component: {fileID: 1493680745}
   - component: {fileID: 1493680744}
+  - component: {fileID: 1493680747}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -21736,7 +21942,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1493680745}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493680747}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1493680745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21772,6 +21989,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493680742}
   m_CullTransparentMesh: 0
+--- !u!114 &1493680747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493680742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322b9c211f375b246806408a572bc3b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500864093
 GameObject:
   m_ObjectHideFlags: 0
@@ -22376,7 +22605,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1708574210}
   m_Direction: 2
   m_Value: 0.99501014
-  m_Size: 0.33199996
+  m_Size: 0.33200002
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -22673,6 +22902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1592465751}
+  - component: {fileID: 1592465752}
   m_Layer: 0
   m_Name: QuestObjectiveHUD
   m_TagString: Untagged
@@ -22702,6 +22932,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 4.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1592465752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592465750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 218f76a6f7047d64abae5577dce3425b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1592541576
 GameObject:
   m_ObjectHideFlags: 0
@@ -22935,6 +23177,7 @@ GameObject:
   - component: {fileID: 1610032262}
   - component: {fileID: 1610032261}
   - component: {fileID: 1610032260}
+  - component: {fileID: 1610032263}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -23001,7 +23244,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1610032261}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1610032263}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1610032261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23037,6 +23291,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610032258}
   m_CullTransparentMesh: 0
+--- !u!114 &1610032263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610032258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691557692747bdf459283f35565e7d9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1613556713
 GameObject:
   m_ObjectHideFlags: 0
@@ -23241,6 +23507,7 @@ GameObject:
   - component: {fileID: 1631359999}
   - component: {fileID: 1631359998}
   - component: {fileID: 1631359997}
+  - component: {fileID: 1631360000}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -23307,7 +23574,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1631359998}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1631360000}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1631359998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23343,6 +23621,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631359995}
   m_CullTransparentMesh: 0
+--- !u!114 &1631360000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631359995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac627c67335335c43b12e4c2cb819da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1650793437
 GameObject:
   m_ObjectHideFlags: 0
@@ -27149,7 +27439,7 @@ GameObject:
   - component: {fileID: 1877373715}
   - component: {fileID: 1877373714}
   m_Layer: 0
-  m_Name: Quest1 - Counter
+  m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27206,7 +27496,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0/X
+  m_Text: 
 --- !u!222 &1877373715
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30186,6 +30476,7 @@ GameObject:
   - component: {fileID: 2054041568}
   - component: {fileID: 2054041567}
   - component: {fileID: 2054041566}
+  - component: {fileID: 2054041569}
   m_Layer: 0
   m_Name: LevelUpButton
   m_TagString: Untagged
@@ -30252,7 +30543,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2054041567}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2054041569}
+        m_MethodName: Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2054041567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30288,6 +30590,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2054041564}
   m_CullTransparentMesh: 0
+--- !u!114 &2054041569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054041564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd01a1080e0608e47b96334eb894662f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2054666274
 GameObject:
   m_ObjectHideFlags: 0

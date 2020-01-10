@@ -111,16 +111,16 @@ public class NpcPathing : BaseController
             agent.SetDestination(fleePosition);
         }
     }
-    
+
     //Function: FollowPlayer
     //DESCRIPTION: tells the npc to follow the player
     //PARAMETERS: GameObject target
     //RETURNS: None
     public void FollowPlayer(GameObject target)
     {
-        agent.SetDestination(target.transform.position + new Vector3 (0,0,-1));
+        agent.SetDestination(target.transform.position);
     }
-    
+
     //Function: WaitWhilePathing
     //DESCRIPTION: function used to allow the npc to wait at a waypoint while its roaming
     //PARAMETERS: None

@@ -15,7 +15,7 @@ public class AtArms : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public override void OnLoad()
+    public AtArms()
     {
         AbilityManager.UnlockAtArms += UnlockAbility;
     }
