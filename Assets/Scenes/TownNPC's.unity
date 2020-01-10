@@ -520,7 +520,7 @@ MonoBehaviour:
   CharacterName: Rebecca
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &142616470
 MonoBehaviour:
@@ -938,7 +938,7 @@ MonoBehaviour:
   CharacterName: Rose
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &180099210
 MonoBehaviour:
@@ -1458,7 +1458,7 @@ MonoBehaviour:
   CharacterName: Anna
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 1
+  NotMoveable: 1
   QuestList:
   - {fileID: 11400000, guid: 13c285c6b9315914f83c8814ccf4ecdc, type: 2}
   isSecondaryNPC: 0
@@ -1729,7 +1729,7 @@ MonoBehaviour:
   CharacterName: John
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &554846351
 MonoBehaviour:
@@ -2147,7 +2147,7 @@ MonoBehaviour:
   CharacterName: Richard
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &568840745
 MonoBehaviour:
@@ -2389,7 +2389,7 @@ MonoBehaviour:
   CharacterName: Susan
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &582142483
 MonoBehaviour:
@@ -2703,7 +2703,7 @@ MonoBehaviour:
   CharacterName: Sendora
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 198dcff9996683d4992045ece69b5073, type: 2}
   EscortCharacter: 0
@@ -4099,7 +4099,7 @@ MonoBehaviour:
   CharacterName: Norman
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1094034380
 MonoBehaviour:
@@ -4292,6 +4292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8158956427685968433, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
+    - {fileID: 114921645572011718, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ab8ac2017bc4c9e40b484324e5ee20e7, type: 3}
 --- !u!4 &1099352393 stripped
 Transform:
@@ -4334,10 +4335,10 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Discarded Sword
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 1
   dialogueList:
   - {fileID: 11400000, guid: 9e721c440d60b9e44a5b5f276dcd2e19, type: 2}
   EscortCharacter: 0
@@ -4410,7 +4411,7 @@ MonoBehaviour:
   CharacterName: Mike
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1157825697
 MonoBehaviour:
@@ -4935,7 +4936,7 @@ MonoBehaviour:
   CharacterName: Sheriff
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   QuestList:
   - {fileID: 11400000, guid: 004e9a3942e57964ab4e50222907c3a8, type: 2}
   isSecondaryNPC: 0
@@ -6752,7 +6753,7 @@ MonoBehaviour:
   CharacterName: Bobby
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1671626851}
 --- !u!1 &1691343732 stripped
 GameObject:
@@ -6797,7 +6798,7 @@ MonoBehaviour:
   CharacterName: Mary
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 51a905f784ad796469bb6f158390c918, type: 2}
   EscortCharacter: 0
@@ -6973,7 +6974,7 @@ MonoBehaviour:
   CharacterName: Tracy
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1728748710
 MonoBehaviour:
@@ -7136,7 +7137,7 @@ MonoBehaviour:
   CharacterName: Gavin
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1744361074
 MonoBehaviour:
@@ -7378,7 +7379,7 @@ MonoBehaviour:
   CharacterName: Tom
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &1773719481
 MonoBehaviour:
@@ -7453,7 +7454,7 @@ MonoBehaviour:
   CharacterName: Azfoldo
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 36d18c087917515428c97e9c2db296a6, type: 2}
   EscortCharacter: 0
@@ -7702,7 +7703,7 @@ MonoBehaviour:
   CharacterName: Milea
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   dialogueList:
   - {fileID: 11400000, guid: 6302c4ec9f0575a429c18ff6f092fda9, type: 2}
   EscortCharacter: 0
@@ -7944,10 +7945,10 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: 
+  CharacterName: Blood
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 1
+  NotMoveable: 1
   dialogueList:
   - {fileID: 11400000, guid: 95ca0ff7fa06a5d4a8f454e51095db97, type: 2}
   EscortCharacter: 0
@@ -8573,7 +8574,7 @@ MonoBehaviour:
   CharacterName: Jeff
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &2125347447
 MonoBehaviour:
@@ -8736,7 +8737,7 @@ MonoBehaviour:
   CharacterName: Tim
   pathingPattern: {fileID: 0}
   vigilant: 0
-  Moveable: 0
+  NotMoveable: 0
   source: {fileID: 1773719479}
 --- !u!114 &2140060384
 MonoBehaviour:
