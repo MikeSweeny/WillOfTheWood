@@ -552,12 +552,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1027090031}
-  m_RootOrder: 0
+  m_Father: {fileID: 1111162850}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -8.999924}
   m_SizeDelta: {x: 35, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24676980
@@ -11445,7 +11445,7 @@ GameObject:
   - component: {fileID: 780537443}
   - component: {fileID: 780537442}
   m_Layer: 0
-  m_Name: Ability_Image
+  m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15080,8 +15080,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 24676979}
+  m_Children: []
   m_Father: {fileID: 1111162850}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16123,7 +16122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111162850}
   m_Layer: 0
-  m_Name: AbilityPointsHolder
+  m_Name: PointsHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16141,6 +16140,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1027090031}
+  - {fileID: 24676979}
   m_Father: {fileID: 2044276975}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

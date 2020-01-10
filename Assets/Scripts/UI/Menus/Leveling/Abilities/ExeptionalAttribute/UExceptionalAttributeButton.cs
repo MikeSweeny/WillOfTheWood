@@ -9,17 +9,14 @@ using UnityEngine;
 //NAME : UExceptionalAttributeButton
 //PURPOSE : sets the selected ability in the 
 //leveling menu to the ExceptionalAttribute ability
-public class UExceptionalAttributeButton : MonoBehaviour
+public class UExceptionalAttributeButton : UAbilitySlotButton
 {
-    // Start is called before the first frame update
-    void Start()
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        ability = new ExceptionalAttribute();
     }
 }
