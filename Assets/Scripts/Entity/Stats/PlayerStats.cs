@@ -32,15 +32,15 @@ public class PlayerStats : StatsObject
     public bool isDetected = false;
 
     private int modValue;
-    private void Awake()
-    {
-        accuracy = Accuracy;
-        discrete = Discrete;
-        pursuasive = Pursuasive;
-        speed = Speed;
-        strong = Strong;
-        defence = Defence;
-    }
+    //private void Awake()
+    //{
+    //    accuracy = Accuracy;
+    //    discrete = Discrete;
+    //    pursuasive = Pursuasive;
+    //    speed = Speed;
+    //    strong = Strong;
+    //    defence = Defence;
+    //}
 
 
     //Function Header:

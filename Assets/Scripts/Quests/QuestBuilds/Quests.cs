@@ -129,7 +129,7 @@ public class Quests : ScriptableObject
         {
             player.AddXP(ExperenceReward);
             player.AddCoins(CoinReward);
-           // player.AddStatPoints(AbilityReward);
+            player.AddStatPoint(AbilityReward);
         }
            
 
