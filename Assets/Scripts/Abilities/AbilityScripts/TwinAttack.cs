@@ -16,7 +16,8 @@ public class TwinAttack : Abilities
     public TwinAttack()
     {
         abilityName = "TwinAttack";
-        abilityDescription = " ";
+        abilityDescription = "Not a working ability...";
+        abilityImage = sprites[41];
         if (isActive)
         {
             Act();

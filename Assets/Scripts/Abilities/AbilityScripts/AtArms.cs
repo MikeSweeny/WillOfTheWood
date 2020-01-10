@@ -4,6 +4,8 @@
 //FIRST VERSION :   30/12/2019
 
 using UnityEngine;
+using UnityEditor;
+
 //NAME : AtArms
 //PURPOSE : All the funcionality of the AtArms ability as a child of abilities
 public class AtArms : Abilities
@@ -17,7 +19,8 @@ public class AtArms : Abilities
     public AtArms()
     {
         abilityName = "AtArms";
-        abilityDescription = " ";
+        abilityDescription = "Changes armour rating to next tier of armour.";
+        abilityImage = sprites[47];
         AbilityManager.UnlockAtArms += UnlockAbility;
     }
     public override void UpdateAbility()

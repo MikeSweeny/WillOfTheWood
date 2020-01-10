@@ -16,7 +16,8 @@ public class Dominate : Abilities
     public Dominate()
     {
         abilityName = "Dominate";
-        abilityDescription = " ";
+        abilityDescription = "Persuasive stat is added to accuracy check.";
+        abilityImage = sprites[39];
         AbilityManager.UnlockDominate += UnlockAbility;
     }
     public override void UpdateAbility()
