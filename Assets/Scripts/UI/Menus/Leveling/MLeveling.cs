@@ -23,7 +23,7 @@ public class MLeveling : Menu
     //RETURNS : none
     void Awake()
     {
-        skillPointsCount = transform.Find("PointHolder").Find("Text").GetComponent<Text>();
+        skillPointsCount = transform.Find("PointsHolder").Find("Text").GetComponent<Text>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         gameObject.SetActive(false);
         UIEventManager.OpenLeveling += OpenMenu;
