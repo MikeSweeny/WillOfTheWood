@@ -43,5 +43,5 @@ public class AtArms : Abilities
     //    {
     //        armour.SetMaxDefenceStats(10);
     //    }
-    //}
+    }
 }
