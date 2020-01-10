@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   accuracy: 12
-  discrete: 10
-  pursuasive: 14
-  speed: 11
-  strong: 13
+  discrete: 12
+  pursuasive: 13
+  speed: 13
+  strong: 14
   defence: 14
   isDetected: 0
