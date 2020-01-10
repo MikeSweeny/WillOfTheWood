@@ -118,7 +118,7 @@ public class NpcPathing : BaseController
     //RETURNS: None
     public void FollowPlayer(GameObject target)
     {
-        agent.SetDestination(target.transform.position);
+        agent.SetDestination(target.transform.position + new Vector3 (0,0,-1));
     }
 
     //Function: WaitWhilePathing

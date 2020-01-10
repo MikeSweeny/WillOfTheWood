@@ -119,6 +119,7 @@ public class ConversationNpc : BaseInteractableNpc, IQuestID
     {
         if (EscortCharacter)
         {
+            NotMoveable = true;
             followPlayer = GetComponent<FollowPlayer>();
 
             if (followPlayer)
