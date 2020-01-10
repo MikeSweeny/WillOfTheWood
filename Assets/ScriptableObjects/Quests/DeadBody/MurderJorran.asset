@@ -23,7 +23,7 @@ MonoBehaviour:
   RequiredAmount: 1
   ExperenceReward: 40
   CoinReward: 10
-  UnitReward: 0
+  AbilityReward: 1
   QuestObjectives: 'Find Jorran and avenge Anne death. '
   StartQuestText: '"Ah, you think it''s Jorran, I don''t believe anyone has seen him
     today.  Be careful,  if what you say is true, he could be lurking anywhere" '

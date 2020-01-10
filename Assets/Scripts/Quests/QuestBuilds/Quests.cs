@@ -42,7 +42,7 @@ public class Quests : ScriptableObject
     public int RequiredAmount;
     public int ExperenceReward = 0;
     public int CoinReward = 0;
-    public int UnitReward;
+    public int AbilityReward = 0;
     //public variable for item reward needed;
 
     //Descriptions of text
@@ -66,6 +66,7 @@ public class Quests : ScriptableObject
     {
         string coin;
         string exp;
+        string ability;
         if (CoinReward > 0)
         {
             coin = "Coin: " + CoinReward;
@@ -78,8 +79,14 @@ public class Quests : ScriptableObject
         }
         else
             exp = "";
+        if (AbilityReward > 0)
+        {
+            ability = "Player Stat Point: " + AbilityReward;
+        }
+        else
+            ability = "";
 
-        return RewardsList = coin + " " + exp;
+        return RewardsList = coin + " " + exp + " " + ability;
     }
 
     public virtual void Load() { }
@@ -122,6 +129,7 @@ public class Quests : ScriptableObject
         {
             player.AddXP(ExperenceReward);
             player.AddCoins(CoinReward);
+           // player.AddStatPoints(AbilityReward);
         }
            
 
