@@ -4335,7 +4335,7 @@ MonoBehaviour:
   defence: 0
   painThreshold: 0
   weaponPrefab: {fileID: 0}
-  CharacterName: Discarded Sword
+  CharacterName: Sword
   pathingPattern: {fileID: 0}
   vigilant: 0
   NotMoveable: 1
