@@ -19570,7 +19570,7 @@ MonoBehaviour:
   autoZoomSpeed: 5
   collisionLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   alwaysRotateToRearofTarget: 0
   allowMouseInputX: 1
   allowMouseInputY: 1
@@ -24029,7 +24029,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1708574210}
   m_Direction: 2
   m_Value: 0.99501014
-  m_Size: 0.33199996
+  m_Size: 0.332
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -26425,7 +26425,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721975044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0940510fecfaba42a2bbeb28d70a9dd, type: 3}
+  m_Script: {fileID: 11500000, guid: e83ccb2724663234a8ed3d952b43d271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1721975047
