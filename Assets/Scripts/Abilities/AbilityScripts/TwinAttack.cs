@@ -17,6 +17,7 @@ public class TwinAttack : Abilities
     {
         abilityName = "TwinAttack";
         abilityDescription = "Not a working ability...";
+        abilityImage = (Sprite)sprites[42];
         AbilityManager.UnlockTwinAttack += UnlockAbility;
     }
     public override void UpdateAbility()

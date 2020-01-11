@@ -17,6 +17,7 @@ public class PolearmMastery : Abilities
     {
         abilityName = "PolearmMastery";
         abilityDescription = "LongSpears add 2 to maximum damage.";
+        abilityImage = (Sprite)sprites[125];
         AbilityManager.UnlockPoleArmMastery += UnlockAbility;
     }
     public override void UpdateAbility()

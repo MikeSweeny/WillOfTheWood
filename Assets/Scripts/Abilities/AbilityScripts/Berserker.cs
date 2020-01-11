@@ -19,6 +19,7 @@ public class Berserker : Abilities
     {
         abilityName = "Berseker";
         abilityDescription = "Base Defence lowered by 2, equipped weapon has additional 1-6 damage.";
+        abilityImage = (Sprite)sprites[35];
         AbilityManager.UnlockBerserker += UnlockAbility;
     }
     public override void UpdateAbility()

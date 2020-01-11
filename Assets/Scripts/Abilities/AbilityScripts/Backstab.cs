@@ -20,6 +20,7 @@ public class Backstab : Abilities
     {
         abilityName = "BackStab";
         abilityDescription = "Do extra damage while undetected.";
+        abilityImage = (Sprite)sprites[43];
         AbilityManager.UnlockBackStab += UnlockAbility;
     }
     public override void UpdateAbility()

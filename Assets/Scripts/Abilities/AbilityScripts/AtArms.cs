@@ -20,6 +20,7 @@ public class AtArms : Abilities
     {
         abilityName = "AtArms";
         abilityDescription = "Changes armour rating to next tier of armour.";
+        abilityImage = (Sprite)sprites[46];
         AbilityManager.UnlockAtArms += UnlockAbility;
     }
     public override void UpdateAbility()

@@ -40,9 +40,9 @@ public class Abilities
     {
         this.player = player;
     }
-    //public void SetSprites()
-    //{
-    //    spriteSheetName = "AbilitySpriteSheet";
-    //    sprites = Resources.LoadAll(spriteSheetName, typeof(Sprite));
-    //}
+    public void SetSprites()
+    {
+        spriteSheetName = "AbilitySpriteSheet";
+        sprites = Resources.LoadAll(spriteSheetName, typeof(Sprite));
+    }
 }
