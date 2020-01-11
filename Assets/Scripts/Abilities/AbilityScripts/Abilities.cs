@@ -23,7 +23,7 @@ public class Abilities
 
     public Abilities()
     {
-        //SetSprites();
+        SetSprites();
     }
     public void UnlockAbility()
     {
