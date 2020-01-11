@@ -263,7 +263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: b2fc7135097039745b863de4721a602b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -88.87237
+      value: -89.14
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: b2fc7135097039745b863de4721a602b, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1102,6 +1102,8 @@ MonoBehaviour:
   alwaysRotateToRearofTarget: 0
   allowMouseInputX: 1
   allowMouseInputY: 1
+  allowControllerInputX: 1
+  allowControllerInputY: 1
 --- !u!1 &1822987956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100010, guid: b2fc7135097039745b863de4721a602b,
@@ -1126,6 +1128,98 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &1822987958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822987956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7d85c83b9f91f4ea7fff6f0bb69f85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  defence: 0
+  painThreshold: 0
+  weaponPrefab: {fileID: 0}
+  CharacterName: 
+  pathingPattern: {fileID: 0}
+  vigilant: 0
+  NotMoveable: 0
+  dialogueList: []
+  EscortCharacter: 0
+  hasBeenTalkedTo: 0
+  IDName: 
+  isPartOfQuest: 0
+  hasConversation: 0
+  source: {fileID: 0}
+--- !u!114 &1822987959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822987956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10b031e71ec190e4597440b1e93b4ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
+  WaypointContainer: {fileID: 0}
+  waypoints: []
+  enemy: []
+  target: {fileID: 0}
+  fleeingPoints: []
+  fleeingDestinationContainer: {fileID: 0}
+  canWait: 0
+  distanceToCover: 1
+--- !u!114 &1822987960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822987956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48196d54e3ce97d40b28e660474f1d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  defence: 0
+  painThreshold: 0
+  weaponPrefab: {fileID: 0}
+  CharacterName: 
+  pathingPattern: {fileID: 0}
+  vigilant: 0
+  BeginFollowing: 0
+  TargetTag: Player
+  CompletionArea: 
+--- !u!195 &1822987961
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822987956}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1936204574
 PrefabInstance:
   m_ObjectHideFlags: 0
