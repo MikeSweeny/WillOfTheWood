@@ -14,11 +14,10 @@ public class Feign : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public Feign()
+    public Feign() : base()
     {
         abilityName = "Feign";
         abilityDescription = "Chance to attack without being detected while active.";
-        abilityImage = sprites[41];
         AbilityManager.UnlockFeign += UnlockAbility;
     }
     public override void UpdateAbility()

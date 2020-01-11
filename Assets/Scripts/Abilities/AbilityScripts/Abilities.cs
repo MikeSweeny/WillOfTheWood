@@ -14,12 +14,17 @@ public class Abilities
     public string abilityName;
     public string abilityDescription;
     public string spriteSheetName;
-    protected Sprite[] sprites;
+    protected Object[] sprites;
     public Sprite abilityImage{ get; set; }
     protected bool isUnlocked = false;
     public virtual void Act() { }
     public virtual void UpdateAbility() { }
     Player player;
+
+    public Abilities()
+    {
+        //SetSprites();
+    }
     public void UnlockAbility()
     {
         if(player.playerStatPoints > 0)
@@ -35,9 +40,9 @@ public class Abilities
     {
         this.player = player;
     }
-    public void SetSprites()
-    {
-        spriteSheetName = "AbilitySpriteSheet";
-        sprites = (Sprite[])Resources.LoadAll(spriteSheetName);
-    }
+    //public void SetSprites()
+    //{
+    //    spriteSheetName = "AbilitySpriteSheet";
+    //    sprites = Resources.LoadAll(spriteSheetName, typeof(Sprite));
+    //}
 }

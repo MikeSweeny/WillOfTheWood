@@ -13,11 +13,10 @@ public class ShieldFighter : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public ShieldFighter()
+    public ShieldFighter() : base()
     {
         abilityName = "ShieldFighter";
         abilityDescription = "Not a working ability...";
-        abilityImage = sprites[79];
         AbilityManager.UnlockShieldFighter += UnlockAbility;
     }
     public override void UpdateAbility()

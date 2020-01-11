@@ -13,11 +13,10 @@ public class Recovery : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public Recovery()
+    public Recovery() : base()
     {
         abilityName = "Recovery";
         abilityDescription = "Heal a random ammount between 1-4.";
-        abilityImage = sprites[140];
         AbilityManager.UnlockRecovery += UnlockAbility;
     }
     public override void UpdateAbility()

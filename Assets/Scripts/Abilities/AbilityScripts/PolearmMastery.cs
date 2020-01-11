@@ -13,11 +13,10 @@ public class PolearmMastery : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public PolearmMastery()
+    public PolearmMastery() : base()
     {
         abilityName = "PolearmMastery";
         abilityDescription = "LongSpears add 2 to maximum damage.";
-        abilityImage = sprites[125];
         AbilityManager.UnlockPoleArmMastery += UnlockAbility;
     }
     public override void UpdateAbility()

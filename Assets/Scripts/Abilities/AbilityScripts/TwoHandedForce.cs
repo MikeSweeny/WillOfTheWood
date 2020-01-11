@@ -14,11 +14,10 @@ public class TwoHandedForce : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public TwoHandedForce()
+    public TwoHandedForce() : base()
     {
         abilityName = "TwoHandedForces";
         abilityDescription = "Increases Two-Handed max damage and BlackBlade min/max damage.";
-        abilityImage = sprites[6];
         AbilityManager.UnlockTwoHandedForce += UnlockAbility;
     }
     public override void UpdateAbility()

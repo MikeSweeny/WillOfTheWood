@@ -13,15 +13,11 @@ public class TwinAttack : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public TwinAttack()
+    public TwinAttack() : base()
     {
         abilityName = "TwinAttack";
         abilityDescription = "Not a working ability...";
-        abilityImage = sprites[41];
-        if (isActive)
-        {
-            Act();
-        }
+        AbilityManager.UnlockTwinAttack += UnlockAbility;
     }
     public override void UpdateAbility()
     {

@@ -16,11 +16,10 @@ public class Backstab : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public Backstab()
+    public Backstab() : base()
     {
         abilityName = "BackStab";
         abilityDescription = "Do extra damage while undetected.";
-        abilityImage = sprites[44];
         AbilityManager.UnlockBackStab += UnlockAbility;
     }
     public override void UpdateAbility()

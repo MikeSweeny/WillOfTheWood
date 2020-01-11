@@ -13,11 +13,10 @@ public class Dominate : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public Dominate()
+    public Dominate() : base()
     {
         abilityName = "Dominate";
         abilityDescription = "Persuasive stat is added to accuracy check.";
-        abilityImage = sprites[39];
         AbilityManager.UnlockDominate += UnlockAbility;
     }
     public override void UpdateAbility()

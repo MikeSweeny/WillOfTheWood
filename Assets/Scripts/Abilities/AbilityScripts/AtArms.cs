@@ -16,11 +16,10 @@ public class AtArms : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public AtArms()
+    public AtArms() : base()
     {
         abilityName = "AtArms";
         abilityDescription = "Changes armour rating to next tier of armour.";
-        abilityImage = sprites[47];
         AbilityManager.UnlockAtArms += UnlockAbility;
     }
     public override void UpdateAbility()

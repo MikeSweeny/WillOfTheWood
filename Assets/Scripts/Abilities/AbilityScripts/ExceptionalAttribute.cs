@@ -12,11 +12,10 @@ public class ExceptionalAttribute : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public ExceptionalAttribute()
+    public ExceptionalAttribute() : base()
     {
         abilityName = "ExceptionalAttribute";
         abilityDescription = "Add 1 point to any stat.";
-        abilityImage = sprites[50];
         AbilityManager.UnlockExceptionalAttribute += UnlockAbility;
     }
     public override void UpdateAbility()

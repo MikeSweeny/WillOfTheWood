@@ -13,11 +13,10 @@ public class Poisoner : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public Poisoner()
+    public Poisoner() : base()
     {
         abilityName = "Poisoner";
         abilityDescription = "Add 1-4 extra damage to weapons when active. ";
-        abilityImage = sprites[175];
         AbilityManager.UnlockPoisoner += UnlockAbility;
     }
     public override void UpdateAbility()

@@ -15,11 +15,10 @@ public class Berserker : Abilities
     //DESCRIPTION : what happens when the script is loaded in the game
     //PARAMETERS : none
     //RETURNS : none
-    public Berserker()
+    public Berserker() : base()
     {
         abilityName = "Berseker";
         abilityDescription = "Base Defence lowered by 2, equipped weapon has additional 1-6 damage.";
-        abilityImage = sprites[43];
         AbilityManager.UnlockBerserker += UnlockAbility;
     }
     public override void UpdateAbility()
