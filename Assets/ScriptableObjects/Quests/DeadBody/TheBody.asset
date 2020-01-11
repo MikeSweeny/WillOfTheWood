@@ -25,7 +25,8 @@ MonoBehaviour:
   CoinReward: 3
   AbilityReward: 1
   QuestObjectives: 'Find clues about the women''s death, then return to the Sheriff
-    to tell him what you found. '
+    to tell him what you found. You may try talking to her friends, Azfoldo, Sendora
+    and Milea, well looking for other clues. '
   StartQuestText: 'You stumble upon a dead body, looking around it seems she might
     have been ready to attend a party, you look about the body for any clues that
     might be able to help you out. '
@@ -35,7 +36,7 @@ MonoBehaviour:
   CompletedQuestText: visit the sherif
   SecondInprogressText: What do you want?
   SecondCompletedText: You say you know who killed Anna?
-  RewardsList: 'Coin: 3 Experence: 1'
+  RewardsList: 'Coin: 3 Experence: 10 Player Stat Point: 1'
   NPCHandInName: Sheriff
   CNPC:
   - Azfoldo

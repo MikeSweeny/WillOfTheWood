@@ -17700,10 +17700,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: a8022183aa3a57442997220374b3c7a4, type: 3}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -24028,8 +24028,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1708574212}
   m_HandleRect: {fileID: 1708574210}
   m_Direction: 2
-  m_Value: 0.99501014
-  m_Size: 0.332
+  m_Value: 0.99500996
+  m_Size: 0.33199996
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
