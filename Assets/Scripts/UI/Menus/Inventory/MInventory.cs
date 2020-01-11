@@ -11,6 +11,7 @@ using UnityEngine.UI;
 //PURPOSE : serves as the inventory menu
 public class MInventory : Menu
 {
+    private Item selectedItem;
     private Transform slotHolder;
     private Sprite defaultSlotSprite;
     private int invContentsCount;
@@ -36,6 +37,11 @@ public class MInventory : Menu
     {
         UIEventManager.OpenInventory -= OpenMenu;
         UIEventManager.CloseInventory -= CloseMenu;
+    }
+
+    public void SetSelectedItem(Item item)
+    {
+        selectedItem = item;
     }
 
     //Function : GetMaxCount
@@ -85,10 +91,12 @@ public class MInventory : Menu
             if (i < inventory.Count)
             {
                 slotHolder.GetChild(i).GetComponent<InventorySlot>().SetImageSprite(inventory[i].GetSprite().sprite);
+                slotHolder.GetChild(i).GetChild(0).GetComponent<UInventorySlotButton>().SetItem(inventory[i]);
             }
             else
             {
                 slotHolder.GetChild(i).GetComponent<InventorySlot>().SetImageSprite(defaultSlotSprite);
+                slotHolder.GetChild(i).GetChild(0).GetComponent<UInventorySlotButton>().SetItem(null);
             }
         }
     }

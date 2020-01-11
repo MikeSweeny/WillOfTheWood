@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UInventorySlotButton : MonoBehaviour
+public class UInventorySlotButton : UIButton
 {
-    // Start is called before the first frame update
-    void Start()
+    private Item item;
+    private MInventory invMenu;
+
+    public override void Clicked()
     {
-        
+        invMenu.SetSelectedItem(item);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetInvMenu(MInventory mInventory)
     {
-        
+        invMenu = mInventory;
+    }
+
+    public void SetItem(Item itemRef)
+    {
+        item = itemRef;
     }
 }

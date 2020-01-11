@@ -16,6 +16,7 @@ public class MMainMenu : Menu
     //RETURNS : none
     private void Awake()
     {
+        InputManager.RefocusEventSystem(gameObject);
         UIEventManager.OpenMainMenu += OpenMenu;
         UIEventManager.CloseMainMenu += CloseMenu;
     }
