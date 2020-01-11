@@ -27,9 +27,10 @@ public class Abilities
     }
     public void UnlockAbility()
     {
-        if(player.playerStatPoints > 0)
+        if(player != null && player.playerStatPoints > 0)
         {
             isUnlocked = true;
+            player.playerStatPoints = 0;
         }
     }
     public bool IsUnlocked()
