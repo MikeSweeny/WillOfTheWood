@@ -17,9 +17,7 @@ public class UMainMenuButton : UIButton
     //RETURNS : none
     public override void Clicked()
     {
+        GameEventManager.TriggerUnPause();
         SceneManager.LoadScene("MainMenu");
-        if (SceneManager.UnloadScene("CoreScene"))
-            print("Success");
-
     }
 }
