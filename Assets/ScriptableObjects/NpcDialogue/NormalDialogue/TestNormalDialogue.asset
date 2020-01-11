@@ -16,9 +16,10 @@ MonoBehaviour:
   preReqStatName2: 
   numInStatReq1: 0
   numInStatReq2: 0
-  welcomeText: Hello test.
+  welcomeText: Hello there traveler
   welcomeButtonText: 
-  conversationText: conversation
+  conversationText: 'There is much to see and do here, I hope you enjoy your visit. '
   conversationButtonText: 
   goodbyeText: goodbye
   goodbyeButtonText: 
+  DH: {fileID: 0}

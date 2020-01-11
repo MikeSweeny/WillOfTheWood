@@ -31,7 +31,7 @@ MonoBehaviour:
     assistance. You see we have a grave robber that refuses to leave, and let us visit
     out dead.  Stop her at all costs. '
   TrackingQuestText: Kill Grave Robber
-  InprogressQuestText: Have you seen the wild beast yet? is he dead?
+  InprogressQuestText: Have you seen the robber yet? is he dead?
   CompletedQuestText: 'Thank you traveler, I knew my faith in you was well placed,
     now we can visit our dead in peace now. '
   SecondInprogressText: 
