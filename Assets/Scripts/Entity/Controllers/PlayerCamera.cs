@@ -56,6 +56,11 @@ public class PlayerCamera : MonoBehaviour
 
     }
 
+    void OnDestroy()
+    {
+        InputManager.MoveCamera -= ControlCamera;
+    }
+
     //Function: ControlCamera
     //DESCRIPTION:  This class is used to get the left and right mouse button inputs and the scroll wheel then control the camera based on that
     //PARAMETERS: Quaternion rotation, Vector3 vTargetOffset, Vector3 position, RaycastHit collisionHit, Vector3 trueTargetPosition and bool isCorrected
@@ -179,4 +184,6 @@ public class PlayerCamera : MonoBehaviour
 
         return Mathf.Clamp(angle, min, max);
     }
+
+
 }

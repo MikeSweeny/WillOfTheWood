@@ -60,6 +60,26 @@ public class PlayerController : BaseController
             ToggleWeaponCollider();
     }
 
+    void OnDestroy()
+    {
+        InputManager.Walk -= Movement;
+        InputManager.Rotate -= TurnPlayer;
+        InputManager.Jump -= PlayerJump;
+        InputManager.Attack -= Attack;
+        InputManager.Interact -= PlayerInteract;
+        InputManager.Sprint -= PlayerSprint;
+        InputManager.HotbarSlot1 -= ActivateHotbarSlot1;
+        InputManager.HotbarSlot2 -= ActivateHotbarSlot2;
+        InputManager.HotbarSlot3 -= ActivateHotbarSlot3;
+        InputManager.HotbarSlot4 -= ActivateHotbarSlot4;
+        InputManager.HotbarSlot5 -= ActivateHotbarSlot5;
+        InputManager.HotbarSlot6 -= ActivateHotbarSlot6;
+        InputManager.HotbarSlot7 -= ActivateHotbarSlot7;
+        InputManager.HotbarSlot8 -= ActivateHotbarSlot8;
+        InputManager.LeftBumper -= LeftBumperPressed;
+        InputManager.RightBumper -= RightBumperPressed;
+    }
+
     private void Update()
     {
 

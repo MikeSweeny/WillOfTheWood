@@ -18,5 +18,8 @@ public class UMainMenuButton : UIButton
     public override void Clicked()
     {
         SceneManager.LoadScene("MainMenu");
+        if (SceneManager.UnloadScene("CoreScene"))
+            print("Success");
+
     }
 }
