@@ -13,15 +13,25 @@ using UnityEngine.UI;
 public class ShopKeeperNpc : BaseInteractableNpc
 {
     public List<Item> items;
-    private Player player;
+    private bool firstUpdate = true;
 
 
     private void Awake()
     {
-        inventory = GetComponent<Inventory>();
-        for (int i = 0; i < items.Count; i++)
+
+    }
+
+    private void FixedUpdate()
+    {
+        if(firstUpdate)
         {
-            inventory.AddItem(items[i]);
+            inventory = new IPlayerInventory();
+            //for (int i = 0; i < items.Count; i++)
+            //{
+            //    inventory.AddItem(items[i]);
+            //    print(inventory);
+            //}
+            firstUpdate = false;
         }
     }
 
