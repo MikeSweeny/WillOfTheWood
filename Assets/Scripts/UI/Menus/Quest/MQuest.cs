@@ -100,8 +100,15 @@ public class MQuest : Menu
 
         for (int i = 0; i < buttons.Count; ++i)
         {
-            buttons[i].SetQuestMenuRef(this);
-            buttons[i].SetQuest(qmRef.ActiveQuest[i]);
+            if (buttons[i] != null)
+            {
+                buttons[i].SetQuestMenuRef(this);
+                buttons[i].SetQuest(qmRef.ActiveQuest[i]);
+            }
+            else
+            {
+                buttons.Remove(buttons[i]);
+            }
         }
     }
 
