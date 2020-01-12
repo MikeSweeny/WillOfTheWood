@@ -2,17 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UDropItemButton : MonoBehaviour
+public class UDropItemButton : UIButton
 {
-    // Start is called before the first frame update
-    void Start()
+    private IPlayerInventory inventory;
+    private Item targetItem;
+
+    public override void Clicked()
     {
-        
+        inventory.RemoveItem(targetItem);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetInventory(IPlayerInventory inventory)
     {
-        
+        this.inventory = inventory;
+    }
+
+    public void SetTargetItem(Item item)
+    {
+        targetItem = item;
     }
 }

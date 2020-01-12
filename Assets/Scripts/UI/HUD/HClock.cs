@@ -31,7 +31,9 @@ public class HClock : HUDElement
     public override void UpdateElement()
     {
         float rotAngle = ((Clock.GetTimeOfDay() / 3600)/24)*360f;
-        //clock.transform.RotateAround(clock.transform.position, Vector3.forward, rotAngle);
+        clock.transform.RotateAround(clock.transform.position, Vector3.forward, rotAngle);
         clock.transform.localRotation = Quaternion.Euler(0, 0, rotAngle + 180);
+
+        dayCountText.text = "" + Clock.GetCurrentDay();
     }
 }

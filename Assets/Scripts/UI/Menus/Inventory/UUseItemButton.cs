@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UUseItemButton : MonoBehaviour
+public class UUseItemButton : UIButton
 {
-    // Start is called before the first frame update
-    void Start()
+    private Item targetItem;
+
+    public override void Clicked()
     {
-        
+        targetItem.Use();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetTargetItem(Item item)
     {
-        
+        targetItem = item;
     }
 }

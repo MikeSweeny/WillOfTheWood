@@ -25,4 +25,9 @@ public class IArmour : Item
     {
         return stats;
     }
+
+    public override void Use()
+    {
+        //
+    }
 }
