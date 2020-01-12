@@ -20,7 +20,7 @@ public class HotbarHUDSlot : HUDElement
     // Update is called once per frame
     public override void UpdateElement()
     {
-        if (slot != null)
+        if (slot != null && slot.ability != null)
         {
             image.sprite = slot.ability.abilityImage;
         }

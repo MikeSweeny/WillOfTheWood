@@ -25,15 +25,15 @@ public class Player : CharacterBase
     public int playerStatPoints { get; set; }
     private float healthPerc;
     protected int unlockedAbilityCount;
-    private List<HotbarSlot> hotBar;
+    private List<HotbarSlot> hotbar;
     private const int hotbarSlots = 8;
     private void Awake()
     {
         playerStatPoints = 1;
-        hotBar = new List<HotbarSlot>();
+        hotbar = new List<HotbarSlot>();
         for (int i = 0; i < hotbarSlots; i++)
         {
-            hotBar.Add(new HotbarSlot());
+            hotbar.Add(new HotbarSlot());
         }
         abilities = new List<Abilities>();
         abilities.Add(new AtArms());
@@ -212,7 +212,7 @@ public class Player : CharacterBase
     }
     public void UsedStatPoint()
     {
-        playerStatPoints -= 1;
+        playerStatPoints--;
     }
     public int GetStatPoints()
     {
@@ -234,15 +234,23 @@ public class Player : CharacterBase
         {
             foreach (Abilities ability in abilities)
             {
-                if(ability.IsUnlocked())
+                if (ability.IsUnlocked() && !ability.InHotbar()) //add a boolean to the abilities to track whether or not they've been added to the hotbar
                 {
-                    hotBar[i].ability = ability;
+                    for (int n = 0; n < hotbar.Count; ++n)
+                    {
+                        if (hotbar[n].ability == null)
+                        {
+                            hotbar[n].ability = ability;
+                            ability.ToggleIsInHOtBar(); //tell the ability it has been added to the hotbar
+                            break;
+                        }
+                    }
                 }
             }
         }
     }
     public List<HotbarSlot> GetHotbar()
     {
-        return hotBar;
+        return hotbar;
     }
 }
