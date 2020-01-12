@@ -27,14 +27,15 @@ public class BaseEnemy : BaseNpc, IQuestID
     public StatsObject npcStats;
 
 
-    private float respawnDelay = 30f;
+    private float respawnDelay = 15f;
     private float respawnTimer;
+
+    private Vector3 originalPos;
 
     protected CurrentState state = CurrentState.waiting;
 
     private void Awake()
     {
-        RespawnEnemy();
         SetStats();
         CalcToughness();
         CalcPainThreshold();
@@ -46,6 +47,8 @@ public class BaseEnemy : BaseNpc, IQuestID
         ID = IDName;
         SetPathingComp();
         source = GetComponent<AudioSource>();
+        pathingPattern.ToggleWeaponCollider();
+        originalPos = gameObject.transform.position;
     }
 
     private void Update()
@@ -82,7 +85,7 @@ public class BaseEnemy : BaseNpc, IQuestID
         else if(state == CurrentState.dead)
         {
             isDead = true;
-            DespawnEnemyCorpse();
+            Invoke("DespawnEnemyCorpse", 1);
         }
     }
 
@@ -163,7 +166,7 @@ public class BaseEnemy : BaseNpc, IQuestID
         animController.SetLayerWeight(2, 1);
         pathingPattern.GetNavMeshAgent().SetDestination(attackingDestination);
         animController.SetBool("Attacking", true);
-        //pathingPattern.ToggleWeaponCollider();
+        pathingPattern.ToggleWeaponCollider();
         if(animController.GetCurrentAnimatorStateInfo(2).normalizedTime > 1)
         {
             animController.SetBool("Attacking", false);
@@ -209,7 +212,7 @@ public class BaseEnemy : BaseNpc, IQuestID
         {
             Cleared();
             isDead = false;
-            Invoke("RespawnEnemy", 2);
+            InvokeRepeating("RespawnEnemy", 2, 1);
         }
 
     }
@@ -220,7 +223,7 @@ public class BaseEnemy : BaseNpc, IQuestID
     //RETURNS: None
     private void RespawnEnemy()
     {
-        respawnTimer += Time.time;
+        respawnTimer++;
         if (respawnTimer >= respawnDelay)
         {
             respawnTimer = 0;
@@ -229,6 +232,9 @@ public class BaseEnemy : BaseNpc, IQuestID
             SetDefence();
             state = CurrentState.waiting;
             gameObject.SetActive(true);
+            CancelInvoke();
+            gameObject.transform.position = originalPos;
+            print("respawned");
         }
     }
 
