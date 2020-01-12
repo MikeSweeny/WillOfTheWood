@@ -25,7 +25,7 @@ public class PlayerController : BaseController
     private bool grounded = false;
     private Vector3 moveDirection = Vector3.zero;
     private bool isWalking = false;
-    private bool jumping = false;
+    public bool jumping = false;
     private bool isAttacking = false;
     private Vector3 midRayFiringPoint;
     private Vector3 bottomRayFiringPoint;
@@ -247,8 +247,8 @@ public class PlayerController : BaseController
             animController.SetBool("Jumping", true);
             jumping = true;
             moveDirection.y += jumpSpeed;
-            controller.Move(moveDirection * Time.deltaTime);
-            moveDirection.y -= gravity * Time.deltaTime;
+            controller.Move(moveDirection * Time.fixedDeltaTime);
+            //moveDirection.y -= gravity * Time.deltaTime;
         }
     }
 
