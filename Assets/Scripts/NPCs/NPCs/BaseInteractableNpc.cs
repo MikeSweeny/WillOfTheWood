@@ -57,7 +57,7 @@ public abstract class BaseInteractableNpc : BaseNpc
             player = FindObjectOfType<Player>();
             if (player)
             {
-                if (Vector3.Distance(transform.position, player.transform.position) >= 2)
+                if (Vector3.Distance(transform.position, player.transform.position) >= 4)
                 {
                     UIEventManager.TriggerCloseDialogue();
                     isActive = false;
@@ -70,7 +70,7 @@ public abstract class BaseInteractableNpc : BaseNpc
         player = FindObjectOfType<Player>();
         if (player)
         {
-            if (Vector3.Distance(transform.position, player.transform.position) <= 2)
+            if (Vector3.Distance(transform.position, player.transform.position) <= 4)
             {
                 transform.LookAt(player.transform);
             }

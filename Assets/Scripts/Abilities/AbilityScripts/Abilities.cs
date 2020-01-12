@@ -21,11 +21,18 @@ public class Abilities
     public virtual void Act() { }
     public virtual void UpdateAbility() { }
     Player player;
-
+    //Function: Abilities()
+    //DESCRIPTION: Constructor for base ability script
+    //PARAMETERS: none
+    //RETURNS: none
     public Abilities()
     {
         SetSprites();
     }
+    //Function: UnlockAbility()
+    //DESCRIPTION: function used to unlock abilities when player uses a stat point
+    //PARAMETERS: none
+    //RETURNS: none
     public void UnlockAbility()
     {
         if(player != null && player.playerStatPoints > 0)
@@ -34,23 +41,43 @@ public class Abilities
             player.playerStatPoints = 0;
         }
     }
+    //Function: IsUnlocked()
+    //DESCRIPTION: function used to return if unlocked or not
+    //PARAMETERS: none
+    //RETURNS: isUnlocked
     public bool IsUnlocked()
     {
         return isUnlocked;
     }
+    //Function: SetPlayer()
+    //DESCRIPTION: function used to set the player in constructor for abilities
+    //PARAMETERS: Player 
+    //RETURNS: None
     public void SetPlayer(Player player)
     {
         this.player = player;
     }
+    //Function: SetSprites()
+    //DESCRIPTION: function used to set sprites for abilites.
+    //PARAMETERS: none
+    //RETURNS: None
     public void SetSprites()
     {
         spriteSheetName = "AbilitySpriteSheet";
         sprites = Resources.LoadAll(spriteSheetName, typeof(Sprite));
     }
+    //Function: InHotbar()
+    //DESCRIPTION: function used check if the ability is in the hotbar already
+    //PARAMETERS: none
+    //RETURNS: inHotbar
     public bool InHotbar()
     {
         return inHotbar;
     }
+    //Function: ToggleIsInHotbar()
+    //DESCRIPTION: function used to set abilities into hotbar
+    //PARAMETERS: none
+    //RETURNS: None
     public void ToggleIsInHOtBar()
     {
         inHotbar = !inHotbar;

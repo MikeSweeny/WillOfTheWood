@@ -3,14 +3,15 @@
 //PROGRAMMER    :   Jonathan Parsons
 //FIRST VERSION :   31/12/2019
 using UnityEngine;
-//NAME : NaturalWarrior
-//PURPOSE : All the funcionality of the NaturalWarrior ability as a child of abilities
+//NAME : Poisoner
+//PURPOSE : All the funcionality of the Poisoner ability as a child of abilities
 public class Poisoner : Abilities
 {
     IWeapon equippedWeapon;
     private bool isActive { get; set; }
-    //Function : OnLoad
-    //DESCRIPTION : what happens when the script is loaded in the game
+
+    //Function : Poisoner() : base() constructor 
+    //DESCRIPTION : Constructor that sets the name,description, image, and unlocks the ability function
     //PARAMETERS : none
     //RETURNS : none
     public Poisoner() : base()
@@ -20,6 +21,10 @@ public class Poisoner : Abilities
         abilityImage = (Sprite)sprites[29];
         AbilityManager.UnlockPoisoner += UnlockAbility;
     }
+    //Function: UpdateAbility()
+    //DESCRIPTION: Override function for the UpdateAbility() function in base class
+    //PARAMETERS: none
+    //RETURNS: None
     public override void UpdateAbility()
     {
         if (isActive)
@@ -27,8 +32,9 @@ public class Poisoner : Abilities
             Act();
         }
     }
-    //Function : Act
-    //DESCRIPTION : what happens when the spell is used
+
+    //Function : Act()
+    //DESCRIPTION : Override function for the act() base function
     //PARAMETERS : none
     //RETURNS : none
     public override void Act()

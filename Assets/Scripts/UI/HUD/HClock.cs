@@ -20,8 +20,8 @@ public class HClock : HUDElement
     //RETURNS : none
     private void Start()
     {
-        clock = transform.Find("Clock").GetComponent<Image>();
-        dayCountText = transform.Find("DayCountText").GetComponent<Text>();
+        clock = transform.GetChild(0).GetComponent<Image>();
+        dayCountText = transform.GetChild(1).GetChild(0).GetComponent<Text>();
     }
 
     //Function : UpdateElement

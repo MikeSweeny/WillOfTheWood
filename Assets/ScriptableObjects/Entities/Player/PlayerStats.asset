@@ -16,6 +16,6 @@ MonoBehaviour:
   discrete: 12
   pursuasive: 13
   speed: 13
-  strong: 14
+  strong: 18
   defence: 14
   isDetected: 0

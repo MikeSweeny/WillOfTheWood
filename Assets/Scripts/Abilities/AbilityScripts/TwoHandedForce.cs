@@ -10,8 +10,8 @@ public class TwoHandedForce : Abilities
     private bool isActive { get; set; }
     private bool hasMissed { get; set; }
     WeaponStats stats;
-    //Function : OnLoad
-    //DESCRIPTION : what happens when the script is loaded in the game
+    //Function : TwoHandedForce() : base() constructor 
+    //DESCRIPTION : Constructor that sets the name,description, image, and unlocks the ability function
     //PARAMETERS : none
     //RETURNS : none
     public TwoHandedForce() : base()
@@ -21,6 +21,10 @@ public class TwoHandedForce : Abilities
         abilityImage = (Sprite)sprites[6];
         AbilityManager.UnlockTwoHandedForce += UnlockAbility;
     }
+    //Function: UpdateAbility()
+    //DESCRIPTION: Override function for the UpdateAbility() function in base class
+    //PARAMETERS: none
+    //RETURNS: None
     public override void UpdateAbility()
     {
         if (isActive)
@@ -28,8 +32,8 @@ public class TwoHandedForce : Abilities
             Act();
         }
     }
-    //Function : Act
-    //DESCRIPTION : what happens when the spell is used
+    //Function : Act()
+    //DESCRIPTION : Override function for the act() base function
     //PARAMETERS : none
     //RETURNS : none
     public override void Act()

@@ -12,8 +12,8 @@ public class Backstab : Abilities
     private bool isActive { get; set; }
     PlayerStats stats;
     ShortSwordStats dagger;
-    //Function : OnLoad
-    //DESCRIPTION : what happens when the script is loaded in the game
+    //Function : Backstab() : base() constructor 
+    //DESCRIPTION : Constructor that sets the name,description, image, and unlocks the ability function
     //PARAMETERS : none
     //RETURNS : none
     public Backstab() : base()
@@ -23,6 +23,10 @@ public class Backstab : Abilities
         abilityImage = (Sprite)sprites[43];
         AbilityManager.UnlockBackStab += UnlockAbility;
     }
+    //Function: UpdateAbility()
+    //DESCRIPTION: Override function for the UpdateAbility() function in base class
+    //PARAMETERS: none
+    //RETURNS: None
     public override void UpdateAbility()
     {
         if (isActive)
@@ -30,8 +34,8 @@ public class Backstab : Abilities
             Act();
         }
     }
-    //Function : Act
-    //DESCRIPTION : what happens when the spell is used
+    //Function : Act()
+    //DESCRIPTION : Override function for the act() base function
     //PARAMETERS : none
     //RETURNS : none
     public override void Act()

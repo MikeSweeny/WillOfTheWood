@@ -11,8 +11,9 @@ public class Berserker : Abilities
     public WeaponStats equippedWeapon;
     private bool isActive { get; set; }
     PlayerStats stats;
-    //Function : OnLoad
-    //DESCRIPTION : what happens when the script is loaded in the game
+
+    //Function : Berserker() : base() constructor 
+    //DESCRIPTION : Constructor that sets the name,description, image, and unlocks the ability function
     //PARAMETERS : none
     //RETURNS : none
     public Berserker() : base()
@@ -22,6 +23,10 @@ public class Berserker : Abilities
         abilityImage = (Sprite)sprites[35];
         AbilityManager.UnlockBerserker += UnlockAbility;
     }
+    //Function: UpdateAbility()
+    //DESCRIPTION: Override function for the UpdateAbility() function in base class
+    //PARAMETERS: none
+    //RETURNS: None
     public override void UpdateAbility()
     {
         if (isActive)
@@ -29,8 +34,8 @@ public class Berserker : Abilities
             Act();
         }
     }
-    //Function : noviceLevelAct
-    //DESCRIPTION : what happens when the novice level of the spell is used
+    //Function : Act()
+    //DESCRIPTION : Override function for the act() base function
     //PARAMETERS : none
     //RETURNS : none
     public override void Act()

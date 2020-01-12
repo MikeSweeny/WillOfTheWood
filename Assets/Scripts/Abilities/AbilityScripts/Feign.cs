@@ -10,8 +10,8 @@ public class Feign : Abilities
     public WeaponStats equippedWeapon;
     PlayerStats stats;
     private bool isActive { get; set; }
-    //Function : OnLoad
-    //DESCRIPTION : what happens when the script is loaded in the game
+    //Function : Feign() : base() constructor 
+    //DESCRIPTION : Constructor that sets the name,description, image, and unlocks the ability function
     //PARAMETERS : none
     //RETURNS : none
     public Feign() : base()
@@ -21,6 +21,10 @@ public class Feign : Abilities
         abilityImage = (Sprite)sprites[40];
         AbilityManager.UnlockFeign += UnlockAbility;
     }
+    //Function: UpdateAbility()
+    //DESCRIPTION: Override function for the UpdateAbility() function in base class
+    //PARAMETERS: none
+    //RETURNS: None
     public override void UpdateAbility()
     {
         if (isActive)
@@ -28,8 +32,9 @@ public class Feign : Abilities
             Act();
         }
     }
-    //Function : Act
-    //DESCRIPTION : what happens when the spell is used
+
+    //Function : Act()
+    //DESCRIPTION : Override function for the act() base function
     //PARAMETERS : none
     //RETURNS : none
     public override void Act()
