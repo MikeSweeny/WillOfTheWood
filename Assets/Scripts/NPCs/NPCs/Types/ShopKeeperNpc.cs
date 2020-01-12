@@ -25,7 +25,7 @@ public class ShopKeeperNpc : BaseInteractableNpc
     {
         if(firstUpdate)
         {
-            inventory = new IPlayerInventory();
+            //inventory = new IShopInventory();
             //for (int i = 0; i < items.Count; i++)
             //{
             //    inventory.AddItem(items[i]);
