@@ -17,6 +17,7 @@ public class Abilities
     protected Object[] sprites;
     public Sprite abilityImage{ get; set; }
     protected bool isUnlocked = false;
+    protected bool inHotbar = false;
     public virtual void Act() { }
     public virtual void UpdateAbility() { }
     Player player;
@@ -45,5 +46,13 @@ public class Abilities
     {
         spriteSheetName = "AbilitySpriteSheet";
         sprites = Resources.LoadAll(spriteSheetName, typeof(Sprite));
+    }
+    public bool InHotbar()
+    {
+        return inHotbar;
+    }
+    public void ToggleIsInHOtBar()
+    {
+        inHotbar = !inHotbar;
     }
 }
