@@ -13,6 +13,7 @@ public class MInventory : Menu
 {
     private Item selectedItem;
     private Transform slotHolder;
+    private Transform popUp;
     private Sprite defaultSlotSprite;
     private int invContentsCount;
     private const int MAXCONTENTSCOUNT = 16;
@@ -78,6 +79,18 @@ public class MInventory : Menu
     public void DecrementCurrentCount()
     {
         invContentsCount--;
+    }
+
+    private void Update()
+    {
+        if (selectedItem != null)
+        {
+            //do stuff
+        }
+        else
+        {
+            popUp.gameObject.SetActive(false);
+        }
     }
 
     //Function : UpdateSlots

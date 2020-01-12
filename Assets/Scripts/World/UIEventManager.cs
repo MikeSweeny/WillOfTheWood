@@ -40,6 +40,8 @@ public class UIEventManager
     public static event UIEvent CloseDialogue;
     public static event UIEvent OpenDeathMenu;
     public static event UIEvent CloseDeathMenu;
+    public static event UIEvent OpenMapMenu;
+    public static event UIEvent CloseMapMenu;
 
     //Function : TriggerOpenMainMenu
     //DESCRIPTION : Opens the main menu
@@ -301,15 +303,39 @@ public class UIEventManager
             CloseDialogue();
     }
 
+    //Function : TriggerOpenDeathMenu
+    //DESCRIPTION : opens the death menu
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerOpenDeathMenu()
     {
         if (OpenDeathMenu != null)
             OpenDeathMenu();
     }
 
+    //Function : TriggerCloseDeathMenu
+    //DESCRIPTION : closes the death menu
+    //PARAMETERS : none
+    //RETURNS : none
     public static void TriggerCloseDeathMenu()
     {
         if (CloseDeathMenu != null)
             CloseDeathMenu();
+    }
+
+    //Function : TriggerOpenMapMenu
+    //DESCRIPTION : opens the map menu
+    //PARAMETERS : none
+    //RETURNS : none
+    public static void TriggerOpenMapMenu()
+    {
+        if (OpenMapMenu != null)
+            OpenMapMenu();
+    }
+
+    public static void TriggerCloseMapMenu()
+    {
+        if (CloseMapMenu != null)
+            CloseMapMenu();
     }
 }
