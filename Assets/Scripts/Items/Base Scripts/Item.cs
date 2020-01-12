@@ -9,7 +9,7 @@ using UnityEngine.UI;
 
 //NAME : Item
 //PURPOSE : represents anything that can exist in an inventory
-public class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour
 {
     protected ItemTypes itemType;
 
@@ -23,4 +23,6 @@ public class Item : MonoBehaviour
     {
         return itemSprite;
     }
+
+    public abstract void Use();
 }

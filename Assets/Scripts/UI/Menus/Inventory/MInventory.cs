@@ -17,6 +17,8 @@ public class MInventory : Menu
     private Sprite defaultSlotSprite;
     private int invContentsCount;
     private const int MAXCONTENTSCOUNT = 16;
+    private UUseItemButton useButton;
+    private UDropItemButton dropButton;
 
     //Function : Awake
     //DESCRIPTION : called when the object is initialized
@@ -28,6 +30,10 @@ public class MInventory : Menu
         UIEventManager.CloseInventory += CloseMenu;
         slotHolder = transform.Find("InventorySlotHolder");
         defaultSlotSprite = GameObject.Instantiate(slotHolder.GetChild(0)).GetComponent<InventorySlot>().GetImageSprite();
+        popUp = transform.Find("Popup");
+        Transform holder = popUp.Find("ButtonHolder");
+        useButton = holder.Find("UseButton").GetComponent<UUseItemButton>();
+        dropButton = holder.Find("DropButton").GetComponent<UDropItemButton>();
     }
 
     //Function : OnDestroy
@@ -85,7 +91,8 @@ public class MInventory : Menu
     {
         if (selectedItem != null)
         {
-            //do stuff
+            useButton.SetTargetItem(selectedItem);
+            dropButton.SetTargetItem(selectedItem);
         }
         else
         {
@@ -112,5 +119,14 @@ public class MInventory : Menu
                 slotHolder.GetChild(i).GetChild(0).GetComponent<UInventorySlotButton>().SetItem(null);
             }
         }
+    }
+
+    //Function : SetInventory
+    //DESCRIPTION : sets the inventory being referenced
+    //PARAMETERS : IPlayerInventory inventory : the inventory being referenced
+    //RETURNS : none
+    public void SetInventory(IPlayerInventory inventory)
+    {
+        dropButton.SetInventory(inventory);
     }
 }

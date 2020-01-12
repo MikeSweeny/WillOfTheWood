@@ -150,6 +150,11 @@ public class IWeapon : Item
 
         return defModValue;
     }
+
+    public override void Use()
+    {
+        //
+    }
 }
     
 

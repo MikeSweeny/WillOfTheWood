@@ -50,4 +50,9 @@ public class Clock
     {
         return (hours * 3600) + seconds;
     }
+
+    public static int GetCurrentDay()
+    {
+        return currentDay;
+    }
 }
