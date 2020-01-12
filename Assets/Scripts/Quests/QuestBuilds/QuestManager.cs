@@ -43,6 +43,10 @@ public class QuestManager: MonoBehaviour
         //}
         
     }
+    //Function : SearchCQNList() 
+    //DESCRIPTION : Function to check if a string matches the quest name searched for
+    //PARAMETERS : String name
+    //RETURNS : isMatch
     public bool searchCQNList(string name)
     {
         for (int i = 0; i < completedQuestNames.Count; i++)

@@ -44,20 +44,26 @@ public class CharacterBase : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    //FUNCTION :  CalcToughness()
-    //DESCRIPTION : Calcualting the Toughness of the Entity
-    //PARAMETERS : void
-    //RETURNS : void
+    //Function : EquippedArmour() 
+    //DESCRIPTION : Function to equip armour to this entity
+    //PARAMETERS : none
+    //RETURNS : none
     public void EquipArmour(IArmour item)
     {
         item = armour;
     }
-
+    //Function : EquippedWeapon() 
+    //DESCRIPTION : Function to equip weapon to this entity
+    //PARAMETERS : none
+    //RETURNS : none
     public void EquipWeapon(IWeapon item)
     {
         item = weapon;
     }
-
+    //Function : CalcToughness() 
+    //DESCRIPTION : Function to calulate toughness of this entity
+    //PARAMETERS : none
+    //RETURNS : none
     public void CalcToughness()
     {
         if (toughness <= 9)
@@ -78,12 +84,16 @@ public class CharacterBase : MonoBehaviour
     {
         painThreshold = strong / 2;
     }
+    //Function : TakeDamage()
+    //DESCRIPTION : Function that applies damage.
+    //PARAMETERS : Int Damage
+    //RETURNS : none
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
     }
 
-    //Function: GetHealthPercent
+    //Function: GetHealthPercent()
     //DESCRIPTION: function used to find the current health percent
     //PARAMETERS: None
     //RETURNS: float
@@ -91,6 +101,10 @@ public class CharacterBase : MonoBehaviour
     {
         return (float)currentHealth / (float)maxHealth;
     }
+    //Function : RecoverHealth()
+    //DESCRIPTION : Function to call for when gaining health
+    //PARAMETERS : none
+    //RETURNS : none
     public void RecoverHealth()
     {
         if(currentHealth != maxHealth)
@@ -100,14 +114,18 @@ public class CharacterBase : MonoBehaviour
             currentHealth = currentHealth + heal;
         }
     }
-    //Function: SetDefence
+    //Function: SetDefence()
     //DESCRIPTION: function used to Set the Defence of the object
     //PARAMETERS: None
-    //RETURNS: int
+    //RETURNS: none
     public void SetDefence()
     {
         defence = speed;
     }
+    //Function : SetArmour() 
+    //DESCRIPTION : Functions to set players armour
+    //PARAMETERS : IArmour armour
+    //RETURNS : none
     public void SetArmour(IArmour armour)
     {
         this.armour = armour;
