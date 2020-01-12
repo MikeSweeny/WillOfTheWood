@@ -15,11 +15,12 @@ public class HPlayerStatus : HUDElement
     private Slider healthbar;
     private Slider XPBar;
 
-    //Function : Awake
-    //DESCRIPTION : called when the object is initialized
+
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
     //PARAMETERS : none
     //RETURNS : none
-    private void Awake()
+    private void Start()
     {
         healthbar = transform.Find("HealthBar").GetComponent<Slider>();
         XPBar = transform.Find("XPBar").GetComponent<Slider>();

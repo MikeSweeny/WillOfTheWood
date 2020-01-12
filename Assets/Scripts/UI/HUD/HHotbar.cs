@@ -12,21 +12,28 @@ public class HHotbar : HUDElement
 {
     private Transform hotbarHolder1;
     private Transform hotbarHolder2;
+    private List<HotbarHUDSlot> slots;
 
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
+    //PARAMETERS : none
+    //RETURNS : none
     private void Start()
     {
         hotbarHolder1 = transform.Find("LeftHotbarHolder");
         hotbarHolder2 = transform.Find("RightHotbarHolder");
+        slots = new List<HotbarHUDSlot>();
         for (int i = 0; i < player.GetHotbar().Count; ++i)
         {
             if (i < hotbarHolder1.childCount)
             {
-                hotbarHolder1.GetChild(i).GetComponent<HotbarHUDSlot>().SetHotbarSlot(player.GetHotbar()[i]);
+                slots.Add(hotbarHolder1.GetChild(i).GetComponent<HotbarHUDSlot>());
             }
             if (i >= hotbarHolder1.childCount)
             {
-                hotbarHolder2.GetChild(i - hotbarHolder1.childCount).GetComponent<HotbarHUDSlot>().SetHotbarSlot(player.GetHotbar()[i]);
+                slots.Add(hotbarHolder2.GetChild(i).GetComponent<HotbarHUDSlot>());
             }
+            slots[i].SetHotbarSlot(player.GetHotbar()[i]);
         }
     }
 
@@ -36,6 +43,9 @@ public class HHotbar : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        throw new System.NotImplementedException();
+        for (int i = 0; i < slots.Count; ++i)
+        {
+            slots[i].UpdateElement();
+        }
     }
 }

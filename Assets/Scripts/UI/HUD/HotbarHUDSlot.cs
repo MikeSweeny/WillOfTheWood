@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HotbarHUDSlot : MonoBehaviour
+public class HotbarHUDSlot : HUDElement
 {
     private HotbarSlot slot;
     private Image image;
 
-    // Start is called before the first frame update
-    void Awake()
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Start()
     {
         image = GetComponent<Image>();
     }
 
     // Update is called once per frame
-    void Update()
+    public override void UpdateElement()
     {
         if (slot != null)
         {

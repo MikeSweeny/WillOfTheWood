@@ -15,11 +15,11 @@ public class HDialogueInterface : HUDElement
     public Text dialogueText { get; set; }
     private UNextDialogueButton button;
 
-    //Function : Awake
-    //DESCRIPTION : called when the object is initialized
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
     //PARAMETERS : none
     //RETURNS : none
-    private void Awake()
+    private void Start()
     {
         dialogueText = transform.Find("Text").GetComponent<Text>();
         button = transform.Find("NextButton").GetComponent<UNextDialogueButton>();

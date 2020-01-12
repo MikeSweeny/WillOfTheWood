@@ -12,11 +12,11 @@ public class PlayerHUD : MonoBehaviour
 {
     private List<HUDElement> elements;
 
-    //Function : Start
-    //DESCRIPTION : called when the object is initialized after Awake
+    //Function : Awake
+    //DESCRIPTION : called when the object is initialized
     //PARAMETERS : none
     //RETURNS : none
-    void Start()
+    void Awake()
     {
         Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         elements = new List<HUDElement>();

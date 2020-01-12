@@ -15,7 +15,11 @@ public class HObjectiveTracker : HUDElement
     private Text counter;
     private Text description;
 
-    private void Awake()
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Start()
     {
         qmRef = GameObject.Find("Managers").GetComponent<QuestManager>();
         counter = transform.Find("Counter").GetComponent<Text>();

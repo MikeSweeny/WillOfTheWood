@@ -16,11 +16,11 @@ public class HTargetStatus : HUDElement
     private Slider healthBar;
     public Text nameText { get; set; }
 
-    //Function : Awake
-    //DESCRIPTION : called when the object is initialized
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
     //PARAMETERS : none
     //RETURNS : none
-    private void Awake()
+    private void Start()
     {
         healthBar = transform.Find("HealthBar").GetComponent<Slider>();
         nameText = transform.Find("TargetName").GetComponent<Text>();
