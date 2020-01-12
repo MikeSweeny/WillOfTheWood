@@ -212,7 +212,7 @@ public class Player : CharacterBase
     }
     public void UsedStatPoint()
     {
-        playerStatPoints -= 1;
+        playerStatPoints--;
     }
     public int GetStatPoints()
     {
