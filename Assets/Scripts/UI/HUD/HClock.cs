@@ -30,7 +30,8 @@ public class HClock : HUDElement
     //RETURNS : none
     public override void UpdateElement()
     {
-        float rotAngle = Clock.GetTimeOfDay() / (24 * 3600);
-        clock.transform.RotateAround(clock.transform.position, Vector3.forward, rotAngle);
+        float rotAngle = ((Clock.GetTimeOfDay() / 3600)/24)*360f;
+        //clock.transform.RotateAround(clock.transform.position, Vector3.forward, rotAngle);
+        clock.transform.localRotation = Quaternion.Euler(0, 0, rotAngle + 180);
     }
 }
