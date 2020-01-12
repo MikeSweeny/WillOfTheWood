@@ -5,6 +5,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //NAME : UAbilitySlotButton
 //PURPOSE : sets the selected ability in the leveling menu
@@ -13,6 +14,17 @@ public class UAbilitySlotButton : UIButton
 {
     protected Abilities ability;
     private MLeveling mlRef;
+    private Image image;
+
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
+    //PARAMETERS : none
+    //RETURNS : none
+    private void Start()
+    {
+        image = GetComponent<Image>();
+        image.sprite = ability.abilityImage;
+    }
 
     //Function : Clicked
     //DESCRIPTION : calls the function in the leveling menu
