@@ -31,7 +31,7 @@ public class HHotbar : HUDElement
             }
             if (i >= hotbarHolder1.childCount)
             {
-                slots.Add(hotbarHolder2.GetChild(i).GetComponent<HotbarHUDSlot>());
+                slots.Add(hotbarHolder2.GetChild(i - hotbarHolder1.childCount).GetComponent<HotbarHUDSlot>());
             }
             slots[i].SetHotbarSlot(player.GetHotbar()[i]);
         }
