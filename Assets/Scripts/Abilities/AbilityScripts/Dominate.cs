@@ -9,8 +9,8 @@ public class Dominate : Abilities
 {
     private bool isActive { get; set; }
     PlayerStats stats;
-    //Function : OnLoad
-    //DESCRIPTION : what happens when the script is loaded in the game
+    //Function : Dominate() : base() constructor 
+    //DESCRIPTION : Constructor that sets the name,description, image, and unlocks the ability function
     //PARAMETERS : none
     //RETURNS : none
     public Dominate() : base()
@@ -20,6 +20,10 @@ public class Dominate : Abilities
         abilityImage = (Sprite)sprites[38];
         AbilityManager.UnlockDominate += UnlockAbility;
     }
+    //Function: UpdateAbility()
+    //DESCRIPTION: Override function for the UpdateAbility() function in base class
+    //PARAMETERS: none
+    //RETURNS: None
     public override void UpdateAbility()
     {
         if (isActive)
@@ -27,8 +31,8 @@ public class Dominate : Abilities
             Act();
         }
     }
-    //Function : Act
-    //DESCRIPTION : what happens when the spell is used
+    //Function : Act()
+    //DESCRIPTION : Override function for the act() base function
     //PARAMETERS : none
     //RETURNS : none
     public override void Act()

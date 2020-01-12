@@ -27,6 +27,10 @@ public class Player : CharacterBase
     protected int unlockedAbilityCount;
     private List<HotbarSlot> hotbar;
     private const int hotbarSlots = 8;
+    //FUNCTION : Awake()
+    //DESCRIPTION : Sets Variables and functions on awake.
+    //PARAMETERS : none
+    //RETURNS : none 
     private void Awake()
     {
         playerStatPoints = 1;
@@ -53,18 +57,18 @@ public class Player : CharacterBase
             abilities[i].SetPlayer(this);
         }
 
-        AbilityManager.UnlockAtArms += updateHotbar;
-        AbilityManager.UnlockBackStab += updateHotbar;
-        AbilityManager.UnlockBerserker += updateHotbar;
-        AbilityManager.UnlockDominate += updateHotbar;
-        AbilityManager.UnlockExceptionalAttribute += updateHotbar;
-        AbilityManager.UnlockFeign += updateHotbar;
-        AbilityManager.UnlockPoisoner += updateHotbar;
-        AbilityManager.UnlockPoleArmMastery += updateHotbar;
-        AbilityManager.UnlockRecovery += updateHotbar;
-        AbilityManager.UnlockShieldFighter += updateHotbar;
-        AbilityManager.UnlockTwinAttack += updateHotbar;
-        AbilityManager.UnlockTwoHandedForce += updateHotbar;
+        AbilityManager.UnlockAtArms += UpdateHotbar;
+        AbilityManager.UnlockBackStab += UpdateHotbar;
+        AbilityManager.UnlockBerserker += UpdateHotbar;
+        AbilityManager.UnlockDominate += UpdateHotbar;
+        AbilityManager.UnlockExceptionalAttribute += UpdateHotbar;
+        AbilityManager.UnlockFeign += UpdateHotbar;
+        AbilityManager.UnlockPoisoner += UpdateHotbar;
+        AbilityManager.UnlockPoleArmMastery += UpdateHotbar;
+        AbilityManager.UnlockRecovery += UpdateHotbar;
+        AbilityManager.UnlockShieldFighter += UpdateHotbar;
+        AbilityManager.UnlockTwinAttack += UpdateHotbar;
+        AbilityManager.UnlockTwoHandedForce += UpdateHotbar;
         //getStats();
         setStats();
 
@@ -76,7 +80,10 @@ public class Player : CharacterBase
         playerCoins = 0;
  
     }
-
+    //FUNCTION : Update()
+    //DESCRIPTION : Updates every frame with player logic
+    //PARAMETERS : none
+    //RETURNS : none 
     private void Update()
     {
         if(firstUpdate)
@@ -198,7 +205,7 @@ public class Player : CharacterBase
         playerCoins -= amount;
     }
 
-    //Function: AddCoins
+    //Function: AddCoins(int amount)
     //DESCRIPTION: function used to add / recieve coins
     //PARAMETERS: int amount
     //RETURNS: None
@@ -206,19 +213,31 @@ public class Player : CharacterBase
     {
         playerCoins += amount;
     }
+    //Function: AddStatPoint()
+    //DESCRIPTION: function used to add / recieve Stat Points
+    //PARAMETERS: int amount
+    //RETURNS: None
     public void AddStatPoint(int addPoint)
     {
         playerStatPoints += addPoint;
     }
+    //Function: UsedStatPoint()
+    //DESCRIPTION: function used to remove stat points
+    //PARAMETERS: int amount
+    //RETURNS: None
     public void UsedStatPoint()
     {
         playerStatPoints--;
     }
+    //Function: GetStatPoint()
+    //DESCRIPTION: checks playerStatPoints
+    //PARAMETERS: none
+    //RETURNS: playerStatPoints
     public int GetStatPoints()
     {
         return playerStatPoints;
     }
-    //Function: SetMaxHealth
+    //Function: SetMaxHealth()
     //DESCRIPTION: Setting maxHealth variable at start of game, and when maxHealth is increased
     //PARAMETERS: void
     //RETURNS: maxHealth
@@ -227,21 +246,25 @@ public class Player : CharacterBase
         maxHealth = toughness;
         return maxHealth;
     }
-    public void updateHotbar()
+    //Function: UpdateHotBar()
+    //DESCRIPTION: function used to update the hotbar with abilities unlocked.
+    //PARAMETERS: none
+    //RETURNS: none
+    public void UpdateHotbar()
     {
         unlockedAbilityCount++;
         for (int i = 0; i < unlockedAbilityCount; i++)
         {
             foreach (Abilities ability in abilities)
             {
-                if (ability.IsUnlocked() && !ability.InHotbar()) //add a boolean to the abilities to track whether or not they've been added to the hotbar
+                if (ability.IsUnlocked() && !ability.InHotbar())
                 {
                     for (int n = 0; n < hotbar.Count; ++n)
                     {
                         if (hotbar[n].ability == null)
                         {
                             hotbar[n].ability = ability;
-                            ability.ToggleIsInHOtBar(); //tell the ability it has been added to the hotbar
+                            ability.ToggleIsInHOtBar();
                             break;
                         }
                     }
@@ -249,6 +272,10 @@ public class Player : CharacterBase
             }
         }
     }
+    //Function: GetHotbar()
+    //DESCRIPTION: function used to return hotbar
+    //PARAMETERS: none
+    //RETURNS: hotBar
     public List<HotbarSlot> GetHotbar()
     {
         return hotbar;
