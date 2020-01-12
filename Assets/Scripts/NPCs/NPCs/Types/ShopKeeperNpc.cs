@@ -14,11 +14,11 @@ public class ShopKeeperNpc : BaseInteractableNpc
 {
     public List<Item> items;
     private bool firstUpdate = true;
-
+    public AudioSource source;
 
     private void Awake()
     {
-
+        source = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -41,6 +41,8 @@ public class ShopKeeperNpc : BaseInteractableNpc
     //RETURNS: None
     public override void OnInteract()
     {
+        if (source)
+            source.Play();
         UIEventManager.TriggerOpenShop();
     }
 
