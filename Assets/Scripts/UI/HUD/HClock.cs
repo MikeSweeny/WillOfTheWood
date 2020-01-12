@@ -14,11 +14,11 @@ public class HClock : HUDElement
     private Image clock;
     private Text dayCountText;
 
-    //Function : Awake
-    //DESCRIPTION : called when the object is initialized
+    //Function : Start
+    //DESCRIPTION : called when the object is initialized after Awake
     //PARAMETERS : none
     //RETURNS : none
-    private void Awake()
+    private void Start()
     {
         clock = transform.Find("Clock").GetComponent<Image>();
         dayCountText = transform.Find("DayCountText").GetComponent<Text>();
