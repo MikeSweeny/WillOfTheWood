@@ -38,7 +38,7 @@ public class Abilities
         if(player != null && player.playerStatPoints > 0)
         {
             isUnlocked = true;
-            player.playerStatPoints = 0;
+            player.playerStatPoints--;
         }
     }
     //Function: IsUnlocked()
