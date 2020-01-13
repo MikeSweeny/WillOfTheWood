@@ -6337,6 +6337,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2245640854779411053, guid: c7e5538c861a6ee4bb04ce2c820b7ef3,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2245640854779411053, guid: c7e5538c861a6ee4bb04ce2c820b7ef3,
+        type: 3}
+      propertyPath: m_Height
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2245640854779411053, guid: c7e5538c861a6ee4bb04ce2c820b7ef3,
+        type: 3}
+      propertyPath: m_StepOffset
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2245640854779411055, guid: c7e5538c861a6ee4bb04ce2c820b7ef3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c7e5538c861a6ee4bb04ce2c820b7ef3, type: 3}
@@ -6366,7 +6381,6 @@ MonoBehaviour:
   pathingPattern: {fileID: 0}
   vigilant: 0
   NotMoveable: 0
-  items: []
   source: {fileID: 1506849880}
 --- !u!114 &1506849879
 MonoBehaviour:
