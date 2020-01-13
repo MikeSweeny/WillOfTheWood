@@ -69,6 +69,8 @@ public class InputManager : MonoBehaviour
         }
         GameEventManager.Pause += OnPause;
         GameEventManager.UnPause += UnPause;
+        UIEventManager.OpenShop += OnPause;
+        UIEventManager.CloseShop += UnPause;
     }
 
     private void Update()
