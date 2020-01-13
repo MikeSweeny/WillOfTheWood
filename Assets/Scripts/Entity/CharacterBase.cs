@@ -130,5 +130,13 @@ public class CharacterBase : MonoBehaviour
     {
         this.armour = armour;
     }
-
+    public Inventory GetInventory()
+    {
+        return inventory;
+    }
+    public void GiveItemTo(CharacterBase character,Item itemGiven)
+    {
+        character.inventory.AddItem(itemGiven);
+        this.inventory.RemoveItem(itemGiven);
+    }
 }
