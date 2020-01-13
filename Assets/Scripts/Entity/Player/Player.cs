@@ -33,7 +33,6 @@ public class Player : CharacterBase
     //RETURNS : none 
     private void Awake()
     {
-        playerStatPoints = 1;
         hotbar = new List<HotbarSlot>();
         for (int i = 0; i < hotbarSlots; i++)
         {
