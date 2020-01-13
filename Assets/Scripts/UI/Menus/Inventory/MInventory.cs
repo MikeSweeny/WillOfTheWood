@@ -101,6 +101,7 @@ public class MInventory : Menu
 
         if (selectedItem != null)
         {
+            popUp.gameObject.SetActive(true);
             useButton.SetTargetItem(selectedItem);
             dropButton.SetTargetItem(selectedItem);
         }
