@@ -17,6 +17,7 @@ public class MInventory : Menu
     private Sprite defaultSlotSprite;
     private int invContentsCount;
     private const int MAXCONTENTSCOUNT = 16;
+    private IPlayerInventory inventory;
     private UUseItemButton useButton;
     private UDropItemButton dropButton;
 
@@ -87,8 +88,17 @@ public class MInventory : Menu
         invContentsCount--;
     }
 
+    //Function : Update
+    //DESCRIPTION : called every frame
+    //PARAMETERS : none
+    //RETURNS : none
     private void Update()
     {
+        if (!inventory.GetContents().Contains(selectedItem))
+        {
+            selectedItem = null;
+        }
+
         if (selectedItem != null)
         {
             useButton.SetTargetItem(selectedItem);
@@ -127,6 +137,7 @@ public class MInventory : Menu
     //RETURNS : none
     public void SetInventory(IPlayerInventory inventory)
     {
+        this.inventory = inventory;
         dropButton.SetInventory(inventory);
     }
 }

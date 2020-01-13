@@ -24,6 +24,15 @@ public class Inventory
         contents = new List<Item>();
     }
 
+    //Function : GetContents
+    //DESCRIPTION : returns the inventory contents
+    //PARAMETERS : none
+    //RETURNS : none
+    public List<Item> GetContents()
+    {
+        return contents;
+    }
+
     //Function : AddItem
     //DESCRIPTION : adds the provided item to the inventory's contents
     //PARAMETERS : Item item : the item to add to the list
