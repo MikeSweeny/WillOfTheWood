@@ -36,7 +36,10 @@ public class HObjectiveTracker : HUDElement
         if (qmRef.TrackingQuest != null)
         {
             description.text = qmRef.TrackingQuest.TrackText();
-            counter.text = qmRef.TrackingQuest.CurrentAmount + "/" + qmRef.TrackingQuest.RequiredAmount;
+            if(qmRef.TrackingQuest.CurrentAmount < qmRef.TrackingQuest.RequiredAmount)
+                counter.text = qmRef.TrackingQuest.CurrentAmount + "/" + qmRef.TrackingQuest.RequiredAmount;
+            else
+                counter.text = qmRef.TrackingQuest.RequiredAmount + "/" + qmRef.TrackingQuest.RequiredAmount;
         }
     }
 }
