@@ -15,5 +15,6 @@ public class PaddedShirt : IArmour
     private void Start()
     {
         stats = new PaddedShirtStats();
+        ItemCost = 1;
     }
 }

@@ -15,5 +15,6 @@ public class Club : IWeapon
     private void Start()
     {
         stats = new ClubStats();
+        ItemCost = 12;
     }
 }

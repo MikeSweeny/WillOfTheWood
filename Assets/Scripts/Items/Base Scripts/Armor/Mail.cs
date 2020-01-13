@@ -15,5 +15,6 @@ public class Mail : IArmour
     private void Start()
     {
         stats = new MailStats();
+        ItemCost = 20;
     }
 }

@@ -15,5 +15,6 @@ public class LeatherCuirass : IArmour
     private void Start()
     {
         stats = new LeatherCuriassStats();
+        ItemCost = 10;
     }
 }

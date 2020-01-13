@@ -15,5 +15,6 @@ public class ElvenArmour : IArmour
     private void Start()
     {
         stats = new ElvenArmourStats();
+        ItemCost = 50;
     }
 }

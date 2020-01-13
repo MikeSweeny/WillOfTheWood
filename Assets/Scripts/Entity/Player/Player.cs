@@ -13,7 +13,7 @@ public class Player : CharacterBase
 {
     public PlayerStats playerBrain;
 
-    List<Abilities> abilities;
+    private List<Abilities> abilities;
     private bool canShootTargetRay = false;
     private bool firstUpdate = true;
     private GameObject target;

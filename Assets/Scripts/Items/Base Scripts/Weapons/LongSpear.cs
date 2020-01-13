@@ -15,5 +15,6 @@ public class LongSpear : IWeapon
     private void Start()
     {
         stats = new LongSpearStats();
+        ItemCost = 20;
     }
 }

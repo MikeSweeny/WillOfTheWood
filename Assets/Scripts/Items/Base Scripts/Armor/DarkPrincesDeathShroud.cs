@@ -15,5 +15,6 @@ public class DarkPrincesDeathShroud : IArmour
     private void Start()
     {
         stats = new DarkPrincesDeathShroudStats();
+        ItemCost = 200;
     }
 }

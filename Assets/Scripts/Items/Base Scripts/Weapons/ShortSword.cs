@@ -15,5 +15,6 @@ public class ShortSword : IWeapon
     private void Start()
     {
         stats = new ShortSwordStats();
+        ItemCost = 2;
     }
 }

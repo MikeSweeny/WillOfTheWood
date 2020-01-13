@@ -15,5 +15,6 @@ public class BlackBlade : IWeapon
     private void Start()
     {
         stats = new BlackBladeStats();
+        ItemCost = 250;
     }
 }

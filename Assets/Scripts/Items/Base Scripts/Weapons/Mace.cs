@@ -15,5 +15,6 @@ public class Mace : IWeapon
     private void Start()
     {
         stats = new MaceStats();
+        ItemCost = 15;
     }
 }

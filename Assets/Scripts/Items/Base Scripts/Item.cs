@@ -15,6 +15,10 @@ public abstract class Item : MonoBehaviour
 
     protected Image itemSprite;
 
+    public int ItemCost;
+
+    public bool isBought = false;
+    public bool isSold = false;
     //Function : GetSprite
     //DESCRIPTION : retrieves the item sprite
     //PARAMETERS : none
@@ -23,6 +27,13 @@ public abstract class Item : MonoBehaviour
     {
         return itemSprite;
     }
-
+    public bool Bought()
+    {
+        return isBought;
+    }
+    public bool Sold()
+    {
+        return isSold;
+    }
     public abstract void Use();
 }
