@@ -11,7 +11,7 @@ using UnityEngine;
 public class Clock
 {
     static int currentDay = 1;
-    static int hours;
+    static int hours = 5;
     static float seconds;
     
     //Function : UpdateClock
