@@ -7,6 +7,10 @@ using UnityEngine;
 //PURPOSE : All the funcionality of the ExceptionalAttribute ability as a child of abilities
 public class ExceptionalAttribute : Abilities
 {
+    private PlayerStats player;
+    private UExceptionalAttributeButton button;
+    private int choice = 6;
+    private bool isChoosing = false;
     private bool isActive { get; set; }
     //Function :  : base() constructor 
     //DESCRIPTION : Constructor that sets the name,description, image, and unlocks the ability function
@@ -38,10 +42,38 @@ public class ExceptionalAttribute : Abilities
     {
         if (isActive)
         {
-            //if temporary:
-            //have a HUD menu that shows the players stats that can be added to as buttons and when one is pressed, add 1 to that stat for x ammount of time
-            //if permanent:
-            //have a HUD menu that shows the players stats that can be added to as buttons and when one is pressed, add 1 to that stat.
+            isChoosing = true;
+            if(isChoosing)
+            {
+                switch (choice)
+                {
+                    case 6:
+                        player.IncreaseStat(1, player.accuracy);
+                        isChoosing = false;
+                        break;
+                    case 5:
+                        player.IncreaseStat(1, player.discrete);
+                        isChoosing = false;
+                        break;
+                    case 4:
+                        player.IncreaseStat(1, player.pursuasive);
+                        isChoosing = false;
+                        break;
+                    case 3:
+                        player.IncreaseStat(1, player.speed);
+                        isChoosing = false;
+                        break;
+                    case 2:
+                        player.IncreaseStat(1, player.strong);
+                        isChoosing = false;
+                        break;
+                    case 1:
+                        player.IncreaseStat(1, player.defence);
+                        isChoosing = false;
+                        break;
+                }
+            } 
         }
+        //button.gameObject.SetActive(false);
     }
 }

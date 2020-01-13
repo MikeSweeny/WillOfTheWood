@@ -39,7 +39,6 @@ public class Dominate : Abilities
     {
         if (isActive)
         {
-            //add persuasive stat to the accuracy check for attacking (combat not setup for this yet)
             stats.accuracy = stats.pursuasive + stats.accuracy;
         }
     }
